@@ -1,0 +1,63 @@
+Loading tokenizer and model
+Tokenizer loaded
+Model loaded
+test
+Outlines model loaded
+CLM model loaded
+CFG loaded
+Beginning of training:
+<s> In the programming language Python, a code that do : x=2, for i from 1 to 5: x = x**2, would be in Python:
+
+<s> In the programming language Python, a code that do : x=2, for i from 1 to 5: x = x**2, would be in Python:
+x
+<s> In the programming language Python, a code that do : x=2, for i from 1 to 5: x = x**2, would be in Python:
+x=
+<s> In the programming language Python, a code that do : x=2, for i from 1 to 5: x = x**2, would be in Python:
+x=2
+<s> In the programming language Python, a code that do : x=2, for i from 1 to 5: x = x**2, would be in Python:
+x=2 
+<s> In the programming language Python, a code that do : x=2, for i from 1 to 5: x = x**2, would be in Python:
+x=2 
+
+<s> In the programming language Python, a code that do : x=2, for i from 1 to 5: x = x**2, would be in Python:
+x=2 
+for
+<s> In the programming language Python, a code that do : x=2, for i from 1 to 5: x = x**2, would be in Python:
+x=2 
+for i
+<s> In the programming language Python, a code that do : x=2, for i from 1 to 5: x = x**2, would be in Python:
+x=2 
+for i in
+<s> In the programming language Python, a code that do : x=2, for i from 1 to 5: x = x**2, would be in Python:
+x=2 
+for i in range
+<s> In the programming language Python, a code that do : x=2, for i from 1 to 5: x = x**2, would be in Python:
+x=2 
+for i in range(
+<s> In the programming language Python, a code that do : x=2, for i from 1 to 5: x = x**2, would be in Python:
+x=2 
+for i in range(1
+<s> In the programming language Python, a code that do : x=2, for i from 1 to 5: x = x**2, would be in Python:
+x=2 
+for i in range(1,
+<s> In the programming language Python, a code that do : x=2, for i from 1 to 5: x = x**2, would be in Python:
+x=2 
+for i in range(1,6
+<s> In the programming language Python, a code that do : x=2, for i from 1 to 5: x = x**2, would be in Python:
+x=2 
+for i in range(1,6):
+<s> In the programming language Python, a code that do : x=2, for i from 1 to 5: x = x**2, would be in Python:
+x=2 
+for i in range(1,6): 
+<s> In the programming language Python, a code that do : x=2, for i from 1 to 5: x = x**2, would be in Python:
+x=2 
+for i in range(1,6): 
+
+<s> In the programming language Python, a code that do : x=2, for i from 1 to 5: x = x**2, would be in Python:
+x=2 
+for i in range(1,6): 
+   
+<s> In the programming language Python, a code that do : x=2, for i from 1 to 5: x = x**2, would be in Python:
+x=2 
+for i in range(1,6): 
+    x

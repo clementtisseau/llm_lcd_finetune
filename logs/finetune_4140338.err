@@ -1,0 +1,6 @@
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:08<00:08,  8.18s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  5.81s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  6.17s/it]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.16s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.54s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.78s/it]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:05<00:05,  5.76s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.52s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.86s/it]
+/home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages/outlines/fsm/guide.py:110: UserWarning: Outlines' public *community-contributed* CFG structured generation is experimental. Please review https://dottxt-ai.github.io/outlines/latest/reference/generation/cfg#disclaimer
+  warnings.warn(
+Epoch 1/3:   0%|          | 0/2 [00:00<?, ?it/s]Epoch 1/3:   0%|          | 0/2 [00:12<?, ?it/s]slurmstepd-gpu006: error: *** JOB 4140338 ON gpu006 CANCELLED AT 2025-07-07T10:11:04 ***

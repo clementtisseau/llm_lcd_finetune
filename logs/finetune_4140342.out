@@ -1,0 +1,36 @@
+==========================================
+SLURM_JOB_ID = 4140342
+SLURM_JOB_NODELIST = gpu006
+==========================================
+Requirement already satisfied: accelerate in /home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages (1.8.1)
+Requirement already satisfied: numpy<3.0.0,>=1.17 in /home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages (from accelerate) (2.0.1)
+Requirement already satisfied: packaging>=20.0 in /home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages (from accelerate) (25.0)
+Requirement already satisfied: psutil in /home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages (from accelerate) (7.0.0)
+Requirement already satisfied: pyyaml in /home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages (from accelerate) (6.0.2)
+Requirement already satisfied: torch>=2.0.0 in /home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages (from accelerate) (2.5.1)
+Requirement already satisfied: huggingface_hub>=0.21.0 in /home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages (from accelerate) (0.33.1)
+Requirement already satisfied: safetensors>=0.4.3 in /home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages (from accelerate) (0.5.3)
+Requirement already satisfied: filelock in /home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages (from huggingface_hub>=0.21.0->accelerate) (3.17.0)
+Requirement already satisfied: fsspec>=2023.5.0 in /home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages (from huggingface_hub>=0.21.0->accelerate) (2025.3.0)
+Requirement already satisfied: requests in /home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages (from huggingface_hub>=0.21.0->accelerate) (2.32.4)
+Requirement already satisfied: tqdm>=4.42.1 in /home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages (from huggingface_hub>=0.21.0->accelerate) (4.67.1)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in /home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages (from huggingface_hub>=0.21.0->accelerate) (4.12.2)
+Requirement already satisfied: hf-xet<2.0.0,>=1.1.2 in /home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages (from huggingface_hub>=0.21.0->accelerate) (1.1.5)
+Requirement already satisfied: sympy==1.13.1 in /home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages (from torch>=2.0.0->accelerate) (1.13.1)
+Requirement already satisfied: networkx in /home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages (from torch>=2.0.0->accelerate) (3.4.2)
+Requirement already satisfied: jinja2 in /home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages (from torch>=2.0.0->accelerate) (3.1.6)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages (from sympy==1.13.1->torch>=2.0.0->accelerate) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages (from jinja2->torch>=2.0.0->accelerate) (3.0.2)
+Requirement already satisfied: charset_normalizer<4,>=2 in /home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages (from requests->huggingface_hub>=0.21.0->accelerate) (3.3.2)
+Requirement already satisfied: idna<4,>=2.5 in /home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages (from requests->huggingface_hub>=0.21.0->accelerate) (3.7)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages (from requests->huggingface_hub>=0.21.0->accelerate) (2.5.0)
+Requirement already satisfied: certifi>=2017.4.17 in /home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages (from requests->huggingface_hub>=0.21.0->accelerate) (2025.4.26)
+Job started on gpu006 at Mon Jul  7 10:11:54 CEST 2025
+Loading dataset
+Dataset loaded
+Loading tokenizer and model
+Tokenizer loaded
+Model loaded
+OOM when trying bs=32, trying smaller…
+OOM when trying bs=16, trying smaller…
+→ fits on GPU: micro_batch_size = 8

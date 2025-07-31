@@ -1,0 +1,4 @@
+  File "/home/ctisseau/llm_lcd_finetune/test_cfg.py", line 130
+    biased_logits[i, j, :] = cfg.process_logits(batch_input_ids[i, :j, :], logits[i, j, :])  # returns shape (batch, seq_len, vocab)
+    ^
+IndentationError: expected an indented block after 'for' statement on line 129

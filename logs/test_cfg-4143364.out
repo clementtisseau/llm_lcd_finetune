@@ -1,0 +1,14 @@
+Loading tokenizer and model
+Tokenizer loaded
+Model loaded
+test
+Outlines model loaded
+CLM model loaded
+CFG loaded
+Beginning of training:
+Epoch 1, step 1 loss: inf
+Epoch 1, step 2 loss: inf
+Epoch 2, step 1 loss: inf
+Epoch 2, step 2 loss: inf
+Epoch 3, step 1 loss: inf
+Epoch 3, step 2 loss: inf

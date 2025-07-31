@@ -1,0 +1,14 @@
+Loading tokenizer and model
+Tokenizer loaded
+Model loaded
+test
+Outlines model loaded
+CLM model loaded
+CFG loaded
+Beginning of training:
+torch.Size([2, 79, 32000]) torch.Size([2, 79])
+Epoch 1, step 1 loss: 5.5117
+torch.Size([2, 79, 32000]) torch.Size([2, 79])
+Epoch 2, step 1 loss: 1.9922
+torch.Size([2, 79, 32000]) torch.Size([2, 79])
+Epoch 3, step 1 loss: 0.8794
