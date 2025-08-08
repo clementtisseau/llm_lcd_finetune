@@ -55,11 +55,15 @@ def finetune_test(
     print("test")
 
     # Create the CFGLogitsProcessor (we need to initialize an outlines and a clm model)
-    model_outlines = outlines.models.transformers(model_name)
+    model_outlines = outlines.from_transformers(
+        AutoModelForCausalLM.from_pretrained(model_name),
+        AutoTokenizer.from_pretrained(model_name)
+    )
+    #model_outlines = outlines.models.transformers(model_name)
     print("Outlines model loaded")
     qwen_clm = clm.TransformersLM(model_name)
     print("CLM model loaded")
-    cfg = clm.CLMCFGLogitsProcessor(python_grammar, model_outlines.tokenizer, qwen_clm)
+    cfg = clm.CLMCFGLogitsProcessor(python_grammar, model_outlines.tokenizer, qwen_clm, tensor_library_name='torch')
     print("CFG loaded")
 
     prompt = ["In the programming language Python, a code that do : x=10, y=0, while x>0: y = y + 2, x = x - 1, would be in Python:\nx=10 \ny=0 \nwhile x>0: \n    y = y + 2 \n    x = x - 1",
@@ -128,7 +132,7 @@ def finetune_test(
                 L = lengths[i]
                 for j in range(l, L):
                     biased_logits[i, j, :] = cfg.process_logits(batch_input_ids[i, :j].unsqueeze(0), logits[i, j, :].unsqueeze(0)).squeeze(0)  # returns shape (batch, seq_len, vocab)
-
+                cfg._seq_start_idx = None
             # Shift for teacher forcing
             shift_logits = biased_logits[..., :-1, :].contiguous()      
             shift_labels = batch_input_ids[..., 1:].clone()   

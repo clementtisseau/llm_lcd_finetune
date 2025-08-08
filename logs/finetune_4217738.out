@@ -1,0 +1,18 @@
+==========================================
+SLURM_JOB_ID = 4217738
+SLURM_JOB_NODELIST = gpu013
+==========================================
+Job started on gpu013 at Wed Aug  6 18:37:54 CEST 2025
+Loading dataset
+Dataset loaded
+Loading tokenizer and model
+Tokenizer loaded
+Model loaded
+Outlines model loaded
+CLM model loaded
+['LPAR', 'LSQB', 'LBRACE'] ['RPAR', 'RSQB', 'RBRACE']
+CFG loaded
+OOM when trying bs=32, trying smaller…
+→ fits on GPU: micro_batch_size = 16
+
+Job finished at Wed Aug  6 18:39:39 CEST 2025

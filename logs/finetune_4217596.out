@@ -1,0 +1,10 @@
+==========================================
+SLURM_JOB_ID = 4217596
+SLURM_JOB_NODELIST = gpu013
+==========================================
+Job started on gpu013 at Wed Aug  6 15:32:29 CEST 2025
+Loading dataset
+Dataset loaded
+Loading tokenizer and model
+Tokenizer loaded
+Job finished at Wed Aug  6 15:32:40 CEST 2025

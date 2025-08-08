@@ -1,0 +1,13 @@
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:10<00:10, 10.55s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:14<00:00,  6.42s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:14<00:00,  7.04s/it]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:02<00:02,  2.52s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.54s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.68s/it]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:10<00:10, 10.06s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:13<00:00,  6.22s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:13<00:00,  6.79s/it]
+/home/ctisseau/llm_lcd_finetune/ConstraintLM/constraintlm/processors/guide.py:68: UserWarning: Outlines' public *community-contributed* CFG structured generation is experimental. Please review https://dottxt-ai.github.io/outlines/latest/reference/generation/cfg#disclaimer
+  warnings.warn(
+Epoch 1/3:   0%|          | 0/8 [00:00<?, ?it/s]Epoch 1/3:   0%|          | 0/8 [00:05<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/ctisseau/llm_lcd_finetune/finetune.py", line 259, in <module>
+    finetune(
+  File "/home/ctisseau/llm_lcd_finetune/finetune.py", line 200, in finetune
+    print(f"paren_level={cfg.cfg_guide.paren_level:2d} :: {tok}")
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'CLMCFGGuide' object has no attribute 'paren_level'

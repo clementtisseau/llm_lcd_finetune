@@ -1,0 +1,125 @@
+==========================================
+SLURM_JOB_ID = 4217329
+SLURM_JOB_NODELIST = gpu012
+==========================================
+Job started on gpu012 at Tue Aug  5 19:09:37 CEST 2025
+Loading dataset
+Dataset loaded
+Loading tokenizer and model
+Tokenizer loaded
+Model loaded
+Outlines model loaded
+CLM model loaded
+['LPAR', 'LSQB', 'LBRACE'] ['RPAR', 'RSQB', 'RBRACE']
+CFG loaded
+OOM when trying bs=32, trying smaller…
+→ fits on GPU: micro_batch_size = 16
+<s> ### Instruction:
+You are given a list of `n` tasks, each represented as a tuple `(start, end)`, indicating the start and end times of the task. The tasks are sorted by their start times. Your goal is to determine the maximum number of non-overlapping tasks that can be selected. Two tasks are considered non-overlapping if the start time of one task is greater than or equal to the end time of the other.
+
+**Input:**
+- An integer `n` representing the number of tasks.
+- A list of `n` tuples, where each tuple `(start, end)` represents the start and end times of a task.
+
+**Output:**
+- An integer representing the maximum number of non-overlapping tasks that can be selected.
+
+**Constraints:**
+- `1 <= n <= 10^5`
+- `0 <= start < end <= 10^9`
+
+**Sample Input:**
+```
+3
+1 3
+2 5
+4 6
+```
+
+**Sample Output:**
+```
+2
+```
+### Response:
+```python
+def max_non_overlapping_tasks(tasks):
+    """
+    Returns the maximum number of non-overlapping tasks that can be selected from a list of tasks.
+    
+    :param tasks: List of tuples, where each tuple (start, end) represents the start and end times of a task.
+    :return: Integer representing the maximum number of non-overlapping tasks.
+    """
+    if not tasks:
+        return 0
+
+    count = 1
+    last_end = tasks[0][1]
+
+    for i in range(1, len(tasks)):
+        current_start, current_end = tasks[i]
+        if current_start >= last_end:
+            count += 1
+            last_end = current_end
+
+    return count
+```</s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s>
+
+
+
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),)))
+
+def
+Token('_NEWLINE', '\n')
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 40, 137, 138), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='DEF', can_transition=False, is_final=True), PartialTerminalInfo(priority=1, terminal_name='NAME', can_transition=True, is_final=True)), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='DEF', can_transition=False, is_final=True), PartialTerminalInfo(priority=1, terminal_name='NAME', can_transition=True, is_final=True))))
+
+def max
+Token('_NEWLINE', '\n')
+Token('DEF', 'def')
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 46, 94, 26), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),)))
+
+def max_
+Token('_NEWLINE', '\n')
+Token('DEF', 'def')
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 46, 94, 26, 26), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),)))
+
+def max_non
+Token('_NEWLINE', '\n')
+Token('DEF', 'def')
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 46, 94, 26, 26, 26, 26, 26), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),)))
+
+def max_non_
+Token('_NEWLINE', '\n')
+Token('DEF', 'def')
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 46, 94, 26, 26, 26, 26, 26, 26), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),)))
+
+def max_non_over
+Token('_NEWLINE', '\n')
+Token('DEF', 'def')
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 46, 94, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),)))
+
+def max_non_overla
+Token('_NEWLINE', '\n')
+Token('DEF', 'def')
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 46, 94, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),)))
+
+def max_non_overlapping
+Token('_NEWLINE', '\n')
+Token('DEF', 'def')
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 46, 94, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),)))
+
+def max_non_overlapping_
+Token('_NEWLINE', '\n')
+Token('DEF', 'def')
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 46, 94, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),)))
+
+def max_non_overlapping_tasks
+Token('_NEWLINE', '\n')
+Token('DEF', 'def')
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 46, 94, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),)))
+
+def max_non_overlapping_tasks(
+Token('_NEWLINE', '\n')
+Token('DEF', 'def')
+Token('NAME', 'max_non_overlapping_tasks')
+Token('LPAR', '(')
+Job finished at Tue Aug  5 19:11:44 CEST 2025

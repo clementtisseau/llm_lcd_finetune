@@ -1,0 +1,504 @@
+==========================================
+SLURM_JOB_ID = 4217926
+SLURM_JOB_NODELIST = gpu012
+==========================================
+Job started on gpu012 at Thu Aug  7 09:16:07 CEST 2025
+Loading dataset
+Dataset loaded
+Loading tokenizer and model
+Tokenizer loaded
+Model loaded
+Outlines model loaded
+CLM model loaded
+['LPAR', 'LSQB', 'LBRACE'] ['RPAR', 'RSQB', 'RBRACE']
+CFG loaded
+OOM when trying bs=32, trying smaller…
+→ fits on GPU: micro_batch_size = 16
+
+0
+
+
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),))) 0 False False
+0
+
+def
+Token('_NEWLINE', '\n') 0 False False
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 40, 137, 138), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='DEF', can_transition=False, is_final=True), PartialTerminalInfo(priority=1, terminal_name='NAME', can_transition=True, is_final=True)), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='DEF', can_transition=False, is_final=True), PartialTerminalInfo(priority=1, terminal_name='NAME', can_transition=True, is_final=True)))) 0 False False
+0
+
+def max
+Token('_NEWLINE', '\n') 0 False False
+Token('DEF', 'def') 0 False False
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 46, 94, 26), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),))) 0 False False
+0
+
+def max_non
+Token('_NEWLINE', '\n') 0 False False
+Token('DEF', 'def') 0 False False
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 46, 94, 26, 26, 26, 26, 26), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),))) 0 False False
+0
+
+def max_non_over
+Token('_NEWLINE', '\n') 0 False False
+Token('DEF', 'def') 0 False False
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 46, 94, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),))) 0 False False
+0
+
+def max_non_overlapping
+Token('_NEWLINE', '\n') 0 False False
+Token('DEF', 'def') 0 False False
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 46, 94, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),))) 0 False False
+0
+
+def max_non_overlapping_tasks
+Token('_NEWLINE', '\n') 0 False False
+Token('DEF', 'def') 0 False False
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 46, 94, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),))) 0 False False
+0
+
+def max_non_overlapping_tasks(tasks
+Token('_NEWLINE', '\n') 0 False False
+Token('DEF', 'def') 0 False False
+Token('NAME', 'max_non_overlapping_tasks') 0 False False
+Token('LPAR', '(') 0 True False
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 51, 26, 26, 26, 26), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),))) 1 False False
+982 ['):\n'] 1
+340 [')\n'] 1
+1648 ['):'] 1
+79098 [')n'] 1
+94127 ["=''):\n"] 1
+317 [');\n'] 1
+7731 ['):\n\n'] 1
+8 [')'] 1
+21035 [' ):\n'] 1
+692 [')\n\n'] 1
+94792 ['):?>\n'] 1
+626 [');\n\n'] 1
+9957 [')):\n'] 1
+81081 [')dealloc'] 1
+62422 [');?>\n'] 1
+61525 [')">\n'] 1
+43385 [')#'] 1
+55504 [')didReceiveMemoryWarning'] 1
+1264 ['){\n'] 1
+49237 [')`\n'] 1
+22788 ['))))\n'] 1
+96200 ['))):\n'] 1
+1171 ['))\n'] 1
+86459 [')throws'] 1
+39278 [')initWith'] 1
+65440 [')["'] 1
+1215 [');'] 1
+80803 ['););\n'] 1
+64501 [')obj'] 1
+5563 [')]\n'] 1
+5929 [')))\n'] 1
+50758 [')animated'] 1
+2376 [')('] 1
+93905 [');">\n'] 1
+96075 [')new'] 1
+4292 [').\n'] 1
+3623 [')\n\n\n'] 1
+40539 [')tableView'] 1
+67506 [')init'] 1
+96866 [')reader'] 1
+6620 [')['] 1
+1106 ['));\n'] 1
+78105 [')t'] 1
+19235 [')))\n\n'] 1
+93897 [');;\n'] 1
+77410 ['):('] 1
+53005 [')section'] 1
+70975 [')))))\n'] 1
+1727 [' )\n'] 1
+12512 [')\n\n\n\n'] 1
+50510 [")['"] 1
+5783 ['):\r\n'] 1
+62256 [')::'] 1
+76847 [')(((('] 1
+46903 [')set'] 1
+90387 [')row'] 1
+59209 [')})\n'] 1
+83917 [')();\n'] 1
+46186 [')`'] 1
+84595 [')NULL'] 1
+51363 ['))){\n'] 1
+27654 [')view'] 1
+10569 [')}\n'] 1
+55546 [');*/\n'] 1
+50245 [')paren'] 1
+75908 [')>\n'] 1
+16512 [' ):'] 1
+62307 [')get'] 1
+66371 [')");\n\n'] 1
+27144 [')])\n'] 1
+4390 ['))\n\n'] 1
+64881 [')!\n'] 1
+89720 [')?;\n\n'] 1
+44568 [')return'] 1
+20996 [')");\n'] 1
+12954 [')"\n'] 1
+8132 [');\n\n\n'] 1
+81246 [')NSString'] 1
+68101 [')\n\n\n\n\n\n\n\n'] 1
+9940 [')"'] 1
+57570 ['))))\n\n'] 1
+593 ['))'] 1
+63741 ['="")\n'] 1
+88002 [')prepare'] 1
+36715 [')):'] 1
+70542 [')(\n'] 1
+1439 [' );\n'] 1
+11132 [')((('] 1
+38776 ['))));\n'] 1
+7705 [')))'] 1
+87903 [')size'] 1
+89049 ['):\\'] 1
+40494 [')viewDidLoad'] 1
+701 ['),'] 1
+92986 [');}\n\n'] 1
+12533 [')</'] 1
+21205 ['__);\n'] 1
+3237 ['));\n\n'] 1
+26432 [')<'] 1
+15087 [')$'] 1
+4945 [')));\n'] 1
+51427 ["='')\n"] 1
+82216 [');\n\n\n\n\n'] 1
+47336 [')};\n'] 1
+31295 [');\n\n\n\n'] 1
+56002 ['):\r\n\r\n'] 1
+72796 [')(*'] 1
+22370 [')arg'] 1
+67864 [')])\n\n'] 1
+61002 [')application'] 1
+86316 [')$_'] 1
+66960 ['__)\n\n\n'] 1
+25805 [')sender'] 1
+32162 [');}\n'] 1
+5905 ['));'] 1
+54108 [')a'] 1
+64434 [')data'] 1
+3593 [').\n\n'] 1
+97556 [')\r\r\n'] 1
+41295 [')!'] 1
+22297 ['))]\n'] 1
+40007 [')?;\n'] 1
+53808 [')did'] 1
+95892 [')++;\n'] 1
+83809 [')))\n\n\n'] 1
+38036 [')}>\n'] 1
+66444 [')*/\n'] 1
+47989 [')\n\n\n\n\n\n'] 1
+41843 ['));\n\n\n'] 1
+7252 [')]'] 1
+92378 [')[-'] 1
+873 [' )'] 1
+568 [').'] 1
+25759 ['))))'] 1
+27771 [')]\n\n'] 1
+59845 [')});\n'] 1
+70787 [')}}"'] 1
+6557 [')){\n'] 1
+73031 ['))}\n'] 1
+69457 [')">'] 1
+58418 [' ):\n\n'] 1
+86427 [')?\n'] 1
+74699 [')(__'] 1
+27506 [')+"'] 1
+63966 [')\n\n\n\n\n'] 1
+65259 [')d'] 1
+24023 [')";\n'] 1
+50724 [')x'] 1
+6098 ['){'] 1
+20356 ['))\n\n\n'] 1
+12530 [');//'] 1
+73822 [')}\n\n'] 1
+33013 [")')\n"] 1
+94208 [')null'] 1
+11730 [')='] 1
+86197 [')";\n\n'] 1
+3997 [')->'] 1
+5125 [' )\n\n'] 1
+17185 ['):-'] 1
+77383 [')index'] 1
+15299 ['_);\n'] 1
+9139 [')}'] 1
+61320 [');\r\r\n'] 1
+4806 [')*'] 1
+41364 ['))['] 1
+19107 [')")\n'] 1
+10959 [' ){\n'] 1
+46605 [')])'] 1
+66910 [')>='] 1
+54145 [',)\n'] 1
+43926 [")');\n"] 1
+91349 ['))=='] 1
+12798 ['){\n\n'] 1
+92782 [')prepareForSegue'] 1
+46607 [')m'] 1
+22525 [')));\n\n'] 1
+88463 [')o'] 1
+72785 [')(_'] 1
+17935 [')|'] 1
+61318 ['));//'] 1
+98329 [')})'] 1
+83347 [')y'] 1
+52731 [')}}'] 1
+7229 [')\r\n\r\n'] 1
+84562 [')[:'] 1
+49555 [').\n\n\n'] 1
+83738 ['))*('] 1
+3475 [' );\n\n'] 1
+31982 [')&&'] 1
+98282 [')”'] 1
+50978 [')}</'] 1
+46986 [')c'] 1
+28154 ['))('] 1
+44388 [');\\'] 1
+72446 [');$'] 1
+41958 [')]);\n'] 1
+5620 [')/'] 1
+19245 [' ))\n'] 1
+10699 [')\\'] 1
+1326 ['),\n'] 1
+56073 ['){}\n'] 1
+48321 ['){//'] 1
+42384 [")';\n"] 1
+35289 [')findViewById'] 1
+30034 [').\n\n\n\n'] 1
+16018 [')>'] 1
+11843 [')?'] 1
+12587 [')];\n'] 1
+39025 [')...'] 1
+50640 ['_);\n\n'] 1
+81949 [')object'] 1
+7257 [')+'] 1
+35200 [')!='] 1
+47563 [')));'] 1
+81892 [')){\n\n'] 1
+63632 [')}>'] 1
+52294 [')"\n\n'] 1
+23135 ['__)\n'] 1
+53740 ['))"\n'] 1
+30584 ['))->'] 1
+95377 [')")\n\n'] 1
+98079 [')}"\n'] 1
+45076 [').*'] 1
+98952 [' )))'] 1
+46251 [')value'] 1
+72821 [')frame'] 1
+93538 [').['] 1
+20390 [').__'] 1
+39567 [")'\n"] 1
+20232 [')=>{\n'] 1
+16466 [')s'] 1
+31740 [')this'] 1
+78878 [')b'] 1
+40725 ['__)\n\n'] 1
+61173 [')("'] 1
+97568 [');\r\r\r\n'] 1
+6903 [' );'] 1
+23373 ['_)\n'] 1
+3079 [');\r\n\r\n'] 1
+736 [');\r\n'] 1
+66656 [')._'] 1
+64113 ['__))\n'] 1
+39749 [')):\r\n'] 1
+68464 ['_));\n'] 1
+84940 [')+\n'] 1
+26579 [')))));\n'] 1
+97332 ['__));\n'] 1
+29776 [')^'] 1
+1218 [')\r\n'] 1
+47717 [')i'] 1
+53278 [',))\n'] 1
+61968 [');\\\n'] 1
+25571 [' )\n\n\n'] 1
+89382 [')__'] 1
+87573 ['))?'] 1
+58177 [' ){\n\n'] 1
+39467 [')).\n'] 1
+97999 [')f'] 1
+32295 [')**'] 1
+81956 ['))];\n'] 1
+33351 [' ));\n\n'] 1
+45164 [')Math'] 1
+54268 [')]['] 1
+87569 ['__);'] 1
+6965 [')),\n'] 1
+84636 [')":'] 1
+14669 [')&'] 1
+46021 [',)'] 1
+33794 [')){'] 1
+25931 [')_'] 1
+31870 ['))*'] 1
+83244 [").'</"] 1
+36368 [');\r\n\r\n\r\n'] 1
+40612 [' )('] 1
+42419 [')},'] 1
+59544 [')localObject'] 1
+4579 [')).'] 1
+91383 [')test'] 1
+42788 [');"'] 1
+35833 [' );\n\n\n'] 1
+33916 [')\r\n\r\n\r\n'] 1
+68752 [')="'] 1
+83107 [')const'] 1
+51921 [')e'] 1
+66233 [').</'] 1
+73530 [')?\n\n'] 1
+78378 [');}'] 1
+21636 [")'"] 1
+31715 [' ))}\n'] 1
+43946 [')||'] 1
+85434 [")=='"] 1
+85925 [' )]\n'] 1
+63554 [')").'] 1
+79553 [')item'] 1
+48622 [' ))\n\n'] 1
+49422 [").'"] 1
+5731 [')),'] 1
+16324 ['_)'] 1
+11583 [')",'] 1
+49248 [')p'] 1
+15348 [')=='] 1
+35392 [')<<'] 1
+30991 ['))\r\n\r\n'] 1
+73663 [')];\n\n'] 1
+99082 [')$/'] 1
+94010 [')".'] 1
+89486 [')./'] 1
+17566 [' )}\n'] 1
+55087 ['__),'] 1
+36334 ['))).'] 1
+23891 [')%'] 1
+39290 [' )),\n'] 1
+64277 ['__);\n\n'] 1
+7287 [')-'] 1
+27151 [')//'] 1
+55178 [')|('] 1
+11985 [' ))'] 1
+93342 [')r'] 1
+25035 [')],'] 1
+16518 [' ));\n'] 1
+92763 [")':"] 1
+5966 ['){\r\n'] 1
+39734 [")+'"] 1
+88512 [')..'] 1
+68638 [")')."] 1
+14362 [')(('] 1
+63553 ['__))'] 1
+40318 [')."'] 1
+21457 ['));\r\n\r\n'] 1
+19141 ['__)'] 1
+28038 [' )\n\n\n\n\n\n\n\n'] 1
+91752 [')initWithFrame'] 1
+81394 ['))]'] 1
+95605 [' ).\n'] 1
+81091 [')];'] 1
+30749 [')],\n'] 1
+59792 [' ));'] 1
+74029 [' )['] 1
+96859 ['))^'] 1
+38592 ['))+'] 1
+70956 [')\\<'] 1
+24254 [')/('] 1
+68191 [')")'] 1
+50869 [')&&('] 1
+69515 [')，'] 1
+6882 [' ),'] 1
+4860 ['));\r\n'] 1
+65612 [')<='] 1
+35538 [' )->'] 1
+17729 [')*('] 1
+5784 ['))\r\n'] 1
+36207 [')))\r\n'] 1
+96351 [')}.'] 1
+90222 [' )}\n\n'] 1
+40023 [' ){'] 1
+54229 [')>>'] 1
+96773 [')"},\n'] 1
+63295 [').^'] 1
+90798 [' )"'] 1
+33442 [')L'] 1
+18733 [")',"] 1
+51877 [')v'] 1
+74342 [')||('] 1
+58219 ['){\r\n\r\n'] 1
+23547 ['),('] 1
+15639 [')))),'] 1
+18459 ['),\n\n'] 1
+7457 [' ).'] 1
+29529 [')]\r\n'] 1
+26169 [')].'] 1
+76440 [')");\r\n'] 1
+30085 ['))/'] 1
+28094 [')){\r\n'] 1
+43507 [')?.'] 1
+70073 [")','"] 1
+73173 [')=('] 1
+39781 [')},\n'] 1
+79787 [')","'] 1
+41749 ['))),\n'] 1
+15752 [')",\n'] 1
+2837 [' ),\n'] 1
+41191 [' ){\r\n'] 1
+35393 ['),"'] 1
+36363 ['))),'] 1
+98903 [')}\r\n'] 1
+59564 [',),'] 1
+98406 ['),$'] 1
+18772 [' );\r\n\r\n'] 1
+21054 [')));\r\n'] 1
+72341 [').\\'] 1
+52438 [',),\n'] 1
+8616 [' )\r\n'] 1
+93389 [')))));\r\n'] 1
+7144 [' );\r\n'] 1
+27166 [')=>'] 1
+68615 [').('] 1
+65016 ['_),'] 1
+22987 ["),'"] 1
+62447 ['_);\r\n'] 1
+86303 [")'],\n"] 1
+77314 [' ));\r\n'] 1
+66995 ['))/('] 1
+52531 [' )\r\n\r\n'] 1
+16921 [")',\n"] 1
+72280 [")'),"] 1
+79146 [')";\r\n'] 1
+41794 [')+('] 1
+88691 [')?$'] 1
+62555 [')\\\n'] 1
+71476 [')];\r\n'] 1
+96279 [")'),\n"] 1
+89401 [' )*'] 1
+49270 [' ).\n\n'] 1
+130654 [')،'] 1
+51356 [')-('] 1
+32598 [').\r\n'] 1
+64540 ['))-'] 1
+60266 [')),\r\n'] 1
+77390 [')V'] 1
+9912 ['),\r\n'] 1
+59043 ['__).'] 1
+36984 [' ),\n\n'] 1
+29621 [')--'] 1
+76643 ['_)\r\n'] 1
+67750 [')—'] 1
+21406 [' ),\r\n'] 1
+86726 [')",\r\n'] 1
+1
+
+def max_non_overlapping_tasks(tasks):
+
+Token('_NEWLINE', '\n') 0 False False
+Token('DEF', 'def') 0 False False
+Token('NAME', 'max_non_overlapping_tasks') 0 False False
+Token('LPAR', '(') 0 True False
+Token('NAME', 'tasks') 1 False False
+Token('RPAR', ')') 1 False True
+Token('COLON', ':') 0 False False
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),))) 0 False False
+Job finished at Thu Aug  7 09:21:07 CEST 2025

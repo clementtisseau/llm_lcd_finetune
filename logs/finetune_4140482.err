@@ -1,5 +1,0 @@
-Traceback (most recent call last):
-  File "/home/ctisseau/llm_lcd_finetune/test_cfg.py", line 145, in <module>
-    finetune(
-    ^^^^^^^^
-NameError: name 'finetune' is not defined

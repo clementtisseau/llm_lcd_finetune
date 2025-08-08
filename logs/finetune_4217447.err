@@ -1,0 +1,30 @@
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:11<00:11, 11.73s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:15<00:00,  7.29s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:15<00:00,  7.95s/it]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:02<00:02,  2.50s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.52s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.67s/it]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:10<00:10, 10.07s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:13<00:00,  6.22s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:13<00:00,  6.80s/it]
+/home/ctisseau/llm_lcd_finetune/ConstraintLM/constraintlm/processors/guide.py:69: UserWarning: Outlines' public *community-contributed* CFG structured generation is experimental. Please review https://dottxt-ai.github.io/outlines/latest/reference/generation/cfg#disclaimer
+  warnings.warn(
+Epoch 1/3:   0%|          | 0/8 [00:00<?, ?it/s]Epoch 1/3:   0%|          | 0/8 [00:12<?, ?it/s]Epoch 1/3:   0%|          | 0/8 [01:05<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/ctisseau/llm_lcd_finetune/finetune.py", line 257, in <module>
+    finetune(
+  File "/home/ctisseau/llm_lcd_finetune/finetune.py", line 200, in finetune
+    biased_logits[i, j, :] = cfg.process_logits(batch_input_ids[i, :j].unsqueeze(0), logits[i, j, :].unsqueeze(0)).squeeze(0)  # returns shape (batch, seq_len, vocab)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ctisseau/llm_lcd_finetune/ConstraintLM/constraintlm/processors/structured.py", line 75, in process_logits
+    valid_ids = list(self.guide.iter_valid_token_ids(guide_state, sorted_candidate_ids))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ctisseau/llm_lcd_finetune/ConstraintLM/constraintlm/processors/guide.py", line 153, in iter_valid_token_ids
+    self._get_parser_state_token_applied(state, int(token_id))
+  File "/home/ctisseau/llm_lcd_finetune/ConstraintLM/constraintlm/processors/guide.py", line 232, in _get_parser_state_token_applied
+    self.parser.parse_from_state(parser_state, is_end=False)
+  File "/home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages/outlines/fsm/parsing.py", line 152, in parse_from_state
+    return self.parser.parser.parser.parse_from_state(parse_state, is_end=is_end)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages/outlines/fsm/parsing.py", line 536, in parse_from_state
+    for token in state.lexer.lex(state):
+  File "/home/ctisseau/llm_lcd_finetune/ConstraintLM/constraintlm/processors/guide.py", line 47, in process
+    for tok in super().process(stream):
+  File "/home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages/lark/indenter.py", line 68, in _process
+    assert self.paren_level >= 0
+           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError

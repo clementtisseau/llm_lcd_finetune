@@ -1,0 +1,27 @@
+==========================================
+SLURM_JOB_ID = 4219129
+SLURM_JOB_NODELIST = gpu006
+==========================================
+Job started on gpu006 at Fri Aug  8 04:29:09 CEST 2025
+Loading dataset
+Dataset loaded
+Loading tokenizer and model
+Tokenizer loaded
+Model loaded
+Outlines model loaded
+CLM model loaded
+['LPAR', 'LSQB', 'LBRACE'] ['RPAR', 'RSQB', 'RBRACE']
+CFG loaded
+Token('DEF', 'def') 0 False False
+Token('NAME', 'max_non_overlapping_tasks') 0 False False
+Token('LPAR', '(') 0 True False
+Token('NAME', 'tasks') 0 False False
+Token('COMMA', ',') 0 False False
+Token('NAME', 'params') 0 False False
+Token('RPAR', ')') 0 False True
+Token('COLON', ':') 0 False False
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),))) 0 False False
+OOM when trying bs=32, trying smaller…
+→ fits on GPU: micro_batch_size = 16
+
+Job finished at Fri Aug  8 04:31:22 CEST 2025

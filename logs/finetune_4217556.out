@@ -1,0 +1,88 @@
+==========================================
+SLURM_JOB_ID = 4217556
+SLURM_JOB_NODELIST = gpu012
+==========================================
+Job started on gpu012 at Wed Aug  6 14:21:49 CEST 2025
+Loading dataset
+Dataset loaded
+Loading tokenizer and model
+Tokenizer loaded
+Model loaded
+Outlines model loaded
+CLM model loaded
+['LPAR', 'LSQB', 'LBRACE'] ['RPAR', 'RSQB', 'RBRACE']
+CFG loaded
+OOM when trying bs=32, trying smaller…
+→ fits on GPU: micro_batch_size = 16
+
+0
+
+
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),))) 0 False
+0
+
+def
+Token('_NEWLINE', '\n') 0 False
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 40, 137, 138), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='DEF', can_transition=False, is_final=True), PartialTerminalInfo(priority=1, terminal_name='NAME', can_transition=True, is_final=True)), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='DEF', can_transition=False, is_final=True), PartialTerminalInfo(priority=1, terminal_name='NAME', can_transition=True, is_final=True)))) 0 False
+0
+
+def max
+Token('_NEWLINE', '\n') 0 False
+Token('DEF', 'def') 0 False
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 46, 94, 26), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),))) 0 False
+0
+
+def max_
+Token('_NEWLINE', '\n') 0 False
+Token('DEF', 'def') 0 False
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 46, 94, 26, 26), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),))) 0 False
+0
+
+def max_non
+Token('_NEWLINE', '\n') 0 False
+Token('DEF', 'def') 0 False
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 46, 94, 26, 26, 26, 26, 26), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),))) 0 False
+0
+
+def max_non_
+Token('_NEWLINE', '\n') 0 False
+Token('DEF', 'def') 0 False
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 46, 94, 26, 26, 26, 26, 26, 26), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),))) 0 False
+0
+
+def max_non_over
+Token('_NEWLINE', '\n') 0 False
+Token('DEF', 'def') 0 False
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 46, 94, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),))) 0 False
+0
+
+def max_non_overla
+Token('_NEWLINE', '\n') 0 False
+Token('DEF', 'def') 0 False
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 46, 94, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),))) 0 False
+0
+
+def max_non_overlapping
+Token('_NEWLINE', '\n') 0 False
+Token('DEF', 'def') 0 False
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 46, 94, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),))) 0 False
+0
+
+def max_non_overlapping_
+Token('_NEWLINE', '\n') 0 False
+Token('DEF', 'def') 0 False
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 46, 94, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),))) 0 False
+0
+
+def max_non_overlapping_tasks
+Token('_NEWLINE', '\n') 0 False
+Token('DEF', 'def') 0 False
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 46, 94, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),))) 0 False
+0
+
+def max_non_overlapping_tasks(
+Token('_NEWLINE', '\n') 0 False
+Token('DEF', 'def') 0 False
+Token('NAME', 'max_non_overlapping_tasks') 0 False
+Token('LPAR', '(') 0 True
+Job finished at Wed Aug  6 14:23:57 CEST 2025
