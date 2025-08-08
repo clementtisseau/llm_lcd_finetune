@@ -243,9 +243,7 @@ def finetune(
                     print(cfg.cfg_guide.indenter.paren_level)
 
                 # Re-initialize the CFGLogitsProcessor
-                cfg._seq_start_idx = None
-                self.initial_state = CFGState(parser_state=self.parser.parse(""), prev_token=None)
-                cfg.cfg_guide.indenter.paren_level = 0
+                cfg.restart()
                 
             # Shift for teacher forcing
             shift_logits = biased_logits[..., :-1, :].contiguous()      

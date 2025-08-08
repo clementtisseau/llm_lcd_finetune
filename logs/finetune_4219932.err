@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/home/ctisseau/llm_lcd_finetune/finetune.py", line 1, in <module>
+    import constraintlm as clm
+  File "/home/ctisseau/llm_lcd_finetune/ConstraintLM/constraintlm/__init__.py", line 1, in <module>
+    from .models.transformers import TransformersLM
+  File "/home/ctisseau/llm_lcd_finetune/ConstraintLM/constraintlm/models/transformers.py", line 11
+    self.model = AutoModelForCausalLM.from_pretrained(model_hf_name, torch_dtype="auto", device_map)
+                                                                                                   ^
+SyntaxError: positional argument follows keyword argument
