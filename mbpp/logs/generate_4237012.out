@@ -1,0 +1,13 @@
+==========================================
+SLURM_JOB_ID = 4237012
+SLURM_JOB_NODELIST = gpu006
+==========================================
+Job started on gpu006 at Sat Aug 30 12:18:53 CEST 2025
+Loading model: Qwen3-1.7B...
+Model loaded.
+Reading problems...
+Found 974 problems.
+Generating 128 samples for each of the 974 problems...
+Writing 124672 sampled solutions to samples/Qwen3-1.7B-128samples-test-all.jsonl
+Done.
+Job finished at Sat Aug 30 14:09:37 CEST 2025

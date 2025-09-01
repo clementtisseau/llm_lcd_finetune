@@ -1,0 +1,52 @@
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:43<00:43, 43.28s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:49<00:00, 21.66s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:49<00:00, 24.90s/it]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:10<00:10, 10.26s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:49<00:00, 27.03s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:49<00:00, 24.51s/it]
+Epoch 1/1:   0%|          | 0/1024 [00:00<?, ?it/s]Epoch 1/1:   0%|          | 0/1024 [00:01<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/ctisseau/llm_lcd_finetune/finetune_van.py", line 292, in <module>
+    finetune(
+  File "/home/ctisseau/llm_lcd_finetune/finetune_van.py", line 217, in finetune
+    outputs = model(
+              ^^^^^^
+  File "/home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages/accelerate/hooks.py", line 175, in new_forward
+    output = module._old_forward(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages/transformers/utils/generic.py", line 969, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 730, in forward
+    outputs: BaseModelOutputWithPast = self.model(
+                                       ^^^^^^^^^^^
+  File "/home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages/transformers/utils/generic.py", line 969, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 463, in forward
+    layer_outputs = decoder_layer(
+                    ^^^^^^^^^^^^^^
+  File "/home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages/transformers/modeling_layers.py", line 48, in __call__
+    return super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages/accelerate/hooks.py", line 175, in new_forward
+    output = module._old_forward(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 301, in forward
+    hidden_states = residual + hidden_states
+                    ~~~~~~~~~^~~~~~~~~~~~~~~
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 494.00 MiB. GPU 0 has a total capacity of 79.26 GiB of which 129.50 MiB is free. Including non-PyTorch memory, this process has 79.12 GiB memory in use. Of the allocated memory 77.57 GiB is allocated by PyTorch, and 1.05 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

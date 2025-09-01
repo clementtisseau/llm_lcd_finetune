@@ -1,0 +1,10 @@
+==========================================
+SLURM_JOB_ID = 4223653
+SLURM_JOB_NODELIST = gpu012
+==========================================
+Job started on gpu012 at Wed Aug 13 16:56:33 CEST 2025
+Training from /scratch/ctisseau/finetuned-models/Qwen3-1.7B-OCI-e1-ds65536-bs256-ckps64/checkpoint-00000000
+Tokenizer and Model loaded
+Loading dataset
+Dataset loaded
+Job finished at Wed Aug 13 17:05:47 CEST 2025

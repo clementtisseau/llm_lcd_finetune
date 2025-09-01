@@ -1,0 +1,14 @@
+==========================================
+SLURM_JOB_ID = 4222907
+SLURM_JOB_NODELIST = gpu012
+==========================================
+Job started on gpu012 at Tue Aug 12 19:57:48 CEST 2025
+Base model checkpoint not found. Downloading 'Qwen/Qwen3-1.7B' and saving as checkpoint-00000000.
+Training from /scratch/ctisseau/finetuned-models/Qwen3-1.7B-OCI-e1-ds65536-bs256-ckps64/checkpoint-00000000
+Tokenizer and Model loaded
+Loading dataset
+Dataset loaded
+OOM when trying bs=64, trying smaller…
+OOM when trying bs=32, trying smaller…
+→ fits on GPU: micro_batch_size = 16
+Job finished at Tue Aug 12 20:01:44 CEST 2025

@@ -1,0 +1,16 @@
+==========================================
+SLURM_JOB_ID = 4220241
+SLURM_JOB_NODELIST = gpu009
+==========================================
+Job started on gpu009 at Fri Aug  8 14:33:03 CEST 2025
+Loading dataset
+Dataset loaded
+No checkpoint found — starting from base model
+Tokenizer and Model loaded
+Outlines model loaded
+['LPAR', 'LSQB', 'LBRACE'] ['RPAR', 'RSQB', 'RBRACE']
+CFG loaded
+OOM when trying bs=32, trying smaller…
+→ fits on GPU: micro_batch_size = 16
+
+Job finished at Fri Aug  8 14:34:59 CEST 2025

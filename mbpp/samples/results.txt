@@ -1,0 +1,33 @@
+Qwen3-1.7B (128 samples for all problems)
+--- pass@k Results ---
+pass@1: 0.3919
+pass@2: 0.4010
+pass@4: 0.4093
+pass@8: 0.4169
+pass@16: 0.4232
+pass@32: 0.4276
+pass@64: 0.4298
+pass@128: 0.4312
+----------------------
+pass@1:   0.3919324306981519
+pass@2:   0.4009583825122476
+pass@4:   0.4093224266820344
+pass@8:   0.416894318296212
+pass@16:  0.42323312775561767
+pass@32:  0.42758566936325154
+pass@64:  0.4297916364210615
+pass@128: 0.43121149897330596
+
+
+Qwen3-1.7B (128 samples for all problems)
+--- Error Analysis Results ---
+Average Completion Length: 212.69 characters
+
+1. Distribution of All Result Types (Raw Counts):
+{'Runtime Error': 63924, 'Success (null)': 48863, 'Name Error': 11258, 'TimeoutError': 462, 'Syntax Error': 165}
+
+2. Distribution of All Result Types (Percentages):
+{'Runtime Error': '51.27%', 'Success (null)': '39.19%', 'Name Error': '9.03%', 'TimeoutError': '0.37%', 'Syntax Error': '0.13%'}
+
+3. Distribution of Error Types Only (Percentages of Failures):
+{'Runtime Error': '84.32%', 'Name Error': '14.85%', 'TimeoutError': '0.61%', 'Syntax Error': '0.22%'}

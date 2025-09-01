@@ -1,0 +1,48 @@
+Qwen3-1.7B-128samples.jsonl_results1-10-100 : 
+'pass@1': np.float64(0.03939596036585363), 'pass@10': np.float64(0.17978021425296115), 'pass@100': np.float64(0.3937280692171462)
+
+Qwen3-1.7B-128samples.jsonl_results1-4-16-64-128 : 
+'pass@1': np.float64(0.03939596036585363), 'pass@4': np.float64(0.1049962190320722), 'pass@16': np.float64(0.22460982893445555), 'pass@64': np.float64(0.3559218008789494), 'pass@128': np.float64(0.4146341463414634)
+'pass@1': np.float64(0.03939596036585363), 'pass@2': np.float64(0.06520894348953334), 'pass@4': np.float64(0.1049962190320722), 'pass@8': np.float64(0.15965325845890982), 'pass@16': np.float64(0.22460982893445555), 'pass@32': np.float64(0.29250836299194805), 'pass@64': np.float64(0.3559218008789494), 'pass@128': np.float64(0.4146341463414634)
+
+
+Qwen3-1.7B (128 samples for all problems)
+--- Error Analysis Results ---
+Average Completion Length: 1731.35 characters
+
+1. Distribution of All Result Types (Raw Counts):
+{'Syntax Error': 17780, 'Runtime Error': 2366, 'TimeoutError': 19, 'Success (null)': 827}
+
+2. Distribution of All Result Types (Percentages):
+{'Syntax Error': '84.70%', 'Runtime Error': '11.27%', 'TimeoutError': '0.09%', 'Success (null)': '3.94%'}
+
+3. Distribution of Error Types Only (Percentages of Failures):
+{'Syntax Error': '88.17%', 'Runtime Error': '11.73%', 'TimeoutError': '0.09%'}
+
+
+Filter applied: Showing results for completions with >= 500 characters.
+Average Completion Length: 1731.35 characters
+1. Distribution of All Result Types (Raw Counts):
+{'Syntax Error': 17780, 'Runtime Error': 2366, 'TimeoutError': 19, 'Success (null)': 827}
+2. Distribution of All Result Types (Percentages):
+{'Syntax Error': '84.70%', 'Runtime Error': '11.27%', 'TimeoutError': '0.09%', 'Success (null)': '3.94%'}
+3. Distribution of Error Types Only (Percentages of Failures):
+{'Syntax Error': '88.17%', 'Runtime Error': '11.73%', 'TimeoutError': '0.09%'}
+
+Filter applied: Showing results for completions with >= 1000 characters.
+Average Completion Length: 1749.47 characters
+1. Distribution of All Result Types (Raw Counts):
+{'Syntax Error': 17427, 'Runtime Error': 2313, 'TimeoutError': 18, 'Success (null)': 791}
+2. Distribution of All Result Types (Percentages):
+{'Syntax Error': '84.81%', 'Runtime Error': '11.26%', 'TimeoutError': '0.09%', 'Success (null)': '3.85%'}
+3. Distribution of Error Types Only (Percentages of Failures):
+{'Syntax Error': '88.20%', 'Runtime Error': '11.71%', 'TimeoutError': '0.09%'}
+
+Filter applied: Showing results for completions with >= 1500 characters.
+Average Completion Length: 1854.92 characters
+1. Distribution of All Result Types (Raw Counts):
+{'Syntax Error': 14181, 'Runtime Error': 1905, 'TimeoutError': 17, 'Success (null)': 548}
+2. Distribution of All Result Types (Percentages):
+{'Syntax Error': '85.17%', 'Runtime Error': '11.44%', 'TimeoutError': '0.10%', 'Success (null)': '3.29%'}
+3. Distribution of Error Types Only (Percentages of Failures):
+{'Syntax Error': '88.06%', 'Runtime Error': '11.83%', 'TimeoutError': '0.11%'}

@@ -16,6 +16,45 @@ from datasets import load_dataset
 python_grammar = Path("python2.lark").read_text(encoding="utf-8")
 
 
+# ----- Helper functions -----
+import os, re, time, json, shutil, signal
+from typing import Optional
+
+def _ckpt_step(p: Path) -> int:
+    m = re.search(r"checkpoint-(\d+)$", p.name)
+    return int(m.group(1)) if m else -1
+
+def find_last_checkpoint(output_dir: str) -> Optional[Path]:
+    d = Path(output_dir)
+    if not d.exists(): 
+        return None
+    cks = [p for p in d.glob("checkpoint-*") if p.is_dir()]
+    return max(cks, key=_ckpt_step) if cks else None
+
+def save_checkpoint(model, tokenizer, optimizer, scheduler, epoch, step, global_step, output_dir):
+    ckpt_dir = Path(output_dir) / f"checkpoint-{global_step:08d}"
+    ckpt_dir.mkdir(parents=True, exist_ok=True)
+    # save model/tokenizer shards as safetensors (works with device_map sharding)
+    model.save_pretrained(ckpt_dir, safe_serialization=True, max_shard_size="5GB")
+    tokenizer.save_pretrained(ckpt_dir)
+    # small file with training state
+    torch.save(
+        {
+            "optimizer": optimizer.state_dict(),
+            "scheduler": scheduler.state_dict(),
+            "epoch": epoch,          # current epoch index
+            "step": step + 1,        # next dataloader step to run in this epoch
+            "global_step": global_step,
+        },
+        ckpt_dir / "training_state.pt",
+    )
+
+def load_training_state(ckpt_dir: Path):
+    path = ckpt_dir / "training_state.pt"
+    return torch.load(path, map_location="cpu") if path.exists() else {}
+# ----- End of Helper functions -----
+
+
 def finetune(
     model_name: str,
     dataset_name: str,
@@ -25,6 +64,7 @@ def finetune(
     epochs: int = 3,
     batch_size: int = 64,
     lr: float = 5e-5,
+    checkpoint_steps=32,
     device: str = None,
 ):
     # Setup device
@@ -234,6 +274,7 @@ def finetune(
                         print(repr(tok), cfg.cfg_guide.indenter.paren_level, tok.type in cfg.cfg_guide.indenter.OPEN_PAREN_types, tok.type in cfg.cfg_guide.indenter.CLOSE_PAREN_types)
                     biased_logits[i, j, :] = cfg.process_logits(batch_input_ids[i, :j].unsqueeze(0), logits[i, j, :].unsqueeze(0)).squeeze(0)  # returns shape (batch, seq_len, vocab)
                     # Update manually paren_level and indent_level of the Indenter
+                    final_paren_level = 0
                     for tok in cfg.cfg_guide.parser.lex(tokenizer.decode(batch_input_ids[i, l:j+1])):
                         if tok.type in cfg.cfg_guide.indenter.OPEN_PAREN_types:
                             final_paren_level += 1
@@ -321,50 +362,3 @@ if __name__ == "__main__":
         lr=args.lr,
         checkpoint_steps=args.checkpoint_steps,
     )
-
-
-
-
-
-
-# ----- Helper functions -----
-
-
-import os, re, time, json, shutil, signal
-from typing import Optional
-
-
-def _ckpt_step(p: Path) -> int:
-    m = re.search(r"checkpoint-(\d+)$", p.name)
-    return int(m.group(1)) if m else -1
-
-def find_last_checkpoint(output_dir: str) -> Optional[Path]:
-    d = Path(output_dir)
-    if not d.exists(): 
-        return None
-    cks = [p for p in d.glob("checkpoint-*") if p.is_dir()]
-    return max(cks, key=_ckpt_step) if cks else None
-
-def save_checkpoint(model, tokenizer, optimizer, scheduler, epoch, step, global_step, output_dir):
-    ckpt_dir = Path(output_dir) / f"checkpoint-{global_step:08d}"
-    ckpt_dir.mkdir(parents=True, exist_ok=True)
-
-    # save model/tokenizer shards as safetensors (works with device_map sharding)
-    model.save_pretrained(ckpt_dir, safe_serialization=True, max_shard_size="5GB")
-    tokenizer.save_pretrained(ckpt_dir)
-
-    # small file with training state
-    torch.save(
-        {
-            "optimizer": optimizer.state_dict(),
-            "scheduler": scheduler.state_dict(),
-            "epoch": epoch,          # current epoch index
-            "step": step + 1,        # next dataloader step to run in this epoch
-            "global_step": global_step,
-        },
-        ckpt_dir / "training_state.pt",
-    )
-
-def load_training_state(ckpt_dir: Path):
-    path = ckpt_dir / "training_state.pt"
-    return torch.load(path, map_location="cpu") if path.exists() else {}

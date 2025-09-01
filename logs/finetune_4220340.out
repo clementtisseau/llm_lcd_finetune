@@ -1,0 +1,197 @@
+==========================================
+SLURM_JOB_ID = 4220340
+SLURM_JOB_NODELIST = gpu009
+==========================================
+Job started on gpu009 at Fri Aug  8 17:10:14 CEST 2025
+Loading dataset
+Dataset loaded
+No checkpoint found — starting from base model
+Tokenizer and Model loaded
+Outlines model loaded
+['LPAR', 'LSQB', 'LBRACE'] ['RPAR', 'RSQB', 'RBRACE']
+CFG loaded
+OOM when trying bs=32, trying smaller…
+→ fits on GPU: micro_batch_size = 16
+
+0
+
+
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),))) 0 False False
+0
+
+def
+Token('_NEWLINE', '\n') 0 False False
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 40, 137, 138), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='DEF', can_transition=False, is_final=True), PartialTerminalInfo(priority=1, terminal_name='NAME', can_transition=True, is_final=True)), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='DEF', can_transition=False, is_final=True), PartialTerminalInfo(priority=1, terminal_name='NAME', can_transition=True, is_final=True)))) 0 False False
+0
+
+def max
+Token('_NEWLINE', '\n') 0 False False
+Token('DEF', 'def') 0 False False
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 46, 94, 26), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),))) 0 False False
+0
+
+def max_non
+Token('_NEWLINE', '\n') 0 False False
+Token('DEF', 'def') 0 False False
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 46, 94, 26, 26, 26, 26, 26), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),))) 0 False False
+0
+
+def max_non_over
+Token('_NEWLINE', '\n') 0 False False
+Token('DEF', 'def') 0 False False
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 46, 94, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),))) 0 False False
+0
+
+def max_non_overlapping
+Token('_NEWLINE', '\n') 0 False False
+Token('DEF', 'def') 0 False False
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 46, 94, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),))) 0 False False
+0
+
+def max_non_overlapping_tasks
+Token('_NEWLINE', '\n') 0 False False
+Token('DEF', 'def') 0 False False
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 46, 94, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),))) 0 False False
+1
+
+def max_non_overlapping_tasks(tasks
+Token('DEF', 'def') 1 False False
+Token('NAME', 'max_non_overlapping_tasks') 1 False False
+Token('LPAR', '(') 1 True False
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 51, 26, 26, 26, 26), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NAME', can_transition=True, is_final=True),))) 1 False False
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('COLON', ':'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),)))]
+982 ['):\n'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),)))]
+340 [')\n'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('COLON', ':')]
+1648 ['):'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 20), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='NONLOCAL', can_transition=True, is_final=False), PartialTerminalInfo(priority=1, terminal_name='NOT', can_transition=True, is_final=False)), final_terminals_and_info=()))]
+79098 [')n'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('EQUAL', '='), Token('STRING', "''"), Token('RPAR', ')'), Token('COLON', ':'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),)))]
+94127 ["=''):\n"] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('COLON', ':'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 2, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),)))]
+7731 ['):\n\n'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')')]
+8 [')'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('COLON', ':'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),)))]
+21035 [' ):\n'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 2, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),)))]
+692 [')\n\n'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 4), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True), PartialTerminalInfo(priority=1, terminal_name='COMMENT', can_transition=True, is_final=True)), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True), PartialTerminalInfo(priority=1, terminal_name='COMMENT', can_transition=True, is_final=True))))]
+43385 [')#'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 2, 2, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),)))]
+3623 [')\n\n\n'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 24), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='TRY', can_transition=True, is_final=False),), final_terminals_and_info=()))]
+78105 [')t'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),)))]
+1727 [' )\n'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 2, 2, 2, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),)))]
+12512 [')\n\n\n\n'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('COLON', ':'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 3, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),)))]
+5783 ['):\r\n'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('COLON', ':'), Token('COLON', ':')]
+62256 [')::'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('COLON', ':')]
+16512 [' ):'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('RETURN', 'return')]
+44568 [')return'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 2, 2, 2, 2, 2, 2, 2, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),)))]
+68101 [')\n\n\n\n\n\n\n\n'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('EQUAL', '='), Token('STRING', '""'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),)))]
+63741 ['="")\n'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('COLON', ':'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 10), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='__IGNORE_1', can_transition=True, is_final=False),), final_terminals_and_info=()))]
+89049 ['):\\'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('EQUAL', '='), Token('STRING', "''"), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),)))]
+51427 ["='')\n"] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('COLON', ':'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 3, 2, 3, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),)))]
+56002 ['):\r\n\r\n'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks__'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 2, 2, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),)))]
+66960 ['__)\n\n\n'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 11), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='ASSERT', can_transition=True, is_final=False), PartialTerminalInfo(priority=1, terminal_name='ASYNC', can_transition=True, is_final=False), PartialTerminalInfo(priority=2, terminal_name='AWAIT', can_transition=True, is_final=False), PartialTerminalInfo(priority=3, terminal_name='AND', can_transition=True, is_final=False), PartialTerminalInfo(priority=4, terminal_name='AS', can_transition=True, is_final=False)), final_terminals_and_info=()))]
+54108 [')a'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 2, 2, 2, 2, 2, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),)))]
+47989 [')\n\n\n\n\n\n'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')')]
+873 [' )'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('COLON', ':'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 2, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),)))]
+58418 [' ):\n\n'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 14), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='DEF', can_transition=True, is_final=False), PartialTerminalInfo(priority=1, terminal_name='DEL', can_transition=True, is_final=False)), final_terminals_and_info=()))]
+65259 [')d'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 2, 2, 2, 2, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),)))]
+63966 [')\n\n\n\n\n'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 2, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),)))]
+5125 [' )\n\n'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('__ANON_0', '->')]
+3997 [')->'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('COLON', ':'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 5), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='__ANON_0', can_transition=True, is_final=False),), final_terminals_and_info=()))]
+17185 ['):-'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('COMMA', ','), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),)))]
+54145 [',)\n'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 21), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='OR', can_transition=True, is_final=False),), final_terminals_and_info=()))]
+88463 [')o'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 26), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='YIELD', can_transition=True, is_final=False),), final_terminals_and_info=()))]
+83347 [')y'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 3, 2, 3, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),)))]
+7229 [')\r\n\r\n'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 13), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='CONTINUE', can_transition=True, is_final=False), PartialTerminalInfo(priority=1, terminal_name='CLASS', can_transition=True, is_final=False)), final_terminals_and_info=()))]
+46986 [')c'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 10), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='__IGNORE_1', can_transition=True, is_final=False),), final_terminals_and_info=()))]
+10699 [')\\'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks__'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),)))]
+23135 ['__)\n'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 12), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='BREAK', can_transition=True, is_final=False),), final_terminals_and_info=()))]
+78878 [')b'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks__'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 2, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),)))]
+40725 ['__)\n\n'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks_'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),)))]
+23373 ['_)\n'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 3, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),)))]
+1218 [')\r\n'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 18), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='IMPORT', can_transition=True, is_final=False), PartialTerminalInfo(priority=1, terminal_name='IF', can_transition=True, is_final=False), PartialTerminalInfo(priority=2, terminal_name='IN', can_transition=True, is_final=False), PartialTerminalInfo(priority=3, terminal_name='IS', can_transition=True, is_final=False)), final_terminals_and_info=()))]
+47717 [')i'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 2, 2, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),)))]
+25571 [' )\n\n\n'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 16), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='FINALLY', can_transition=True, is_final=False), PartialTerminalInfo(priority=1, terminal_name='FROM', can_transition=True, is_final=False), PartialTerminalInfo(priority=2, terminal_name='FOR', can_transition=True, is_final=False)), final_terminals_and_info=()))]
+97999 [')f'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('COMMA', ','), Token('RPAR', ')')]
+46021 [',)'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 3, 2, 3, 2, 3, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),)))]
+33916 [')\r\n\r\n\r\n'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 15), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='EXCEPT', can_transition=True, is_final=False), PartialTerminalInfo(priority=1, terminal_name='ELIF', can_transition=True, is_final=False), PartialTerminalInfo(priority=2, terminal_name='ELSE', can_transition=True, is_final=False)), final_terminals_and_info=()))]
+51921 [')e'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks_'), Token('RPAR', ')')]
+16324 ['_)'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 22), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='PASS', can_transition=True, is_final=False),), final_terminals_and_info=()))]
+49248 [')p'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 5), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='__ANON_0', can_transition=True, is_final=False),), final_terminals_and_info=()))]
+7287 [')-'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 23), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='RETURN', can_transition=True, is_final=False), PartialTerminalInfo(priority=1, terminal_name='RAISE', can_transition=True, is_final=False)), final_terminals_and_info=()))]
+93342 [')r'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks__'), Token('RPAR', ')')]
+19141 ['__)'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 2, 2, 2, 2, 2, 2, 2, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),)))]
+28038 [' )\n\n\n\n\n\n\n\n'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('__ANON_0', '->')]
+35538 [' )->'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 3, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),)))]
+8616 [' )\r\n'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 3, 2, 3, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),)))]
+52531 [' )\r\n\r\n'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')')]
+62555 [')\\\n'] 1
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks_'), Token('RPAR', ')'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 3, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),)))]
+76643 ['_)\r\n'] 1
+0
+
+def max_non_overlapping_tasks(tasks):
+
+Token('_NEWLINE', '\n') 0 False False
+Token('DEF', 'def') 0 False False
+Token('NAME', 'max_non_overlapping_tasks') 0 False False
+Token('LPAR', '(') 0 True False
+Token('NAME', 'tasks') 0 False False
+Token('RPAR', ')') 0 False True
+Token('COLON', ':') 0 False False
+Token('partial', PartialTokensInfo(fsm_state_seq=(0, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),))) 0 False False
+it is actually <0 -1 Token('RPAR', ')') [Token('NAME', 'tasks'), Token('RPAR', ')'), Token('COLON', ':'), Token('partial', PartialTokensInfo(fsm_state_seq=(0, 2), is_not_finished=True, terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),), final_terminals_and_info=(PartialTerminalInfo(priority=0, terminal_name='_NEWLINE', can_transition=True, is_final=True),)))]
+Job finished at Fri Aug  8 17:15:31 CEST 2025

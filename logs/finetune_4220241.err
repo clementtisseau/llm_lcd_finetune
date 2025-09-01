@@ -1,0 +1,12 @@
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:42<00:42, 42.67s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:49<00:00, 21.70s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:49<00:00, 24.85s/it]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.47s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.35it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.18it/s]
+/home/ctisseau/llm_lcd_finetune/ConstraintLM/constraintlm/processors/guide.py:107: UserWarning: Outlines' public *community-contributed* CFG structured generation is experimental. Please review https://dottxt-ai.github.io/outlines/latest/reference/generation/cfg#disclaimer
+  warnings.warn(
+Epoch 1/3:   0%|          | 0/8 [00:00<?, ?it/s]Epoch 1/3:   0%|          | 0/8 [00:15<?, ?it/s]Epoch 1/3:   0%|          | 0/8 [00:21<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/ctisseau/llm_lcd_finetune/finetune.py", line 352, in <module>
+    finetune(
+  File "/home/ctisseau/llm_lcd_finetune/finetune.py", line 282, in finetune
+    cfg.cfg_guide.indenter.paren_level = final_paren_level
+                                         ^^^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'final_paren_level' where it is not associated with a value
