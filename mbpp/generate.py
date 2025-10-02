@@ -12,8 +12,10 @@ max_memory3 = {
     2: "40GB"
 }
 
-model_name = "/scratch/ctisseau/finetuned-models/Qwen3-1.7B-OCI-e1-ds65536-bs256-ckps64/checkpoint-00000000"            #this need to change
-readable_model_name = "Qwen3-1.7B"
+# model_name = "/scratch/ctisseau/finetuned-models/Qwen3-1.7B-OCI-e1-ds65536-bs256-ckps64/checkpoint-00000000"            #this need to change
+# readable_model_name = "Qwen3-1.7B"
+model_name = "Qwen/Qwen3-30B-A3B"
+readable_model_name = "Qwen3-30B-A3B"
 
 HERE = Path(__file__).resolve().parent  # directory containing generate.py
 DATA = HERE / "data" / "mbpp.jsonl"
@@ -116,13 +118,12 @@ def main(
     
     print("Reading problems...")
     problems = list(stream_jsonl(problem_file))
-    # problems = problems[:10]
     print(f"Found {len(problems)} problems.")
     
     # Create the output directory if it doesn't exist
     output_dir = "samples"
     os.makedirs(output_dir, exist_ok=True)
-    output_file = os.path.join(output_dir, f"{readable_model_name}-{n_samples}samples-test-all.jsonl")
+    output_file = os.path.join(output_dir, f"{readable_model_name}-{n_samples}samples.jsonl")
 
     print(f"Generating {n_samples} samples for each of the {len(problems)} problems...")
     

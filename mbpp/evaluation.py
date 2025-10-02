@@ -13,7 +13,7 @@ from execution import check_correctness
 
 HERE = Path(__file__).resolve().parent  # directory containing generate.py
 DATA_PROBLEM = HERE / "data" / "mbpp.jsonl"
-DATA_EVAL = HERE / "samples" / "Qwen3-1.7B-128samples-test-all.jsonl"
+DATA_EVAL = HERE / "samples" / "Qwen3-30B-A3B-128samples-100problems.jsonl"
 
 # --- Utility functions for data handling ---
 
@@ -109,7 +109,7 @@ def evaluate_functional_correctness(
     print(pass_at_k)
 
     # Save detailed results to a new file
-    out_file = str(sample_file) + "_results.jsonl"
+    out_file = str(sample_file) + "_results_new.jsonl"
     print(f"Writing detailed results to {out_file}...")
     
     # Flatten results for writing

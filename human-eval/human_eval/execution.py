@@ -9,6 +9,63 @@ import tempfile
 from typing import Dict, Optional
 
 
+# def unsafe_execute(problem: Dict, completion: str, timeout: float, result):
+#     with create_tempdir():
+
+#         # These system calls are needed when cleaning up tempdir.
+#         import os
+#         import shutil
+
+#         rmtree = shutil.rmtree
+#         rmdir = os.rmdir
+#         chdir = os.chdir
+
+#         # Disable functionalities that can make destructive changes to the test.
+#         reliability_guard()
+
+#         # Construct the check program and run it.
+#         check_program = (
+#             problem["prompt"]
+#             + completion
+#             + "\n"
+#             + problem["test"]
+#             + "\n"
+#             + f"check({problem['entry_point']})"
+#         )
+
+#         try:
+#             exec_globals = {}
+#             with swallow_io():
+#                 with time_limit(timeout):
+#                     # WARNING
+#                     # This program exists to execute untrusted model-generated code. Although
+#                     # it is highly unlikely that model-generated code will do something overtly
+#                     # malicious in response to this test suite, model-generated code may act
+#                     # destructively due to a lack of model capability or alignment.
+#                     # Users are strongly encouraged to sandbox this evaluation suite so that it
+#                     # does not perform destructive actions on their host or network. For more
+#                     # information on how OpenAI sandboxes its code, see the accompanying paper.
+#                     # Once you have read this disclaimer and taken appropriate precautions,
+#                     # uncomment the following line and proceed at your own risk:
+#                     exec(check_program, exec_globals)
+#             result.append(("passed", None)) 
+#         except TimeoutException:
+#             result.append(("timed out", "TimeoutError"))
+#         # --- START OF MODIFICATIONS ---
+#         except (SyntaxError, IndentationError) as e:
+#             result.append(("failed", "Syntax Error"))
+#         except Exception as e:
+#             # Catches standard runtime errors like TypeError, ValueError, IndexError
+#             result.append(("failed", "Runtime Error"))
+#         except BaseException as e:
+#             # Catches other base exceptions if needed, like SystemExit
+#             result.append(("failed", "Base Exception"))
+#         # --- END OF MODIFICATIONS ---
+
+#         # Needed for cleaning up.
+#         shutil.rmtree = rmtree
+#         os.rmdir = rmdir
+#         os.chdir = chdir
 def unsafe_execute(problem: Dict, completion: str, timeout: float, result):
     with create_tempdir():
 
@@ -33,33 +90,89 @@ def unsafe_execute(problem: Dict, completion: str, timeout: float, result):
             + f"check({problem['entry_point']})"
         )
 
+        def fail(label_or_exc):
+            # Keep result format, but always use precise exception class names
+            name = label_or_exc.__class__.__name__ if isinstance(label_or_exc, BaseException) else str(label_or_exc)
+            result.append(("failed", name))
+
         try:
             exec_globals = {}
             with swallow_io():
                 with time_limit(timeout):
-                    # WARNING
-                    # This program exists to execute untrusted model-generated code. Although
-                    # it is highly unlikely that model-generated code will do something overtly
-                    # malicious in response to this test suite, model-generated code may act
-                    # destructively due to a lack of model capability or alignment.
-                    # Users are strongly encouraged to sandbox this evaluation suite so that it
-                    # does not perform destructive actions on their host or network. For more
-                    # information on how OpenAI sandboxes its code, see the accompanying paper.
-                    # Once you have read this disclaimer and taken appropriate precautions,
-                    # uncomment the following line and proceed at your own risk:
+                    # WARNING: executing untrusted code; sandbox strongly recommended.
                     exec(check_program, exec_globals)
-            result.append(("passed", None)) 
+            result.append(("passed", None))
+
         except TimeoutException:
+            # Preserve this benchmark's semantics
             result.append(("timed out", "TimeoutError"))
         # --- START OF MODIFICATIONS ---
-        except (SyntaxError, IndentationError) as e:
-            result.append(("failed", "Syntax Error"))
+        # Parse-time (keep IndentationError distinct; it's a SyntaxError subclass)
+        except IndentationError as e:
+            fail(e)
+        except SyntaxError as e:
+            fail(e)
+        # Assertion/test failures
+        except AssertionError as e:
+            fail(e)
+        # Name/identifier issues
+        except UnboundLocalError as e:   # subclass of NameError; catch first
+            fail(e)
+        except NameError as e:
+            fail(e)
+        # Type/value/collections
+        except TypeError as e:
+            fail(e)
+        except ValueError as e:
+            fail(e)
+        except IndexError as e:
+            fail(e)
+        except KeyError as e:
+            fail(e)
+        except AttributeError as e:
+            fail(e)
+        # Arithmetic
+        except ZeroDivisionError as e:
+            fail(e)
+        except OverflowError as e:
+            fail(e)
+        # Imports / I/O / OS
+        except ModuleNotFoundError as e:  # subclass of ImportError
+            fail(e)
+        except ImportError as e:
+            fail(e)
+        except FileNotFoundError as e:    # subclass of OSError
+            fail(e)
+        except PermissionError as e:      # subclass of OSError
+            fail(e)
+        except TimeoutError as e:         # OS-level timeout (not the sandbox TimeoutException)
+            fail(e)
+        except OSError as e:
+            fail(e)
+        # Misc runtime
+        except EOFError as e:
+            fail(e)
+        except NotImplementedError as e:
+            fail(e)
+        except RecursionError as e:
+            fail(e)
+        except RuntimeError as e:
+            fail(e)
+        except StopIteration as e:
+            fail(e)
+        except MemoryError as e:
+            fail(e)
+        # User/system interrupts (outside Exception hierarchy)
+        except KeyboardInterrupt as e:
+            fail(e)
+        except SystemExit as e:
+            fail(e)
+
+        # Fallbacks
         except Exception as e:
-            # Catches standard runtime errors like TypeError, ValueError, IndexError
-            result.append(("failed", "Runtime Error"))
+            fail(e)
         except BaseException as e:
-            # Catches other base exceptions if needed, like SystemExit
-            result.append(("failed", "Base Exception"))
+            fail(e)
         # --- END OF MODIFICATIONS ---
 
         # Needed for cleaning up.
