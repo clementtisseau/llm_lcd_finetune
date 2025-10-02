@@ -1,0 +1,59 @@
+########################
+#  Top-level & program #
+########################
+?start: command                       -> program        # one or more commands
+
+################
+#  Commands    #
+################
+?command: simple
+        | simple ";" command           -> seq            # right-associative sequencing
+
+?simple: "skip"                        -> skip
+        | NAME ":=" aexpr               -> assign
+        | "if" bexpr "then" command "else" command                -> if
+        | "while" bexpr "do" command    -> while
+        | "(" command ")"                               # optional grouping
+
+########################
+#  Arithmetic grammar  #
+########################
+?aexpr: term
+        | aexpr "+" term                 -> add
+        | aexpr "-" term                 -> sub
+
+?term: factor
+        | term "*" factor                 -> mul
+        | term "/" factor                 -> div
+
+?factor: NUMBER                        -> number
+        | NAME                          -> var
+        | "-" factor                    -> neg
+        | "(" aexpr ")"                 -> aparen
+
+#######################
+#  Boolean grammar    #
+#######################
+?bexpr: bterm
+        | bexpr "||" bterm               -> or
+
+?bterm: bfactor
+        | bterm "&&" bfactor             -> and
+
+?bfactor: "true"                       -> true
+        | "false"                      -> false
+        | "!" bfactor                  -> not
+        | aexpr relop aexpr            -> rel
+        | "(" bexpr ")"                -> bparen
+
+relop: "==" | "!=" | "<" | "<=" | ">" | ">="
+
+#################
+#  Terminals    #
+#################
+NAME: /[A-Za-z_][A-Za-z0-9_]*/          # identifiers
+%import common.NUMBER                   # ints from Lark’s standard library
+%import common.WS_INLINE
+%import common.WS
+%ignore WS_INLINE                       # skip spaces and tabs
+%ignore WS
