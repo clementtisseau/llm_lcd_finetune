@@ -1,0 +1,8 @@
+==========================================
+SLURM_JOB_ID = 4245732
+SLURM_JOB_NODELIST = gpu012
+==========================================
+Job started on gpu012 at Fri Sep  5 10:41:41 CEST 2025
+Model loaded.
+Reading problems...
+Job finished at Fri Sep  5 10:59:02 CEST 2025

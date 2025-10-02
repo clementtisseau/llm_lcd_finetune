@@ -31,3 +31,96 @@ Average Completion Length: 212.69 characters
 
 3. Distribution of Error Types Only (Percentages of Failures):
 {'Runtime Error': '84.32%', 'Name Error': '14.85%', 'TimeoutError': '0.61%', 'Syntax Error': '0.22%'}
+
+Filter applied: Showing results for completions with >= 100 characters.
+Average Completion Length: 290.78 characters
+1. Distribution of All Result Types (Raw Counts):
+{'Runtime Error': 47328, 'Success (null)': 25272, 'Name Error': 7978, 'TimeoutError': 462, 'Syntax Error': 147}
+2. Distribution of All Result Types (Percentages):
+{'Runtime Error': '58.30%', 'Success (null)': '31.13%', 'Name Error': '9.83%', 'TimeoutError': '0.57%', 'Syntax Error': '0.18%'}
+3. Distribution of Error Types Only (Percentages of Failures):
+{'Runtime Error': '84.64%', 'Name Error': '14.27%', 'TimeoutError': '0.83%', 'Syntax Error': '0.26%'}
+
+Filter applied: Showing results for completions with >= 200 characters.
+Average Completion Length: 397.36 characters
+1. Distribution of All Result Types (Raw Counts):
+{'Runtime Error': 29672, 'Success (null)': 11044, 'Name Error': 4924, 'TimeoutError': 462, 'Syntax Error': 145}
+2. Distribution of All Result Types (Percentages):
+{'Runtime Error': '64.16%', 'Success (null)': '23.88%', 'Name Error': '10.65%', 'TimeoutError': '1.00%', 'Syntax Error': '0.31%'}
+3. Distribution of Error Types Only (Percentages of Failures):
+{'Runtime Error': '84.29%', 'Name Error': '13.99%', 'TimeoutError': '1.31%', 'Syntax Error': '0.41%'}
+
+Filter applied: Showing results for completions with >= 300 characters.
+Average Completion Length: 519.01 characters
+1. Distribution of All Result Types (Raw Counts):
+{'Runtime Error': 17080, 'Success (null)': 5824, 'Name Error': 2486, 'TimeoutError': 334, 'Syntax Error': 145}
+2. Distribution of All Result Types (Percentages):
+{'Runtime Error': '66.02%', 'Success (null)': '22.51%', 'Name Error': '9.61%', 'TimeoutError': '1.29%', 'Syntax Error': '0.56%'}
+3. Distribution of Error Types Only (Percentages of Failures):
+{'Runtime Error': '85.21%', 'Name Error': '12.40%', 'TimeoutError': '1.67%', 'Syntax Error': '0.72%'}
+
+
+
+
+
+
+
+-------- Same thing with much more errors now --------
+1. Distribution of All Result Types (Raw Counts):
+{'AssertionError': 55213, 'Success (null)': 48863, 'NameError': 11245, 'TypeError': 5488, 'ZeroDivisionError': 237, 'TimeoutError': 462, 'SyntaxError': 153, 'IndexError': 1100, 'AttributeError': 518, 'ValueError': 678, 'ModuleNotFoundError': 43, 'RecursionError': 106, 'IndentationError': 12, 'UnboundLocalError': 13, 'KeyError': 416, 'error': 64, 'StopIteration': 3, 'OSError': 58}
+
+2. Distribution of All Result Types (Percentages):
+{'AssertionError': '44.29%', 'Success (null)': '39.19%', 'NameError': '9.02%', 'TypeError': '4.40%', 'ZeroDivisionError': '0.19%', 'TimeoutError': '0.37%', 'SyntaxError': '0.12%', 'IndexError': '0.88%', 'AttributeError': '0.42%', 'ValueError': '0.54%', 'ModuleNotFoundError': '0.03%', 'RecursionError': '0.09%', 'IndentationError': '0.01%', 'UnboundLocalError': '0.01%', 'KeyError': '0.33%', 'error': '0.05%', 'StopIteration': '0.00%', 'OSError': '0.05%'}
+
+3. Distribution of Error Types Only (Percentages of Failures):
+{'AssertionError': '72.83%', 'NameError': '14.83%', 'TypeError': '7.24%', 'ZeroDivisionError': '0.31%', 'TimeoutError': '0.61%', 'SyntaxError': '0.20%', 'IndexError': '1.45%', 'AttributeError': '0.68%', 'ValueError': '0.89%', 'ModuleNotFoundError': '0.06%', 'RecursionError': '0.14%', 'IndentationError': '0.02%', 'UnboundLocalError': '0.02%', 'KeyError': '0.55%', 'error': '0.08%', 'StopIteration': '0.00%', 'OSError': '0.08%'}
+
+
+
+
+
+
+
+
+
+
+Qwen3-30B-A3B-128samples-100problems.jsonl_results_new
+--- Analysis Results ---
+
+Average Completion Length: 133.77 characters
+1. Distribution of All Result Types (Raw Counts):
+{'Success (null)': 8042, 'AssertionError': 3478, 'NameError': 768, 'TypeError': 384, 'TimeoutError': 128}
+2. Distribution of All Result Types (Percentages):
+{'Success (null)': '62.83%', 'AssertionError': '27.17%', 'NameError': '6.00%', 'TypeError': '3.00%', 'TimeoutError': '1.00%'}
+3. Distribution of Error Types Only (Percentages of Failures):
+{'AssertionError': '73.10%', 'NameError': '16.14%', 'TypeError': '8.07%', 'TimeoutError': '2.69%'}
+============================================================
+--- Running analysis for completions with at least min_length characters ---
+--- Analysis Results ---
+
+Filter applied: Showing results for completions with >= 100 characters.
+Average Completion Length: 211.48 characters
+1. Distribution of All Result Types (Raw Counts):
+{'Success (null)': 3818, 'AssertionError': 1532, 'NameError': 256, 'TypeError': 256, 'TimeoutError': 128}
+2. Distribution of All Result Types (Percentages):
+{'Success (null)': '63.74%', 'AssertionError': '25.58%', 'NameError': '4.27%', 'TypeError': '4.27%', 'TimeoutError': '2.14%'}
+3. Distribution of Error Types Only (Percentages of Failures):
+{'AssertionError': '70.53%', 'NameError': '11.79%', 'TypeError': '11.79%', 'TimeoutError': '5.89%'}
+
+Filter applied: Showing results for completions with >= 200 characters.
+Average Completion Length: 284.88 characters
+1. Distribution of All Result Types (Raw Counts):
+{'Success (null)': 1774, 'AssertionError': 647, 'TypeError': 128, 'TimeoutError': 128}
+2. Distribution of All Result Types (Percentages):
+{'Success (null)': '66.27%', 'AssertionError': '24.17%', 'TypeError': '4.78%', 'TimeoutError': '4.78%'}
+3. Distribution of Error Types Only (Percentages of Failures):
+{'AssertionError': '71.65%', 'TypeError': '14.17%', 'TimeoutError': '14.17%'}
+
+Filter applied: Showing results for completions with >= 300 characters.
+Average Completion Length: 394.39 characters
+1. Distribution of All Result Types (Raw Counts):
+{'AssertionError': 230, 'Success (null)': 483, 'TimeoutError': 128}
+2. Distribution of All Result Types (Percentages):
+{'AssertionError': '27.35%', 'Success (null)': '57.43%', 'TimeoutError': '15.22%'}
+3. Distribution of Error Types Only (Percentages of Failures):
+{'AssertionError': '64.25%', 'TimeoutError': '35.75%'}

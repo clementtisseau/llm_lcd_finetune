@@ -46,3 +46,80 @@ Average Completion Length: 1854.92 characters
 {'Syntax Error': '85.17%', 'Runtime Error': '11.44%', 'TimeoutError': '0.10%', 'Success (null)': '3.29%'}
 3. Distribution of Error Types Only (Percentages of Failures):
 {'Syntax Error': '88.06%', 'Runtime Error': '11.83%', 'TimeoutError': '0.11%'}
+
+
+
+
+
+
+
+
+
+
+Qwen3-1.7B-128samples-prompted3_new4 
+---------------- New prompting technique ----------------
+{'pass@1': np.float64(0.008574695121951217), 'pass@2': np.float64(0.010057074611100444), 'pass@4': np.float64(0.011461805650818037), 'pass@8': np.float64(0.01211470320145042), 'pass@16': np.float64(0.012194414485873238), 'pass@32': np.float64(0.012195121940097262), 'pass@64': np.float64(0.012195121951219513), 'pass@128': np.float64(0.012195121951219513)} 
+
+
+
+
+
+
+Qwen3-30B-A3B-128samples-20problems (no prompt but add_indent)
+--- Analysis Results ---
+
+Average Completion Length: 1774.66 characters
+
+1. Distribution of All Result Types (Raw Counts):
+{'IndentationError': 1406, 'SyntaxError': 1068, 'Success (null)': 86}
+
+2. Distribution of All Result Types (Percentages):
+{'IndentationError': '54.92%', 'SyntaxError': '41.72%', 'Success (null)': '3.36%'}
+
+3. Distribution of Error Types Only (Percentages of Failures):
+{'IndentationError': '56.83%', 'SyntaxError': '43.17%'}
+
+
+
+
+
+checkpoint-00000002-128samples-prompted-problemsALL-add_indent.jsonl_results.jsonl
+{'pass@1': np.float64(0.08284108231707311), 'pass@2': np.float64(0.11947483555790285), 'pass@4': np.float64(0.16476344858569508), 'pass@8': np.float64(0.21719328347054612), 'pass@16': np.float64(0.27552445509648443), 'pass@32': np.float64(0.33573476025387655), 'pass@64': np.float64(0.38853948072730293), 'pass@128': np.float64(0.4268292682926829)}
+
+--- Analysis Results ---
+
+Average Completion Length: 1797.45 characters
+
+1. Distribution of All Result Types (Raw Counts):
+{'IndentationError': 6203, 'SyntaxError': 11436, 'Success (null)': 1739, 'AssertionError': 1357, 'ValueError': 75, 'TypeError': 97, 'TimeoutError': 7, 'IndexError': 19, 'UnboundLocalError': 10, 'AttributeError': 17, 'NameError': 32}
+
+2. Distribution of All Result Types (Percentages):
+{'IndentationError': '29.55%', 'SyntaxError': '54.48%', 'Success (null)': '8.28%', 'AssertionError': '6.46%', 'ValueError': '0.36%', 'TypeError': '0.46%', 'TimeoutError': '0.03%', 'IndexError': '0.09%', 'UnboundLocalError': '0.05%', 'AttributeError': '0.08%', 'NameError': '0.15%'}
+
+3. Distribution of Error Types Only (Percentages of Failures):
+{'IndentationError': '32.22%', 'SyntaxError': '59.40%', 'AssertionError': '7.05%', 'ValueError': '0.39%', 'TypeError': '0.50%', 'TimeoutError': '0.04%', 'IndexError': '0.10%', 'UnboundLocalError': '0.05%', 'AttributeError': '0.09%', 'NameError': '0.17%'}
+
+
+
+checkpoint-00000004-128samples-prompted-problemsALL-add_indent.jsonl_results.jsonl
+{'pass@1': np.float64(0.37852515243902424), 'pass@2': np.float64(0.4624326327539851), 'pass@4': np.float64(0.5385952615298087), 'pass@8': np.float64(0.5995993120622511), 'pass@16': np.float64(0.6431813662159228), 'pass@32': np.float64(0.6711186267909357), 'pass@64': np.float64(0.6900679340484306), 'pass@128': np.float64(0.7073170731707317)}
+
+--- Analysis Results ---
+Average Completion Length: 696.53 characters
+1. Distribution of All Result Types (Raw Counts):
+{'Success (null)': 7946, 'AssertionError': 5307, 'IndexError': 225, 'SyntaxError': 6585, 'NameError': 580, 'TypeError': 89, 'TimeoutError': 35, 'RecursionError': 50, 'OverflowError': 2, 'ValueError': 159, 'IndentationError': 5, 'AttributeError': 8, 'UnboundLocalError': 1}
+2. Distribution of All Result Types (Percentages):
+{'Success (null)': '37.85%', 'AssertionError': '25.28%', 'IndexError': '1.07%', 'SyntaxError': '31.37%', 'NameError': '2.76%', 'TypeError': '0.42%', 'TimeoutError': '0.17%', 'RecursionError': '0.24%', 'OverflowError': '0.01%', 'ValueError': '0.76%', 'IndentationError': '0.02%', 'AttributeError': '0.04%', 'UnboundLocalError': '0.00%'}
+3. Distribution of Error Types Only (Percentages of Failures):
+{'AssertionError': '40.68%', 'IndexError': '1.72%', 'SyntaxError': '50.48%', 'NameError': '4.45%', 'TypeError': '0.68%', 'TimeoutError': '0.27%', 'RecursionError': '0.38%', 'OverflowError': '0.02%', 'ValueError': '1.22%', 'IndentationError': '0.04%', 'AttributeError': '0.06%', 'UnboundLocalError': '0.01%'}
+
+--- Running analysis for completions with at least min_length characters ---
+--- Analysis Results ---
+Filter applied: Showing results for completions with >= 300 characters.
+Average Completion Length: 986.74 characters
+1. Distribution of All Result Types (Raw Counts):
+{'AssertionError': 3119, 'IndexError': 211, 'Success (null)': 3950, 'SyntaxError': 6008, 'NameError': 213, 'TypeError': 70, 'TimeoutError': 35, 'RecursionError': 48, 'OverflowError': 2, 'ValueError': 156, 'IndentationError': 5, 'AttributeError': 8, 'UnboundLocalError': 1}
+2. Distribution of All Result Types (Percentages):
+{'AssertionError': '22.56%', 'IndexError': '1.53%', 'Success (null)': '28.57%', 'SyntaxError': '43.45%', 'NameError': '1.54%', 'TypeError': '0.51%', 'TimeoutError': '0.25%', 'RecursionError': '0.35%', 'OverflowError': '0.01%', 'ValueError': '1.13%', 'IndentationError': '0.04%', 'AttributeError': '0.06%', 'UnboundLocalError': '0.01%'}
+3. Distribution of Error Types Only (Percentages of Failures):
+{'AssertionError': '31.58%', 'IndexError': '2.14%', 'SyntaxError': '60.83%', 'NameError': '2.16%', 'TypeError': '0.71%', 'TimeoutError': '0.35%', 'RecursionError': '0.49%', 'OverflowError': '0.02%', 'ValueError': '1.58%', 'IndentationError': '0.05%', 'AttributeError': '0.08%', 'UnboundLocalError': '0.01%'}

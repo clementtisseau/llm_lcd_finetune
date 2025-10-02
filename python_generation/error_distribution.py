@@ -16,8 +16,14 @@ def analyze_error_distribution(min_length=None):
     try:
         # Define the path to the data file relative to the script's location.
         here = Path(__file__).resolve().parent
-        # data_file = here / "mbpp" / "samples" / "Qwen3-1.7B-128samples-test-all.jsonl_results.jsonl"
-        data_file = here / "human-eval" / "samples" / "Qwen3-1.7B-128samples.jsonl_results-1-128.jsonl"
+        # data_file = here / "mbpp" / "samples" / "Qwen3-1.7B-128samples-test-all.jsonl_results_new_errors.jsonl"
+        # data_file = here / "mbpp" / "samples" / "Qwen3-30B-A3B-128samples-100problems.jsonl_results.jsonl"
+        # data_file = here / "human-eval" / "samples" / "Qwen3-1.7B-128samples.jsonl_results-1-128.jsonl"
+        # data_file = here / "human-eval" / "samples" / "Qwen3-1.7B-128samples-prompted.jsonl_results.jsonl"
+        # data_file = here / "human-eval" / "samples" / "Qwen3-1.7B-128samples.jsonl_results_new_errors.jsonl"
+        # data_file = here / "human-eval" / "samples" / "Qwen3-30B-A3B-128samples-20problems-add_indent.jsonl_results.jsonl"
+        data_file = here / "human-eval" / "samples" / "checkpoint-00000004-128samples-prompted-problemsALL.jsonl_results.jsonl"
+
 
         # Check if the file exists before attempting to open it.
         if not data_file.exists():
@@ -129,4 +135,4 @@ if __name__ == "__main__":
     print("\n" + "="*60 + "\n")
 
     print("--- Running analysis for completions with at least min_length characters ---")
-    analyze_error_distribution(min_length=1500)
+    analyze_error_distribution(min_length=300)

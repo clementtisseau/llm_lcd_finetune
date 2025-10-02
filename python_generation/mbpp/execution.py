@@ -80,17 +80,56 @@ def reliability_guard(maximum_memory_bytes: Optional[int] = None):
 
 # --- MBPP-specific execution logic ---
 
+# def unsafe_execute(problem: Dict, completion: str, timeout: float, result: List):
+#     """
+#     Executes the generated code against the problem's test cases.
+    
+#     This function is intended to be run in a separate process to isolate it.
+#     """
+#     with create_tempdir():
+#         reliability_guard()
+        
+#         # Combine the test setup, generated code, and test assertions
+#         # into a single executable script.
+#         test_setup = problem.get("test_setup_code", "")
+#         test_assertions = "\n".join(problem["test_list"])
+#         check_program = f"{test_setup}\n{completion}\n{test_assertions}"
+
+#         try:
+#             exec_globals = {}
+#             with swallow_io(), time_limit(timeout):
+#                 exec(check_program, exec_globals)
+#             result.append(("passed", None))
+#         except TimeoutException:
+#             result.append(("failed", "TimeoutError"))
+#         except (SyntaxError, IndentationError):
+#             result.append(("failed", "Syntax Error"))
+#         except AssertionError:
+#             result.append(("failed", "Runtime Error")) # Assertion failures are runtime errors
+#         except NameError:
+#             result.append(("failed", "Name Error"))
+#         except Exception:
+#             result.append(("failed", "Runtime Error"))
+#         except BaseException:
+#             result.append(("failed", "Base Exception"))
 def unsafe_execute(problem: Dict, completion: str, timeout: float, result: List):
     """
     Executes the generated code against the problem's test cases.
-    
+
     This function is intended to be run in a separate process to isolate it.
     """
+    def fail(label_or_exc):
+        # Accept either a string label or an exception instance
+        if isinstance(label_or_exc, BaseException):
+            name = label_or_exc.__class__.__name__
+        else:
+            name = str(label_or_exc)
+        result.append(("failed", name))
+
     with create_tempdir():
         reliability_guard()
-        
-        # Combine the test setup, generated code, and test assertions
-        # into a single executable script.
+
+        # Build the program: setup + candidate solution + tests
         test_setup = problem.get("test_setup_code", "")
         test_assertions = "\n".join(problem["test_list"])
         check_program = f"{test_setup}\n{completion}\n{test_assertions}"
@@ -100,18 +139,75 @@ def unsafe_execute(problem: Dict, completion: str, timeout: float, result: List)
             with swallow_io(), time_limit(timeout):
                 exec(check_program, exec_globals)
             result.append(("passed", None))
+
+        # Timeouts
         except TimeoutException:
-            result.append(("failed", "TimeoutError"))
-        except (SyntaxError, IndentationError):
-            result.append(("failed", "Syntax Error"))
-        except AssertionError:
-            result.append(("failed", "Runtime Error")) # Assertion failures are runtime errors
-        except NameError:
-            result.append(("failed", "Name Error"))
-        except Exception:
-            result.append(("failed", "Runtime Error"))
-        except BaseException:
-            result.append(("failed", "Base Exception"))
+            fail("TimeoutError")  # your sandbox timeout -> label as built-in name
+        # Parse-time
+        except IndentationError as e:   # subclass of SyntaxError; catch first to keep it distinct
+            fail(e)
+        except SyntaxError as e:
+            fail(e)
+        # Test/assertion failure
+        except AssertionError as e:
+            fail(e)
+        # Name/identifier issues
+        except UnboundLocalError as e:  # subclass of NameError; catch first
+            fail(e)
+        except NameError as e:
+            fail(e)
+        # Type/value/collection issues
+        except TypeError as e:
+            fail(e)
+        except ValueError as e:
+            fail(e)
+        except IndexError as e:
+            fail(e)
+        except KeyError as e:
+            fail(e)
+        except AttributeError as e:
+            fail(e)
+        # Arithmetic
+        except ZeroDivisionError as e:
+            fail(e)
+        except OverflowError as e:
+            fail(e)
+        # Imports / I/O / OS
+        except ModuleNotFoundError as e:  # subclass of ImportError
+            fail(e)
+        except ImportError as e:
+            fail(e)
+        except FileNotFoundError as e:    # subclass of OSError
+            fail(e)
+        except PermissionError as e:      # subclass of OSError
+            fail(e)
+        except TimeoutError as e:         # OS-level timeout (also an OSError)
+            fail(e)
+        except OSError as e:
+            fail(e)
+        # Misc runtime
+        except EOFError as e:
+            fail(e)
+        except NotImplementedError as e:
+            fail(e)
+        except RecursionError as e:
+            fail(e)
+        except RuntimeError as e:
+            fail(e)
+        except StopIteration as e:
+            fail(e)
+        except MemoryError as e:
+            fail(e)
+        # User/system interrupts (outside Exception hierarchy)
+        except KeyboardInterrupt as e:
+            fail(e)
+        except SystemExit as e:
+            fail(e)
+        # Fallbacks (keep consistent naming)
+        except Exception as e:
+            fail(e)
+        except BaseException as e:
+            fail(e)
  
 def check_correctness(
     problem: Dict, completion: str, timeout: float, completion_id: Optional[int] = None

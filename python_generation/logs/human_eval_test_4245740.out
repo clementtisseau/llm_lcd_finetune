@@ -1,0 +1,30 @@
+==========================================
+SLURM_JOB_ID = 4245740
+SLURM_JOB_NODELIST = gpu012
+==========================================
+Job started on gpu012 at Fri Sep  5 11:25:57 CEST 2025
+Model loaded.
+Reading problems...
+Problems read.
+call to generate_code() for a batch of 128 samples
+call to generate_code() for a batch of 128 samples
+call to generate_code() for a batch of 128 samples
+call to generate_code() for a batch of 128 samples
+call to generate_code() for a batch of 128 samples
+call to generate_code() for a batch of 128 samples
+call to generate_code() for a batch of 128 samples
+call to generate_code() for a batch of 128 samples
+call to generate_code() for a batch of 128 samples
+call to generate_code() for a batch of 128 samples
+call to generate_code() for a batch of 128 samples
+call to generate_code() for a batch of 128 samples
+call to generate_code() for a batch of 128 samples
+call to generate_code() for a batch of 128 samples
+call to generate_code() for a batch of 128 samples
+call to generate_code() for a batch of 128 samples
+call to generate_code() for a batch of 128 samples
+call to generate_code() for a batch of 128 samples
+call to generate_code() for a batch of 128 samples
+call to generate_code() for a batch of 128 samples
+Writing sampled solutions in .jsonl file
+Job finished at Fri Sep  5 16:18:38 CEST 2025

@@ -1,0 +1,6 @@
+==========================================
+SLURM_JOB_ID = 4250061
+SLURM_JOB_NODELIST = gpu007
+==========================================
+Job started on gpu007 at Thu Sep 11 15:10:49 CEST 2025
+Job finished at Thu Sep 11 15:10:53 CEST 2025
