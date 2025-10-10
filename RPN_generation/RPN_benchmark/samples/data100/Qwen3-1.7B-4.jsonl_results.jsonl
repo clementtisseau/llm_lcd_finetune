@@ -1,0 +1,400 @@
+{"task_id": "0001", "completion_id": 0, "completion": "63 46 -", "pred_value": 17.0, "true_value": 17.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0001", "completion_id": 1, "completion": "63 46 -", "pred_value": 17.0, "true_value": 17.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0001", "completion_id": 2, "completion": "63 46 -", "pred_value": 17.0, "true_value": 17.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0001", "completion_id": 3, "completion": "63 46 -", "pred_value": 17.0, "true_value": 17.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0002", "completion_id": 0, "completion": "56 56 + 53 20 - - 12 - 62 +", "pred_value": 129.0, "true_value": 129.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0002", "completion_id": 1, "completion": "56 56 + 53 20 - - 12 - 62 +", "pred_value": 129.0, "true_value": 129.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0002", "completion_id": 2, "completion": "56 56 + 53 20 - - 12 - 62 +", "pred_value": 129.0, "true_value": 129.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0002", "completion_id": 3, "completion": "56 56 + 53 20 - - 12 - 62 +", "pred_value": 129.0, "true_value": 129.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0003", "completion_id": 0, "completion": "11 50 - 89 65 * / 53 - 12 73 6 69 - 5 70 - 52 + + * 30 *", "pred_value": null, "true_value": 50.11325842696629, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0003", "completion_id": 1, "completion": "11 50 - 89 65 * / 53 - 12 73 6 69 - 5 70 - 52 + + * 30 *", "pred_value": null, "true_value": 50.11325842696629, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0003", "completion_id": 2, "completion": "11 50 - 89 65 * / 53 - 12 73 6 69 - 5 70 - 52 + + * 30 *", "pred_value": null, "true_value": 50.11325842696629, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0003", "completion_id": 3, "completion": "11 50 - 89 65 * / 53 - 12 73 6 69 - 5 70 - 52 + + * 30 *", "pred_value": null, "true_value": 50.11325842696629, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0004", "completion_id": 0, "completion": "44 85 - 57 + 76 + 88 +", "pred_value": 180.0, "true_value": 180.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0004", "completion_id": 1, "completion": "44 85 - 57 + 76 + 88 +", "pred_value": 180.0, "true_value": 180.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0004", "completion_id": 2, "completion": "44 85 - 57 + 76 + 88 +", "pred_value": 180.0, "true_value": 180.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0004", "completion_id": 3, "completion": "44 85 - 57 + 76 + 88 +", "pred_value": 180.0, "true_value": 180.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0005", "completion_id": 0, "completion": "95 45 -", "pred_value": 50.0, "true_value": 50.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0005", "completion_id": 1, "completion": "95 45 -", "pred_value": 50.0, "true_value": 50.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0005", "completion_id": 2, "completion": "95 45 -", "pred_value": 50.0, "true_value": 50.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0005", "completion_id": 3, "completion": "95 45 -", "pred_value": 50.0, "true_value": 50.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0006", "completion_id": 0, "completion": "2 78 + 90 + 19 + 65 +", "pred_value": 254.0, "true_value": 254.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0006", "completion_id": 1, "completion": "2 78 + 90 + 19 + 65 +", "pred_value": 254.0, "true_value": 254.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0006", "completion_id": 2, "completion": "2 78 + 90 + 19 + 65 +", "pred_value": 254.0, "true_value": 254.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0006", "completion_id": 3, "completion": "2 78 + 90 + 19 + 65 +", "pred_value": 254.0, "true_value": 254.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0007", "completion_id": 0, "completion": "11 63 + 41 85 62 + * - 20 -", "pred_value": -5973.0, "true_value": -5973.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0007", "completion_id": 1, "completion": "11 63 + 41 85 62 + * - 20 -", "pred_value": -5973.0, "true_value": -5973.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0007", "completion_id": 2, "completion": "11 63 + 41 85 62 + * - 20 -", "pred_value": -5973.0, "true_value": -5973.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0007", "completion_id": 3, "completion": "11 63 + 41 85 62 + * - 20 -", "pred_value": -5973.0, "true_value": -5973.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0008", "completion_id": 0, "completion": "88 70 -", "pred_value": 18.0, "true_value": 18.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0008", "completion_id": 1, "completion": "88 70 -", "pred_value": 18.0, "true_value": 18.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0008", "completion_id": 2, "completion": "88 70 -", "pred_value": 18.0, "true_value": 18.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0008", "completion_id": 3, "completion": "88 70 -", "pred_value": 18.0, "true_value": 18.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0009", "completion_id": 0, "completion": "87 95 34 - -", "pred_value": 26.0, "true_value": 26.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0009", "completion_id": 1, "completion": "87 95 34 - -", "pred_value": 26.0, "true_value": 26.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0009", "completion_id": 2, "completion": "87 95 34 - -", "pred_value": 26.0, "true_value": 26.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0009", "completion_id": 3, "completion": "87 95 34 - -", "pred_value": 26.0, "true_value": 26.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0010", "completion_id": 0, "completion": "11 32 - 51 12 50 + + 89 13 * * 48 *", "pred_value": null, "true_value": -58368.0, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0010", "completion_id": 1, "completion": "11 32 - 51 12 50 + + 89 13 * * 48 *", "pred_value": null, "true_value": -58368.0, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0010", "completion_id": 2, "completion": "11 32 - 51 12 + 50 + 89 13 * * 48 *", "pred_value": null, "true_value": -58368.0, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0010", "completion_id": 3, "completion": "11 32 - 51 12 50 + + 89 13 * * 48 *", "pred_value": null, "true_value": -58368.0, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0011", "completion_id": 0, "completion": "76 6 + 9 34 + 80 - 12 -", "pred_value": null, "true_value": -29.0, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0011", "completion_id": 1, "completion": "76 6 + 9 34 + 80 - 12 -", "pred_value": null, "true_value": -29.0, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0011", "completion_id": 2, "completion": "76 6 + 9 34 + 80 - 12 -", "pred_value": null, "true_value": -29.0, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0011", "completion_id": 3, "completion": "76 6 + 9 34 + 80 - 12 -", "pred_value": null, "true_value": -29.0, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0012", "completion_id": 0, "completion": "9", "pred_value": 9.0, "true_value": 9.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0012", "completion_id": 1, "completion": "9", "pred_value": 9.0, "true_value": 9.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0012", "completion_id": 2, "completion": "9", "pred_value": 9.0, "true_value": 9.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0012", "completion_id": 3, "completion": "9", "pred_value": 9.0, "true_value": 9.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0013", "completion_id": 0, "completion": "28", "pred_value": 28.0, "true_value": 28.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0013", "completion_id": 1, "completion": "28", "pred_value": 28.0, "true_value": 28.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0013", "completion_id": 2, "completion": "28", "pred_value": 28.0, "true_value": 28.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0013", "completion_id": 3, "completion": "28", "pred_value": 28.0, "true_value": 28.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0014", "completion_id": 0, "completion": "12 92 *", "pred_value": 1104.0, "true_value": 1104.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0014", "completion_id": 1, "completion": "12 92 *", "pred_value": 1104.0, "true_value": 1104.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0014", "completion_id": 2, "completion": "12 92 *", "pred_value": 1104.0, "true_value": 1104.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0014", "completion_id": 3, "completion": "12 92 *", "pred_value": 1104.0, "true_value": 1104.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0015", "completion_id": 0, "completion": "6", "pred_value": 6.0, "true_value": 6.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0015", "completion_id": 1, "completion": "6", "pred_value": 6.0, "true_value": 6.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0015", "completion_id": 2, "completion": "6", "pred_value": 6.0, "true_value": 6.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0015", "completion_id": 3, "completion": "6", "pred_value": 6.0, "true_value": 6.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0016", "completion_id": 0, "completion": "64 95 / 17 + 93 5 + +", "pred_value": 115.67368421052632, "true_value": -80.32631578947368, "abs_err": 196.0, "passed": false, "error": null}
+{"task_id": "0016", "completion_id": 1, "completion": "64 95 / 17 + 93 5 + +", "pred_value": 115.67368421052632, "true_value": -80.32631578947368, "abs_err": 196.0, "passed": false, "error": null}
+{"task_id": "0016", "completion_id": 2, "completion": "64 95 / 17 + 93 5 + +", "pred_value": 115.67368421052632, "true_value": -80.32631578947368, "abs_err": 196.0, "passed": false, "error": null}
+{"task_id": "0016", "completion_id": 3, "completion": "64 95 / 17 + 93 5 + +", "pred_value": 115.67368421052632, "true_value": -80.32631578947368, "abs_err": 196.0, "passed": false, "error": null}
+{"task_id": "0017", "completion_id": 0, "completion": "61 43 30 * + 70 + 18 + 73 -", "pred_value": 1366.0, "true_value": 4306.0, "abs_err": 2940.0, "passed": false, "error": null}
+{"task_id": "0017", "completion_id": 1, "completion": "61 43 30 * + 70 + 18 + 73 -", "pred_value": 1366.0, "true_value": 4306.0, "abs_err": 2940.0, "passed": false, "error": null}
+{"task_id": "0017", "completion_id": 2, "completion": "61 43 30 * + 70 + 18 + 73 -", "pred_value": 1366.0, "true_value": 4306.0, "abs_err": 2940.0, "passed": false, "error": null}
+{"task_id": "0017", "completion_id": 3, "completion": "61 43 30 * + 70 + 18 + 73 -", "pred_value": 1366.0, "true_value": 4306.0, "abs_err": 2940.0, "passed": false, "error": null}
+{"task_id": "0018", "completion_id": 0, "completion": "85", "pred_value": 85.0, "true_value": 85.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0018", "completion_id": 1, "completion": "85", "pred_value": 85.0, "true_value": 85.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0018", "completion_id": 2, "completion": "85", "pred_value": 85.0, "true_value": 85.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0018", "completion_id": 3, "completion": "85", "pred_value": 85.0, "true_value": 85.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0019", "completion_id": 0, "completion": "50", "pred_value": 50.0, "true_value": 50.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0019", "completion_id": 1, "completion": "50", "pred_value": 50.0, "true_value": 50.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0019", "completion_id": 2, "completion": "50", "pred_value": 50.0, "true_value": 50.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0019", "completion_id": 3, "completion": "50", "pred_value": 50.0, "true_value": 50.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0020", "completion_id": 0, "completion": "33 43 - 31 +", "pred_value": 21.0, "true_value": 21.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0020", "completion_id": 1, "completion": "33 43 - 31 +", "pred_value": 21.0, "true_value": 21.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0020", "completion_id": 2, "completion": "33 43 - 31 +", "pred_value": 21.0, "true_value": 21.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0020", "completion_id": 3, "completion": "33 43 - 31 +", "pred_value": 21.0, "true_value": 21.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0021", "completion_id": 0, "completion": "43 57 + 33 61 + - 38 61 + 37 + * 72 -", "pred_value": 744.0, "true_value": 9798.0, "abs_err": 9054.0, "passed": false, "error": null}
+{"task_id": "0021", "completion_id": 1, "completion": "43 57 + 33 61 + - 38 61 + 37 + * 72 -", "pred_value": 744.0, "true_value": 9798.0, "abs_err": 9054.0, "passed": false, "error": null}
+{"task_id": "0021", "completion_id": 2, "completion": "43 57 + 33 61 + - 38 61 + 37 + * 72 -", "pred_value": 744.0, "true_value": 9798.0, "abs_err": 9054.0, "passed": false, "error": null}
+{"task_id": "0021", "completion_id": 3, "completion": "43 57 + 33 61 - 38 61 + 37 + 72 * - +", "pred_value": -9720.0, "true_value": 9798.0, "abs_err": 19518.0, "passed": false, "error": null}
+{"task_id": "0022", "completion_id": 0, "completion": "2 91 85 79 * - 26 + - 50 * 48 69 * - 38 -", "pred_value": 326650.0, "true_value": -21773398.0, "abs_err": 22100048.0, "passed": false, "error": null}
+{"task_id": "0022", "completion_id": 1, "completion": "2 91 85 79 * - 26 + - 50 * 48 69 * - 38 -", "pred_value": 326650.0, "true_value": -21773398.0, "abs_err": 22100048.0, "passed": false, "error": null}
+{"task_id": "0022", "completion_id": 2, "completion": "2 91 85 79 * - 26 + - 50 * 48 69 * - 38 -", "pred_value": 326650.0, "true_value": -21773398.0, "abs_err": 22100048.0, "passed": false, "error": null}
+{"task_id": "0022", "completion_id": 3, "completion": "2 91 85 79 * - 26 + - 50 * 48 69 * - 38 -", "pred_value": 326650.0, "true_value": -21773398.0, "abs_err": 22100048.0, "passed": false, "error": null}
+{"task_id": "0023", "completion_id": 0, "completion": "50 20 *", "pred_value": 1000.0, "true_value": 1000.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0023", "completion_id": 1, "completion": "50 20 *", "pred_value": 1000.0, "true_value": 1000.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0023", "completion_id": 2, "completion": "50 20 *", "pred_value": 1000.0, "true_value": 1000.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0023", "completion_id": 3, "completion": "50 20 *", "pred_value": 1000.0, "true_value": 1000.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0024", "completion_id": 0, "completion": "95", "pred_value": 95.0, "true_value": 95.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0024", "completion_id": 1, "completion": "95", "pred_value": 95.0, "true_value": 95.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0024", "completion_id": 2, "completion": "95", "pred_value": 95.0, "true_value": 95.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0024", "completion_id": 3, "completion": "95", "pred_value": 95.0, "true_value": 95.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0025", "completion_id": 0, "completion": "73 86 + 99 54 - - 65 *", "pred_value": 7410.0, "true_value": 7410.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0025", "completion_id": 1, "completion": "73 86 + 99 54 - - 65 *", "pred_value": 7410.0, "true_value": 7410.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0025", "completion_id": 2, "completion": "73 86 + 99 54 - - 65 *", "pred_value": 7410.0, "true_value": 7410.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0025", "completion_id": 3, "completion": "73 86 + 99 54 - - 65 *", "pred_value": 7410.0, "true_value": 7410.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0026", "completion_id": 0, "completion": "74 73 64 - 88 84 + + 20 * 68 24 - -", "pred_value": null, "true_value": -670.0, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0026", "completion_id": 1, "completion": "74 73 64 - 88 84 + + 20 * 68 24 - -", "pred_value": null, "true_value": -670.0, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0026", "completion_id": 2, "completion": "74 73 64 - 88 84 + + 20 * 68 24 - -", "pred_value": null, "true_value": -670.0, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0026", "completion_id": 3, "completion": "74 73 64 - 88 84 + + 20 * 68 24 - -", "pred_value": null, "true_value": -670.0, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0027", "completion_id": 0, "completion": "90 45 51 - -", "pred_value": 96.0, "true_value": 96.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0027", "completion_id": 1, "completion": "90 45 51 - -", "pred_value": 96.0, "true_value": 96.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0027", "completion_id": 2, "completion": "90 45 51 - -", "pred_value": 96.0, "true_value": 96.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0027", "completion_id": 3, "completion": "90 45 51 - -", "pred_value": 96.0, "true_value": 96.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0028", "completion_id": 0, "completion": "49", "pred_value": 49.0, "true_value": 49.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0028", "completion_id": 1, "completion": "49", "pred_value": 49.0, "true_value": 49.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0028", "completion_id": 2, "completion": "49", "pred_value": 49.0, "true_value": 49.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0028", "completion_id": 3, "completion": "49", "pred_value": 49.0, "true_value": 49.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0029", "completion_id": 0, "completion": "48 65 + 84 *", "pred_value": 9492.0, "true_value": 9492.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0029", "completion_id": 1, "completion": "48 65 + 84 *", "pred_value": 9492.0, "true_value": 9492.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0029", "completion_id": 2, "completion": "48 65 + 84 *", "pred_value": 9492.0, "true_value": 9492.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0029", "completion_id": 3, "completion": "48 65 + 84 *", "pred_value": 9492.0, "true_value": 9492.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0030", "completion_id": 0, "completion": "30 2 +", "pred_value": 32.0, "true_value": 32.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0030", "completion_id": 1, "completion": "30 2 +", "pred_value": 32.0, "true_value": 32.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0030", "completion_id": 2, "completion": "30 2 +", "pred_value": 32.0, "true_value": 32.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0030", "completion_id": 3, "completion": "30 2 +", "pred_value": 32.0, "true_value": 32.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0031", "completion_id": 0, "completion": "94 7 90 * 29 96 + + -", "pred_value": -661.0, "true_value": -11163.0, "abs_err": 10502.0, "passed": false, "error": null}
+{"task_id": "0031", "completion_id": 1, "completion": "94 7 90 * 29 96 + + -", "pred_value": -661.0, "true_value": -11163.0, "abs_err": 10502.0, "passed": false, "error": null}
+{"task_id": "0031", "completion_id": 2, "completion": "94 7 90 * 29 96 + + -", "pred_value": -661.0, "true_value": -11163.0, "abs_err": 10502.0, "passed": false, "error": null}
+{"task_id": "0031", "completion_id": 3, "completion": "94 7 90 * 29 96 + + -", "pred_value": -661.0, "true_value": -11163.0, "abs_err": 10502.0, "passed": false, "error": null}
+{"task_id": "0032", "completion_id": 0, "completion": "25 23 +", "pred_value": 48.0, "true_value": 48.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0032", "completion_id": 1, "completion": "25 23 +", "pred_value": 48.0, "true_value": 48.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0032", "completion_id": 2, "completion": "25 23 +", "pred_value": 48.0, "true_value": 48.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0032", "completion_id": 3, "completion": "25 23 +", "pred_value": 48.0, "true_value": 48.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0033", "completion_id": 0, "completion": "81 76 * 27 - 81 3 + -", "pred_value": 6045.0, "true_value": 6045.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0033", "completion_id": 1, "completion": "81 76 * 27 - 81 3 + -", "pred_value": 6045.0, "true_value": 6045.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0033", "completion_id": 2, "completion": "81 76 * 27 - 81 3 + -", "pred_value": 6045.0, "true_value": 6045.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0033", "completion_id": 3, "completion": "81 76 * 27 - 81 3 + -", "pred_value": 6045.0, "true_value": 6045.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0034", "completion_id": 0, "completion": "36", "pred_value": 36.0, "true_value": 36.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0034", "completion_id": 1, "completion": "36", "pred_value": 36.0, "true_value": 36.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0034", "completion_id": 2, "completion": "36", "pred_value": 36.0, "true_value": 36.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0034", "completion_id": 3, "completion": "36", "pred_value": 36.0, "true_value": 36.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0035", "completion_id": 0, "completion": "22", "pred_value": 22.0, "true_value": 22.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0035", "completion_id": 1, "completion": "22", "pred_value": 22.0, "true_value": 22.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0035", "completion_id": 2, "completion": "22", "pred_value": 22.0, "true_value": 22.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0035", "completion_id": 3, "completion": "22", "pred_value": 22.0, "true_value": 22.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0036", "completion_id": 0, "completion": "76 12 77 69 + 53 - + 54 + 46 +", "pred_value": null, "true_value": -6056.0, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0036", "completion_id": 1, "completion": "76 12 77 69 + 53 - + 54 + 46 +", "pred_value": null, "true_value": -6056.0, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0036", "completion_id": 2, "completion": "76 12 77 69 + 53 - + 54 + 46 +", "pred_value": null, "true_value": -6056.0, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0036", "completion_id": 3, "completion": "76 12 77 69 + 53 - + 54 + 46 +", "pred_value": null, "true_value": -6056.0, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0037", "completion_id": 0, "completion": "53 100 76 37 - - 67 23 * * 44 +", "pred_value": null, "true_value": 296274.0, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0037", "completion_id": 1, "completion": "53 100 76 37 - - 67 23 * * 44 +", "pred_value": null, "true_value": 296274.0, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0037", "completion_id": 2, "completion": "53 100 76 37 - - 67 23 * * 44 +", "pred_value": null, "true_value": 296274.0, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0037", "completion_id": 3, "completion": "53 100 76 37 - - 67 23 * * 44 +", "pred_value": null, "true_value": 296274.0, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0038", "completion_id": 0, "completion": "81 47 + 99 +", "pred_value": 227.0, "true_value": 227.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0038", "completion_id": 1, "completion": "81 47 + 99 +", "pred_value": 227.0, "true_value": 227.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0038", "completion_id": 2, "completion": "81 47 + 99 +", "pred_value": 227.0, "true_value": 227.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0038", "completion_id": 3, "completion": "81 47 + 99 +", "pred_value": 227.0, "true_value": 227.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0039", "completion_id": 0, "completion": "48 92 +", "pred_value": 140.0, "true_value": 140.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0039", "completion_id": 1, "completion": "48 92 +", "pred_value": 140.0, "true_value": 140.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0039", "completion_id": 2, "completion": "48 92 +", "pred_value": 140.0, "true_value": 140.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0039", "completion_id": 3, "completion": "48 92 +", "pred_value": 140.0, "true_value": 140.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0040", "completion_id": 0, "completion": "50 46 /", "pred_value": 1.0869565217391304, "true_value": 1.0869565217391304, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0040", "completion_id": 1, "completion": "50 46 /", "pred_value": 1.0869565217391304, "true_value": 1.0869565217391304, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0040", "completion_id": 2, "completion": "50 46 /", "pred_value": 1.0869565217391304, "true_value": 1.0869565217391304, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0040", "completion_id": 3, "completion": "50 46 /", "pred_value": 1.0869565217391304, "true_value": 1.0869565217391304, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0041", "completion_id": 0, "completion": "8 65 +", "pred_value": 73.0, "true_value": 73.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0041", "completion_id": 1, "completion": "8 65 +", "pred_value": 73.0, "true_value": 73.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0041", "completion_id": 2, "completion": "8 65 +", "pred_value": 73.0, "true_value": 73.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0041", "completion_id": 3, "completion": "8 65 +", "pred_value": 73.0, "true_value": 73.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0042", "completion_id": 0, "completion": "12 27 *", "pred_value": 324.0, "true_value": 324.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0042", "completion_id": 1, "completion": "12 27 *", "pred_value": 324.0, "true_value": 324.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0042", "completion_id": 2, "completion": "12 27 *", "pred_value": 324.0, "true_value": 324.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0042", "completion_id": 3, "completion": "12 27 *", "pred_value": 324.0, "true_value": 324.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0043", "completion_id": 0, "completion": "37 23 39 - 8 + 32 - 91 - 67 3 87 + + +", "pred_value": null, "true_value": 183.0, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0043", "completion_id": 1, "completion": "37 23 39 + 8 + 32 - 91 - 67 3 + 87 + +", "pred_value": null, "true_value": 183.0, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0043", "completion_id": 2, "completion": "37 23 39 - 8 + 32 - 91 - 67 3 87 + + +", "pred_value": null, "true_value": 183.0, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0043", "completion_id": 3, "completion": "37 23 39 - 8 + 32 - 91 - 67 3 87 + + +", "pred_value": null, "true_value": 183.0, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0044", "completion_id": 0, "completion": "58 69 - 87 + 84 -", "pred_value": -8.0, "true_value": -14.0, "abs_err": 6.0, "passed": false, "error": null}
+{"task_id": "0044", "completion_id": 1, "completion": "58 69 - 87 + 84 -", "pred_value": -8.0, "true_value": -14.0, "abs_err": 6.0, "passed": false, "error": null}
+{"task_id": "0044", "completion_id": 2, "completion": "58 69 - 87 + 84 -", "pred_value": -8.0, "true_value": -14.0, "abs_err": 6.0, "passed": false, "error": null}
+{"task_id": "0044", "completion_id": 3, "completion": "58 69 - 87 + 84 -", "pred_value": -8.0, "true_value": -14.0, "abs_err": 6.0, "passed": false, "error": null}
+{"task_id": "0045", "completion_id": 0, "completion": "12 72 + 90 +", "pred_value": 174.0, "true_value": 174.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0045", "completion_id": 1, "completion": "12 72 + 90 +", "pred_value": 174.0, "true_value": 174.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0045", "completion_id": 2, "completion": "12 72 + 90 +", "pred_value": 174.0, "true_value": 174.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0045", "completion_id": 3, "completion": "12 72 + 90 +", "pred_value": 174.0, "true_value": 174.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0046", "completion_id": 0, "completion": "49 68 39 + *", "pred_value": 5243.0, "true_value": 5243.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0046", "completion_id": 1, "completion": "49 68 39 + *", "pred_value": 5243.0, "true_value": 5243.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0046", "completion_id": 2, "completion": "49 68 39 + *", "pred_value": 5243.0, "true_value": 5243.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0046", "completion_id": 3, "completion": "49 68 39 + *", "pred_value": 5243.0, "true_value": 5243.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0047", "completion_id": 0, "completion": "44 39 -", "pred_value": 5.0, "true_value": 5.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0047", "completion_id": 1, "completion": "44 39 -", "pred_value": 5.0, "true_value": 5.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0047", "completion_id": 2, "completion": "44 39 -", "pred_value": 5.0, "true_value": 5.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0047", "completion_id": 3, "completion": "44 39 -", "pred_value": 5.0, "true_value": 5.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0048", "completion_id": 0, "completion": "72 72 22 * +", "pred_value": 1656.0, "true_value": 1656.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0048", "completion_id": 1, "completion": "72 72 22 * +", "pred_value": 1656.0, "true_value": 1656.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0048", "completion_id": 2, "completion": "72 72 22 * +", "pred_value": 1656.0, "true_value": 1656.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0048", "completion_id": 3, "completion": "72 72 22 * +", "pred_value": 1656.0, "true_value": 1656.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0049", "completion_id": 0, "completion": "2 72 100 + + 66 *", "pred_value": 11484.0, "true_value": 11354.0, "abs_err": 130.0, "passed": false, "error": null}
+{"task_id": "0049", "completion_id": 1, "completion": "2 72 100 + + 66 *", "pred_value": 11484.0, "true_value": 11354.0, "abs_err": 130.0, "passed": false, "error": null}
+{"task_id": "0049", "completion_id": 2, "completion": "2 72 100 + + 66 *", "pred_value": 11484.0, "true_value": 11354.0, "abs_err": 130.0, "passed": false, "error": null}
+{"task_id": "0049", "completion_id": 3, "completion": "2 72 100 + + 66 *", "pred_value": 11484.0, "true_value": 11354.0, "abs_err": 130.0, "passed": false, "error": null}
+{"task_id": "0050", "completion_id": 0, "completion": "17", "pred_value": 17.0, "true_value": 17.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0050", "completion_id": 1, "completion": "17", "pred_value": 17.0, "true_value": 17.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0050", "completion_id": 2, "completion": "17", "pred_value": 17.0, "true_value": 17.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0050", "completion_id": 3, "completion": "17", "pred_value": 17.0, "true_value": 17.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0051", "completion_id": 0, "completion": "51 47 37 - -", "pred_value": 41.0, "true_value": 41.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0051", "completion_id": 1, "completion": "51 47 37 - -", "pred_value": 41.0, "true_value": 41.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0051", "completion_id": 2, "completion": "51 47 37 - -", "pred_value": 41.0, "true_value": 41.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0051", "completion_id": 3, "completion": "51 47 37 - -", "pred_value": 41.0, "true_value": 41.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0052", "completion_id": 0, "completion": "39", "pred_value": 39.0, "true_value": 39.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0052", "completion_id": 1, "completion": "39", "pred_value": 39.0, "true_value": 39.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0052", "completion_id": 2, "completion": "39", "pred_value": 39.0, "true_value": 39.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0052", "completion_id": 3, "completion": "39", "pred_value": 39.0, "true_value": 39.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0053", "completion_id": 0, "completion": "8 40 -", "pred_value": -32.0, "true_value": -32.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0053", "completion_id": 1, "completion": "8 40 -", "pred_value": -32.0, "true_value": -32.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0053", "completion_id": 2, "completion": "8 40 -", "pred_value": -32.0, "true_value": -32.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0053", "completion_id": 3, "completion": "8 40 -", "pred_value": -32.0, "true_value": -32.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0054", "completion_id": 0, "completion": "65", "pred_value": 65.0, "true_value": 65.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0054", "completion_id": 1, "completion": "65", "pred_value": 65.0, "true_value": 65.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0054", "completion_id": 2, "completion": "65", "pred_value": 65.0, "true_value": 65.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0054", "completion_id": 3, "completion": "65", "pred_value": 65.0, "true_value": 65.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0055", "completion_id": 0, "completion": "68", "pred_value": 68.0, "true_value": 68.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0055", "completion_id": 1, "completion": "68", "pred_value": 68.0, "true_value": 68.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0055", "completion_id": 2, "completion": "68", "pred_value": 68.0, "true_value": 68.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0055", "completion_id": 3, "completion": "68", "pred_value": 68.0, "true_value": 68.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0056", "completion_id": 0, "completion": "2", "pred_value": 2.0, "true_value": 2.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0056", "completion_id": 1, "completion": "2", "pred_value": 2.0, "true_value": 2.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0056", "completion_id": 2, "completion": "2", "pred_value": 2.0, "true_value": 2.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0056", "completion_id": 3, "completion": "2", "pred_value": 2.0, "true_value": 2.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0057", "completion_id": 0, "completion": "89 2 * 46 - 47 +", "pred_value": 179.0, "true_value": -3869.0, "abs_err": 4048.0, "passed": false, "error": null}
+{"task_id": "0057", "completion_id": 1, "completion": "89 2 * 46 - 47 +", "pred_value": 179.0, "true_value": -3869.0, "abs_err": 4048.0, "passed": false, "error": null}
+{"task_id": "0057", "completion_id": 2, "completion": "89 2 * 46 - 47 +", "pred_value": 179.0, "true_value": -3869.0, "abs_err": 4048.0, "passed": false, "error": null}
+{"task_id": "0057", "completion_id": 3, "completion": "89 2 * 46 - 47 +", "pred_value": 179.0, "true_value": -3869.0, "abs_err": 4048.0, "passed": false, "error": null}
+{"task_id": "0058", "completion_id": 0, "completion": "74", "pred_value": 74.0, "true_value": 74.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0058", "completion_id": 1, "completion": "74", "pred_value": 74.0, "true_value": 74.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0058", "completion_id": 2, "completion": "74", "pred_value": 74.0, "true_value": 74.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0058", "completion_id": 3, "completion": "74", "pred_value": 74.0, "true_value": 74.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0059", "completion_id": 0, "completion": "49 65 - 99 +", "pred_value": 83.0, "true_value": 83.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0059", "completion_id": 1, "completion": "49 65 - 99 +", "pred_value": 83.0, "true_value": 83.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0059", "completion_id": 2, "completion": "49 65 - 99 +", "pred_value": 83.0, "true_value": 83.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0059", "completion_id": 3, "completion": "49 65 - 99 +", "pred_value": 83.0, "true_value": 83.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0060", "completion_id": 0, "completion": "12 88 *", "pred_value": 1056.0, "true_value": 1056.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0060", "completion_id": 1, "completion": "12 88 *", "pred_value": 1056.0, "true_value": 1056.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0060", "completion_id": 2, "completion": "12 88 *", "pred_value": 1056.0, "true_value": 1056.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0060", "completion_id": 3, "completion": "12 88 *", "pred_value": 1056.0, "true_value": 1056.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0061", "completion_id": 0, "completion": "54", "pred_value": 54.0, "true_value": 54.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0061", "completion_id": 1, "completion": "54", "pred_value": 54.0, "true_value": 54.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0061", "completion_id": 2, "completion": "54", "pred_value": 54.0, "true_value": 54.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0061", "completion_id": 3, "completion": "54", "pred_value": 54.0, "true_value": 54.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0062", "completion_id": 0, "completion": "12 70 93 69 12 - * + 14 + *", "pred_value": 64620.0, "true_value": 111660.0, "abs_err": 47040.0, "passed": false, "error": null}
+{"task_id": "0062", "completion_id": 1, "completion": "12 70 93 69 12 - * + 14 + *", "pred_value": 64620.0, "true_value": 111660.0, "abs_err": 47040.0, "passed": false, "error": null}
+{"task_id": "0062", "completion_id": 2, "completion": "12 70 93 69 12 - * + 14 + *", "pred_value": 64620.0, "true_value": 111660.0, "abs_err": 47040.0, "passed": false, "error": null}
+{"task_id": "0062", "completion_id": 3, "completion": "12 70 93 69 12 - * + 14 + +", "pred_value": 5397.0, "true_value": 111660.0, "abs_err": 106263.0, "passed": false, "error": null}
+{"task_id": "0063", "completion_id": 0, "completion": "57 96 + 87 39 - 14 + 31 + 52 + *", "pred_value": 22185.0, "true_value": 29835.0, "abs_err": 7650.0, "passed": false, "error": null}
+{"task_id": "0063", "completion_id": 1, "completion": "57 96 + 87 39 - 14 + 31 + 52 + *", "pred_value": 22185.0, "true_value": 29835.0, "abs_err": 7650.0, "passed": false, "error": null}
+{"task_id": "0063", "completion_id": 2, "completion": "57 96 + 87 39 - 14 + 31 + 52 + *", "pred_value": 22185.0, "true_value": 29835.0, "abs_err": 7650.0, "passed": false, "error": null}
+{"task_id": "0063", "completion_id": 3, "completion": "57 96 + 87 39 - 14 + 31 + 52 + *", "pred_value": 22185.0, "true_value": 29835.0, "abs_err": 7650.0, "passed": false, "error": null}
+{"task_id": "0064", "completion_id": 0, "completion": "65 92 + 43 -", "pred_value": 114.0, "true_value": 114.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0064", "completion_id": 1, "completion": "65 92 + 43 -", "pred_value": 114.0, "true_value": 114.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0064", "completion_id": 2, "completion": "65 92 + 43 -", "pred_value": 114.0, "true_value": 114.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0064", "completion_id": 3, "completion": "65 92 + 43 -", "pred_value": 114.0, "true_value": 114.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0065", "completion_id": 0, "completion": "10 69 / 52 +", "pred_value": 52.14492753623188, "true_value": 52.14492753623188, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0065", "completion_id": 1, "completion": "10 69 / 52 +", "pred_value": 52.14492753623188, "true_value": 52.14492753623188, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0065", "completion_id": 2, "completion": "10 69 / 52 +", "pred_value": 52.14492753623188, "true_value": 52.14492753623188, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0065", "completion_id": 3, "completion": "10 69 / 52 +", "pred_value": 52.14492753623188, "true_value": 52.14492753623188, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0066", "completion_id": 0, "completion": "19 66 + 38 57 + 8 - + 56 +", "pred_value": 228.0, "true_value": 54.0, "abs_err": 174.0, "passed": false, "error": null}
+{"task_id": "0066", "completion_id": 1, "completion": "19 66 + 38 57 + 8 - + 56 +", "pred_value": 228.0, "true_value": 54.0, "abs_err": 174.0, "passed": false, "error": null}
+{"task_id": "0066", "completion_id": 2, "completion": "19 66 + 38 57 + 8 - + 56 +", "pred_value": 228.0, "true_value": 54.0, "abs_err": 174.0, "passed": false, "error": null}
+{"task_id": "0066", "completion_id": 3, "completion": "19 66 + 38 57 + 8 - + 56 +", "pred_value": 228.0, "true_value": 54.0, "abs_err": 174.0, "passed": false, "error": null}
+{"task_id": "0067", "completion_id": 0, "completion": "78 91 +", "pred_value": 169.0, "true_value": 169.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0067", "completion_id": 1, "completion": "78 91 +", "pred_value": 169.0, "true_value": 169.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0067", "completion_id": 2, "completion": "78 91 +", "pred_value": 169.0, "true_value": 169.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0067", "completion_id": 3, "completion": "78 91 +", "pred_value": 169.0, "true_value": 169.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0068", "completion_id": 0, "completion": "75", "pred_value": 75.0, "true_value": 75.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0068", "completion_id": 1, "completion": "75", "pred_value": 75.0, "true_value": 75.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0068", "completion_id": 2, "completion": "75", "pred_value": 75.0, "true_value": 75.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0068", "completion_id": 3, "completion": "75", "pred_value": 75.0, "true_value": 75.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0069", "completion_id": 0, "completion": "46 68 25 + -", "pred_value": -47.0, "true_value": -47.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0069", "completion_id": 1, "completion": "46 68 25 + -", "pred_value": -47.0, "true_value": -47.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0069", "completion_id": 2, "completion": "46 68 25 + -", "pred_value": -47.0, "true_value": -47.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0069", "completion_id": 3, "completion": "46 68 25 + -", "pred_value": -47.0, "true_value": -47.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0070", "completion_id": 0, "completion": "61", "pred_value": 61.0, "true_value": 61.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0070", "completion_id": 1, "completion": "61", "pred_value": 61.0, "true_value": 61.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0070", "completion_id": 2, "completion": "61", "pred_value": 61.0, "true_value": 61.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0070", "completion_id": 3, "completion": "61", "pred_value": 61.0, "true_value": 61.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0071", "completion_id": 0, "completion": "51 53 22 84 71 53 + - - +", "pred_value": null, "true_value": -188.0, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0071", "completion_id": 1, "completion": "51 53 22 84 71 53 + - - +", "pred_value": null, "true_value": -188.0, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0071", "completion_id": 2, "completion": "51 53 22 84 71 53 + - - +", "pred_value": null, "true_value": -188.0, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0071", "completion_id": 3, "completion": "51 53 22 84 71 53 + - - +", "pred_value": null, "true_value": -188.0, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0072", "completion_id": 0, "completion": "72 98 * 65 + 74 + 19 - 12 14 +", "pred_value": null, "true_value": 7188.0, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0072", "completion_id": 1, "completion": "72 98 * 65 + 74 + 19 - 12 14 +", "pred_value": null, "true_value": 7188.0, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0072", "completion_id": 2, "completion": "72 98 * 65 + 74 + 19 - 12 14 + +", "pred_value": 7202.0, "true_value": 7188.0, "abs_err": 14.0, "passed": false, "error": null}
+{"task_id": "0072", "completion_id": 3, "completion": "72 98 * 65 + 74 + 19 - 12 14 +", "pred_value": null, "true_value": 7188.0, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0073", "completion_id": 0, "completion": "20 49 +", "pred_value": 69.0, "true_value": 69.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0073", "completion_id": 1, "completion": "20 49 +", "pred_value": 69.0, "true_value": 69.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0073", "completion_id": 2, "completion": "20 49 +", "pred_value": 69.0, "true_value": 69.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0073", "completion_id": 3, "completion": "20 49 +", "pred_value": 69.0, "true_value": 69.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0074", "completion_id": 0, "completion": "79 47 - 80 -", "pred_value": -48.0, "true_value": -48.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0074", "completion_id": 1, "completion": "79 47 - 80 -", "pred_value": -48.0, "true_value": -48.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0074", "completion_id": 2, "completion": "79 47 - 80 -", "pred_value": -48.0, "true_value": -48.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0074", "completion_id": 3, "completion": "79 47 - 80 -", "pred_value": -48.0, "true_value": -48.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0075", "completion_id": 0, "completion": "19", "pred_value": 19.0, "true_value": 19.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0075", "completion_id": 1, "completion": "19", "pred_value": 19.0, "true_value": 19.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0075", "completion_id": 2, "completion": "19", "pred_value": 19.0, "true_value": 19.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0075", "completion_id": 3, "completion": "19", "pred_value": 19.0, "true_value": 19.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0076", "completion_id": 0, "completion": "10", "pred_value": 10.0, "true_value": 10.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0076", "completion_id": 1, "completion": "10", "pred_value": 10.0, "true_value": 10.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0076", "completion_id": 2, "completion": "10", "pred_value": 10.0, "true_value": 10.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0076", "completion_id": 3, "completion": "10", "pred_value": 10.0, "true_value": 10.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0077", "completion_id": 0, "completion": "69", "pred_value": 69.0, "true_value": 69.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0077", "completion_id": 1, "completion": "69", "pred_value": 69.0, "true_value": 69.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0077", "completion_id": 2, "completion": "69", "pred_value": 69.0, "true_value": 69.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0077", "completion_id": 3, "completion": "69", "pred_value": 69.0, "true_value": 69.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0078", "completion_id": 0, "completion": "83 62 * 75 *", "pred_value": 385950.0, "true_value": 385950.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0078", "completion_id": 1, "completion": "83 62 * 75 *", "pred_value": 385950.0, "true_value": 385950.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0078", "completion_id": 2, "completion": "83 62 * 75 *", "pred_value": 385950.0, "true_value": 385950.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0078", "completion_id": 3, "completion": "83 62 * 75 *", "pred_value": 385950.0, "true_value": 385950.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0079", "completion_id": 0, "completion": "57 17 * 88 *", "pred_value": 85272.0, "true_value": 85272.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0079", "completion_id": 1, "completion": "57 17 * 88 *", "pred_value": 85272.0, "true_value": 85272.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0079", "completion_id": 2, "completion": "57 17 * 88 *", "pred_value": 85272.0, "true_value": 85272.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0079", "completion_id": 3, "completion": "57 17 * 88 *", "pred_value": 85272.0, "true_value": 85272.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0080", "completion_id": 0, "completion": "19 87 -", "pred_value": -68.0, "true_value": -68.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0080", "completion_id": 1, "completion": "19 87 -", "pred_value": -68.0, "true_value": -68.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0080", "completion_id": 2, "completion": "19 87 -", "pred_value": -68.0, "true_value": -68.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0080", "completion_id": 3, "completion": "19 87 -", "pred_value": -68.0, "true_value": -68.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0081", "completion_id": 0, "completion": "36", "pred_value": 36.0, "true_value": 36.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0081", "completion_id": 1, "completion": "36", "pred_value": 36.0, "true_value": 36.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0081", "completion_id": 2, "completion": "36", "pred_value": 36.0, "true_value": 36.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0081", "completion_id": 3, "completion": "36", "pred_value": 36.0, "true_value": 36.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0082", "completion_id": 0, "completion": "20 98 - 24 +", "pred_value": -54.0, "true_value": -54.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0082", "completion_id": 1, "completion": "20 98 - 24 +", "pred_value": -54.0, "true_value": -54.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0082", "completion_id": 2, "completion": "20 98 - 24 +", "pred_value": -54.0, "true_value": -54.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0082", "completion_id": 3, "completion": "20 98 - 24 +", "pred_value": -54.0, "true_value": -54.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0083", "completion_id": 0, "completion": "52", "pred_value": 52.0, "true_value": 52.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0083", "completion_id": 1, "completion": "52", "pred_value": 52.0, "true_value": 52.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0083", "completion_id": 2, "completion": "52", "pred_value": 52.0, "true_value": 52.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0083", "completion_id": 3, "completion": "52", "pred_value": 52.0, "true_value": 52.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0084", "completion_id": 0, "completion": "70", "pred_value": 70.0, "true_value": 70.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0084", "completion_id": 1, "completion": "70", "pred_value": 70.0, "true_value": 70.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0084", "completion_id": 2, "completion": "70", "pred_value": 70.0, "true_value": 70.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0084", "completion_id": 3, "completion": "70", "pred_value": 70.0, "true_value": 70.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0085", "completion_id": 0, "completion": "37 54 *", "pred_value": 1998.0, "true_value": 1998.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0085", "completion_id": 1, "completion": "37 54 *", "pred_value": 1998.0, "true_value": 1998.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0085", "completion_id": 2, "completion": "37 54 *", "pred_value": 1998.0, "true_value": 1998.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0085", "completion_id": 3, "completion": "37 54 *", "pred_value": 1998.0, "true_value": 1998.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0086", "completion_id": 0, "completion": "10 40 - 19 +", "pred_value": -11.0, "true_value": -11.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0086", "completion_id": 1, "completion": "10 40 - 19 +", "pred_value": -11.0, "true_value": -11.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0086", "completion_id": 2, "completion": "10 40 - 19 +", "pred_value": -11.0, "true_value": -11.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0086", "completion_id": 3, "completion": "10 40 - 19 +", "pred_value": -11.0, "true_value": -11.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0087", "completion_id": 0, "completion": "42 50 + 76 + 3 -", "pred_value": 165.0, "true_value": 165.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0087", "completion_id": 1, "completion": "42 50 + 76 + 3 -", "pred_value": 165.0, "true_value": 165.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0087", "completion_id": 2, "completion": "42 50 + 76 + 3 -", "pred_value": 165.0, "true_value": 165.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0087", "completion_id": 3, "completion": "42 50 + 76 + 3 -", "pred_value": 165.0, "true_value": 165.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0088", "completion_id": 0, "completion": "83 8 - 59 - 89 * 14", "pred_value": null, "true_value": 1262.0, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0088", "completion_id": 1, "completion": "83 8 - 59 - 89 * 14", "pred_value": null, "true_value": 1262.0, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0088", "completion_id": 2, "completion": "83 8 - 59 - 89 * 14", "pred_value": null, "true_value": 1262.0, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0088", "completion_id": 3, "completion": "83 8 - 59 - 89 * 14", "pred_value": null, "true_value": 1262.0, "abs_err": null, "passed": false, "error": "ValueError: Malformed RPN: stack has multiple values at end"}
+{"task_id": "0089", "completion_id": 0, "completion": "72 88 28 + * 42 *", "pred_value": 350784.0, "true_value": 350784.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0089", "completion_id": 1, "completion": "72 88 28 + * 42 *", "pred_value": 350784.0, "true_value": 350784.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0089", "completion_id": 2, "completion": "72 88 28 + * 42 *", "pred_value": 350784.0, "true_value": 350784.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0089", "completion_id": 3, "completion": "72 88 28 + * 42 *", "pred_value": 350784.0, "true_value": 350784.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0090", "completion_id": 0, "completion": "50", "pred_value": 50.0, "true_value": 50.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0090", "completion_id": 1, "completion": "50", "pred_value": 50.0, "true_value": 50.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0090", "completion_id": 2, "completion": "50", "pred_value": 50.0, "true_value": 50.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0090", "completion_id": 3, "completion": "50", "pred_value": 50.0, "true_value": 50.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0091", "completion_id": 0, "completion": "99", "pred_value": 99.0, "true_value": 99.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0091", "completion_id": 1, "completion": "99", "pred_value": 99.0, "true_value": 99.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0091", "completion_id": 2, "completion": "99", "pred_value": 99.0, "true_value": 99.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0091", "completion_id": 3, "completion": "99", "pred_value": 99.0, "true_value": 99.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0092", "completion_id": 0, "completion": "60 52 98 * + 30 18 * 88 - 42 + +", "pred_value": 5650.0, "true_value": 2547064.0, "abs_err": 2541414.0, "passed": false, "error": null}
+{"task_id": "0092", "completion_id": 1, "completion": "60 52 98 * + 30 18 * 88 - 42 + +", "pred_value": 5650.0, "true_value": 2547064.0, "abs_err": 2541414.0, "passed": false, "error": null}
+{"task_id": "0092", "completion_id": 2, "completion": "60 52 98 * + 30 18 * 88 - 42 + +", "pred_value": 5650.0, "true_value": 2547064.0, "abs_err": 2541414.0, "passed": false, "error": null}
+{"task_id": "0092", "completion_id": 3, "completion": "60 52 98 * + 30 18 * 88 - 42 + +", "pred_value": 5650.0, "true_value": 2547064.0, "abs_err": 2541414.0, "passed": false, "error": null}
+{"task_id": "0093", "completion_id": 0, "completion": "99 86 *", "pred_value": 8514.0, "true_value": 8514.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0093", "completion_id": 1, "completion": "99 86 *", "pred_value": 8514.0, "true_value": 8514.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0093", "completion_id": 2, "completion": "99 86 *", "pred_value": 8514.0, "true_value": 8514.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0093", "completion_id": 3, "completion": "99 86 *", "pred_value": 8514.0, "true_value": 8514.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0094", "completion_id": 0, "completion": "18 43 68 + 41 * -", "pred_value": -4533.0, "true_value": -4533.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0094", "completion_id": 1, "completion": "18 43 68 + 41 * -", "pred_value": -4533.0, "true_value": -4533.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0094", "completion_id": 2, "completion": "18 43 68 + 41 * -", "pred_value": -4533.0, "true_value": -4533.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0094", "completion_id": 3, "completion": "18 43 68 + 41 * -", "pred_value": -4533.0, "true_value": -4533.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0095", "completion_id": 0, "completion": "40", "pred_value": 40.0, "true_value": 40.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0095", "completion_id": 1, "completion": "40", "pred_value": 40.0, "true_value": 40.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0095", "completion_id": 2, "completion": "40", "pred_value": 40.0, "true_value": 40.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0095", "completion_id": 3, "completion": "40", "pred_value": 40.0, "true_value": 40.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0096", "completion_id": 0, "completion": "29", "pred_value": 29.0, "true_value": 29.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0096", "completion_id": 1, "completion": "29", "pred_value": 29.0, "true_value": 29.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0096", "completion_id": 2, "completion": "29", "pred_value": 29.0, "true_value": 29.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0096", "completion_id": 3, "completion": "29", "pred_value": 29.0, "true_value": 29.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0097", "completion_id": 0, "completion": "13 64 1 * / 87 + 32 + 17 +", "pred_value": 136.203125, "true_value": 136.203125, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0097", "completion_id": 1, "completion": "13 64 1 * / 87 + 32 + 17 +", "pred_value": 136.203125, "true_value": 136.203125, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0097", "completion_id": 2, "completion": "13 64 1 * / 87 + 32 + 17 +", "pred_value": 136.203125, "true_value": 136.203125, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0097", "completion_id": 3, "completion": "13 64 1 * / 87 + 32 + 17 +", "pred_value": 136.203125, "true_value": 136.203125, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0098", "completion_id": 0, "completion": "93 19 *", "pred_value": 1767.0, "true_value": 1767.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0098", "completion_id": 1, "completion": "93 19 *", "pred_value": 1767.0, "true_value": 1767.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0098", "completion_id": 2, "completion": "93 19 *", "pred_value": 1767.0, "true_value": 1767.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0098", "completion_id": 3, "completion": "93 19 *", "pred_value": 1767.0, "true_value": 1767.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0099", "completion_id": 0, "completion": "71 47 * 31 - 88 + 14 -", "pred_value": 3380.0, "true_value": 6390.0, "abs_err": 3010.0, "passed": false, "error": null}
+{"task_id": "0099", "completion_id": 1, "completion": "71 47 * 31 - 88 + 14 -", "pred_value": 3380.0, "true_value": 6390.0, "abs_err": 3010.0, "passed": false, "error": null}
+{"task_id": "0099", "completion_id": 2, "completion": "71 47 * 31 - 88 + 14 -", "pred_value": 3380.0, "true_value": 6390.0, "abs_err": 3010.0, "passed": false, "error": null}
+{"task_id": "0099", "completion_id": 3, "completion": "71 47 * 31 - 88 + 14 -", "pred_value": 3380.0, "true_value": 6390.0, "abs_err": 3010.0, "passed": false, "error": null}
+{"task_id": "0100", "completion_id": 0, "completion": "48 47 85 * + 37 +", "pred_value": 4080.0, "true_value": 4080.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0100", "completion_id": 1, "completion": "48 47 85 * + 37 +", "pred_value": 4080.0, "true_value": 4080.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0100", "completion_id": 2, "completion": "48 47 85 * + 37 +", "pred_value": 4080.0, "true_value": 4080.0, "abs_err": 0.0, "passed": true, "error": null}
+{"task_id": "0100", "completion_id": 3, "completion": "48 47 85 * + 37 +", "pred_value": 4080.0, "true_value": 4080.0, "abs_err": 0.0, "passed": true, "error": null}

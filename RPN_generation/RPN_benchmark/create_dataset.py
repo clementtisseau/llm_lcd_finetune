@@ -93,7 +93,7 @@ def weighted_op():
     return choices(OPS, weights=OP_WEIGHTS, k=1)[0]
 
 def random_expression(prob, depth=0):
-    if random() > prob:
+    if random() > prob and depth > 0:
         return Number(randint(1, 100))
 
     # Small chance to add parentheses — decreasing with depth
