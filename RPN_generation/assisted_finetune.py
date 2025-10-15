@@ -5,15 +5,13 @@ from torch.optim import AdamW
 from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModelForCausalLM, get_linear_schedule_with_warmup
 
+from torch.utils.tensorboard import SummaryWriter
+
 import constraintlm as clm
 import outlines
 from outlines.processors import RegexLogitsProcessor
 
 from pathlib import Path
-
-HERE = Path(__file__).resolve().parent  # directory containing assisted_finetune.py
-# DATA = HERE / "RPN_benchmark" / "data" / "dataset.jsonl"
-DATA = HERE / "RPN_benchmark" / "train" / "train_dataset1024.jsonl"
 
 
 
@@ -68,7 +66,7 @@ def load_training_state(ckpt_dir: Path):
 def finetune(
     model_name: str,
     dataset_name: str,
-    dataset_size: int,
+    dataset_size: int = None,
     max_length: int = 256,
     output_dir: str = "/scratch/ctisseau/finetuned-models",
     epochs: int = 3,
@@ -82,14 +80,14 @@ def finetune(
 
     # Load dataset
     print("Loading dataset")
-    dataset = list(stream_jsonl(DATA))
-    # problems = problems[:10]
+    dataset = list(stream_jsonl(dataset_name))
+    if dataset_size is not None: dataset = dataset[:dataset_size]
     print("Dataset loaded")
 
     max_memory3 = {
-        0: "10GB",
-        1: "10GB",
-        2: "10GB"
+        0: "7GB",
+        1: "7GB",
+        2: "7GB"
     }
     max_memory2 = {
         0: "75GB",   
@@ -126,6 +124,7 @@ def finetune(
         outlines_model.tensor_library_name,
     )
     print("Logits Processor created.")
+    model.config.use_cache = False          # Disable KV-cache, which is useless during training
 
     first_device = next(model.parameters()).device
 
@@ -203,7 +202,8 @@ def finetune(
             enable_thinking=False
         )
         for r in rows
-    ]
+    ]# example: (4 additional newlines when enable_thinking=False)
+    # "<|im_start|>system\nYou are an expert at converting arithmetic expressions into Reverse Polish Notation (RPN). You always output only the RPN expression, with tokens separated by a single space. Do not include explanations or extra text.<|im_end|>\n<|im_start|>user\nInfix: 3 + 4 * 2\nRPN:<|im_end|>\n<|im_start|>assistant\n\n\n\n\n"
 
     # Full training strings (prompt + target)
     full_texts = [
@@ -215,6 +215,8 @@ def finetune(
         )
         for r in rows
     ]
+    # "<|im_start|>system\nYou are an expert at converting arithmetic expressions into Reverse Polish Notation (RPN). You always output only the RPN expression, with tokens separated by a single space. Do not include explanations or extra text.<|im_end|>\n<|im_start|>user\nInfix: 3 + 4 * 2\nRPN:<|im_end|>\n<|im_start|>assistant\n\n\n\n\n3 4 2 * +<|im_end|>\n"
+
 
     # Tokenize full sequences
     encodings = tokenizer(
@@ -286,6 +288,11 @@ def finetune(
         num_warmup_steps=int(0.1 * total_steps),
         num_training_steps=total_steps,
     )
+    # To monitor training
+    # tensorboard --logdir /scratch/ctisseau/finetuned-models/Qwen3-1.7B-lcd-RPN-ds1024-e2-ds1024-bs32-testdeletelater/tb --host 127.0.0.1 --port 7007    
+    # ssh -N -L 7007:127.0.0.1:7007 -J ctisseau@cleps.paris.inria.fr ctisseau@gpu014
+    # # Then open http://localhost:7007 on the browser
+    writer = SummaryWriter(log_dir=str(Path(output_dir) / "tb"))
 
     # Find information to resume training
     # A step is an update of the weights. Each epoch comprise several batch (one batch is multiple micro_batch) and each batch means a step
@@ -335,14 +342,17 @@ def finetune(
             biased_logits = logits.clone()
             micro_bs = logits.shape[0]
             for i in range(micro_bs):
-                idx = step * micro_batch_size + i
-                start_prompt = padded_seq_len - full_lengths[idx]
-                len_prompt = prompt_lengths[idx]                                
-                start_ans = min(start_prompt + len_prompt, padded_seq_len)      # except error: start_prompt + len_prompt < padded_seq_len
-                end_ans = padded_seq_len - 2                                    # - 2 : a_1, ..., a_m, <|im_end|>, \n (apply_chat_template add a eos_token_id and a newline)
+                # idx = step * micro_batch_size + i
+                # start_prompt = padded_seq_len - full_lengths[idx]
+                # len_prompt = prompt_lengths[idx]                                
+                # start_ans = min(start_prompt + len_prompt, padded_seq_len)      # except error: start_prompt + len_prompt < padded_seq_len
+                # end_ans = padded_seq_len - 2                                    # - 2 : a_1, ..., a_m, <|im_end|>, \n (apply_chat_template add a eos_token_id and a newline)
+                valid = (batch_labels[i] != -100).nonzero(as_tuple=False).squeeze(-1)
+                start_ans = int(valid[0])                                       # first non -100 label
+                end_ans   = int(valid[-1]) - 1                                  # This token is excluded from biasing (-1: because here we have a_1, ..., a_m, <|im_end|>, \n)
                 # print(f"---input---'{tokenizer.decode(batch_input_ids[i, :], skip_special_tokens=False, clean_up_tokenization_spaces=False)}'---end of input---")
-                # print(tokenizer.decode(prompts[idx], skip_special_tokens=False, clean_up_tokenization_spaces=False), "this was the prompt")
-                # print(tokenizer.decode(batch_input_ids[i, start_ans-1], skip_special_tokens=False, clean_up_tokenization_spaces=False), "first token to compute logits from")
+                # print(tokenizer.decode(batch_input_ids[i, start_ans-1], skip_special_tokens=False, clean_up_tokenization_spaces=False), "first token to compute and bias logits from")
+                # print(tokenizer.decode(batch_input_ids[i, end_ans-1], skip_special_tokens=False, clean_up_tokenization_spaces=False), "last token to compute and bias logits from")
                 rpn_logits_processor._seq_start_idx = start_ans                 # Length of the prompt before the generation biased of the answer
                 rpn_logits_processor._guide_states = {hash(tuple()): rpn_logits_processor.guide.initial_state}        # reset the _guide_states dictionary
                 for j in range(start_ans-1, end_ans):
@@ -352,7 +362,6 @@ def finetune(
             # Shift for teacher forcing
             shift_logits = biased_logits[..., :-1, :].contiguous()      # we exclude the last logits vector because we don't know the ground truth next token  
             shift_labels = batch_labels[..., 1:].contiguous()           # we exclude the first token because we can't predict it from nothing
-            # print(shift_logits.shape, shift_labels.shape)   
 
             # Count valid tokens in this micro-batch
             valid_mask = (shift_labels != -100)
@@ -387,7 +396,13 @@ def finetune(
                 global_optimizer_step += 1
 
                 mean_loss = window_loss_sum / denom
-                print(f"Epoch {epoch+1}, loss over the (real) batch {(step + 1) // accum_steps}: {(mean_loss):.4f}, ppl: {math.exp(mean_loss):.2f}") 
+                ppl = math.exp(mean_loss)
+                lr_now = scheduler.get_last_lr()[0]
+                print(f"Epoch {epoch+1}, loss over the (real) batch {(step + 1) // accum_steps}: {(mean_loss):.4f}, ppl: {ppl:.2f}") 
+                writer.add_scalar("train/loss_token_avg", mean_loss, global_optimizer_step)
+                writer.add_scalar("train/ppl", ppl, global_optimizer_step)
+                writer.add_scalar("train/lr", lr_now, global_optimizer_step)
+                writer.flush()
 
                 # reset window accumulators
                 window_valid_tokens = 0
@@ -402,6 +417,7 @@ def finetune(
                         epoch=epoch, step=step, global_step=global_optimizer_step,
                         output_dir=output_dir
                     )     
+                    print(f"model saved as {output_dir}/checkpoint-{global_optimizer_step:08d}")
         # --- Flush leftover micro-batches at end of epoch (if any) ---
         if window_mb > 0:
             denom = max(window_valid_tokens, 1)
@@ -424,14 +440,16 @@ def finetune(
 if __name__ == "__main__":
     import argparse
 
+    HERE = Path(__file__).resolve().parent  # directory containing assisted_finetune.py
+    DATA = HERE / "RPN_benchmark" / "train" / "train_dataset1024.jsonl"     # dataset used for training
+
     parser = argparse.ArgumentParser(description="Fine-tune a constrained LLM with biased logits.")
-    #parser.add_argument("--model_name", type=str, default="meta-llama/Llama-2-7b-hf")
     parser.add_argument("--model_name", type=str, default="Qwen/Qwen3-1.7B")
-    parser.add_argument("--dataset_name", type=str, default="train_dataset1024")
+    parser.add_argument("--dataset_name", type=str, default=DATA)
     parser.add_argument("--dataset_size", type=int, default=None,
                         help="Number of samples of the whole dataset to train on.")
     parser.add_argument("--max_length", type=int, default=256)
-    parser.add_argument("--output_dir", type=str)
+    parser.add_argument("--output_dir", type=str, default=f"/scratch/ctisseau/finetuned-models/Qwen3-1.7B-lcd-RPN-ds1024-e2-ds1024-bs32-testdeletelater")
     parser.add_argument("--epochs", type=int, default=2)
     parser.add_argument("--batch_size", type=int, default=32)
     parser.add_argument("--lr", type=float, default=5e-5)
@@ -444,8 +462,7 @@ if __name__ == "__main__":
         dataset_name=args.dataset_name,
         dataset_size=args.dataset_size,
         max_length=args.max_length,
-        #output_dir=f"/scratch/ctisseau/finetuned-models/Llama-2-7b-hf-OCI-test-32",
-        output_dir=f"/scratch/ctisseau/finetuned-models/Qwen3-1.7B-lcd-RPN-ds1024-e2-ds1024-bs32",
+        output_dir=args.output_dir,
         epochs=args.epochs,
         batch_size=args.batch_size,
         lr=args.lr,

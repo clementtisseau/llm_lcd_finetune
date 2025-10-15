@@ -1,0 +1,13 @@
+==========================================
+SLURM_JOB_ID = 4285218
+SLURM_JOB_NODELIST = gpu006
+==========================================
+Loading CLM model: Qwen3-1.7B-dtrain1024-ckpt32-lcd...
+CLM model loaded.
+Creating Logits Processor and Sequence Sampler...
+Logits Processor and Sequence Sampler created.
+Reading problems...
+Found 100 problems.
+Generating 128 samples with constraint for each of the 100 problems...
+Writing 12800 sampled solutions to samples/Qwen3-1.7B-dtrain1024-ckpt32-lcd-n128-t1-p08.jsonl
+Done.

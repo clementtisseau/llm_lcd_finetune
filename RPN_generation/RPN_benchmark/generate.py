@@ -7,13 +7,14 @@ from tqdm import tqdm
 from pathlib import Path
 
 max_memory3 = {
-    0: "10GB",
-    1: "10GB",
-    2: "10GB"
+    0: "40GB",
+    1: "40GB",
+    2: "40GB"
 }
 
-model_name = "/scratch/ctisseau/finetuned-models/Qwen3-1.7B-RPN-ds1024-e2-ds1024-bs32/checkpoint-00000032"            #this need to change
-readable_model_name = "Qwen3-1.7B-dtrain1024-ckpt32"
+# model_name = "/scratch/ctisseau/finetuned-models/Qwen3-1.7B-RPN-ds1024-e2-ds1024-bs32/checkpoint-00000032"
+model_name = "/scratch/ctisseau/finetuned-models/Qwen3-1.7B-lcd-RPN-ds1024-e2-ds1024-bs32-testdeletelater/checkpoint-00000032"
+readable_model_name = "Qwen3-1.7B-testdeletelater-dtrain1024-ckpt32"
 
 HERE = Path(__file__).resolve().parent  # directory containing generate.py
 DATA = HERE / "data" / "dataset1000.jsonl"
@@ -136,7 +137,7 @@ def main(
     # Create the output directory if it doesn't exist
     output_dir = "samples"
     os.makedirs(output_dir, exist_ok=True)
-    output_file = os.path.join(output_dir, f"{readable_model_name}-d1000ordered-n{n_samples}-t1-p08.jsonl")     # lcd: locally constrained decoding, t1: temperature=1, p08: top-p=0.8
+    output_file = os.path.join(output_dir, f"{readable_model_name}-n{n_samples}-t1-p08.jsonl")     # lcd: locally constrained decoding, t1: temperature=1, p08: top-p=0.8
 
     print(f"Generating {n_samples} samples for each of the {len(dataset)} problems...")
     samples = []

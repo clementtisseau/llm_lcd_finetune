@@ -12,11 +12,13 @@ max_memory3 = {
     2: "40GB"
 }
 
-model_name = "/scratch/ctisseau/finetuned-models/Qwen3-1.7B-OCI-e1-ds65536-bs256-ckps64/checkpoint-00000000"            #this need to change
-readable_model_name = "Qwen3-1.7B"
+# model_name = "Qwen/Qwen3-1.7B"
+model_name = "/scratch/ctisseau/finetuned-models/Qwen3-1.7B-lcd-RPN-ds1024-e2-ds1024-bs32/checkpoint-00000032"            #this need to change
+readable_model_name = "Qwen3-1.7B-dtrain1024-ckpt32-lcd"
 
 HERE = Path(__file__).resolve().parent  # directory containing generate.py
 DATA = HERE / "data" / "dataset1000.jsonl"
+# DATA = HERE / "data" / "dataset1000.jsonl"
 
 # --- Utility Functions for File I/O ---
 def stream_jsonl(filename: str):
@@ -102,7 +104,7 @@ from outlines.processors import RegexLogitsProcessor
 # (?:\d+|[+\-*/])(?: (?:\d+|[+\-*/]))*    a single space *between* two digits/operators. 
 
 def main(
-    n_samples: int = 64,
+    n_samples: int = 128,
     max_new_tokens: int = 64,
     dataset_file: str = DATA,
 ):
@@ -146,7 +148,7 @@ def main(
     # Create the output directory if it doesn't exist
     output_dir = "samples"
     os.makedirs(output_dir, exist_ok=True)
-    output_file = os.path.join(output_dir, f"{readable_model_name}-lcd-d1000ordered-n{n_samples}-t1-p08.jsonl")     # lcd: locally constrained decoding, t1: temperature=1, p08: top-p=0.8
+    output_file = os.path.join(output_dir, f"{readable_model_name}-n{n_samples}-t1-p08.jsonl")     # lcd: locally constrained decoding, t1: temperature=1, p08: top-p=0.8
 
     print(f"Generating {n_samples} samples with constraint for each of the {len(dataset)} problems...")
     samples = []

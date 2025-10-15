@@ -1,0 +1,79 @@
+Job started on Tue Oct 14 19:31:02 CEST 2025
+Loading dataset
+Dataset loaded
+No checkpoint found — starting from base model
+Loading CLM model: Qwen/Qwen3-1.7B...
+CLM model loaded.
+Creating Logits Processor...
+Logits Processor created.
+OOM when trying bs=32, trying smaller…
+OOM when trying bs=16, trying smaller…
+OOM when trying bs=8, trying smaller…
+fits on GPU: micro_batch_size = 4
+Epoch 1, loss over the (real) batch 1: 2.3620, ppl: 10.61
+Epoch 1, loss over the (real) batch 2: 2.2888, ppl: 9.86
+Epoch 1, loss over the (real) batch 3: 1.3351, ppl: 3.80
+Epoch 1, loss over the (real) batch 4: 1.1949, ppl: 3.30
+Epoch 1, loss over the (real) batch 5: 0.4387, ppl: 1.55
+Epoch 1, loss over the (real) batch 6: 0.2359, ppl: 1.27
+Epoch 1, loss over the (real) batch 7: 0.3360, ppl: 1.40
+Epoch 1, loss over the (real) batch 8: 0.3854, ppl: 1.47
+Epoch 1, loss over the (real) batch 9: 0.3075, ppl: 1.36
+Epoch 1, loss over the (real) batch 10: 0.3291, ppl: 1.39
+Epoch 1, loss over the (real) batch 11: 0.2638, ppl: 1.30
+Epoch 1, loss over the (real) batch 12: 0.2394, ppl: 1.27
+Epoch 1, loss over the (real) batch 13: 0.2584, ppl: 1.29
+Epoch 1, loss over the (real) batch 14: 0.2562, ppl: 1.29
+Epoch 1, loss over the (real) batch 15: 0.2402, ppl: 1.27
+Epoch 1, loss over the (real) batch 16: 0.2347, ppl: 1.26
+Epoch 1, loss over the (real) batch 17: 0.1559, ppl: 1.17
+Epoch 1, loss over the (real) batch 18: 0.2556, ppl: 1.29
+Epoch 1, loss over the (real) batch 19: 0.1477, ppl: 1.16
+Epoch 1, loss over the (real) batch 20: 0.1948, ppl: 1.22
+Epoch 1, loss over the (real) batch 21: 0.1898, ppl: 1.21
+Epoch 1, loss over the (real) batch 22: 0.1906, ppl: 1.21
+Epoch 1, loss over the (real) batch 23: 0.1694, ppl: 1.18
+Epoch 1, loss over the (real) batch 24: 0.1575, ppl: 1.17
+Epoch 1, loss over the (real) batch 25: 0.2014, ppl: 1.22
+Epoch 1, loss over the (real) batch 26: 0.1518, ppl: 1.16
+Epoch 1, loss over the (real) batch 27: 0.1444, ppl: 1.16
+Epoch 1, loss over the (real) batch 28: 0.1395, ppl: 1.15
+Epoch 1, loss over the (real) batch 29: 0.1558, ppl: 1.17
+Epoch 1, loss over the (real) batch 30: 0.1324, ppl: 1.14
+Epoch 1, loss over the (real) batch 31: 0.1279, ppl: 1.14
+Epoch 1, loss over the (real) batch 32: 0.1816, ppl: 1.20
+model saved as /scratch/ctisseau/finetuned-models/Qwen3-1.7B-lcd-RPN-ds1024-e2-ds1024-bs32-testdeletelater/checkpoint-00000032
+Epoch 2, loss over the (real) batch 1: 0.1601, ppl: 1.17
+Epoch 2, loss over the (real) batch 2: 0.1073, ppl: 1.11
+Epoch 2, loss over the (real) batch 3: 0.1324, ppl: 1.14
+Epoch 2, loss over the (real) batch 4: 0.1547, ppl: 1.17
+Epoch 2, loss over the (real) batch 5: 0.1196, ppl: 1.13
+Epoch 2, loss over the (real) batch 6: 0.1025, ppl: 1.11
+Epoch 2, loss over the (real) batch 7: 0.1135, ppl: 1.12
+Epoch 2, loss over the (real) batch 8: 0.1513, ppl: 1.16
+Epoch 2, loss over the (real) batch 9: 0.1254, ppl: 1.13
+Epoch 2, loss over the (real) batch 10: 0.1357, ppl: 1.15
+Epoch 2, loss over the (real) batch 11: 0.1285, ppl: 1.14
+Epoch 2, loss over the (real) batch 12: 0.1255, ppl: 1.13
+Epoch 2, loss over the (real) batch 13: 0.1503, ppl: 1.16
+Epoch 2, loss over the (real) batch 14: 0.1544, ppl: 1.17
+Epoch 2, loss over the (real) batch 15: 0.1558, ppl: 1.17
+Epoch 2, loss over the (real) batch 16: 0.1530, ppl: 1.17
+Epoch 2, loss over the (real) batch 17: 0.1022, ppl: 1.11
+Epoch 2, loss over the (real) batch 18: 0.1746, ppl: 1.19
+Epoch 2, loss over the (real) batch 19: 0.1035, ppl: 1.11
+Epoch 2, loss over the (real) batch 20: 0.1520, ppl: 1.16
+Epoch 2, loss over the (real) batch 21: 0.1549, ppl: 1.17
+Epoch 2, loss over the (real) batch 22: 0.1541, ppl: 1.17
+Epoch 2, loss over the (real) batch 23: 0.1394, ppl: 1.15
+Epoch 2, loss over the (real) batch 24: 0.1381, ppl: 1.15
+Epoch 2, loss over the (real) batch 25: 0.1793, ppl: 1.20
+Epoch 2, loss over the (real) batch 26: 0.1271, ppl: 1.14
+Epoch 2, loss over the (real) batch 27: 0.1298, ppl: 1.14
+Epoch 2, loss over the (real) batch 28: 0.1282, ppl: 1.14
+Epoch 2, loss over the (real) batch 29: 0.1401, ppl: 1.15
+Epoch 2, loss over the (real) batch 30: 0.1231, ppl: 1.13
+Epoch 2, loss over the (real) batch 31: 0.1157, ppl: 1.12
+Epoch 2, loss over the (real) batch 32: 0.1708, ppl: 1.19
+model saved as /scratch/ctisseau/finetuned-models/Qwen3-1.7B-lcd-RPN-ds1024-e2-ds1024-bs32-testdeletelater/checkpoint-00000064
+Job finished on Tue Oct 14 19:51:06 CEST 2025
