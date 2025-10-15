@@ -215,3 +215,34 @@ def build_optimizer_and_scheduler(model, lr: float, steps_total: int, warmup_rat
         num_training_steps=steps_total,
     )
     return optimizer, scheduler
+
+
+
+# ---------- Write metrics ----------
+def log_jsonl(path: Path, **fields):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "a") as f:
+        f.write(json.dumps(fields, separators=(",", ":")) + "\n")
+
+def reconcile_metrics(metrics_path: Path, last_global_step: int):
+    """Keep only records with global_step <= last_global_step.
+       Silently drops malformed/truncated lines (common after crashes)."""
+    if not metrics_path.exists():
+        return
+    kept = []
+    with metrics_path.open("r") as f:
+        for line in f:
+            try:
+                rec = json.loads(line)
+            except json.JSONDecodeError:
+                # drop partial/garbled lines
+                continue
+            s = int(rec.get("global_step", -1))
+            if s <= last_global_step:
+                kept.append(line)
+
+    tmp = metrics_path.with_suffix(".jsonl.tmp")
+    with tmp.open("w") as f:
+        f.writelines(kept)
+        f.flush(); os.fsync(f.fileno())
+    tmp.replace(metrics_path)  # atomic on POSIX

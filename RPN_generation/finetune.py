@@ -1,5 +1,6 @@
 import torch
 import math
+import json
 from torch.utils.data import DataLoader, TensorDataset
 from torch.optim import AdamW
 from tqdm import tqdm
@@ -7,13 +8,14 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, get_linear_schedul
 
 from torch.utils.tensorboard import SummaryWriter
 
+import time
 from pathlib import Path
 
 
 from finetune_utils import (
     stream_jsonl, find_last_checkpoint, resume_training, save_checkpoint,
     load_model_tokenizer, prepare_encodings, find_micro_batch_size,
-    build_optimizer_and_scheduler,
+    build_optimizer_and_scheduler, log_jsonl, reconcile_metrics,
 )
 
 
@@ -73,14 +75,12 @@ def finetune(
     total_steps = num_update_steps_per_epoch * epochs
     optimizer, scheduler = build_optimizer_and_scheduler(model, lr, total_steps)
 
-    # To monitor training
-    # tensorboard --logdir /scratch/ctisseau/finetuned-models/Qwen3-1.7B-RPN-ds1024-e2-ds1024-bs32-testdeletelater/tb --host 127.0.0.1 --port 7007    
-    # ssh -N -L 7007:127.0.0.1:7007 -J ctisseau@cleps.paris.inria.fr ctisseau@gpu014
-    # Then open http://localhost:7007 on the browser    
-    writer = SummaryWriter(log_dir=str(Path(output_dir) / "tb"))
-
     # Find information to resume training
     start_epoch, resume_step, global_optimizer_step = resume_training(output_dir, optimizer, scheduler)
+
+    # To monitor training
+    metrics_path = Path(output_dir) / "metrics.jsonl"
+    reconcile_metrics(metrics_path, last_global_step=global_optimizer_step)
     
     # Loss ignoring padding
     loss_fct = torch.nn.CrossEntropyLoss(ignore_index=-100, reduction="sum")    #sum is important here. We are doing gradient accumulation, with sentences of varying lengths.
@@ -143,20 +143,6 @@ def finetune(
                 optimizer.zero_grad()   # Clears grads so the next accumulation window starts fresh.
                 global_optimizer_step += 1
 
-                mean_loss = window_loss_sum / denom
-                ppl = math.exp(mean_loss)
-                lr_now = scheduler.get_last_lr()[0]
-                print(f"Epoch {epoch+1}, loss over the (real) batch {(step + 1) // accum_steps}: {(mean_loss):.4f}, ppl: {ppl:.2f}") 
-                writer.add_scalar("train/loss_token_avg", mean_loss, global_optimizer_step)
-                writer.add_scalar("train/ppl", ppl, global_optimizer_step)
-                writer.add_scalar("train/lr", lr_now, global_optimizer_step)
-                writer.flush()
-
-                # reset window accumulators
-                window_valid_tokens = 0
-                window_loss_sum = 0.0
-                window_mb = 0
-
                 # Save checkpoint
                 if (checkpoint_steps > 0) and (global_optimizer_step % checkpoint_steps == 0):
                     torch.cuda.synchronize()  # be safe before saving
@@ -165,6 +151,30 @@ def finetune(
                         epoch=epoch, step=step, global_step=global_optimizer_step,
                         output_dir=output_dir
                     )
+
+                mean_loss = window_loss_sum / denom
+                ppl = math.exp(mean_loss)
+                lr_now = scheduler.get_last_lr()[0]
+                print(f"Epoch {epoch+1}, loss over the (real) batch {(step + 1) // accum_steps}: {(mean_loss):.4f}, ppl: {ppl:.2f}") 
+                
+                log_jsonl(
+                    metrics_path,
+                    ts=time.time(),
+                    epoch=epoch + 1,
+                    global_step=global_optimizer_step,
+                    batch=(step + 1) // accum_steps,
+                    tokens_in_batch=denom,
+                    loss_token_avg=mean_loss,
+                    ppl=ppl,
+                    lr=lr_now,
+                )
+
+                # reset window accumulators
+                window_valid_tokens = 0
+                window_loss_sum = 0.0
+                window_mb = 0
+
+                
         # --- Flush leftover micro-batches at end of epoch (if any) ---
         if window_mb > 0:
             denom = max(window_valid_tokens, 1)
@@ -179,6 +189,17 @@ def finetune(
             mean_loss = window_loss_sum / denom
             print(f"Epoch {epoch+1}, loss over the (real) batch {(step + 1) // accum_steps}: {(mean_loss):.4f}, ppl: {math.exp(mean_loss):.2f}") 
 
+            log_jsonl(
+                    metrics_path,
+                    ts=time.time(),
+                    epoch=epoch + 1,
+                    global_step=global_optimizer_step,
+                    batch=(step + 1) // accum_steps,
+                    tokens_in_batch=denom,
+                    loss_token_avg=mean_loss,
+                    ppl=ppl,
+                    lr=lr_now,
+                )
 
     # # Save the fine-tuned model and tokenizer
     # model.save_pretrained(output_dir)
@@ -186,31 +207,78 @@ def finetune(
 
 if __name__ == "__main__":
     import argparse
+    import json
+    import hashlib
+    from pathlib import Path
+    from datetime import datetime
 
     HERE = Path(__file__).resolve().parent  # directory containing finetune.py
     DATA = HERE / "RPN_benchmark" / "train" / "train_dataset1024.jsonl"     # dataset used for training
 
+    OUTPUT_ROOT = Path("/scratch/ctisseau/finetuned-models")
+
+    def slugify(s: str) -> str:
+        return (
+            s.replace("/", "-")
+             .replace("\\", "-")
+             .replace(" ", "-")
+             .replace(":", "-")
+        )
+
+    def args_hash(d: dict, digest_size: int = 10) -> str:
+        payload = json.dumps(d, sort_keys=True, separators=(",", ":")).encode("utf-8")
+        return hashlib.blake2b(payload, digest_size=digest_size).hexdigest()
+
+
     parser = argparse.ArgumentParser(description="Fine-tune a LLM.")
     parser.add_argument("--model_name", type=str, default="Qwen/Qwen3-1.7B")
-    parser.add_argument("--dataset_name", type=str, default=DATA)
+    parser.add_argument("--dataset_path", type=Path, default=DATA)
     parser.add_argument("--dataset_size", type=int, default=None,
                         help="Number of samples of the whole dataset to train on.")
     parser.add_argument("--max_length", type=int, default=256)
-    parser.add_argument("--output_dir", type=str, default=f"/scratch/ctisseau/finetuned-models/Qwen3-1.7B-RPN-ds1024-e2-ds1024-bs32-testdeletenow")
+    parser.add_argument("--output_root", type=str, default=OUTPUT_ROOT)
     parser.add_argument("--epochs", type=int, default=2)
     parser.add_argument("--batch_size", type=int, default=32)
     parser.add_argument("--lr", type=float, default=5e-5)
     parser.add_argument("--checkpoint_steps", type=int, default=32)     # save every N optimizer steps. There is dataset_size / batch_size steps in one epoch. 1024 / 32 = 32.
     args = parser.parse_args()
 
+    training_args = {
+        "base_model": args.model_name,
+        "training_method": "classical_sft",
+        "train_dataset": str(args.dataset_path),
+        "dataset_size": args.dataset_size,
+        "is_shuffled": "no",
+        "epochs": args.epochs,
+        "batch_size": args.batch_size,
+        "checkpoint_steps": args.checkpoint_steps,
+        "lr": args.lr,
+        "warmup_ratio": 0.1,
+    }
+    
+    run_id = args_hash(training_args, digest_size=10)  # 20 hex chars
+    run_name = f"{slugify(training_args['base_model'])}_" \
+               f"{slugify(training_args['training_method'])}_" \
+               f"{run_id}"
+    output_dir = args.output_root / run_name
+    output_dir.mkdir(parents=True, exist_ok=True)
 
+    config_path = output_dir / "training_args.json"
+    if not config_path.exists():
+        payload = {
+            **training_args,
+            "run_id": run_id,
+            "created_at": datetime.now().astimezone().isoformat(timespec="seconds"),
+        }
+        with open(config_path, "w") as f:
+            json.dump(payload, f, indent=4)
 
     finetune(
         model_name=args.model_name,
         dataset_name=args.dataset_name,
         dataset_size=args.dataset_size,
         max_length=args.max_length,
-        output_dir=args.output_dir,
+        output_dir=output_dir,
         epochs=args.epochs,
         batch_size=args.batch_size,
         lr=args.lr,
