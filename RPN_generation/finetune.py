@@ -15,15 +15,16 @@ from pathlib import Path
 from finetune_utils import (
     stream_jsonl, find_last_checkpoint, resume_training, save_checkpoint,
     load_model_tokenizer, prepare_encodings, find_micro_batch_size,
-    build_optimizer_and_scheduler, log_jsonl, reconcile_metrics,
+    build_optimizer_and_scheduler, log_jsonl, reconcile_metrics, evaluate,
 )
 
 
 
 def finetune(
     model_name: str,
-    dataset_name: str,
-    dataset_size: int,
+    train_data: str,
+    train_data_size: int,
+    eval_data: str,
     max_length: int = 256,
     output_dir: str = "/scratch/ctisseau/finetuned-models",
     epochs: int = 3,
@@ -37,8 +38,9 @@ def finetune(
 
     # Load dataset
     print("Loading dataset")
-    dataset = list(stream_jsonl(dataset_name))
-    if dataset_size is not None: dataset = dataset[:dataset_size]
+    train_dataset = list(stream_jsonl(train_data))
+    if train_data_size is not None: train_dataset = train_dataset[:train_data_size]
+    eval_dataset = list(stream_jsonl(eval_data))
     print("Dataset loaded")
 
     max_memory3 = {
@@ -53,7 +55,8 @@ def finetune(
     first_device = next(model.parameters()).device
 
     # Prepare input_ids, attention_mask, labels for training
-    input_ids, attention_mask, labels = prepare_encodings(tokenizer, dataset)
+    input_ids, attention_mask, labels = prepare_encodings(tokenizer, train_dataset)
+    eval_input_ids, eval_attention_mask, eval_labels = prepare_encodings(tokenizer, eval_dataset)
 
     # Find the perfect micro_batch_size
     micro_batch_size = find_micro_batch_size(model, max_length)
@@ -67,9 +70,13 @@ def finetune(
     accum_steps = batch_size // micro_batch_size        # The number of micro_batch to process to obtain a real batch
 
     # DataLoader
-    dataset = TensorDataset(input_ids, attention_mask, labels)
-    dataloader = DataLoader(dataset, batch_size=micro_batch_size, shuffle=False)    # We need shuffle = False if we want to track the input of each sentence
-                                                                                    # By default drop_last=False, meaning the last batch is smaller than the other ones
+    train_dataset = TensorDataset(input_ids, attention_mask, labels)
+    dataloader = DataLoader(train_dataset, batch_size=micro_batch_size, shuffle=False)  # We need shuffle = False if we want to track the input of each sentence
+                                                                                        # By default drop_last=False, meaning the last batch is smaller than the other ones
+    eval_dataset = TensorDataset(eval_input_ids, eval_attention_mask, eval_labels)
+    eval_dataloader = DataLoader(eval_dataset, batch_size=micro_batch_size, shuffle=False)
+    eval_every = 8   # We will evaluate every 8 optimizer steps (1 epoch is 32 optimizer steps)
+
     # Optimizer & scheduler
     num_update_steps_per_epoch = math.ceil(len(dataloader) / accum_steps)
     total_steps = num_update_steps_per_epoch * epochs
@@ -104,6 +111,7 @@ def finetune(
             outputs = model(
                 input_ids=batch_input_ids,
                 attention_mask=batch_attention,
+                use_cache=False,        # disable KV-cache during training
                 return_dict=True,
             )
             logits = outputs.logits  # shape (batch, seq_len, vocab_size)                
@@ -153,8 +161,6 @@ def finetune(
                     )
 
                 mean_loss = window_loss_sum / denom
-                ppl = math.exp(mean_loss)
-                lr_now = scheduler.get_last_lr()[0]
                 print(f"Epoch {epoch+1}, loss over the (real) batch {(step + 1) // accum_steps}: {(mean_loss):.4f}, ppl: {ppl:.2f}") 
                 
                 log_jsonl(
@@ -163,16 +169,30 @@ def finetune(
                     epoch=epoch + 1,
                     global_step=global_optimizer_step,
                     batch=(step + 1) // accum_steps,
+                    split="train",
                     tokens_in_batch=denom,
                     loss_token_avg=mean_loss,
-                    ppl=ppl,
-                    lr=lr_now,
+                    ppl=math.exp(mean_loss),
+                    lr=scheduler.get_last_lr()[0],
                 )
 
                 # reset window accumulators
                 window_valid_tokens = 0
                 window_loss_sum = 0.0
                 window_mb = 0
+
+                if eval_every and (global_optimizer_step % eval_every == 0):
+                    eval_loss, eval_ppl, eval_tokens = evaluate(model, eval_dataloader, loss_fct, first_device)
+                    log_jsonl(metrics_path,
+                            ts=time.time(),
+                            epoch=epoch + 1,
+                            global_step=global_optimizer_step,
+                            split="eval",
+                            tokens_in_batch=eval_tokens,
+                            loss_token_avg=eval_loss,
+                            ppl=eval_ppl,
+                            lr=scheduler.get_last_lr()[0])
+                    print(f"[EVAL] step {global_optimizer_step}: loss/token={eval_loss:.4f}, ppl={eval_ppl:.2f}")
 
                 
         # --- Flush leftover micro-batches at end of epoch (if any) ---
@@ -197,9 +217,22 @@ def finetune(
                     batch=(step + 1) // accum_steps,
                     tokens_in_batch=denom,
                     loss_token_avg=mean_loss,
-                    ppl=ppl,
-                    lr=lr_now,
+                    ppl=math.exp(mean_loss),
+                    lr=scheduler.get_last_lr()[0],
                 )
+            
+            if eval_every and (global_optimizer_step % eval_every == 0):
+                    eval_loss, eval_ppl, eval_tokens = evaluate(model, eval_dataloader, loss_fct, first_device)
+                    log_jsonl(metrics_path,
+                            ts=time.time(),
+                            epoch=epoch + 1,
+                            global_step=global_optimizer_step,
+                            split="eval",
+                            tokens_in_batch=eval_tokens,
+                            loss_token_avg=eval_loss,
+                            ppl=eval_ppl,
+                            lr=scheduler.get_last_lr()[0])
+                    print(f"[EVAL] step {global_optimizer_step}: loss/token={eval_loss:.4f}, ppl={eval_ppl:.2f}")
 
     # # Save the fine-tuned model and tokenizer
     # model.save_pretrained(output_dir)
@@ -214,6 +247,7 @@ if __name__ == "__main__":
 
     HERE = Path(__file__).resolve().parent  # directory containing finetune.py
     DATA = HERE / "RPN_benchmark" / "train" / "train_dataset1024.jsonl"     # dataset used for training
+    EVAL = HERE / "RPN_benchmark" / "eval" / "eval_dataset128.jsonl"
 
     OUTPUT_ROOT = Path("/scratch/ctisseau/finetuned-models")
 
@@ -232,9 +266,10 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="Fine-tune a LLM.")
     parser.add_argument("--model_name", type=str, default="Qwen/Qwen3-1.7B")
-    parser.add_argument("--dataset_path", type=Path, default=DATA)
-    parser.add_argument("--dataset_size", type=int, default=None,
+    parser.add_argument("--train_path", type=Path, default=DATA)
+    parser.add_argument("--train_data_size", type=int, default=None,
                         help="Number of samples of the whole dataset to train on.")
+    parser.add_argument("--eval_path", type=Path, default=EVAL)
     parser.add_argument("--max_length", type=int, default=256)
     parser.add_argument("--output_root", type=str, default=OUTPUT_ROOT)
     parser.add_argument("--epochs", type=int, default=2)
@@ -246,9 +281,10 @@ if __name__ == "__main__":
     training_args = {
         "base_model": args.model_name,
         "training_method": "classical_sft",
-        "train_dataset": str(args.dataset_path),
-        "dataset_size": args.dataset_size,
+        "train_dataset": str(args.train_path),
+        "train_dataset_size": args.train_data_size,
         "is_shuffled": "no",
+        "eval_dataset": str(args.eval_path),
         "epochs": args.epochs,
         "batch_size": args.batch_size,
         "checkpoint_steps": args.checkpoint_steps,
@@ -275,8 +311,9 @@ if __name__ == "__main__":
 
     finetune(
         model_name=args.model_name,
-        dataset_name=args.dataset_name,
-        dataset_size=args.dataset_size,
+        train_data=args.train_path,
+        train_data_size=args.train_data_size,
+        eval_data=args.eval_path,
         max_length=args.max_length,
         output_dir=output_dir,
         epochs=args.epochs,

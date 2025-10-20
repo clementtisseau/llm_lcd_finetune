@@ -17,7 +17,9 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 DATA = HERE / "data" / "dataset1000.jsonl"
-SAMPLES = HERE / "samples" / "data1000" / "LCD-SFT, no LCD gen" / "Qwen3-1.7B-testdeletelater-dtrain1024-ckpt32-n128-t1-p08.jsonl"
+SAMPLES = HERE / "samples" / "data1000" / "SFT" / "Qwen3-1.7B-dtrain1024-ckpt32-d1000-n128-t1-p08.jsonl"
+# SAMPLES = HERE / "samples" / "Qwen3-1.7B-lcd-testdeletelater-dtrain1024-ckpt32-n128-t1.jsonl"
+
 
 # --- I/O helpers ---
 def stream_jsonl(filename: Path) -> Iterable[Dict]:
@@ -115,6 +117,7 @@ def evaluate_rpn_correctness(
                 "task_id": task_id,
                 "completion_id": comp_id,
                 "completion": completion,
+                "true_length": None,
                 "pred_value": None,
                 "true_value": None,
                 "abs_err": None,
@@ -133,16 +136,23 @@ def evaluate_rpn_correctness(
             passed = False
             err = f"{type(e).__name__}: {e}"
 
+        # True length of the dataset solution (not the generated candidate).
+        true_length = dataset[task_id]["num_operands"] + dataset[task_id]["num_operators"]
+
         results[task_id].append({
             "task_id": task_id,
             "completion_id": comp_id,
             "completion": completion,
+            "true_length": true_length,
             "pred_value": pred_val,
             "true_value": truth_value,
             "abs_err": (None if pred_val is None else abs(pred_val - truth_value)),
             "passed": bool(passed),
             "error": err,
         })
+
+    # Flatten all per-candidate results for downstream reporting
+    all_results = list(itertools.chain.from_iterable(results.values()))
 
     # Compute pass@k
     total, correct = [], []
@@ -157,9 +167,28 @@ def evaluate_rpn_correctness(
     print("pass@k results:")
     print(pass_at_k)
 
+    # --- Accuracy per true_length ---
+    length_stats: Dict[int, Dict[str, int]] = defaultdict(lambda: {"total": 0, "correct": 0})
+    for r in all_results:
+        L = r.get("true_length")
+        if L is None:
+            continue
+        length_stats[L]["total"] += 1
+        if r.get("passed"):
+            length_stats[L]["correct"] += 1
+
+    if length_stats:
+        print("Accuracy by true_length (% passed):")
+        for L in sorted(length_stats):
+            t = length_stats[L]["total"]
+            c = length_stats[L]["correct"]
+            pct = 100.0 * c / t if t else 0.0
+            print(f"  length={L}: {pct:.2f}% ({c}/{t})")
+    else:
+        print("Accuracy by true_length: no lengths available.")
+
     # Save detailed results
     out_file = Path(sample_file).with_suffix(Path(sample_file).suffix + "_results.jsonl")
-    all_results = list(itertools.chain.from_iterable(results.values()))
     write_jsonl(out_file, all_results)
     print(f"Wrote detailed results to: {out_file}")
 

@@ -13,7 +13,7 @@ max_memory3 = {
 }
 
 # model_name = "/scratch/ctisseau/finetuned-models/Qwen3-1.7B-RPN-ds1024-e2-ds1024-bs32/checkpoint-00000032"
-model_name = "/scratch/ctisseau/finetuned-models/Qwen3-1.7B-lcd-RPN-ds1024-e2-ds1024-bs32-testdeletelater/checkpoint-00000032"
+model_name = "/scratch/ctisseau/finetuned-models/Qwen3-1.7B-RPN-ds1024-e2-ds1024-bs32-testdeletelater/checkpoint-00000032"
 readable_model_name = "Qwen3-1.7B-testdeletelater-dtrain1024-ckpt32"
 
 HERE = Path(__file__).resolve().parent  # directory containing generate.py
@@ -40,7 +40,7 @@ def write_jsonl(filename: str, data, append: bool = False):
 
 
 # --- Core Generation Function ---
-def generate_rpn(model, tokenizer, infix: str, num_samples: int, max_new_tokens: int) -> list[str]:
+def generate_rpn(model, tokenizer, infix: str, num_samples: int, max_new_tokens: int, temperature=1.0, top_k=20, top_p=0.95) -> list[str]:
     """
     Generates a batch of rpn expressions for a given infix.
 
@@ -58,7 +58,7 @@ def generate_rpn(model, tokenizer, infix: str, num_samples: int, max_new_tokens:
         {"role": "system", "content": "You are an expert at converting arithmetic expressions into Reverse Polish Notation (RPN). You always output only the RPN expression, with tokens separated by a single space. Do not include explanations or extra text."},
         {"role": "user", "content": f"""Examples:
 
-Infix: 63 - 46
+Infix: 63 - _ = 17
 RPN: 63 46 -
 
 Infix: 44 - 85 + 57 + 76 + 88
@@ -70,13 +70,13 @@ RPN: 95 45 -
 Now convert this expression:
 
 Infix: {infix}
-RPN: """}
+RPN:"""}
     ]
     text = tokenizer.apply_chat_template(
         messages,
         tokenize=False,
-        add_generation_prompt=True,
-        enable_thinking=False # Switches between thinking and non-thinking modes. Default is True.
+        add_generation_prompt=True,     # Adds <|im_start|>assistant\n\n\n\n\n after RPN:<|im_end|>\n
+        enable_thinking=False           # Switches between thinking and non-thinking modes. Default is True.
     )
     inputs = tokenizer([text], return_tensors="pt").to(model.device)
     prompt_len = inputs["input_ids"].shape[-1]
@@ -86,8 +86,9 @@ RPN: """}
             **inputs,
             max_new_tokens=max_new_tokens,
             do_sample=True,
-            temperature=1, # Using a lower temperature for more deterministic outputs
-            top_p=0.8,
+            temperature=temperature, # Using a lower temperature for more deterministic outputs
+            top_k=top_k,
+            top_p=top_p,
             num_return_sequences=num_samples
         )
     
@@ -104,6 +105,10 @@ def main(
     n_samples: int = 128,
     max_new_tokens: int = 64,
     dataset_file: str = DATA,
+    temperature=1.0,
+    top_k=20,
+    top_p=0.95,
+
 ):
     """
     Generates code samples for RPN problems using a specified model.
@@ -137,7 +142,7 @@ def main(
     # Create the output directory if it doesn't exist
     output_dir = "samples"
     os.makedirs(output_dir, exist_ok=True)
-    output_file = os.path.join(output_dir, f"{readable_model_name}-n{n_samples}-t1-p08.jsonl")     # lcd: locally constrained decoding, t1: temperature=1, p08: top-p=0.8
+    output_file = os.path.join(output_dir, f"{readable_model_name}-n{n_samples}-t1.jsonl")     # lcd: locally constrained decoding, t1: temperature=1, p08: top-p=0.8
 
     print(f"Generating {n_samples} samples for each of the {len(dataset)} problems...")
     samples = []
@@ -147,7 +152,10 @@ def main(
             tokenizer=tokenizer,
             infix=data["infix"], 
             num_samples=n_samples,
-            max_new_tokens=max_new_tokens
+            max_new_tokens=max_new_tokens,
+            temperature=temperature, 
+            top_k=top_k,
+            top_p=top_p,
         )
         for completion in generated_completions:
             samples.append(

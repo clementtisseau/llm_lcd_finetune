@@ -292,7 +292,7 @@ def finetune(
     # tensorboard --logdir /scratch/ctisseau/finetuned-models/Qwen3-1.7B-lcd-RPN-ds1024-e2-ds1024-bs32-testdeletelater/tb --host 127.0.0.1 --port 7007    
     # ssh -N -L 7007:127.0.0.1:7007 -J ctisseau@cleps.paris.inria.fr ctisseau@gpu014
     # # Then open http://localhost:7007 on the browser
-    writer = SummaryWriter(log_dir=str(Path(output_dir) / "tb"))
+    # writer = SummaryWriter(log_dir=str(Path(output_dir) / "tb"))
 
     # Find information to resume training
     # A step is an update of the weights. Each epoch comprise several batch (one batch is multiple micro_batch) and each batch means a step
@@ -399,10 +399,10 @@ def finetune(
                 ppl = math.exp(mean_loss)
                 lr_now = scheduler.get_last_lr()[0]
                 print(f"Epoch {epoch+1}, loss over the (real) batch {(step + 1) // accum_steps}: {(mean_loss):.4f}, ppl: {ppl:.2f}") 
-                writer.add_scalar("train/loss_token_avg", mean_loss, global_optimizer_step)
-                writer.add_scalar("train/ppl", ppl, global_optimizer_step)
-                writer.add_scalar("train/lr", lr_now, global_optimizer_step)
-                writer.flush()
+                # writer.add_scalar("train/loss_token_avg", mean_loss, global_optimizer_step)
+                # writer.add_scalar("train/ppl", ppl, global_optimizer_step)
+                # writer.add_scalar("train/lr", lr_now, global_optimizer_step)
+                # writer.flush()
 
                 # reset window accumulators
                 window_valid_tokens = 0

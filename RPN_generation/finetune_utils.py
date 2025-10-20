@@ -1,4 +1,5 @@
 import torch
+import math
 from transformers import AutoTokenizer, AutoModelForCausalLM, get_linear_schedule_with_warmup
 from pathlib import Path
 
@@ -246,3 +247,41 @@ def reconcile_metrics(metrics_path: Path, last_global_step: int):
         f.writelines(kept)
         f.flush(); os.fsync(f.fileno())
     tmp.replace(metrics_path)  # atomic on POSIX
+
+
+
+# ---------- Evaluate model (unbiased logits) ----------
+@torch.inference_mode()
+def evaluate(model, loader, loss_fct, device):
+    was_training = model.training
+    model.eval()
+
+    total_loss_sum = 0.0          # python float for logging (sum of per-token losses)
+    total_valid_tokens = 0            # total valid tokens (non padded) across each batch
+
+    for input_ids, attention_mask, labels in loader:
+        input_ids = input_ids.to(device, non_blocking=True)
+        attention_mask = attention_mask.to(device, non_blocking=True)
+        labels = labels.to(device, non_blocking=True)
+
+        logits = model(
+            input_ids=input_ids, 
+            attention_mask=attention_mask, 
+            use_cache=False,    # disable KV-cache during evaluation
+            return_dict=True).logits
+        shift_logits = logits[..., :-1, :].contiguous()
+        shift_labels = labels[..., 1:].contiguous()
+
+        total_loss_sum += loss_fct(
+            shift_logits.float().view(-1, shift_logits.size(-1)),
+            shift_labels.view(-1),
+        ).item()
+        total_valid_tokens += int((shift_labels != -100).sum())
+
+    mean_loss = total_loss_sum / max(total_valid_tokens, 1)
+    ppl = math.exp(mean_loss) if mean_loss < 100 else float("inf")
+
+    if was_training:
+        model.train()
+    return mean_loss, ppl, total_valid_tokens
+
