@@ -6,8 +6,6 @@ from torch.optim import AdamW
 from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModelForCausalLM, get_linear_schedule_with_warmup
 
-from torch.utils.tensorboard import SummaryWriter
-
 import time
 from pathlib import Path
 
@@ -27,9 +25,9 @@ def finetune(
     eval_data: str,
     max_length: int = 256,
     output_dir: str = "/scratch/ctisseau/finetuned-models",
-    epochs: int = 3,
+    epochs: int = 2,
     batch_size: int = 32,
-    lr: float = 5e-5,
+    lr: float = 2e-5,
     checkpoint_steps=32,
     device: str = None,
 ):
@@ -44,9 +42,9 @@ def finetune(
     print("Dataset loaded")
 
     max_memory3 = {
-        0: "7GB",
-        1: "7GB",
-        2: "7GB"
+        0: "40GB",
+        1: "40GB",
+        2: "40GB"
     }
     
     # Load Model and Tokenizer
@@ -54,7 +52,7 @@ def finetune(
     model.config.use_cache = False          # Disable KV-cache, which is useless during training
     first_device = next(model.parameters()).device
 
-    # Prepare input_ids, attention_mask, labels for training
+    # Prepare input_ids, attention_mask, labels for training and evaluation
     input_ids, attention_mask, labels = prepare_encodings(tokenizer, train_dataset)
     eval_input_ids, eval_attention_mask, eval_labels = prepare_encodings(tokenizer, eval_dataset)
 
@@ -75,7 +73,7 @@ def finetune(
                                                                                         # By default drop_last=False, meaning the last batch is smaller than the other ones
     eval_dataset = TensorDataset(eval_input_ids, eval_attention_mask, eval_labels)
     eval_dataloader = DataLoader(eval_dataset, batch_size=micro_batch_size, shuffle=False)
-    eval_every = 8   # We will evaluate every 8 optimizer steps (1 epoch is 32 optimizer steps)
+    eval_every = 16   # We will evaluate every 16 optimizer steps (1 epoch is 128 optimizer steps, so 8 eval)
 
     # Optimizer & scheduler
     num_update_steps_per_epoch = math.ceil(len(dataloader) / accum_steps)
@@ -146,6 +144,20 @@ def finetune(
                     if p.grad is not None:
                         p.grad.div_(denom)
 
+                # measure global L2 grad norm
+                total_sq = 0.0
+                for p in model.parameters():
+                    if p.grad is None:
+                        continue
+                    g = p.grad.detach()
+                    # (optional) handle sparse grads
+                    if g.is_sparse:
+                        param_norm = g.coalesce().values().float().norm(2)
+                    else:
+                        param_norm = g.float().norm(2)
+                    total_sq += (param_norm.item() ** 2)
+                total_grad_norm = total_sq ** 0.5  # float
+
                 optimizer.step()        # Applies an update using the accumulated gradients and updates AdamW internal state.
                 scheduler.step()        # Advances the LR schedule by one optimizer *step*. 
                 optimizer.zero_grad()   # Clears grads so the next accumulation window starts fresh.
@@ -159,9 +171,11 @@ def finetune(
                         epoch=epoch, step=step, global_step=global_optimizer_step,
                         output_dir=output_dir
                     )
+                    print(f"model saved as {output_dir}/checkpoint-{global_optimizer_step:08d}")
+
 
                 mean_loss = window_loss_sum / denom
-                print(f"Epoch {epoch+1}, loss over the (real) batch {(step + 1) // accum_steps}: {(mean_loss):.4f}, ppl: {ppl:.2f}") 
+                print(f"Epoch {epoch+1}, loss over the (real) batch {(step + 1) // accum_steps}: {(mean_loss):.4f}, ppl: {math.exp(mean_loss):.2f}") 
                 
                 log_jsonl(
                     metrics_path,
@@ -172,6 +186,7 @@ def finetune(
                     split="train",
                     tokens_in_batch=denom,
                     loss_token_avg=mean_loss,
+                    grad_norm=total_grad_norm,
                     ppl=math.exp(mean_loss),
                     lr=scheduler.get_last_lr()[0],
                 )
@@ -201,6 +216,20 @@ def finetune(
             for p in model.parameters():
                 if p.grad is not None:
                     p.grad.div_(denom)
+            # measure global L2 grad norm
+            total_sq = 0.0
+            for p in model.parameters():
+                if p.grad is None:
+                    continue
+                g = p.grad.detach()
+                # (optional) handle sparse grads
+                if g.is_sparse:
+                    param_norm = g.coalesce().values().float().norm(2)
+                else:
+                    param_norm = g.float().norm(2)
+                total_sq += (param_norm.item() ** 2)
+
+            total_grad_norm = total_sq ** 0.5  # float
             optimizer.step()
             scheduler.step()
             optimizer.zero_grad(set_to_none=True)
@@ -215,8 +244,10 @@ def finetune(
                     epoch=epoch + 1,
                     global_step=global_optimizer_step,
                     batch=(step + 1) // accum_steps,
+                    split="train",
                     tokens_in_batch=denom,
                     loss_token_avg=mean_loss,
+                    grad_norm=total_grad_norm,
                     ppl=math.exp(mean_loss),
                     lr=scheduler.get_last_lr()[0],
                 )
@@ -246,8 +277,8 @@ if __name__ == "__main__":
     from datetime import datetime
 
     HERE = Path(__file__).resolve().parent  # directory containing finetune.py
-    DATA = HERE / "RPN_benchmark" / "train" / "train_dataset1024.jsonl"     # dataset used for training
-    EVAL = HERE / "RPN_benchmark" / "eval" / "eval_dataset128.jsonl"
+    DATA = HERE / "RPN_benchmark" / "train" / "train_dataset_uniform4096.jsonl"     # dataset used for training
+    EVAL = HERE / "RPN_benchmark" / "eval" / "eval_dataset_uniform108.jsonl"        # dataset used for eval
 
     OUTPUT_ROOT = Path("/scratch/ctisseau/finetuned-models")
 
@@ -265,7 +296,7 @@ if __name__ == "__main__":
 
 
     parser = argparse.ArgumentParser(description="Fine-tune a LLM.")
-    parser.add_argument("--model_name", type=str, default="Qwen/Qwen3-1.7B")
+    parser.add_argument("--model_name", type=str, default="Qwen/Qwen2.5-0.5B")
     parser.add_argument("--train_path", type=Path, default=DATA)
     parser.add_argument("--train_data_size", type=int, default=None,
                         help="Number of samples of the whole dataset to train on.")
@@ -274,8 +305,8 @@ if __name__ == "__main__":
     parser.add_argument("--output_root", type=str, default=OUTPUT_ROOT)
     parser.add_argument("--epochs", type=int, default=2)
     parser.add_argument("--batch_size", type=int, default=32)
-    parser.add_argument("--lr", type=float, default=5e-5)
-    parser.add_argument("--checkpoint_steps", type=int, default=32)     # save every N optimizer steps. There is dataset_size / batch_size steps in one epoch. 1024 / 32 = 32.
+    parser.add_argument("--lr", type=float, default=2e-5)
+    parser.add_argument("--checkpoint_steps", type=int, default=64)     # save every N optimizer steps. There is dataset_size / batch_size steps in one epoch. 4096 / 32 = 128.
     args = parser.parse_args()
 
     training_args = {

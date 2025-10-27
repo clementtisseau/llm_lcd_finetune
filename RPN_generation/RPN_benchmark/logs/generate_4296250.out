@@ -1,0 +1,13 @@
+==========================================
+SLURM_JOB_ID = 4296250
+SLURM_JOB_NODELIST = gpu011
+==========================================
+Job started on Fri Oct 24 14:20:14 CEST 2025
+Loading model: Qwen2.5-0.5B_classical_sft_c5c0c8e1a308a4b6f52a-ckpt256...
+Model loaded.
+Reading problems...
+Found 900 problems.
+Generating 128 samples for each of the 900 problems...
+Writing 115200 sampled solutions to samples/Qwen2.5-0.5B_classical_sft_c5c0c8e1a308a4b6f52a-ckpt256-n128-t1-p1-k20.jsonl
+Done.
+Job finished on Fri Oct 24 15:44:15 CEST 2025

@@ -1,0 +1,278 @@
+Qwen3-1.7B
+Generated (w/o LCD) by Qwen3-1.7B (not finetuned)
+n_samples = 128, T = 1, top-p = 0.95, top-k=20
+Evaluated on dataset data / dataset900.jsonl        (this dataset is uniform with 100 problems for each length from 3 to 19)
+
+pass@1:   0.4395920138888889
+pass@2:   0.44766322178477697
+pass@4:   0.4544245488063992
+pass@8:   0.4604300429234748
+pass@16:  0.46557777691519076
+pass@32:  0.46874158877222716
+pass@64:  0.46989819605050714
+pass@128: 0.47
+
+Accuracy by true_length (% passed):
+  length=3: 100.00% (12800/12800)
+  length=5: 88.00% (11264/12800)
+  length=7: 72.81% (9320/12800)
+  length=9: 61.24% (7839/12800)
+  length=11: 31.05% (3975/12800)
+  length=13: 22.46% (2875/12800)
+  length=15: 11.84% (1515/12800)
+  length=17: 5.27% (674/12800)
+  length=19: 2.96% (379/12800)
+
+
+
+
+
+Qwen3-1.7B_classical_sft_7c8926f8324c983f7990-ckpt128-n128-t1-p0_95-k20
+Generated (w/o LCD) by Qwen3-1.7B finetuned (w/o LCD) on train/train_dataset4096.jsonl for 128 steps (128 steps of batch size 32, for a dataset of 4096) i.e. 1 epoch.
+n_samples = 128, T = 1, top-p = 0.95, top-k=20
+Evaluated on dataset data / dataset900.jsonl        (this dataset is uniform with 100 problems for each length from 3 to 19)
+
+pass@1:   0.503376736111111
+pass@2:   0.582558918416448
+pass@4:   0.6539098430404533
+pass@8:   0.71405315156348
+pass@16:  0.7613746451405071
+pass@32:  0.7968083705515497
+pass@64:  0.8231365993704172
+pass@128: 0.8422222222222222
+
+Accuracy by true_length (% passed):
+  length=3: 100.00% (12800/12800)
+  length=5: 88.21% (11291/12800)
+  length=7: 73.02% (9346/12800)
+  length=9: 69.01% (8833/12800)
+  length=11: 48.39% (6194/12800)
+  length=13: 33.33% (4266/12800)
+  length=15: 18.71% (2395/12800)
+  length=17: 15.56% (1992/12800)
+  length=19: 6.81% (872/12800)
+
+
+Qwen3-1.7B_lcd_sft_9fdbc593c01affa7ad7a-ckpt128-lcdgen-n128-t1-p0_95-k20
+Generated (w/ LCD) by Qwen3-1.7B finetuned (w/ LCD) on train/train_dataset4096.jsonl for 128 steps (128 steps of batch size 32, for a dataset of 4096) i.e. 1 epoch.
+n_samples = 128, T = 1, top-p = 0.95, top-k=20
+Evaluated on dataset data / dataset900.jsonl        (this dataset is uniform with 100 problems for each length from 3 to 19)
+
+pass@1:   0.5742274305555556
+pass@2:   0.6077995133420823
+pass@4:   0.6341171981627296
+pass@8:   0.6517083792065838
+pass@16:  0.6621075675026604
+pass@32:  0.6674576820690644
+pass@64:  0.6698169796531084
+pass@128: 0.6711111111111111          (it looks like for LCD_gen, top_p<1 is a really bad idea)
+
+Accuracy by true_length (% passed):
+  length=3: 100.00% (12800/12800)
+  length=5: 89.57% (11465/12800)
+  length=7: 76.88% (9840/12800)
+  length=9: 78.88% (10097/12800)
+  length=11: 59.77% (7650/12800)
+  length=13: 46.42% (5942/12800)
+  length=15: 29.73% (3806/12800)
+  length=17: 21.98% (2813/12800)
+  length=19: 13.58% (1738/12800)
+
+
+
+
+
+
+
+
+
+
+----------------------- From here, everything is sampled with top-p=1.0 for a fair comparison. -------------------------------
+
+----------
+Qwen3-1.7B
+Generated (w/o LCD) by Qwen3-1.7B (not finetuned)
+n_samples = 128, T = 1, top-p = 1.0, top-k=20
+Evaluated on dataset data / dataset900.jsonl        (this dataset is uniform with 100 problems for each length from 3 to 19)
+
+pass@1:   0.4392447916666667
+pass@2:   0.4486722167541557
+pass@4:   0.4567438852435113
+pass@8:   0.4643189887943009
+pass@16:  0.47189349020286725
+pass@32:  0.47915092172244644
+pass@64:  0.48653994983456605
+pass@128: 0.49444444444444446
+
+Accuracy by true_length (% passed):
+  length=3: 99.99% (12799/12800)
+  length=5: 88.00% (11264/12800)
+  length=7: 72.83% (9322/12800)
+  length=9: 61.22% (7836/12800)
+  length=11: 30.86% (3950/12800)
+  length=13: 22.23% (2845/12800)
+  length=15: 11.74% (1503/12800)
+  length=17: 5.33% (682/12800)
+  length=19: 3.12% (400/12800)
+  overall: 43.92% (50601/115200)
+Syntax error rate by true_length (% or syntax error):
+  length=3: 0.01% (1/12800)
+  length=5: 0.65% (83/12800)
+  length=7: 4.58% (586/12800)
+  length=9: 23.14% (2962/12800)
+  length=11: 35.24% (4511/12800)
+  length=13: 49.76% (6369/12800)
+  length=15: 55.10% (7053/12800)
+  length=17: 66.37% (8495/12800)
+  length=19: 75.73% (9693/12800)
+  overall: 34.51% (39753/115200)
+
+
+----------
+Qwen3-1.7B-lcdgen-n128-t1-p1-k20
+Generated (w/ LCD) by Qwen3-1.7B (not finetuned)
+n_samples = 128, T = 1, top-p = 1.0, top-k=20
+Evaluated on dataset data / dataset900.jsonl        (this dataset is uniform with 100 problems for each length from 3 to 19)
+
+pass@1:   0.4524565972222222
+pass@2:   0.46181936242344707
+pass@4:   0.46999138170228727
+pass@8:   0.4782358105361043
+pass@16:  0.4877679471779178
+pass@32:  0.49825242620005794
+pass@64:  0.5083726069998644
+pass@128: 0.5177777777777778        (The masking is making the generation slightly better: it could be luck. However the increase at accuracy at length = 19 makes me believe it isn't luck.)
+
+Accuracy by true_length (% passed):
+  length=3: 100.00% (12800/12800)
+  length=5: 88.27% (11298/12800)
+  length=7: 73.20% (9370/12800)
+  length=9: 65.65% (8403/12800)
+  length=11: 32.73% (4189/12800)
+  length=13: 25.14% (3218/12800)
+  length=15: 11.08% (1418/12800)
+  length=17: 6.95% (889/12800)
+  length=19: 4.20% (538/12800)
+  overall: 45.25% (52123/115200)
+Syntax error rate by true_length (% or syntax error):
+  length=3: 0.00% (0/12800)
+  length=5: 0.34% (44/12800)
+  length=7: 3.48% (446/12800)
+  length=9: 18.14% (2322/12800)
+  length=11: 31.57% (4041/12800)
+  length=13: 43.31% (5544/12800)
+  length=15: 50.34% (6443/12800)
+  length=17: 62.21% (7963/12800)
+  length=19: 69.84% (8940/12800)
+  overall: 31.03% (35743/115200)
+
+
+
+---------- (Classical-SFT for 1 epoch, no-LCD-gen)
+Qwen3-1.7B_classical_sft_7c8926f8324c983f7990-ckpt128-n128-t1-p1-k20
+Generated (w/o LCD) by Qwen3-1.7B finetuned (w/o LCD) on train/train_dataset4096.jsonl for 128 steps (128 steps of batch size 32, for a dataset of 4096) i.e. 1 epoch.
+n_samples = 128, T = 1, top-p = 1.0, top-k=20
+Evaluated on dataset data / dataset900.jsonl        (this dataset is uniform with 100 problems for each length from 3 to 19)
+
+pass@1:   0.4817013888888889
+pass@2:   0.5664190999562555
+pass@4:   0.6404491788526434
+pass@8:   0.7037805226928396
+pass@16:  0.7562712662038269
+pass@32:  0.7985898140544009
+pass@64:  0.8327917556359011
+pass@128: 0.8633333333333333
+
+Accuracy by true_length (% passed):
+  length=3: 99.96% (12795/12800)
+  length=5: 87.38% (11184/12800)
+  length=7: 70.23% (8989/12800)
+  length=9: 66.14% (8466/12800)
+  length=11: 44.40% (5683/12800)
+  length=13: 30.07% (3849/12800)
+  length=15: 16.26% (2081/12800)
+  length=17: 13.38% (1712/12800)
+  length=19: 5.73% (733/12800)
+
+
+
+---------- (LCD-SFT for 1 epoch, LCD-gen)
+Qwen3-1.7B_lcd_sft_9fdbc593c01affa7ad7a-ckpt128-lcdgen-n128-t1-p1-k20
+Generated (w/ LCD) by Qwen3-1.7B finetuned (w/ LCD) on train/train_dataset4096.jsonl for 128 steps (128 steps of batch size 32, for a dataset of 4096) i.e. 1 epoch.
+n_samples = 128, T = 1, top-p = 1.0, top-k=20
+Evaluated on dataset data / dataset900.jsonl        (this dataset is uniform with 100 problems for each length from 3 to 19)
+
+pass@1:   0.48039062499999996
+pass@2:   0.5651540627734034
+pass@4:   0.6404662285964253
+pass@8:   0.7052052371652577
+pass@16:  0.7584211386351765
+pass@32:  0.800141793047611
+pass@64:  0.8328683694038442
+pass@128: 0.8566666666666667
+
+Accuracy by true_length (% passed):
+  length=3: 100.00% (12800/12800)
+  length=5: 88.03% (11268/12800)
+  length=7: 70.06% (8968/12800)
+  length=9: 64.52% (8259/12800)
+  length=11: 43.80% (5606/12800)
+  length=13: 30.34% (3883/12800)
+  length=15: 15.87% (2031/12800)
+  length=17: 13.90% (1779/12800)
+  length=19: 5.84% (747/12800)
+
+
+
+---------- (LCD-SFT for 2 epochs, LCD-gen)
+Qwen3-1.7B_lcd_sft_9fdbc593c01affa7ad7a-ckpt256-lcdgen-n128-t1-p1-k20
+Generated (w/ LCD) by Qwen3-1.7B finetuned (w/ LCD) on train/train_dataset4096.jsonl for 256 steps (256 steps of batch size 32, for a dataset of 4096) i.e. 2 epochs.
+n_samples = 128, T = 1, top-p = 1.0, top-k=20
+Evaluated on dataset data / dataset900.jsonl        (this dataset is uniform with 100 problems for each length from 3 to 19)
+
+pass@1:   0.503376736111111
+pass@2:   0.590907015529309
+pass@4:   0.6657727828813066
+pass@8:   0.7274134756367836
+pass@16:  0.7771679096444021
+pass@32:  0.8154835582973536
+pass@64:  0.8440707244484935
+pass@128: 0.8655555555555555
+
+Accuracy by true_length (% passed):
+  length=3: 100.00% (12800/12800)
+  length=5: 88.12% (11279/12800)
+  length=7: 71.66% (9172/12800)
+  length=9: 67.23% (8606/12800)
+  length=11: 47.86% (6126/12800)
+  length=13: 34.42% (4406/12800)
+  length=15: 20.14% (2578/12800)
+  length=17: 16.08% (2058/12800)
+  length=19: 7.53% (964/12800)
+
+
+---------- (Classical-SFT for 2 epochs, LCD-gen)
+Qwen3-1.7B_classical_sft_7c8926f8324c983f7990-ckpt256-lcdgen-n128-t1-p1-k20
+Generated (w/ LCD) by Qwen3-1.7B finetuned (w/o LCD) on train/train_dataset4096.jsonl for 256 steps (256 steps of batch size 32, for a dataset of 4096) i.e. 2 epochs.
+n_samples = 128, T = 1, top-p = 1.0, top-k=20
+Evaluated on dataset data / dataset900.jsonl        (this dataset is uniform with 100 problems for each length from 3 to 19)
+
+pass@1:   0.5070138888888889
+pass@2:   0.5937998961067367
+pass@4:   0.6679364883556224
+pass@8:   0.7294828279952114
+pass@16:  0.7799325243854359
+pass@32:  0.8203479800668597
+pass@64:  0.851731391595798
+pass@128: 0.8766666666666667
+
+Accuracy by true_length (% passed):
+  length=3: 100.00% (12800/12800)
+  length=5: 88.42% (11318/12800)
+  length=7: 71.98% (9213/12800)
+  length=9: 68.09% (8715/12800)
+  length=11: 48.42% (6198/12800)
+  length=13: 34.76% (4449/12800)
+  length=15: 19.91% (2548/12800)
+  length=17: 16.94% (2168/12800)
+  length=19: 7.80% (999/12800)

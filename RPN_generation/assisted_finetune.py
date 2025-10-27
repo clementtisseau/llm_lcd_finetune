@@ -5,74 +5,33 @@ from torch.optim import AdamW
 from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModelForCausalLM, get_linear_schedule_with_warmup
 
-from torch.utils.tensorboard import SummaryWriter
-
 import constraintlm as clm
 import outlines
 from outlines.processors import RegexLogitsProcessor
 
+import time
 from pathlib import Path
 
 
+from finetune_utils import (
+    stream_jsonl, find_last_checkpoint, resume_training, save_checkpoint,
+    load_model_tokenizer_rpnprocessor, prepare_encodings, find_micro_batch_size,
+    build_optimizer_and_scheduler, log_jsonl, reconcile_metrics, evaluate,
+)
 
-# --- Utility Functions for File I/O ---
-def stream_jsonl(filename: str):
-    """
-    Parses a JSONL file and yields each line as a dictionary.
-    """
-    with open(filename, "r") as fp:
-        for line in fp:
-            if any(not x.isspace() for x in line):
-                yield json.loads(line)
-# ----- Helper functions -----
-import os, re, time, json, shutil, signal
-from typing import Optional
-
-def _ckpt_step(p: Path) -> int:
-    m = re.search(r"checkpoint-(\d+)$", p.name)
-    return int(m.group(1)) if m else -1
-
-def find_last_checkpoint(output_dir: str) -> Optional[Path]:
-    d = Path(output_dir)
-    if not d.exists(): 
-        return None
-    cks = [p for p in d.glob("checkpoint-*") if p.is_dir()]
-    return max(cks, key=_ckpt_step) if cks else None
-
-def save_checkpoint(model, tokenizer, optimizer, scheduler, epoch, step, global_step, output_dir):
-    ckpt_dir = Path(output_dir) / f"checkpoint-{global_step:08d}"
-    ckpt_dir.mkdir(parents=True, exist_ok=True)
-    # save model/tokenizer shards as safetensors (works with device_map sharding)
-    model.save_pretrained(ckpt_dir, safe_serialization=True, max_shard_size="5GB")
-    tokenizer.save_pretrained(ckpt_dir)
-    # small file with training state
-    torch.save(
-        {
-            "optimizer": optimizer.state_dict(),
-            "scheduler": scheduler.state_dict(),
-            "epoch": epoch,          # current epoch index
-            "step": step + 1,        # next dataloader step to run in this epoch
-            "global_step": global_step,
-        },
-        ckpt_dir / "training_state.pt",
-    )
-
-def load_training_state(ckpt_dir: Path):
-    path = ckpt_dir / "training_state.pt"
-    return torch.load(path, map_location="cpu") if path.exists() else {}
-# ----- End of Helper functions -----
 
 
 def finetune(
     model_name: str,
-    dataset_name: str,
-    dataset_size: int = None,
+    train_data: str,
+    train_data_size: int,
+    eval_data: str,
     max_length: int = 256,
     output_dir: str = "/scratch/ctisseau/finetuned-models",
-    epochs: int = 3,
+    epochs: int = 2,
     batch_size: int = 32,
-    lr: float = 5e-5,
-    checkpoint_steps=16,
+    lr: float = 2e-5,
+    checkpoint_steps=32,
     device: str = None,
 ):
     # Setup device
@@ -80,193 +39,29 @@ def finetune(
 
     # Load dataset
     print("Loading dataset")
-    dataset = list(stream_jsonl(dataset_name))
-    if dataset_size is not None: dataset = dataset[:dataset_size]
+    train_dataset = list(stream_jsonl(train_data))
+    if train_data_size is not None: train_dataset = train_dataset[:train_data_size]
+    eval_dataset = list(stream_jsonl(eval_data))
     print("Dataset loaded")
 
     max_memory3 = {
-        0: "7GB",
-        1: "7GB",
-        2: "7GB"
-    }
-    max_memory2 = {
-        0: "75GB",   
-        1: "75GB",
+        0: "40GB",
+        1: "40GB",
+        2: "40GB"
     }
 
-    resume_dir = find_last_checkpoint(output_dir)
-    if resume_dir is not None:
-        print(f"Resuming from {resume_dir}")
-        model_to_load = resume_dir
-    else: 
-        print("No checkpoint found — starting from base model")
-        model_to_load = model_name
-    # Load tokenizer and model
-    bf16_ok = torch.cuda.is_available() and torch.cuda.is_bf16_supported()
-    dtype = torch.bfloat16 if bf16_ok else torch.float16
-    print(f"Loading CLM model: {model_name}...")
-    clm_model = clm.TransformersLM(
-        model_to_load,
-        torch_dtype=dtype,
-        device_map="balanced",
-        max_memory=max_memory3,
-    )
-    tokenizer = clm_model.tokenizer
-    tokenizer.padding_side = "left"  # simpler for generating multiple sequences
-    model = clm_model.model
-    model.eval()
-    print("CLM model loaded.")
-    print("Creating Logits Processor...")
-    outlines_model = outlines.from_transformers(clm_model.model, clm_model.tokenizer)
-    rpn_logits_processor = RegexLogitsProcessor(
-        r"(?:\d+|[+\-*/])(?: (?:\d+|[+\-*/]))*",
-        outlines_model.tokenizer,
-        outlines_model.tensor_library_name,
-    )
-    print("Logits Processor created.")
+    # Load Model and Tokenizer
+    model, tokenizer, rpn_logits_processor = load_model_tokenizer_rpnprocessor(output_dir, model_name, max_memory3)
     model.config.use_cache = False          # Disable KV-cache, which is useless during training
-
     first_device = next(model.parameters()).device
 
-    # # --- Process dataset ---
-    # SYSTEM = (
-    #     "You are an expert at converting arithmetic expressions into Reverse Polish "
-    #     "Notation (RPN). You always output only the RPN expression, with tokens "
-    #     "separated by a single space. Do not include explanations or extra text."
-    # )
-    # def render_prompt(infix: str) -> str:
-    #     # prompt only (no target), ends right after assistant-start
-    #     return (
-    #         "<|im_start|>system\n"
-    #         f"{SYSTEM}\n"
-    #         "<|im_end|>\n"
-    #         "<|im_start|>user\n"
-    #         f"Infix: {infix}\n"
-    #         "RPN:\n"
-    #         "<|im_end|>\n"
-    #         "<|im_start|>assistant\n"
-    #     )
-    # def render_full(infix: str, rpn: str) -> str:
-    #     # full training sample = prompt + answer + end
-    #     return render_prompt(infix) + f"{rpn}<|im_end|>"
-    # # dataset is a LIST of dicts like {"infix": "...", "rpn": "..."}
-    # rows = dataset  # keep your current variable name if needed
-    # # Build texts for SFT
-    # texts = [render_full(r["infix"], r["rpn"]) for r in rows]
-    # # Tokenize
-    # encodings = tokenizer(
-    #     texts,
-    #     add_special_tokens=False,           # No need to add_special_tokens, we are adding them by hand
-    #     padding=True,
-    #     return_tensors="pt",
-    # )
-    # # Create input_ids, attention_mask, labels
-    # input_ids = encodings["input_ids"]
-    # padded_seq_len = input_ids.size(1)
-    # attention_mask = encodings["attention_mask"]
-    # full_lengths = attention_mask.sum(dim=1)            # number of non-pad tokens per row
-    # labels = input_ids.clone()
-    # prompts = [tokenizer(render_prompt(r["infix"]), add_special_tokens=False)["input_ids"] for r in rows]               # No need to add_special_tokens, we are adding them by hand
-    # prompt_lengths = [len(tokenizer(render_prompt(r["infix"]), add_special_tokens=False)["input_ids"]) for r in rows]   # No need to add_special_tokens, we are adding them by hand
-    # # mask the prompt region, correctly offset for left padding
-    # for i, l_prompt in enumerate(prompt_lengths):
-    #     start_prompt = padded_seq_len - full_lengths[i]         
-    #     end_prompt = min(start_prompt + l_prompt, padded_seq_len)   # except error: start_prompt + l_prompt < padded_seq_len
-    #     labels[i, start_prompt:end_prompt] = -100                   # start_prompt:end_prompt excludes <\s>: <s>, prompt_1, ..., prompt_n, <\s>
-    # # mask padding
-    # labels[attention_mask == 0] = -100
-    # # --- END OF Process dataset ---
-
-    # --- Process dataset ---
-    SYSTEM = (
-        "You are an expert at converting arithmetic expressions into Reverse Polish "
-        "Notation (RPN). You always output only the RPN expression, with tokens "
-        "separated by a single space. Do not include explanations or extra text."
-    )
-    def build_messages(infix: str, rpn: str | None):
-        msgs = [
-            {"role": "system", "content": SYSTEM},
-            {"role": "user", "content": f"Infix: {infix}\nRPN:"},
-        ]
-        if rpn is not None:
-            msgs.append({"role": "assistant", "content": rpn})
-        return msgs
-    
-    rows = dataset
-    # Prompt-only strings (stop at assistant start) — used to compute prompt lengths
-    prompt_texts = [
-        tokenizer.apply_chat_template(
-            build_messages(r["infix"], None),
-            tokenize=False,
-            add_generation_prompt=True,   # ends right after assistant-start
-            enable_thinking=False
-        )
-        for r in rows
-    ]# example: (4 additional newlines when enable_thinking=False)
-    # "<|im_start|>system\nYou are an expert at converting arithmetic expressions into Reverse Polish Notation (RPN). You always output only the RPN expression, with tokens separated by a single space. Do not include explanations or extra text.<|im_end|>\n<|im_start|>user\nInfix: 3 + 4 * 2\nRPN:<|im_end|>\n<|im_start|>assistant\n\n\n\n\n"
-
-    # Full training strings (prompt + target)
-    full_texts = [
-        tokenizer.apply_chat_template(
-            build_messages(r["infix"], r["rpn"]),
-            tokenize=False,
-            add_generation_prompt=False,  # includes assistant message + proper end token
-            enable_thinking=False
-        )
-        for r in rows
-    ]
-    # "<|im_start|>system\nYou are an expert at converting arithmetic expressions into Reverse Polish Notation (RPN). You always output only the RPN expression, with tokens separated by a single space. Do not include explanations or extra text.<|im_end|>\n<|im_start|>user\nInfix: 3 + 4 * 2\nRPN:<|im_end|>\n<|im_start|>assistant\n\n\n\n\n3 4 2 * +<|im_end|>\n"
-
-
-    # Tokenize full sequences
-    encodings = tokenizer(
-        full_texts,
-        add_special_tokens=False,        # template already added them
-        padding=True,                    # left-padding
-        return_tensors="pt",
-    )
-
-    input_ids = encodings["input_ids"]
-    attention_mask = encodings["attention_mask"]
-    labels = input_ids.clone()
-    # Compute per-row full (non-pad) lengths
-    full_lengths = attention_mask.sum(dim=1)
-    padded_seq_len = input_ids.size(1)
-    # Prompt lengths (tokenized without padding)
-    prompt_tokenized = tokenizer(
-        prompt_texts, add_special_tokens=False, padding=False, return_tensors=None
-    )
-    prompt_lengths = [len(ids) for ids in prompt_tokenized["input_ids"]]
-    # Mask the prompt region (left-padded batches)
-    for i, l_prompt in enumerate(prompt_lengths):
-        start_prompt = padded_seq_len - full_lengths[i]     # index where non-pad starts
-        end_prompt = min(start_prompt + l_prompt, padded_seq_len)
-        labels[i, start_prompt:end_prompt] = -100
-    # Mask padding
-    labels[attention_mask == 0] = -100
-    # --- END Process dataset ---
+    # Prepare input_ids, attention_mask, labels for training and evaluation
+    input_ids, attention_mask, labels = prepare_encodings(tokenizer, train_dataset)
+    eval_input_ids, eval_attention_mask, eval_labels = prepare_encodings(tokenizer, eval_dataset)
 
     # Find the perfect micro_batch_size
-    vocab_size = model.config.vocab_size
-    micro_batch_size = 1
-    for bs in [32, 16, 8, 4, 2, 1]:
-        try:
-            model.zero_grad(set_to_none=True)
-            dummy = torch.randint(0, vocab_size, (bs, max_length), device=first_device)
-            # backward to test peak memory, but NO optimizer step
-            test_out = model(dummy, labels=dummy)
-            test_out.loss.backward()
-            model.zero_grad(set_to_none=True)
-            micro_batch_size = bs
-            print(f"fits on GPU: micro_batch_size = {bs}")
-            break
-        except RuntimeError as e:
-            if "out of memory" in str(e).lower():
-                print(f"OOM when trying bs={bs}, trying smaller…")
-                torch.cuda.empty_cache()
-            else:
-                raise
-    torch.cuda.empty_cache()
+    micro_batch_size = find_micro_batch_size(model, max_length)
+    torch.cuda.empty_cache()    # Is this necessary here? 
 
     if batch_size % micro_batch_size != 0:
         raise ValueError(
@@ -276,42 +71,25 @@ def finetune(
     accum_steps = batch_size // micro_batch_size        # The number of micro_batch to process to obtain a real batch
 
     # DataLoader
-    dataset = TensorDataset(input_ids, attention_mask, labels)
-    dataloader = DataLoader(dataset, batch_size=micro_batch_size, shuffle=False)    # We need shuffle = False if we want to track the input of each sentence
+    train_dataset = TensorDataset(input_ids, attention_mask, labels)
+    dataloader = DataLoader(train_dataset, batch_size=micro_batch_size, shuffle=False)    # We need shuffle = False if we want to track the input of each sentence
                                                                                     # By default drop_last=False, meaning the last batch is smaller than the other ones
+    eval_dataset = TensorDataset(eval_input_ids, eval_attention_mask, eval_labels)
+    eval_dataloader = DataLoader(eval_dataset, batch_size=micro_batch_size, shuffle=False)
+    eval_every = 16   # We will evaluate every 16 optimizer steps (1 epoch is 128 optimizer steps, so 8 eval)
+
     # Optimizer & scheduler
-    optimizer = torch.optim.AdamW(model.parameters(), lr=lr)
     num_update_steps_per_epoch = math.ceil(len(dataloader) / accum_steps)
     total_steps = num_update_steps_per_epoch * epochs
-    scheduler = get_linear_schedule_with_warmup(
-        optimizer,
-        num_warmup_steps=int(0.1 * total_steps),
-        num_training_steps=total_steps,
-    )
-    # To monitor training
-    # tensorboard --logdir /scratch/ctisseau/finetuned-models/Qwen3-1.7B-lcd-RPN-ds1024-e2-ds1024-bs32-testdeletelater/tb --host 127.0.0.1 --port 7007    
-    # ssh -N -L 7007:127.0.0.1:7007 -J ctisseau@cleps.paris.inria.fr ctisseau@gpu014
-    # # Then open http://localhost:7007 on the browser
-    # writer = SummaryWriter(log_dir=str(Path(output_dir) / "tb"))
+    optimizer, scheduler = build_optimizer_and_scheduler(model, lr, total_steps)
 
     # Find information to resume training
-    # A step is an update of the weights. Each epoch comprise several batch (one batch is multiple micro_batch) and each batch means a step
-    start_epoch = 0             # the epoch at which the checkpoint model is
-    resume_step = 0             # the optimizer step within the current epoch at which the checkpoint model is
-    global_optimizer_step = 0   # the optimizer step at which the checkpoint model is
-    if resume_dir is not None:
-        state = load_training_state(resume_dir)
-        if state:
-            try:
-                optimizer.load_state_dict(state["optimizer"])
-                scheduler.load_state_dict(state["scheduler"])
-            except Exception as e:
-                print(f"Warning: could not load optimizer/scheduler state: {e}")
-            start_epoch = state.get("epoch", 0)
-            resume_step = state.get("step", 0)
-            global_optimizer_step = state.get("global_step", 0)
-    
+    start_epoch, resume_step, global_optimizer_step = resume_training(output_dir, optimizer, scheduler)
 
+    # To monitor training
+    metrics_path = Path(output_dir) / "metrics.jsonl"
+    reconcile_metrics(metrics_path, last_global_step=global_optimizer_step)
+    
     # Loss ignoring padding
     loss_fct = torch.nn.CrossEntropyLoss(ignore_index=-100, reduction="sum")    #sum is important here. We are doing gradient accumulation, with sentences of varying lengths.
 
@@ -334,6 +112,7 @@ def finetune(
             outputs = model(
                 input_ids=batch_input_ids,
                 attention_mask=batch_attention,
+                use_cache=False,        # disable KV-cache during training
                 return_dict=True,
             )
             logits = outputs.logits  # shape (batch, seq_len, vocab_size)  
@@ -390,24 +169,24 @@ def finetune(
                     if p.grad is not None:
                         p.grad.div_(denom)
 
+                # measure global L2 grad norm
+                total_sq = 0.0
+                for p in model.parameters():
+                    if p.grad is None:
+                        continue
+                    g = p.grad.detach()
+                    # (optional) handle sparse grads
+                    if g.is_sparse:
+                        param_norm = g.coalesce().values().float().norm(2)
+                    else:
+                        param_norm = g.float().norm(2)
+                    total_sq += (param_norm.item() ** 2)
+                total_grad_norm = total_sq ** 0.5  # float
+
                 optimizer.step()        # Applies an update using the accumulated gradients and updates AdamW internal state.
                 scheduler.step()        # Advances the LR schedule by one optimizer *step*. 
                 optimizer.zero_grad()   # Clears grads so the next accumulation window starts fresh.
                 global_optimizer_step += 1
-
-                mean_loss = window_loss_sum / denom
-                ppl = math.exp(mean_loss)
-                lr_now = scheduler.get_last_lr()[0]
-                print(f"Epoch {epoch+1}, loss over the (real) batch {(step + 1) // accum_steps}: {(mean_loss):.4f}, ppl: {ppl:.2f}") 
-                # writer.add_scalar("train/loss_token_avg", mean_loss, global_optimizer_step)
-                # writer.add_scalar("train/ppl", ppl, global_optimizer_step)
-                # writer.add_scalar("train/lr", lr_now, global_optimizer_step)
-                # writer.flush()
-
-                # reset window accumulators
-                window_valid_tokens = 0
-                window_loss_sum = 0.0
-                window_mb = 0
 
                 # Save checkpoint
                 if (checkpoint_steps > 0) and (global_optimizer_step % checkpoint_steps == 0):
@@ -418,12 +197,63 @@ def finetune(
                         output_dir=output_dir
                     )     
                     print(f"model saved as {output_dir}/checkpoint-{global_optimizer_step:08d}")
+
+                mean_loss = window_loss_sum / denom
+                print(f"Epoch {epoch+1}, loss over the (real) batch {(step + 1) // accum_steps}: {(mean_loss):.4f}, ppl: {math.exp(mean_loss):.2f}") 
+
+                log_jsonl(
+                    metrics_path,
+                    ts=time.time(),
+                    epoch=epoch + 1,
+                    global_step=global_optimizer_step,
+                    batch=(step + 1) // accum_steps,
+                    split="train",
+                    tokens_in_batch=denom,
+                    loss_token_avg=mean_loss,
+                    grad_norm=total_grad_norm,
+                    ppl=math.exp(mean_loss),
+                    lr=scheduler.get_last_lr()[0],
+                )
+
+                # reset window accumulators
+                window_valid_tokens = 0
+                window_loss_sum = 0.0
+                window_mb = 0
+
+                if eval_every and (global_optimizer_step % eval_every == 0):
+                    eval_loss, eval_ppl, eval_tokens = evaluate(model, eval_dataloader, loss_fct, first_device)
+                    log_jsonl(metrics_path,
+                            ts=time.time(),
+                            epoch=epoch + 1,
+                            global_step=global_optimizer_step,
+                            split="eval",
+                            tokens_in_batch=eval_tokens,
+                            loss_token_avg=eval_loss,
+                            ppl=eval_ppl,
+                            lr=scheduler.get_last_lr()[0])
+                    print(f"[EVAL] step {global_optimizer_step}: loss/token={eval_loss:.4f}, ppl={eval_ppl:.2f}")
+
+      
         # --- Flush leftover micro-batches at end of epoch (if any) ---
         if window_mb > 0:
             denom = max(window_valid_tokens, 1)
             for p in model.parameters():
                 if p.grad is not None:
                     p.grad.div_(denom)
+            # measure global L2 grad norm
+            total_sq = 0.0
+            for p in model.parameters():
+                if p.grad is None:
+                    continue
+                g = p.grad.detach()
+                # (optional) handle sparse grads
+                if g.is_sparse:
+                    param_norm = g.coalesce().values().float().norm(2)
+                else:
+                    param_norm = g.float().norm(2)
+                total_sq += (param_norm.item() ** 2)
+
+            total_grad_norm = total_sq ** 0.5  # float
             optimizer.step()
             scheduler.step()
             optimizer.zero_grad(set_to_none=True)
@@ -432,6 +262,32 @@ def finetune(
             mean_loss = window_loss_sum / denom
             print(f"Epoch {epoch+1}, loss over the (real) batch {(step + 1) // accum_steps}: {(mean_loss):.4f}, ppl: {math.exp(mean_loss):.2f}") 
 
+            log_jsonl(
+                    metrics_path,
+                    ts=time.time(),
+                    epoch=epoch + 1,
+                    global_step=global_optimizer_step,
+                    batch=(step + 1) // accum_steps,
+                    split="train",
+                    tokens_in_batch=denom,
+                    loss_token_avg=mean_loss,
+                    grad_norm=total_grad_norm,
+                    ppl=math.exp(mean_loss),
+                    lr=scheduler.get_last_lr()[0],
+                )
+            
+            if eval_every and (global_optimizer_step % eval_every == 0):
+                    eval_loss, eval_ppl, eval_tokens = evaluate(model, eval_dataloader, loss_fct, first_device)
+                    log_jsonl(metrics_path,
+                            ts=time.time(),
+                            epoch=epoch + 1,
+                            global_step=global_optimizer_step,
+                            split="eval",
+                            tokens_in_batch=eval_tokens,
+                            loss_token_avg=eval_loss,
+                            ppl=eval_ppl,
+                            lr=scheduler.get_last_lr()[0])
+                    print(f"[EVAL] step {global_optimizer_step}: loss/token={eval_loss:.4f}, ppl={eval_ppl:.2f}")
 
     # # Save the fine-tuned model and tokenizer
     # model.save_pretrained(output_dir)
@@ -439,30 +295,82 @@ def finetune(
 
 if __name__ == "__main__":
     import argparse
+    import json
+    import hashlib
+    from pathlib import Path
+    from datetime import datetime
 
-    HERE = Path(__file__).resolve().parent  # directory containing assisted_finetune.py
-    DATA = HERE / "RPN_benchmark" / "train" / "train_dataset1024.jsonl"     # dataset used for training
+    HERE = Path(__file__).resolve().parent  # directory containing finetune.py
+    DATA = HERE / "RPN_benchmark" / "train" / "train_dataset_uniform4096.jsonl"     # dataset used for training
+    EVAL = HERE / "RPN_benchmark" / "eval" / "eval_dataset_uniform108.jsonl"        # dataset used for eval
 
-    parser = argparse.ArgumentParser(description="Fine-tune a constrained LLM with biased logits.")
+    OUTPUT_ROOT = Path("/scratch/ctisseau/finetuned-models")
+
+    def slugify(s: str) -> str:
+        return (
+            s.replace("/", "-")
+             .replace("\\", "-")
+             .replace(" ", "-")
+             .replace(":", "-")
+        )
+
+    def args_hash(d: dict, digest_size: int = 10) -> str:
+        payload = json.dumps(d, sort_keys=True, separators=(",", ":")).encode("utf-8")
+        return hashlib.blake2b(payload, digest_size=digest_size).hexdigest()
+
+
+    parser = argparse.ArgumentParser(description="Fine-tune a LLM.")
     parser.add_argument("--model_name", type=str, default="Qwen/Qwen3-1.7B")
-    parser.add_argument("--dataset_name", type=str, default=DATA)
-    parser.add_argument("--dataset_size", type=int, default=None,
+    parser.add_argument("--train_path", type=Path, default=DATA)
+    parser.add_argument("--train_data_size", type=int, default=None,
                         help="Number of samples of the whole dataset to train on.")
+    parser.add_argument("--eval_path", type=Path, default=EVAL)
     parser.add_argument("--max_length", type=int, default=256)
-    parser.add_argument("--output_dir", type=str, default=f"/scratch/ctisseau/finetuned-models/Qwen3-1.7B-lcd-RPN-ds1024-e2-ds1024-bs32-testdeletelater")
+    parser.add_argument("--output_root", type=str, default=OUTPUT_ROOT)
     parser.add_argument("--epochs", type=int, default=2)
     parser.add_argument("--batch_size", type=int, default=32)
-    parser.add_argument("--lr", type=float, default=5e-5)
-    parser.add_argument("--checkpoint_steps", type=int, default=32)     # save every N optimizer steps. There is dataset_size / batch_size steps in one epoch. 1024 / 32 = 32.
+    parser.add_argument("--lr", type=float, default=2e-5)
+    parser.add_argument("--checkpoint_steps", type=int, default=64)     # save every N optimizer steps. There is dataset_size / batch_size steps in one epoch. 4096 / 32 = 128.
     args = parser.parse_args()
 
+    training_args = {
+        "base_model": args.model_name,
+        "training_method": "lcd_sft",
+        "train_dataset": str(args.train_path),
+        "train_dataset_size": args.train_data_size,
+        "is_shuffled": "no",
+        "eval_dataset": str(args.eval_path),
+        "epochs": args.epochs,
+        "batch_size": args.batch_size,
+        "checkpoint_steps": args.checkpoint_steps,
+        "lr": args.lr,
+        "warmup_ratio": 0.1,
+    }
+    
+    run_id = args_hash(training_args, digest_size=10)  # 20 hex chars
+    run_name = f"{slugify(training_args['base_model'])}_" \
+               f"{slugify(training_args['training_method'])}_" \
+               f"{run_id}"
+    output_dir = args.output_root / run_name
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    config_path = output_dir / "training_args.json"
+    if not config_path.exists():
+        payload = {
+            **training_args,
+            "run_id": run_id,
+            "created_at": datetime.now().astimezone().isoformat(timespec="seconds"),
+        }
+        with open(config_path, "w") as f:
+            json.dump(payload, f, indent=4)
 
     finetune(
         model_name=args.model_name,
-        dataset_name=args.dataset_name,
-        dataset_size=args.dataset_size,
+        train_data=args.train_path,
+        train_data_size=args.train_data_size,
+        eval_data=args.eval_path,
         max_length=args.max_length,
-        output_dir=args.output_dir,
+        output_dir=output_dir,
         epochs=args.epochs,
         batch_size=args.batch_size,
         lr=args.lr,

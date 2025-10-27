@@ -1,23 +1,16 @@
 import json
 import os
-import fire
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from tqdm import tqdm
 from pathlib import Path
 
 max_memory3 = {
-    0: "40GB",
-    1: "40GB",
-    2: "40GB"
+    0: "7GB",
+    1: "7GB",
+    2: "7GB"
 }
 
-# model_name = "/scratch/ctisseau/finetuned-models/Qwen3-1.7B-RPN-ds1024-e2-ds1024-bs32/checkpoint-00000032"
-model_name = "/scratch/ctisseau/finetuned-models/Qwen3-1.7B-RPN-ds1024-e2-ds1024-bs32-testdeletelater/checkpoint-00000032"
-readable_model_name = "Qwen3-1.7B-testdeletelater-dtrain1024-ckpt32"
-
-HERE = Path(__file__).resolve().parent  # directory containing generate.py
-DATA = HERE / "data" / "dataset1000.jsonl"
 
 # --- Utility Functions for File I/O ---
 def stream_jsonl(filename: str):
@@ -40,7 +33,7 @@ def write_jsonl(filename: str, data, append: bool = False):
 
 
 # --- Core Generation Function ---
-def generate_rpn(model, tokenizer, infix: str, num_samples: int, max_new_tokens: int, temperature=1.0, top_k=20, top_p=0.95) -> list[str]:
+def generate_rpn(model, tokenizer, infix: str, num_samples: int, max_new_tokens: int, temperature=1.0, top_k=20, top_p=0.95, few_shot=1) -> list[str]:
     """
     Generates a batch of rpn expressions for a given infix.
 
@@ -54,9 +47,10 @@ def generate_rpn(model, tokenizer, infix: str, num_samples: int, max_new_tokens:
     Returns:
         A list of generated rpn expressions.
     """
-    messages = [
-        {"role": "system", "content": "You are an expert at converting arithmetic expressions into Reverse Polish Notation (RPN). You always output only the RPN expression, with tokens separated by a single space. Do not include explanations or extra text."},
-        {"role": "user", "content": f"""Examples:
+    if few_shot == 1:
+        messages = [
+            {"role": "system", "content": "You are an expert at converting arithmetic expressions into Reverse Polish Notation (RPN). You always output only the RPN expression, with tokens separated by a single space. Do not include explanations or extra text."},
+            {"role": "user", "content": f"""Examples:
 
 Infix: 63 - _ = 17
 RPN: 63 46 -
@@ -71,7 +65,13 @@ Now convert this expression:
 
 Infix: {infix}
 RPN:"""}
-    ]
+        ]
+    elif few_shot == 0:
+        messages = [
+            {"role": "system", "content": "You are an expert at converting arithmetic expressions into Reverse Polish Notation (RPN). You always output only the RPN expression, with tokens separated by a single space. Do not include explanations or extra text."},
+            {"role": "user", "content": f"""Infix: {infix}
+RPN:"""}
+        ]
     text = tokenizer.apply_chat_template(
         messages,
         tokenize=False,
@@ -102,13 +102,15 @@ RPN:"""}
 # --- Main Execution Block ---
 
 def main(
+    model_name,
+    readable_model_name,
+    dataset_file: str,
     n_samples: int = 128,
     max_new_tokens: int = 64,
-    dataset_file: str = DATA,
     temperature=1.0,
     top_k=20,
     top_p=0.95,
-
+    few_shot=1,
 ):
     """
     Generates code samples for RPN problems using a specified model.
@@ -136,14 +138,19 @@ def main(
     
     print("Reading problems...")
     dataset = list(stream_jsonl(dataset_file))
-    # problems = problems[:10]
     print(f"Found {len(dataset)} problems.")
     
     # Create the output directory if it doesn't exist
     output_dir = "samples"
     os.makedirs(output_dir, exist_ok=True)
-    output_file = os.path.join(output_dir, f"{readable_model_name}-n{n_samples}-t1.jsonl")     # lcd: locally constrained decoding, t1: temperature=1, p08: top-p=0.8
-
+    if few_shot == 1:
+        print("few_shot is True")
+        output_file = os.path.join(output_dir, f"{readable_model_name}-n{n_samples}-t{f'{temperature:g}'.replace('.', '_')}-p{f'{top_p:g}'.replace('.', '_')}-k{top_k}.jsonl")     # lcd: locally constrained decoding, t1: temperature=1, p08: top-p=0.8
+    elif few_shot == 0:
+        print("few_shot is False")
+        output_file = os.path.join(output_dir, f"{readable_model_name}-nofewshot-n{n_samples}-t{f'{temperature:g}'.replace('.', '_')}-p{f'{top_p:g}'.replace('.', '_')}-k{top_k}.jsonl")     # lcd: locally constrained decoding, t1: temperature=1, p08: top-p=0.8
+    else:
+        print("--few_shot should be 0 or 1")
     print(f"Generating {n_samples} samples for each of the {len(dataset)} problems...")
     samples = []
     for data in tqdm(dataset, desc="Generating samples"):
@@ -156,6 +163,7 @@ def main(
             temperature=temperature, 
             top_k=top_k,
             top_p=top_p,
+            few_shot=few_shot,
         )
         for completion in generated_completions:
             samples.append(
@@ -167,4 +175,31 @@ def main(
     print("Done.")
 
 if __name__ == "__main__":
-    fire.Fire(main)
+    import argparse
+
+    HERE = Path(__file__).resolve().parent  # directory containing generate.py
+    DATA = HERE / "data" / "dataset900.jsonl"
+
+    parser = argparse.ArgumentParser(description="Fine-tune a LLM.")
+
+    parser.add_argument("--model_name", type=str, default="Qwen/Qwen3-1.7B")
+    parser.add_argument("--readable_model_name", type=str, default="Qwen3-1.7B")
+    parser.add_argument("--dataset_file", type=str, default=DATA)
+    parser.add_argument("--n_samples", type=int, default=128)
+    parser.add_argument("--max_new_tokens", type=int, default=64)
+    parser.add_argument("--temperature", type=float, default=1.0)
+    parser.add_argument("--top_k", type=int, default=20)
+    parser.add_argument("--top_p", type=float, default=1.0)    # 0.95
+    parser.add_argument("--few_shot", type=int, default=1) 
+    args = parser.parse_args()
+
+    # model_name = "/scratch/ctisseau/finetuned-models/Qwen3-1.7B-RPN-ds1024-e2-ds1024-bs32/checkpoint-00000032"
+    # model_name = "/scratch/ctisseau/finetuned-models/Qwen-Qwen3-1.7B_classical_sft_7c8926f8324c983f7990/checkpoint-00000128"
+    # model_name = "/scratch/ctisseau/finetuned-models/Qwen-Qwen3-1.7B_lcd_sft_9fdbc593c01affa7ad7a/checkpoint-00000128"
+    # model_name = "Qwen/Qwen3-1.7B"
+
+    # readable_model_name = "Qwen3-1.7B"
+    # readable_model_name = "Qwen3-1.7B_classical_sft_7c8926f8324c983f7990-ckpt128"
+    # readable_model_name = "Qwen3-1.7B_lcd_sft_9fdbc593c01affa7ad7a-ckpt128"
+
+    main(**vars(args))

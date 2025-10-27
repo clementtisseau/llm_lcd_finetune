@@ -1,6 +1,10 @@
 import torch
 import math
-from transformers import AutoTokenizer, AutoModelForCausalLM, get_linear_schedule_with_warmup
+from transformers import AutoTokenizer, AutoModelForCausalLM, get_cosine_schedule_with_warmup
+import constraintlm as clm
+import outlines
+from outlines.processors import RegexLogitsProcessor
+
 from pathlib import Path
 
 
@@ -106,6 +110,39 @@ def load_model_tokenizer(output_dir, model_name, max_memory):
     return model, tokenizer
 
 
+def load_model_tokenizer_rpnprocessor(output_dir, model_name, max_memory):
+    resume_dir = find_last_checkpoint(output_dir)
+    if resume_dir is not None:
+        print(f"Resuming from {resume_dir}")
+        model_to_load = resume_dir
+    else: 
+        print("No checkpoint found — starting from base model")
+        model_to_load = model_name
+    # Load tokenizer and model
+    bf16_ok = torch.cuda.is_available() and torch.cuda.is_bf16_supported()
+    dtype = torch.bfloat16 if bf16_ok else torch.float16
+    clm_model = clm.TransformersLM(
+        model_to_load,
+        torch_dtype=dtype,
+        device_map="balanced",
+        max_memory=max_memory,
+    )
+    tokenizer = clm_model.tokenizer
+    tokenizer.padding_side = "left"  # simpler for generating multiple sequences
+    if tokenizer.pad_token is None:
+        tokenizer.pad_token = tokenizer.eos_token
+    model = clm_model.model
+    model.eval()
+    print("CLM Tokenizer and Model loaded")
+    outlines_model = outlines.from_transformers(clm_model.model, clm_model.tokenizer)
+    rpn_logits_processor = RegexLogitsProcessor(
+        r"(?:\d+|[+\-*/])(?: (?:\d+|[+\-*/]))*",
+        outlines_model.tokenizer,
+        outlines_model.tensor_library_name,
+    )
+    print("Logits Processor created")
+    return model, tokenizer, rpn_logits_processor
+
 
 
 # ---------- Process dataset ----------
@@ -209,8 +246,14 @@ def find_micro_batch_size(model, max_length: int) -> int:
 
 # ---------- Optim & sched ----------
 def build_optimizer_and_scheduler(model, lr: float, steps_total: int, warmup_ratio: float = 0.1):
-    optimizer = torch.optim.AdamW(model.parameters(), lr=lr)
-    scheduler = get_linear_schedule_with_warmup(
+    optimizer = torch.optim.AdamW(
+        [
+            {"params": [p for n,p in model.named_parameters() if p.requires_grad and not any(x in n for x in ["bias","LayerNorm.weight","layer_norm.weight"])], "weight_decay": 0.01},
+            {"params": [p for n,p in model.named_parameters() if p.requires_grad and any(x in n for x in ["bias","LayerNorm.weight","layer_norm.weight"])], "weight_decay": 0.0},
+        ],
+        lr=lr, betas=(0.9, 0.98), eps=1e-8
+    )
+    scheduler = get_cosine_schedule_with_warmup(
         optimizer,
         num_warmup_steps=int(warmup_ratio * steps_total),
         num_training_steps=steps_total,

@@ -320,12 +320,21 @@ if __name__ == "__main__":
     #     3: 270, 5: 226, 7: 174, 9: 132,
     #     11: 92, 13: 55, 15: 40, 17: 20, 19: 15,
     # }   # 1024
+    # target = {
+    #     3: 34, 5: 28, 7: 22, 9: 17,
+    #     11: 12, 13: 7, 15: 5, 17: 2, 19: 1
+    # }   # 128 eval dataset
+    # target = {
+    #     3: 12, 5: 12, 7: 12, 9: 12,
+    #     11: 12, 13: 12, 15: 12, 17: 12, 19: 12
+    # }   # 9*12=108 eval dataset uniform
     target = {
-        3: 34, 5: 28, 7: 22, 9: 17,
-        11: 12, 13: 7, 15: 5, 17: 2, 19: 1
-    }   # 128
+        3: 100, 5: 100, 7: 100, 9: 100,
+        11: 100, 13: 100, 15: 100, 17: 100, 19: 100
+    }   # 9*100=900 data dataset uniform
+    # target = {3: 455, 5: 456, 7: 455, 9: 455, 11: 455, 13: 455, 15: 455, 17: 455, 19: 455} # 4096 training dataset with uniform distribution
 
-    out = "eval/eval_dataset128.jsonl"
+    out = "data/dataset900.jsonl"
 
     # 1) Generate each bucket WITHOUT IDs and WITHOUT writing
     all_recs = []

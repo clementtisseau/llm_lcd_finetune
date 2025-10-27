@@ -8,6 +8,7 @@ import sys
 import json
 import math
 import itertools
+import re 
 from collections import defaultdict, Counter
 from typing import Iterable, Dict, List, Union
 
@@ -16,10 +17,10 @@ import numpy as np
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-DATA = HERE / "data" / "dataset1000.jsonl"
-SAMPLES = HERE / "samples" / "data1000" / "SFT" / "Qwen3-1.7B-dtrain1024-ckpt32-d1000-n128-t1-p08.jsonl"
-# SAMPLES = HERE / "samples" / "Qwen3-1.7B-lcd-testdeletelater-dtrain1024-ckpt32-n128-t1.jsonl"
-
+DATA = HERE / "data" / "dataset900.jsonl"
+# SAMPLES = HERE / "samples" / "data1000" / "SFT" / "Qwen3-1.7B-dtrain1024-ckpt32-d1000-n128-t1-p08.jsonl"
+# SAMPLES = HERE / "samples" / "Qwen3-1.7B_lcd_sft_9fdbc593c01affa7ad7a-ckpt256-nofewshot-lcdgen-n128-t1-p1-k20.jsonl"
+SAMPLES = HERE / "samples" / "data900" / "nofewshot" / "Qwen3-1.7B_classical_sft_7c8926f8324c983f7990-ckpt256-nofewshot-n128-t1-p1-k20.jsonl"
 
 # --- I/O helpers ---
 def stream_jsonl(filename: Path) -> Iterable[Dict]:
@@ -66,6 +67,13 @@ def eval_rpn(expr: str) -> float:
         raise ValueError("Malformed RPN: stack has multiple values at end")
     return stack[0]
 
+# --- regex helper ---
+_RPN_TOKEN_RE = re.compile(r'(?:\d+|[+\-*/])(?: (?:\d+|[+\-*/]))*$')
+def is_valid_rpn_format(expr: str) -> bool:
+    if expr is None:
+        return False
+    return _RPN_TOKEN_RE.fullmatch(expr.strip()) is not None
+
 # --- pass@k ---
 def estimate_pass_at_k(
     num_samples: Union[int, List[int], np.ndarray],
@@ -111,6 +119,7 @@ def evaluate_rpn_correctness(
         completion = sample["completion"]
         comp_id = completion_id_counter[task_id]
         completion_id_counter[task_id] += 1
+        regex_ok = is_valid_rpn_format(completion)
 
         if task_id not in dataset:
             results[task_id].append({
@@ -122,6 +131,7 @@ def evaluate_rpn_correctness(
                 "true_value": None,
                 "abs_err": None,
                 "passed": False,
+                "regex": bool(regex_ok),
                 "error": f"Unknown task_id '{task_id}'",
             })
             continue
@@ -148,6 +158,7 @@ def evaluate_rpn_correctness(
             "true_value": truth_value,
             "abs_err": (None if pred_val is None else abs(pred_val - truth_value)),
             "passed": bool(passed),
+            "regex": bool(regex_ok),
             "error": err,
         })
 
@@ -167,8 +178,8 @@ def evaluate_rpn_correctness(
     print("pass@k results:")
     print(pass_at_k)
 
-    # --- Accuracy per true_length ---
-    length_stats: Dict[int, Dict[str, int]] = defaultdict(lambda: {"total": 0, "correct": 0})
+    # --- Accuracy and Syntax Error rate per true_length ---
+    length_stats: Dict[int, Dict[str, int]] = defaultdict(lambda: {"total": 0, "correct": 0, "null_pred": 0, "regex_err": 0})
     for r in all_results:
         L = r.get("true_length")
         if L is None:
@@ -176,6 +187,10 @@ def evaluate_rpn_correctness(
         length_stats[L]["total"] += 1
         if r.get("passed"):
             length_stats[L]["correct"] += 1
+        if r.get("pred_value") is None:
+            length_stats[L]["null_pred"] += 1
+        if not r["regex"]:
+            length_stats[L]["regex_err"] += 1
 
     if length_stats:
         print("Accuracy by true_length (% passed):")
@@ -184,8 +199,26 @@ def evaluate_rpn_correctness(
             c = length_stats[L]["correct"]
             pct = 100.0 * c / t if t else 0.0
             print(f"  length={L}: {pct:.2f}% ({c}/{t})")
+        T = sum(v["total"] for v in length_stats.values())
+        C = sum(v["correct"] for v in length_stats.values())
+        acc_overall = 100.0 * C / T if T else 0.0
+        print(f"  overall: {acc_overall:.2f}% ({C}/{T})")
+
+        print("Error rates by true_length (%):")
+        for L in sorted(length_stats):
+            t = length_stats[L]["total"]
+            s = length_stats[L]["null_pred"]
+            r = length_stats[L]["regex_err"]
+            pct_s = 100.0 * s / t if t else 0.0
+            pct_r = 100.0 * r / t if t else 0.0
+            print(f"  length={L}: syntax {pct_s:.2f}% ({s}/{t}) | regex {pct_r:.2f}% ({r}/{t})")
+        N = sum(v["null_pred"] for v in length_stats.values())
+        R = sum(v["regex_err"] for v in length_stats.values())
+        null_overall = 100.0 * N / T if T else 0.0
+        regex_overall = 100.0 * R / T if T else 0.0
+        print(f"  overall: syntax {null_overall:.2f}% ({N}/{T}) | regex {regex_overall:.2f}% ({R}/{T})")
     else:
-        print("Accuracy by true_length: no lengths available.")
+        print("Accuracy and Syntax Error rate by true_length: no lengths available.")
 
     # Save detailed results
     out_file = Path(sample_file).with_suffix(Path(sample_file).suffix + "_results.jsonl")

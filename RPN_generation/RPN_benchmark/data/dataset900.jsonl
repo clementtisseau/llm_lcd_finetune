@@ -1,0 +1,900 @@
+{"infix": "85 + 79 + 46 + 30 + 8 + 76", "rpn": "85 79 46 + + 30 + 8 76 + +", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 324.0, "id": "0001"}
+{"infix": "18 - (50 + 100 * 57) - 22 * (91 - 87 + 57)", "rpn": "18 50 100 57 * + - 22 - 91 87 - 57 + *", "depth": 6, "num_operands": 8, "num_operators": 7, "value": -350994.0, "id": "0002"}
+{"infix": "(23 + 68) / (91 - 95 - (94 + 80) + 40)", "rpn": "23 68 + 91 95 - 94 80 + - 40 + /", "depth": 5, "num_operands": 7, "num_operators": 6, "value": -0.6594202898550725, "id": "0003"}
+{"infix": "30 + 80 + 61 + 14 + 21 / 86 - (40 - 62)", "rpn": "30 80 + 61 + 14 21 + 86 / 40 62 - - +", "depth": 5, "num_operands": 8, "num_operators": 7, "value": 193.40697674418604, "id": "0004"}
+{"infix": "55 + 89 + 78 * (95 + 25 + 56)", "rpn": "55 89 + 78 95 25 + 56 + * +", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 13872.0, "id": "0005"}
+{"infix": "42 - (93 + 97) + 9 + 34", "rpn": "42 93 97 + - 9 34 + +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": -105.0, "id": "0006"}
+{"infix": "(27 + 91 * 74 - 99 + 86 + 38 + 86 + 24 + 2) * 13", "rpn": "27 91 74 * 99 86 38 + + 86 24 + + 2 + - + 13 *", "depth": 8, "num_operands": 10, "num_operators": 9, "value": 83538.0, "id": "0007"}
+{"infix": "65 + 36 + 84", "rpn": "65 36 + 84 +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 185.0, "id": "0008"}
+{"infix": "24 - 37", "rpn": "24 37 -", "depth": 2, "num_operands": 2, "num_operators": 1, "value": -13.0, "id": "0009"}
+{"infix": "30 - 61 + 24 - (21 - (78 + 97) + 93 * 65 - 81) + 96", "rpn": "30 61 - 24 + 21 78 97 + - 93 65 81 - * + - 96 +", "depth": 6, "num_operands": 10, "num_operators": 9, "value": 1731.0, "id": "0010"}
+{"infix": "53 + 81", "rpn": "53 81 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 134.0, "id": "0011"}
+{"infix": "74 - 27 * 27 * (81 + 50 - (82 + 26)) * 26 - (9 + 5)", "rpn": "74 27 27 * 81 50 + 82 26 + - 26 * 9 5 + - * -", "depth": 7, "num_operands": 10, "num_operators": 9, "value": -425662.0, "id": "0012"}
+{"infix": "24 + 95 + (16 + 48) * (23 + 14) * (50 + 22) * 10", "rpn": "24 95 + 16 48 + 23 14 + * 50 22 + 10 * * +", "depth": 5, "num_operands": 9, "num_operators": 8, "value": 1705079.0, "id": "0013"}
+{"infix": "90 / 45 + 70", "rpn": "90 45 / 70 +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 72.0, "id": "0014"}
+{"infix": "74 + 94 + 53 + 12 + 52 + 35 - 89 + 1", "rpn": "74 94 53 + + 12 52 + 35 + 89 - 1 + +", "depth": 6, "num_operands": 8, "num_operators": 7, "value": 232.0, "id": "0015"}
+{"infix": "86 + 33 - 86 * 16 + 4 * 49", "rpn": "86 33 + 86 16 * 4 49 * + -", "depth": 4, "num_operands": 6, "num_operators": 5, "value": -1453.0, "id": "0016"}
+{"infix": "5 + 97 * 21 + 58 / 61 - 95 - 38 * 31", "rpn": "5 97 21 * + 58 61 / 95 - + 38 31 * -", "depth": 5, "num_operands": 8, "num_operators": 7, "value": 769.950819672131, "id": "0017"}
+{"infix": "76 / 30 - 31 - (62 + 75 - 71) * (77 + 81)", "rpn": "76 30 / 31 - 62 75 71 - + - 77 81 + *", "depth": 5, "num_operands": 8, "num_operators": 7, "value": -14925.733333333334, "id": "0018"}
+{"infix": "13 - 39 + 14", "rpn": "13 39 - 14 +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": -12.0, "id": "0019"}
+{"infix": "88 - (65 - 81) * 65", "rpn": "88 65 81 - - 65 *", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 6760.0, "id": "0020"}
+{"infix": "63 + 88", "rpn": "63 88 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 151.0, "id": "0021"}
+{"infix": "78 + 46 + 62", "rpn": "78 46 62 + +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 186.0, "id": "0022"}
+{"infix": "(26 + 89 + 49) * 60 - (56 - 78 + 36) + 77", "rpn": "26 89 49 + + 60 56 78 - 36 + - 77 + *", "depth": 6, "num_operands": 8, "num_operators": 7, "value": 20172.0, "id": "0023"}
+{"infix": "(77 - 56) / (82 + 64 * 70) + (84 + 96) * (13 + 11)", "rpn": "77 56 - 82 64 70 * + / 84 96 + 13 11 + * +", "depth": 5, "num_operands": 9, "num_operators": 8, "value": 4320.0046032441915, "id": "0024"}
+{"infix": "86 * (80 - 17 + 88 + 8 + 61 + 64 + 55 - 90)", "rpn": "86 80 17 88 + 8 + 61 + - 64 + 55 90 - + *", "depth": 8, "num_operands": 9, "num_operators": 8, "value": -5590.0, "id": "0025"}
+{"infix": "1 - 24 + 82", "rpn": "1 24 - 82 +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 59.0, "id": "0026"}
+{"infix": "58 + 31 / 16 + 14 + 14 + 92 + 25 * 37", "rpn": "58 31 16 / + 14 14 92 + 25 + 37 * + +", "depth": 6, "num_operands": 8, "num_operators": 7, "value": 4920.9375, "id": "0027"}
+{"infix": "63 * (73 - 38) - 45 + 90", "rpn": "63 73 38 - * 45 - 90 +", "depth": 5, "num_operands": 5, "num_operators": 4, "value": 2250.0, "id": "0028"}
+{"infix": "50 + 33", "rpn": "50 33 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 83.0, "id": "0029"}
+{"infix": "11 + 9 - 16 * 83 + 61 - 30", "rpn": "11 9 + 16 83 * - 61 30 - +", "depth": 4, "num_operands": 6, "num_operators": 5, "value": -1277.0, "id": "0030"}
+{"infix": "86 + 1 - 31 + 93", "rpn": "86 1 + 31 - 93 +", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 149.0, "id": "0031"}
+{"infix": "(44 + 71) * 5 + 10 - (4 + 20)", "rpn": "44 71 + 5 10 + 4 20 + - *", "depth": 4, "num_operands": 6, "num_operators": 5, "value": -1035.0, "id": "0032"}
+{"infix": "32 + (73 - 17) * 23", "rpn": "32 73 17 - 23 * +", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 1320.0, "id": "0033"}
+{"infix": "25 - 22 + 97 + 35 + 8", "rpn": "25 22 - 97 35 + 8 + +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 143.0, "id": "0034"}
+{"infix": "57 - 19 / 20 * (47 + 82) / 100 - 1 + 63 - 32", "rpn": "57 19 20 / - 47 82 + * 100 1 - / 63 32 - +", "depth": 6, "num_operands": 9, "num_operators": 8, "value": 104.03484848484848, "id": "0035"}
+{"infix": "77 + (22 - (91 - 8) * 31) / (52 - (5 - (60 + 50) + 59))", "rpn": "77 22 91 8 - 31 * - 52 5 60 50 + - 59 + - / +", "depth": 7, "num_operands": 10, "num_operators": 9, "value": 50.96938775510204, "id": "0036"}
+{"infix": "(52 - 70) * (50 * 24 + 85) + 11 * 54 - (73 + 59 - 77)", "rpn": "52 70 - 50 24 * 85 + * 11 54 * 73 59 + 77 - - +", "depth": 5, "num_operands": 10, "num_operators": 9, "value": -22591.0, "id": "0037"}
+{"infix": "90 - 63 / 77 + 54 / 18 + 43", "rpn": "90 63 - 77 / 54 18 / 43 + +", "depth": 4, "num_operands": 6, "num_operators": 5, "value": 46.35064935064935, "id": "0038"}
+{"infix": "12 * (8 + 71) * (95 - 81) * 64 * 35", "rpn": "12 8 71 + * 95 81 - 64 35 * * *", "depth": 4, "num_operands": 7, "num_operators": 6, "value": 29729280.0, "id": "0039"}
+{"infix": "53 - (22 + 53 - 32 * 61 + 66 - 46)", "rpn": "53 22 53 + 32 61 * 66 46 - + - -", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 1950.0, "id": "0040"}
+{"infix": "20 + 12 + 61 + 48 + 45", "rpn": "20 12 + 61 48 + 45 + +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 186.0, "id": "0041"}
+{"infix": "55 + 25 - 32 - 60 - (28 - 98 + 7 - 4 + 12) - 26", "rpn": "55 25 32 - + 60 - 28 98 - 7 4 - 12 + + - 26 -", "depth": 6, "num_operands": 10, "num_operators": 9, "value": 17.0, "id": "0042"}
+{"infix": "81 + 4", "rpn": "81 4 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 85.0, "id": "0043"}
+{"infix": "9 * (53 + 83) + 21 + 15 - (11 + 45) + 84", "rpn": "9 53 83 + * 21 + 15 + 11 45 + - 84 +", "depth": 7, "num_operands": 8, "num_operators": 7, "value": 1288.0, "id": "0044"}
+{"infix": "(87 * (13 + 49) + 24) * (7 + 50) * 51 + 82 + 65 - 43", "rpn": "87 13 49 + * 24 + 7 50 + 51 * * 82 65 + 43 - +", "depth": 6, "num_operands": 10, "num_operators": 9, "value": 15750230.0, "id": "0045"}
+{"infix": "9 * 34", "rpn": "9 34 *", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 306.0, "id": "0046"}
+{"infix": "92 - (43 + 53 + 66 - 95 + 15 + 10)", "rpn": "92 43 53 66 95 - + + 15 10 + + -", "depth": 6, "num_operands": 7, "num_operators": 6, "value": 0.0, "id": "0047"}
+{"infix": "51 - 100 * 7 + 8 - 43", "rpn": "51 100 7 * - 8 + 43 -", "depth": 5, "num_operands": 5, "num_operators": 4, "value": -684.0, "id": "0048"}
+{"infix": "65 * 94 * (31 - 19) - 73 + 96", "rpn": "65 94 31 19 - * * 73 - 96 +", "depth": 6, "num_operands": 6, "num_operators": 5, "value": 73343.0, "id": "0049"}
+{"infix": "(73 + 17) * 49 - (94 + 86) + 58 + 1", "rpn": "73 17 + 49 * 94 86 + - 58 1 + +", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 4289.0, "id": "0050"}
+{"infix": "70 - 99 * 32", "rpn": "70 99 - 32 *", "depth": 3, "num_operands": 3, "num_operators": 2, "value": -928.0, "id": "0051"}
+{"infix": "35 - 96 + 84", "rpn": "35 96 84 + -", "depth": 3, "num_operands": 3, "num_operators": 2, "value": -145.0, "id": "0052"}
+{"infix": "96 + 6 + 17 + (40 + 72 - 85) * 19 + 51 - 69", "rpn": "96 6 + 17 + 40 72 85 - + 19 * + 51 69 - +", "depth": 6, "num_operands": 9, "num_operators": 8, "value": 614.0, "id": "0053"}
+{"infix": "92 + 98 + (51 + 71) / 38 - 53", "rpn": "92 98 + 51 71 + 38 / 53 - +", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 140.21052631578948, "id": "0054"}
+{"infix": "67 + 47 + 10 + 5 - 35", "rpn": "67 47 10 + 5 + + 35 -", "depth": 5, "num_operands": 5, "num_operators": 4, "value": 94.0, "id": "0055"}
+{"infix": "53 / (54 + 72) + 65 + 33 - 20 * 3 - 16", "rpn": "53 54 72 + / 65 33 + + 20 3 * 16 - -", "depth": 5, "num_operands": 8, "num_operators": 7, "value": 54.420634920634924, "id": "0056"}
+{"infix": "50 - 71 + 26 - 77 + 20 + 65", "rpn": "50 71 - 26 77 - 20 + + 65 +", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 13.0, "id": "0057"}
+{"infix": "78 - 38 + 4 + 54", "rpn": "78 38 4 54 + + -", "depth": 4, "num_operands": 4, "num_operators": 3, "value": -18.0, "id": "0058"}
+{"infix": "10 + 13 + (76 + 29) * 51 * 74 * 46 + 9 + 15", "rpn": "10 13 + 76 29 + 51 74 * 46 * * + 9 15 + +", "depth": 6, "num_operands": 9, "num_operators": 8, "value": 18228467.0, "id": "0059"}
+{"infix": "3 - 91 + (49 * 5 * 91 + 50 - (79 + 87)) / 47", "rpn": "3 91 - 49 5 * 91 * 50 + 79 87 + - 47 / +", "depth": 7, "num_operands": 9, "num_operators": 8, "value": 383.8936170212766, "id": "0060"}
+{"infix": "(2 - 5) / 99 + 17 + 26 - 35 + 12 - (8 - 39)", "rpn": "2 5 - 99 / 17 26 + 35 - 12 8 39 - - + +", "depth": 5, "num_operands": 9, "num_operators": 8, "value": 50.96969696969697, "id": "0061"}
+{"infix": "79 * 10 + 36 * 1 + 70 - 73 + 90 * 41", "rpn": "79 10 36 + 1 * 70 + * 73 90 41 * + -", "depth": 6, "num_operands": 8, "num_operators": 7, "value": 5401.0, "id": "0062"}
+{"infix": "51 - 9", "rpn": "51 9 -", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 42.0, "id": "0063"}
+{"infix": "(53 - 19) * 41 + 83", "rpn": "53 19 - 41 83 + *", "depth": 3, "num_operands": 4, "num_operators": 3, "value": 4216.0, "id": "0064"}
+{"infix": "57 * 30 - 27 + 55 * (47 + 60 + 72) - 12 + 5", "rpn": "57 30 * 27 - 55 47 60 72 + + * + 12 - 5 +", "depth": 7, "num_operands": 9, "num_operators": 8, "value": 11521.0, "id": "0065"}
+{"infix": "(41 - 11) * (3 + 58) / (59 + 87 + 75 * 92) - (86 + 36)", "rpn": "41 11 - 3 58 + * 59 87 + 75 92 * + / 86 36 + -", "depth": 5, "num_operands": 10, "num_operators": 9, "value": -121.7402781720125, "id": "0066"}
+{"infix": "(82 + 64) * (83 - 70 + 23 * 80)", "rpn": "82 64 + 83 70 - 23 80 * + *", "depth": 4, "num_operands": 6, "num_operators": 5, "value": 270538.0, "id": "0067"}
+{"infix": "75 * 69 - 66 + 32", "rpn": "75 69 66 - 32 + *", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 2625.0, "id": "0068"}
+{"infix": "60 - 48 + 98 * 73 + 68 + 66 - 48 + 90 - 87 + 6", "rpn": "60 48 - 98 73 * 68 66 + + + 48 - 90 87 - + 6 +", "depth": 7, "num_operands": 10, "num_operators": 9, "value": 7261.0, "id": "0069"}
+{"infix": "71 * 35", "rpn": "71 35 *", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 2485.0, "id": "0070"}
+{"infix": "38 + 4 + 59 * 92 + 21 + 45 + 79 * 68 + 86", "rpn": "38 4 59 92 * + 21 45 79 68 * + + 86 + + +", "depth": 7, "num_operands": 9, "num_operators": 8, "value": 10994.0, "id": "0071"}
+{"infix": "36 - (87 + 78) * 92 * (40 + 55 / 58 - 8) * (80 + 70)", "rpn": "36 87 78 + - 92 40 55 + 58 / 8 - * 80 70 + * *", "depth": 7, "num_operands": 10, "num_operators": 9, "value": 11325755.172413792, "id": "0072"}
+{"infix": "1 + 61 - 72 + 26", "rpn": "1 61 72 - 26 + +", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 16.0, "id": "0073"}
+{"infix": "66 * 25", "rpn": "66 25 *", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 1650.0, "id": "0074"}
+{"infix": "(17 + 1 - 19 + 36) * 83 * (40 - 86 + 62) * 62", "rpn": "17 1 + 19 - 36 + 83 40 86 - 62 + 62 * * *", "depth": 6, "num_operands": 9, "num_operators": 8, "value": 2881760.0, "id": "0075"}
+{"infix": "71 * 74", "rpn": "71 74 *", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 5254.0, "id": "0076"}
+{"infix": "4 * 10", "rpn": "4 10 *", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 40.0, "id": "0077"}
+{"infix": "49 * 24", "rpn": "49 24 *", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 1176.0, "id": "0078"}
+{"infix": "76 + 65", "rpn": "76 65 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 141.0, "id": "0079"}
+{"infix": "50 * 65", "rpn": "50 65 *", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 3250.0, "id": "0080"}
+{"infix": "8 * 100 * 62", "rpn": "8 100 * 62 *", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 49600.0, "id": "0081"}
+{"infix": "48 - (41 + 23) * (74 + 47 + 34)", "rpn": "48 41 23 + - 74 47 + 34 + *", "depth": 4, "num_operands": 6, "num_operators": 5, "value": -2480.0, "id": "0082"}
+{"infix": "65 / (52 + 17 + 41 + 26 * 77) + 96 / 79", "rpn": "65 52 17 41 + + 26 77 * + / 96 79 / +", "depth": 6, "num_operands": 8, "num_operators": 7, "value": 1.2459663885692367, "id": "0083"}
+{"infix": "50 * 88 * 18 + 11 - 71 + 22", "rpn": "50 88 * 18 11 + 71 - 22 + *", "depth": 5, "num_operands": 6, "num_operators": 5, "value": -88000.0, "id": "0084"}
+{"infix": "90 * (88 / 53 + 35) + 83 * (94 + 61) + 62", "rpn": "90 88 53 / 35 + * 83 94 61 + * 62 + +", "depth": 5, "num_operands": 8, "num_operators": 7, "value": 16226.433962264151, "id": "0085"}
+{"infix": "57 + (46 - 65) * (45 - (44 + 52)) + 56", "rpn": "57 46 65 - 45 44 52 + - * + 56 +", "depth": 6, "num_operands": 7, "num_operators": 6, "value": 1082.0, "id": "0086"}
+{"infix": "46 * 18 + 91 - 1", "rpn": "46 18 * 91 1 - +", "depth": 3, "num_operands": 4, "num_operators": 3, "value": 918.0, "id": "0087"}
+{"infix": "48 - 99", "rpn": "48 99 -", "depth": 2, "num_operands": 2, "num_operators": 1, "value": -51.0, "id": "0088"}
+{"infix": "46 - (19 + 58)", "rpn": "46 19 58 + -", "depth": 3, "num_operands": 3, "num_operators": 2, "value": -31.0, "id": "0089"}
+{"infix": "41 + 50", "rpn": "41 50 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 91.0, "id": "0090"}
+{"infix": "4 - (35 * 78 + (40 - 48) / (5 / (16 + 98 + 99)))", "rpn": "4 35 78 * 40 48 - 5 16 98 99 + + / / + -", "depth": 7, "num_operands": 9, "num_operators": 8, "value": -2385.2, "id": "0091"}
+{"infix": "22 + 65 - 32", "rpn": "22 65 32 - +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 55.0, "id": "0092"}
+{"infix": "57 * 65 + 14 * 42 + 14", "rpn": "57 65 * 14 + 42 14 + *", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 208264.0, "id": "0093"}
+{"infix": "2 / 32 + 50 + 44", "rpn": "2 32 / 50 44 + +", "depth": 3, "num_operands": 4, "num_operators": 3, "value": 94.0625, "id": "0094"}
+{"infix": "(17 - 51) * 64 * 59 * (45 + 89 - 16)", "rpn": "17 51 - 64 * 59 * 45 89 16 - + *", "depth": 5, "num_operands": 7, "num_operators": 6, "value": -15149312.0, "id": "0095"}
+{"infix": "83 + 90", "rpn": "83 90 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 173.0, "id": "0096"}
+{"infix": "(74 - (85 + 78)) / (49 + 60) + 64 + 91 + 62 + 75 + 67", "rpn": "74 85 78 + - 49 60 + / 64 91 62 + 75 + 67 + + +", "depth": 6, "num_operands": 10, "num_operators": 9, "value": 358.1834862385321, "id": "0097"}
+{"infix": "19 * (54 - (20 + 27))", "rpn": "19 54 20 27 + - *", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 133.0, "id": "0098"}
+{"infix": "16 + 95 + 79 + 67 - (68 - 87) * 20", "rpn": "16 95 + 79 67 68 87 - 20 * - + +", "depth": 6, "num_operands": 7, "num_operators": 6, "value": 637.0, "id": "0099"}
+{"infix": "47 + 91 * 84 - (47 + 86) - 96", "rpn": "47 91 84 47 86 + - * + 96 -", "depth": 6, "num_operands": 6, "num_operators": 5, "value": -4508.0, "id": "0100"}
+{"infix": "64 / 82 - (30 + 8 - 64)", "rpn": "64 82 / 30 8 + 64 - -", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 26.78048780487805, "id": "0101"}
+{"infix": "(64 / 40 + 11 - 67) * (21 + 24 - (68 + 2 - 43))", "rpn": "64 40 / 11 67 - + 21 24 68 2 43 - + - + *", "depth": 6, "num_operands": 9, "num_operators": 8, "value": -979.1999999999999, "id": "0102"}
+{"infix": "38 / 100 - 16 + 72 - (19 - 43) - (77 * 12 + 24)", "rpn": "38 100 / 16 72 + - 19 43 - - 77 12 * 24 + -", "depth": 5, "num_operands": 9, "num_operators": 8, "value": -1011.62, "id": "0103"}
+{"infix": "53 + 10", "rpn": "53 10 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 63.0, "id": "0104"}
+{"infix": "71 + 31 * 10 + 48", "rpn": "71 31 10 * + 48 +", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 429.0, "id": "0105"}
+{"infix": "28 - (76 - (39 + 16)) + 52 - 15", "rpn": "28 76 39 16 + - - 52 15 - +", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 44.0, "id": "0106"}
+{"infix": "36 + 30 + 14 * (12 - 33 * 35)", "rpn": "36 30 14 + 12 33 35 * - * +", "depth": 5, "num_operands": 6, "num_operators": 5, "value": -50256.0, "id": "0107"}
+{"infix": "29 / 33 * 48 * 57 * (63 + 60) * (20 + 42) / 17", "rpn": "29 33 48 * 57 63 60 + * * 20 42 + * / 17 /", "depth": 7, "num_operands": 9, "num_operators": 8, "value": 2.477548943565886e-09, "id": "0108"}
+{"infix": "24 + 26 + 76 - 63 + 3 * 38 * 54 + 3 * 58 + 54", "rpn": "24 26 + 76 63 - + 3 38 * 54 * 3 58 * 54 + + +", "depth": 5, "num_operands": 10, "num_operators": 9, "value": 6447.0, "id": "0109"}
+{"infix": "75 + 30 + 35 + 22 - 15 + 11 + 63", "rpn": "75 30 35 22 + + 15 11 63 + + - +", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 73.0, "id": "0110"}
+{"infix": "70 + 2 * 31 - 59 + 21", "rpn": "70 2 31 59 - * + 21 +", "depth": 5, "num_operands": 5, "num_operators": 4, "value": 35.0, "id": "0111"}
+{"infix": "(99 + 95) * (1 + 73) * 1 / 78", "rpn": "99 95 + 1 73 + * 1 * 78 /", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 184.05128205128204, "id": "0112"}
+{"infix": "71 * (71 / 7 * 69 - (91 + 22))", "rpn": "71 71 7 69 * / 91 22 + - *", "depth": 5, "num_operands": 6, "num_operators": 5, "value": -8012.56314699793, "id": "0113"}
+{"infix": "93 + 28 + 20 - 85", "rpn": "93 28 + 20 + 85 -", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 56.0, "id": "0114"}
+{"infix": "86 * 58 / (95 - (31 - 2)) + 40 * (83 + 26)", "rpn": "86 58 * 95 31 2 - - / 40 83 26 + * +", "depth": 5, "num_operands": 8, "num_operators": 7, "value": 4435.575757575758, "id": "0115"}
+{"infix": "62 * 79 + 59 + 89 + 89", "rpn": "62 79 * 59 89 + + 89 +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 5135.0, "id": "0116"}
+{"infix": "37 * (34 + 61) + 19 * (78 + (84 + 44) * 68 - (100 - 49))", "rpn": "37 34 61 + * 19 + 78 84 44 + 68 * + 100 49 - - *", "depth": 6, "num_operands": 10, "num_operators": 9, "value": 30855354.0, "id": "0117"}
+{"infix": "13 - (32 * (58 + 26 + 36) + 25 - 97)", "rpn": "13 32 58 26 + 36 + * 25 97 - + -", "depth": 6, "num_operands": 7, "num_operators": 6, "value": -3755.0, "id": "0118"}
+{"infix": "18 * 70 * (13 - 14)", "rpn": "18 70 13 14 - * *", "depth": 4, "num_operands": 4, "num_operators": 3, "value": -1260.0, "id": "0119"}
+{"infix": "(78 + 75) * (88 + 41 * 85) - (55 + 15) * 7 - 98", "rpn": "78 75 + 88 41 85 * + * 55 15 + 7 * 98 - -", "depth": 5, "num_operands": 9, "num_operators": 8, "value": 546277.0, "id": "0120"}
+{"infix": "(60 - 42 - 19 - (96 + 33) * 87) * 93", "rpn": "60 42 - 19 96 33 + 87 * - - 93 *", "depth": 6, "num_operands": 7, "num_operators": 6, "value": 1043646.0, "id": "0121"}
+{"infix": "21 + 59 - (61 + 94 + 95 - 91)", "rpn": "21 59 + 61 94 95 + 91 - + -", "depth": 5, "num_operands": 6, "num_operators": 5, "value": -79.0, "id": "0122"}
+{"infix": "73 + 3", "rpn": "73 3 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 76.0, "id": "0123"}
+{"infix": "88 + 6 * 24 * (8 * 44 * (12 + 49) - 21) + 63", "rpn": "88 6 24 8 44 * 12 49 + * 21 - * * + 63 +", "depth": 8, "num_operands": 9, "num_operators": 8, "value": 3089095.0, "id": "0124"}
+{"infix": "91 - 97", "rpn": "91 97 -", "depth": 2, "num_operands": 2, "num_operators": 1, "value": -6.0, "id": "0125"}
+{"infix": "13 - 84 + 23 + 44 - 41 + 44 - 91 / 43 * 28 * 45", "rpn": "13 84 - 23 + 44 41 - 44 + + 91 43 28 * 45 * / -", "depth": 5, "num_operands": 10, "num_operators": 9, "value": -1.0016795865633075, "id": "0126"}
+{"infix": "60 * 64 + 69 - 69 * (67 - 92 - 87) - 81 + 5 + 45", "rpn": "60 64 69 69 67 92 - 87 - * - 81 - + 5 45 + + *", "depth": 9, "num_operands": 10, "num_operators": 9, "value": 469800.0, "id": "0127"}
+{"infix": "8 + 67", "rpn": "8 67 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 75.0, "id": "0128"}
+{"infix": "86 - 58 + 39 * 4", "rpn": "86 58 - 39 + 4 *", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 268.0, "id": "0129"}
+{"infix": "70 + 46", "rpn": "70 46 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 116.0, "id": "0130"}
+{"infix": "84 + 40 + 79 / 18 * 92", "rpn": "84 40 + 79 18 92 * / +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 124.04770531400966, "id": "0131"}
+{"infix": "(11 + 54 * 53) * 35", "rpn": "11 54 53 * + 35 *", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 100555.0, "id": "0132"}
+{"infix": "(72 - 94 + 45 + 87 - 31 + 67) / (4 + 6 * 61)", "rpn": "72 94 45 87 31 - + + 67 + - 4 6 61 * + /", "depth": 7, "num_operands": 9, "num_operators": 8, "value": -0.5135135135135135, "id": "0133"}
+{"infix": "99 + 15 + 72 - 34 - 19 + 77 + 99 + 32 + 22 - 88", "rpn": "99 15 72 + 34 - + 19 77 + 99 + 32 + - 22 88 - +", "depth": 6, "num_operands": 10, "num_operators": 9, "value": -141.0, "id": "0134"}
+{"infix": "67 * 10 - (86 + 21 + 4) * 22 * 22", "rpn": "67 10 * 86 21 + 4 + - 22 22 * *", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 270556.0, "id": "0135"}
+{"infix": "53 + 94 * 59 + 18 - (41 + 59 - 15) + 99", "rpn": "53 94 59 * + 18 41 59 15 - + - 99 + +", "depth": 6, "num_operands": 8, "num_operators": 7, "value": 5631.0, "id": "0136"}
+{"infix": "68 + 73 - 65 * 78", "rpn": "68 73 65 - + 78 *", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 5928.0, "id": "0137"}
+{"infix": "89 * 2 + 32 + 49 / 1 + 92 + 23", "rpn": "89 2 * 32 + 49 1 / 92 + + 23 +", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 374.0, "id": "0138"}
+{"infix": "35 + 7 * 55 + 17 - 28", "rpn": "35 7 55 * + 17 28 - +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 409.0, "id": "0139"}
+{"infix": "58 - (57 + 60) + 73 + 49 * 2 + 32", "rpn": "58 57 60 + - 73 49 2 * + + 32 +", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 144.0, "id": "0140"}
+{"infix": "40 + 71 - (89 + 74 + 56) + 79 * 64 + 14 * 72 / 8", "rpn": "40 71 89 74 56 + + - + 79 64 * 14 72 8 / * + +", "depth": 6, "num_operands": 10, "num_operators": 9, "value": 5074.0, "id": "0141"}
+{"infix": "(2 + 35 - 84 * 34) * (85 + 71 / (99 - 48))", "rpn": "2 35 84 34 * - + 85 71 99 48 - / + *", "depth": 5, "num_operands": 8, "num_operators": 7, "value": -243539.49019607843, "id": "0142"}
+{"infix": "72 + 74 + 90 + 60 + 33 * 50 * 61", "rpn": "72 74 90 + 60 + + 33 50 61 * * +", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 100946.0, "id": "0143"}
+{"infix": "27 + 66", "rpn": "27 66 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 93.0, "id": "0144"}
+{"infix": "21 + 100 - 96 * (47 + 24 - 74) + 84 + 88", "rpn": "21 100 + 96 47 24 74 - + * - 84 88 + +", "depth": 6, "num_operands": 8, "num_operators": 7, "value": 581.0, "id": "0145"}
+{"infix": "(96 - 17) * (16 + 29) - (95 * 53 - (99 - 17 + 31) + 11)", "rpn": "96 17 - 16 29 + * 95 53 * 99 17 - 31 + - 11 + -", "depth": 6, "num_operands": 10, "num_operators": 9, "value": -1378.0, "id": "0146"}
+{"infix": "48 / 65 + 45 - 94 - (60 + 14)", "rpn": "48 65 / 45 94 - + 60 14 + -", "depth": 4, "num_operands": 6, "num_operators": 5, "value": -122.26153846153846, "id": "0147"}
+{"infix": "80 + 8 + 99 - 66 + 26 + 3 * (55 + 19)", "rpn": "80 8 99 + 66 - + 26 + 3 55 19 + * +", "depth": 6, "num_operands": 8, "num_operators": 7, "value": 369.0, "id": "0148"}
+{"infix": "64 * (33 - 96 * 73)", "rpn": "64 33 96 73 * - *", "depth": 4, "num_operands": 4, "num_operators": 3, "value": -446400.0, "id": "0149"}
+{"infix": "41 + 11 - 78 * 42", "rpn": "41 11 78 42 * - +", "depth": 4, "num_operands": 4, "num_operators": 3, "value": -3224.0, "id": "0150"}
+{"infix": "(32 + 3 + 71) * 68 - (15 + 24 * 15 + 35) + 91 * 24", "rpn": "32 3 71 + + 68 * 15 24 15 * + 35 + - 91 24 * +", "depth": 6, "num_operands": 10, "num_operators": 9, "value": 8982.0, "id": "0151"}
+{"infix": "98 * (6 + 14 + 97 + 98) + 1 * 99", "rpn": "98 6 14 97 + + 98 + * 1 99 * +", "depth": 6, "num_operands": 7, "num_operators": 6, "value": 21169.0, "id": "0152"}
+{"infix": "(65 + 35 + 29) * 28", "rpn": "65 35 + 29 + 28 *", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 3612.0, "id": "0153"}
+{"infix": "59 + 73 + 47 + 50 * 85 * 59 - (95 - (22 - 88))", "rpn": "59 73 47 + + 50 85 59 * * 95 22 88 - - - +", "depth": 5, "num_operands": 9, "num_operators": 8, "value": 250768.0, "id": "0154"}
+{"infix": "39 - 9 + (30 + 10) * 49 * 41 - 4 + 43", "rpn": "39 9 - 30 10 + 49 41 * 4 - 43 + * +", "depth": 6, "num_operands": 8, "num_operators": 7, "value": 81950.0, "id": "0155"}
+{"infix": "(12 + 42 + 13 + 20) * (12 - 54 + 98 + 25)", "rpn": "12 42 13 20 + + + 12 54 98 + 25 + - *", "depth": 5, "num_operands": 8, "num_operators": 7, "value": -14355.0, "id": "0156"}
+{"infix": "58 - 20 - (76 + 29 * 41)", "rpn": "58 20 - 76 29 41 * + -", "depth": 4, "num_operands": 5, "num_operators": 4, "value": -1227.0, "id": "0157"}
+{"infix": "(93 + 76 - 98) * 13 - 25 * 19", "rpn": "93 76 + 98 - 13 * 25 19 * -", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 448.0, "id": "0158"}
+{"infix": "36 * (10 + 2) * 61 * (96 + 3)", "rpn": "36 10 2 + 61 * * 96 3 + *", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 2608848.0, "id": "0159"}
+{"infix": "(48 + 67) * (54 * 89 * 32 + 8)", "rpn": "48 67 + 54 89 32 * * 8 + *", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 17687000.0, "id": "0160"}
+{"infix": "89 + 20 + 61", "rpn": "89 20 61 + +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 170.0, "id": "0161"}
+{"infix": "46 + (72 - 86) * 93 - (58 + 68)", "rpn": "46 72 86 - 93 * 58 68 + - +", "depth": 5, "num_operands": 6, "num_operators": 5, "value": -1382.0, "id": "0162"}
+{"infix": "19 + 74 * 49 + 59 * 93", "rpn": "19 74 49 * + 59 93 * +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 9132.0, "id": "0163"}
+{"infix": "69 + (80 + 32) * 34", "rpn": "69 80 32 + 34 * +", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 3877.0, "id": "0164"}
+{"infix": "25 + 48 - (55 + 73) - 96", "rpn": "25 48 + 55 73 + - 96 -", "depth": 4, "num_operands": 5, "num_operators": 4, "value": -151.0, "id": "0165"}
+{"infix": "94 + 73 + 100 + 39 * (54 - (80 + 15) + 11 - 83 * 76)", "rpn": "94 73 + 100 + 39 54 80 15 + - 11 83 76 * - + * +", "depth": 6, "num_operands": 10, "num_operators": 9, "value": -246915.0, "id": "0166"}
+{"infix": "35 / 67 + 16 + 17 - 31", "rpn": "35 67 / 16 17 31 - + +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 2.5223880597014925, "id": "0167"}
+{"infix": "48 - 72 / 80 - 11 + 41", "rpn": "48 72 80 / 11 41 + - -", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 99.1, "id": "0168"}
+{"infix": "85 - (93 + 94) + (94 + 14 - 27) / (23 + 81) + 93 * 57", "rpn": "85 93 94 + - 94 14 + 27 - 23 81 + / + 93 57 * +", "depth": 6, "num_operands": 10, "num_operators": 9, "value": 5199.778846153846, "id": "0169"}
+{"infix": "(22 + 72) * (55 + 64) / (57 * 87)", "rpn": "22 72 + 55 64 + * 57 87 * /", "depth": 4, "num_operands": 6, "num_operators": 5, "value": 2.2556967130469854, "id": "0170"}
+{"infix": "7 + 51 + 2 + 45 * 55 - 29 * 21", "rpn": "7 51 + 2 + 45 55 * + 29 21 * -", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 1926.0, "id": "0171"}
+{"infix": "50 + 43 + 87 + 2 * (61 + 89 + 69) * 52", "rpn": "50 43 + 87 + 2 61 89 69 + + 52 * * +", "depth": 6, "num_operands": 8, "num_operators": 7, "value": 22956.0, "id": "0172"}
+{"infix": "17 + 4 + 35", "rpn": "17 4 + 35 +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 56.0, "id": "0173"}
+{"infix": "83 * 92 + 57 * 89 * 88 + 22 * 29 + 49 + 39", "rpn": "83 92 * 57 89 88 * * 22 29 * 49 39 + + + +", "depth": 5, "num_operands": 9, "num_operators": 8, "value": 454786.0, "id": "0174"}
+{"infix": "(4 - 40) * (59 + 94) * 29 / (40 - 97 + 6)", "rpn": "4 40 - 59 94 + * 29 40 97 - 6 + / *", "depth": 5, "num_operands": 8, "num_operators": 7, "value": 3132.0, "id": "0175"}
+{"infix": "41 + 44 / (42 + 25 + 44) - 82 + 96 - 76", "rpn": "41 44 42 25 + 44 + / 82 - 96 76 - + +", "depth": 7, "num_operands": 8, "num_operators": 7, "value": -20.603603603603602, "id": "0176"}
+{"infix": "73 + 5", "rpn": "73 5 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 78.0, "id": "0177"}
+{"infix": "37 - 51 + (10 * 24 - 16) * 59 - (89 - 44) + 77 + 90", "rpn": "37 51 - 10 24 * 16 - 59 * + 89 44 - - 77 + 90 +", "depth": 8, "num_operands": 10, "num_operators": 9, "value": 13324.0, "id": "0178"}
+{"infix": "11 - 45 + 23 + 14", "rpn": "11 45 - 23 14 + +", "depth": 3, "num_operands": 4, "num_operators": 3, "value": 3.0, "id": "0179"}
+{"infix": "93 - (51 - 16 / (48 + 50)) + 75 * 25", "rpn": "93 51 16 48 50 + / - - 75 25 * +", "depth": 6, "num_operands": 7, "num_operators": 6, "value": 1917.1632653061224, "id": "0180"}
+{"infix": "41 + 69 + 44 * 49 + 17", "rpn": "41 69 44 49 * + 17 + +", "depth": 5, "num_operands": 5, "num_operators": 4, "value": 2283.0, "id": "0181"}
+{"infix": "26 + 30 * 21 - 16 / (77 - (77 + 25 + 42 + 48) * 23)", "rpn": "26 30 21 * 16 - + 77 77 25 42 + 48 + + 23 * - /", "depth": 7, "num_operands": 10, "num_operators": 9, "value": -0.14749942383037568, "id": "0182"}
+{"infix": "14 + 47 + 33 + 84 + 97 + 20 / (86 + 31)", "rpn": "14 47 33 + 84 + 97 20 + + 86 31 + / +", "depth": 6, "num_operands": 8, "num_operators": 7, "value": 16.4017094017094, "id": "0183"}
+{"infix": "(60 - 22) * 14 * 64 * (47 + 86 * (65 - 33)) * 10", "rpn": "60 22 - 14 * 64 47 86 65 33 - * + 10 * * *", "depth": 7, "num_operands": 9, "num_operators": 8, "value": 953003520.0, "id": "0184"}
+{"infix": "42 * 85 + 56 + 17", "rpn": "42 85 56 17 + + *", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 6636.0, "id": "0185"}
+{"infix": "46 + 57 - (39 + 81 + 47 + 78)", "rpn": "46 57 + 39 81 + 47 + 78 + -", "depth": 5, "num_operands": 6, "num_operators": 5, "value": -142.0, "id": "0186"}
+{"infix": "21 + 68 + 54 - (45 + 82) * 28 + 23 + 86", "rpn": "21 68 + 54 45 82 + - 28 23 86 + + * +", "depth": 5, "num_operands": 8, "num_operators": 7, "value": -9912.0, "id": "0187"}
+{"infix": "14 * 27", "rpn": "14 27 *", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 378.0, "id": "0188"}
+{"infix": "43 - 88 + 62 + 18 + 94 - 55", "rpn": "43 88 - 62 18 + 94 + + 55 -", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 74.0, "id": "0189"}
+{"infix": "7 + 26 + 68 + 57 + 14", "rpn": "7 26 68 + + 57 14 + +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 172.0, "id": "0190"}
+{"infix": "3 + 61 - 77", "rpn": "3 61 + 77 -", "depth": 3, "num_operands": 3, "num_operators": 2, "value": -13.0, "id": "0191"}
+{"infix": "83 - 35", "rpn": "83 35 -", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 48.0, "id": "0192"}
+{"infix": "78 + 52 + 47 + 12", "rpn": "78 52 + 47 12 + +", "depth": 3, "num_operands": 4, "num_operators": 3, "value": 189.0, "id": "0193"}
+{"infix": "27 + 65 + 30 - (58 + 76) + 100", "rpn": "27 65 + 30 58 76 + - + 100 +", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 88.0, "id": "0194"}
+{"infix": "70 + 80 + 31 * (46 - 9 + 93)", "rpn": "70 80 + 31 + 46 9 - 93 + *", "depth": 4, "num_operands": 6, "num_operators": 5, "value": 23530.0, "id": "0195"}
+{"infix": "3 / (88 + 56) - 16", "rpn": "3 88 56 + / 16 -", "depth": 4, "num_operands": 4, "num_operators": 3, "value": -15.979166666666666, "id": "0196"}
+{"infix": "48 - 75", "rpn": "48 75 -", "depth": 2, "num_operands": 2, "num_operators": 1, "value": -27.0, "id": "0197"}
+{"infix": "78 + 98 + 62 + 32 + 11", "rpn": "78 98 + 62 32 + 11 + +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 281.0, "id": "0198"}
+{"infix": "7 + 80 * 81 * 11", "rpn": "7 80 81 * 11 * +", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 71287.0, "id": "0199"}
+{"infix": "22 - (99 - 66) + 68 + 76 - (22 + 51) - 79 * 1", "rpn": "22 99 66 - - 68 76 + 22 51 + - + 79 1 * -", "depth": 5, "num_operands": 9, "num_operators": 8, "value": -19.0, "id": "0200"}
+{"infix": "61 - (60 + 84)", "rpn": "61 60 84 + -", "depth": 3, "num_operands": 3, "num_operators": 2, "value": -83.0, "id": "0201"}
+{"infix": "4 - 72 + 85 + 86 + 61 - 7", "rpn": "4 72 - 85 86 + 61 7 - + +", "depth": 4, "num_operands": 6, "num_operators": 5, "value": 157.0, "id": "0202"}
+{"infix": "74 + 63 - 13 + 8 * 99 + 39 + 9 + 34 - 91", "rpn": "74 63 13 - + 8 99 * 39 + + 9 + 34 91 - +", "depth": 6, "num_operands": 9, "num_operators": 8, "value": 907.0, "id": "0203"}
+{"infix": "13 + 22 * 80 * 82 + 96 + 59 + 71", "rpn": "13 22 80 82 * * + 96 59 + 71 + +", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 144559.0, "id": "0204"}
+{"infix": "11 - 30", "rpn": "11 30 -", "depth": 2, "num_operands": 2, "num_operators": 1, "value": -19.0, "id": "0205"}
+{"infix": "47 + 100 + (42 + 46 - 87) * (45 + 50)", "rpn": "47 100 + 42 46 + 87 - 45 50 + * +", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 242.0, "id": "0206"}
+{"infix": "87 * (85 + 96 - 57 + 10) * (10 - 49) + 31 - (3 + 18)", "rpn": "87 85 96 + 57 - 10 + * 10 49 - * 31 3 18 + - +", "depth": 7, "num_operands": 10, "num_operators": 9, "value": -454652.0, "id": "0207"}
+{"infix": "(18 + 11 / 30 + 70 - 6 * 69 - 45) / 60", "rpn": "18 11 30 / + 70 + 6 69 * 45 - - 60 /", "depth": 6, "num_operands": 8, "num_operators": 7, "value": -4.677222222222222, "id": "0208"}
+{"infix": "40 * 63 + 86 + 9 - 55 - 27 + 20 + 77 + 87", "rpn": "40 63 86 + 9 + * 55 27 - 20 77 87 + + + -", "depth": 5, "num_operands": 9, "num_operators": 8, "value": 6108.0, "id": "0209"}
+{"infix": "6 - 27 + 59 + 93 + 40 - 24", "rpn": "6 27 - 59 93 + + 40 24 - +", "depth": 4, "num_operands": 6, "num_operators": 5, "value": 147.0, "id": "0210"}
+{"infix": "39 + 62 + 46 - (1 + 43 + 80) + 77", "rpn": "39 62 46 + + 1 43 + 80 + - 77 +", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 100.0, "id": "0211"}
+{"infix": "13 * 15", "rpn": "13 15 *", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 195.0, "id": "0212"}
+{"infix": "55 * 59 + 87", "rpn": "55 59 * 87 +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 3332.0, "id": "0213"}
+{"infix": "9 + 95", "rpn": "9 95 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 104.0, "id": "0214"}
+{"infix": "62 + 9 - 45 + 46 + 51 + 78 - 54 + 74 + 58", "rpn": "62 9 45 - 46 51 + + + 78 + 54 74 58 + + -", "depth": 6, "num_operands": 9, "num_operators": 8, "value": 15.0, "id": "0215"}
+{"infix": "(75 + 2 + 20) * 58 * 50 + 52 * 80 + 40 * 69 + 42", "rpn": "75 2 + 20 + 58 50 * 52 80 40 + * + * 69 42 + *", "depth": 6, "num_operands": 10, "num_operators": 9, "value": 98410380.0, "id": "0216"}
+{"infix": "66 + 42 * (86 + 59) + 18 * 62 + 56 + 99 + 82", "rpn": "66 42 86 59 + * 18 62 * + + 56 99 + 82 + +", "depth": 6, "num_operands": 9, "num_operators": 8, "value": 7509.0, "id": "0217"}
+{"infix": "(23 + 7) / 21", "rpn": "23 7 + 21 /", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 1.4285714285714286, "id": "0218"}
+{"infix": "76 + 75", "rpn": "76 75 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 151.0, "id": "0219"}
+{"infix": "92 - 89 + 5", "rpn": "92 89 - 5 +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 8.0, "id": "0220"}
+{"infix": "97 + 15 * (98 - (41 + 18))", "rpn": "97 15 + 98 41 18 + - *", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 4368.0, "id": "0221"}
+{"infix": "100 + 21 - (38 - 88) * (32 + 38)", "rpn": "100 21 + 38 88 - - 32 38 + *", "depth": 4, "num_operands": 6, "num_operators": 5, "value": 11970.0, "id": "0222"}
+{"infix": "72 + 21 + 41 - 93 + 22 - 30 + 64 - 33 - 100", "rpn": "72 21 + 41 93 - 22 30 - + 64 33 - 100 - + +", "depth": 5, "num_operands": 9, "num_operators": 8, "value": -36.0, "id": "0223"}
+{"infix": "51 - (53 + 89)", "rpn": "51 53 89 + -", "depth": 3, "num_operands": 3, "num_operators": 2, "value": -91.0, "id": "0224"}
+{"infix": "12 + 52 + 86 + 63 * (95 - 15 * 56 * 60 + 96)", "rpn": "12 52 + 86 63 + + 95 15 - 56 60 * * 96 + *", "depth": 5, "num_operands": 9, "num_operators": 8, "value": 57274848.0, "id": "0225"}
+{"infix": "57 - 40 + 96 + 10 - 95 + 28 + 44 + 64 * 25", "rpn": "57 40 - 96 + 10 + 95 28 + 44 + - 64 + 25 *", "depth": 7, "num_operands": 9, "num_operators": 8, "value": 500.0, "id": "0226"}
+{"infix": "(31 + 86 + 9) * 5 + 44 - 71 + 83", "rpn": "31 86 + 9 + 5 44 + 71 - * 83 +", "depth": 5, "num_operands": 7, "num_operators": 6, "value": -2689.0, "id": "0227"}
+{"infix": "57 - 81 / 37", "rpn": "57 81 - 37 /", "depth": 3, "num_operands": 3, "num_operators": 2, "value": -0.6486486486486487, "id": "0228"}
+{"infix": "95 - 39", "rpn": "95 39 -", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 56.0, "id": "0229"}
+{"infix": "10 - 50 - (96 - 82) * (59 + 63 + 21 + 96)", "rpn": "10 50 96 82 - - 59 63 21 96 + + + * -", "depth": 6, "num_operands": 8, "num_operators": 7, "value": -8594.0, "id": "0230"}
+{"infix": "28 - 30 * 87 + 36 * 95 * 92", "rpn": "28 30 87 * - 36 95 92 * * +", "depth": 4, "num_operands": 6, "num_operators": 5, "value": 312058.0, "id": "0231"}
+{"infix": "(47 + 64 - 79 + 50) * 97 + 8 + 50 + 30 + 59", "rpn": "47 64 79 - 50 + + 97 8 50 + 30 59 + + + *", "depth": 5, "num_operands": 9, "num_operators": 8, "value": 20008.0, "id": "0232"}
+{"infix": "(50 - 12) / (16 + 27 - 26 + 49 * 10)", "rpn": "50 12 - 16 27 + 26 - 49 10 * + /", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 0.07495069033530571, "id": "0233"}
+{"infix": "92 - 59 - 55 * 73 - 64", "rpn": "92 59 - 55 73 * - 64 -", "depth": 4, "num_operands": 5, "num_operators": 4, "value": -4046.0, "id": "0234"}
+{"infix": "87 - 84 + 73 * (92 + 12 + 47) * 4", "rpn": "87 84 73 + 92 12 + 47 + 4 * * -", "depth": 6, "num_operands": 7, "num_operators": 6, "value": -94741.0, "id": "0235"}
+{"infix": "4 - (12 + 72 + 27) + 69 * 60 - 26", "rpn": "4 12 72 + 27 + - 69 60 * + 26 -", "depth": 6, "num_operands": 7, "num_operators": 6, "value": 4007.0, "id": "0236"}
+{"infix": "60 + 88", "rpn": "60 88 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 148.0, "id": "0237"}
+{"infix": "40 - 25 - (37 + 30 * 5 * 72)", "rpn": "40 25 - 37 30 5 72 * * + -", "depth": 5, "num_operands": 6, "num_operators": 5, "value": -10822.0, "id": "0238"}
+{"infix": "85 + 10", "rpn": "85 10 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 95.0, "id": "0239"}
+{"infix": "8 * 96", "rpn": "8 96 *", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 768.0, "id": "0240"}
+{"infix": "93 * 41 * 32 - 93", "rpn": "93 41 * 32 * 93 -", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 121923.0, "id": "0241"}
+{"infix": "49 + 11 + 35", "rpn": "49 11 35 + +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 95.0, "id": "0242"}
+{"infix": "2 + 64 - (55 - 63 - 81)", "rpn": "2 64 55 63 - 81 - - +", "depth": 5, "num_operands": 5, "num_operators": 4, "value": 155.0, "id": "0243"}
+{"infix": "93 - (87 + 29) + (15 * (50 - 99) + 63 - 63 - 64) * 95", "rpn": "93 87 29 + - 15 50 99 - * 63 63 - 64 - + 95 * +", "depth": 6, "num_operands": 10, "num_operators": 9, "value": -75928.0, "id": "0244"}
+{"infix": "12 * 22 * 81 - (83 - (31 * (72 + 64) - 57) + 76)", "rpn": "12 22 81 * * 83 31 72 64 + * 57 - - 76 + -", "depth": 7, "num_operands": 9, "num_operators": 8, "value": 25384.0, "id": "0245"}
+{"infix": "85 * (47 - 17) - (15 - 55) + 68 * 37", "rpn": "85 47 17 - * 15 55 - - 68 37 * +", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 5106.0, "id": "0246"}
+{"infix": "95 * 3 + 10 - 48", "rpn": "95 3 * 10 48 - +", "depth": 3, "num_operands": 4, "num_operators": 3, "value": 247.0, "id": "0247"}
+{"infix": "15 - 58 + 99", "rpn": "15 58 - 99 +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 56.0, "id": "0248"}
+{"infix": "74 + 24 + 17", "rpn": "74 24 + 17 +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 115.0, "id": "0249"}
+{"infix": "8 * 59", "rpn": "8 59 *", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 472.0, "id": "0250"}
+{"infix": "(73 - 2 + 94 + 61) * 53 + 84 - 97", "rpn": "73 2 - 94 + 61 + 53 84 + 97 - *", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 9040.0, "id": "0251"}
+{"infix": "44 + 6 + 35 * (72 - (35 + 46) + 18 + 32 + 49)", "rpn": "44 6 35 + 72 35 46 + - 18 32 + 49 + + * +", "depth": 6, "num_operands": 9, "num_operators": 8, "value": 3734.0, "id": "0252"}
+{"infix": "25 + 13 + 95 / 35 + 63", "rpn": "25 13 95 35 / 63 + + +", "depth": 5, "num_operands": 5, "num_operators": 4, "value": 103.71428571428571, "id": "0253"}
+{"infix": "(7 + 64 + 99 - (9 + 45)) * 35", "rpn": "7 64 99 + 9 45 + - + 35 *", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 4060.0, "id": "0254"}
+{"infix": "43 - 37 + 4 + 72 + 29 - 25 + 19 + 26 + 91", "rpn": "43 37 4 + - 72 29 + + 25 19 26 + 91 + + -", "depth": 5, "num_operands": 9, "num_operators": 8, "value": -58.0, "id": "0255"}
+{"infix": "69 + 60", "rpn": "69 60 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 129.0, "id": "0256"}
+{"infix": "96 - 41 + 99 + 99 / 96 - (46 + 38)", "rpn": "96 41 - 99 99 96 / 46 38 + - + +", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 71.03125, "id": "0257"}
+{"infix": "(72 + 86) / 44 * 63 + 95 - 8 * 5 * 60 + 72", "rpn": "72 86 + 44 / 63 95 + 8 5 60 * * - 72 + *", "depth": 6, "num_operands": 9, "num_operators": 8, "value": -7792.272727272727, "id": "0258"}
+{"infix": "(84 + 50) * 70 - (81 + 17) * 76", "rpn": "84 50 + 70 81 17 + 76 * - *", "depth": 5, "num_operands": 6, "num_operators": 5, "value": -988652.0, "id": "0259"}
+{"infix": "9 + 62 + 18 + 21", "rpn": "9 62 + 18 21 + +", "depth": 3, "num_operands": 4, "num_operators": 3, "value": 110.0, "id": "0260"}
+{"infix": "64 - 90", "rpn": "64 90 -", "depth": 2, "num_operands": 2, "num_operators": 1, "value": -26.0, "id": "0261"}
+{"infix": "90 + 89 * 82 + 78", "rpn": "90 89 82 78 + * +", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 14330.0, "id": "0262"}
+{"infix": "18 * 26 - 77 * (61 + 78) + 76", "rpn": "18 26 * 77 61 78 + * - 76 +", "depth": 5, "num_operands": 6, "num_operators": 5, "value": -10159.0, "id": "0263"}
+{"infix": "80 + (4 + 60) * 99 / 78 - 27 - (80 + 40)", "rpn": "80 4 60 + 99 78 / * 27 80 40 + - - +", "depth": 5, "num_operands": 8, "num_operators": 7, "value": 254.23076923076923, "id": "0264"}
+{"infix": "68 + 10 + 17", "rpn": "68 10 17 + +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 95.0, "id": "0265"}
+{"infix": "12 + 41 + 89 - 96", "rpn": "12 41 89 + + 96 -", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 46.0, "id": "0266"}
+{"infix": "(94 - 36) * 53 * 78 + 71 + 20", "rpn": "94 36 - 53 78 * * 71 + 20 +", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 239863.0, "id": "0267"}
+{"infix": "80 * 7", "rpn": "80 7 *", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 560.0, "id": "0268"}
+{"infix": "2 * 30", "rpn": "2 30 *", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 60.0, "id": "0269"}
+{"infix": "9 + 6 + 82 + 53 * 43", "rpn": "9 6 82 + + 53 43 * +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 2376.0, "id": "0270"}
+{"infix": "12 - 90 * 44 + 82", "rpn": "12 90 44 * 82 + -", "depth": 4, "num_operands": 4, "num_operators": 3, "value": -4030.0, "id": "0271"}
+{"infix": "44 + 87", "rpn": "44 87 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 131.0, "id": "0272"}
+{"infix": "18 + 54 * (19 / 53 - 27)", "rpn": "18 54 + 19 53 / 27 - *", "depth": 4, "num_operands": 5, "num_operators": 4, "value": -1918.1886792452829, "id": "0273"}
+{"infix": "(52 + 12) * (71 + 19 - (57 + 94 + 71))", "rpn": "52 12 + 71 19 + 57 94 + 71 + - *", "depth": 5, "num_operands": 7, "num_operators": 6, "value": -8448.0, "id": "0274"}
+{"infix": "(48 - 89 + 17) * (3 - 89)", "rpn": "48 89 - 17 + 3 89 - *", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 2064.0, "id": "0275"}
+{"infix": "(67 * 97 - 64 + 67) * 8", "rpn": "67 97 * 64 - 67 + 8 *", "depth": 5, "num_operands": 5, "num_operators": 4, "value": 52016.0, "id": "0276"}
+{"infix": "(20 - 56 + 79) * 20 - (40 + 51 + 30) - (81 + 55 - 99)", "rpn": "20 56 - 79 + 20 40 51 + 30 + - 81 55 + 99 - - *", "depth": 6, "num_operands": 10, "num_operators": 9, "value": -5934.0, "id": "0277"}
+{"infix": "18 * (69 - 22 - 39 * (19 + 67 + 46) / 56)", "rpn": "18 69 22 39 19 67 + 46 + 56 / * - - *", "depth": 8, "num_operands": 8, "num_operators": 7, "value": 2500.7142857142862, "id": "0278"}
+{"infix": "48 + 94 / 25 + 52 / (13 * (31 + 86))", "rpn": "48 94 25 / + 52 13 31 86 + * / +", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 51.79418803418803, "id": "0279"}
+{"infix": "62 - (37 - 66) + 38 * 79 + 88 + 9", "rpn": "62 37 66 - - 38 79 * 88 + 9 + +", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 3190.0, "id": "0280"}
+{"infix": "2 * 6 + 43 - 44 + 72 + 30 - 9", "rpn": "2 6 * 43 44 - 72 + 30 + 9 - +", "depth": 6, "num_operands": 7, "num_operators": 6, "value": 104.0, "id": "0281"}
+{"infix": "63 * 27 - (46 - 96 + 24 + 84 * 24 + 41)", "rpn": "63 27 * 46 96 24 + 84 24 * + 41 + - -", "depth": 6, "num_operands": 8, "num_operators": 7, "value": 3832.0, "id": "0282"}
+{"infix": "99 + ((5 - 34) * 77 - (49 + 93)) * 63 + 72 + 14 * 42", "rpn": "99 5 34 - 77 * 49 93 + - 63 72 + 14 + 42 * * +", "depth": 6, "num_operands": 10, "num_operators": 9, "value": -14862651.0, "id": "0283"}
+{"infix": "30 - 43 + 32 * 16", "rpn": "30 43 - 32 + 16 *", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 304.0, "id": "0284"}
+{"infix": "8 * (9 * (89 + 58 + 19) + 83) + 23 + 11 - 69", "rpn": "8 9 89 58 19 + + * 83 + * 23 11 + 69 - +", "depth": 7, "num_operands": 9, "num_operators": 8, "value": 12581.0, "id": "0285"}
+{"infix": "12 * 67 + 72", "rpn": "12 67 * 72 +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 876.0, "id": "0286"}
+{"infix": "21 - 32 / (78 + 96) * 51 / 15", "rpn": "21 32 78 96 + / - 51 15 / *", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 70.77471264367816, "id": "0287"}
+{"infix": "90 * 62 + 72 - 91", "rpn": "90 62 * 72 91 - +", "depth": 3, "num_operands": 4, "num_operators": 3, "value": 5561.0, "id": "0288"}
+{"infix": "65 + 98", "rpn": "65 98 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 163.0, "id": "0289"}
+{"infix": "73 + 72 * (4 - 27 * 24) + 24 + 47 * (81 - 68)", "rpn": "73 72 4 27 24 * - * + 24 + 47 81 68 - * +", "depth": 7, "num_operands": 9, "num_operators": 8, "value": -45660.0, "id": "0290"}
+{"infix": "59 / 18 - 19", "rpn": "59 18 / 19 -", "depth": 3, "num_operands": 3, "num_operators": 2, "value": -15.722222222222221, "id": "0291"}
+{"infix": "92 + (82 + 42) * 65 + 17 + 94 - 31 + 13", "rpn": "92 82 42 + 65 * + 17 94 31 - 13 + + +", "depth": 5, "num_operands": 8, "num_operators": 7, "value": 8245.0, "id": "0292"}
+{"infix": "30 - 36 + 11 * 6 + 5 + 95 - 54", "rpn": "30 36 - 11 6 * 5 + 95 + + 54 -", "depth": 6, "num_operands": 7, "num_operators": 6, "value": 106.0, "id": "0293"}
+{"infix": "93 + 99 - 65 + 22", "rpn": "93 99 + 65 - 22 +", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 149.0, "id": "0294"}
+{"infix": "11 - 53", "rpn": "11 53 -", "depth": 2, "num_operands": 2, "num_operators": 1, "value": -42.0, "id": "0295"}
+{"infix": "83 + 95 + 37 - 38 * 51 + 95", "rpn": "83 95 + 37 38 51 95 + * - +", "depth": 5, "num_operands": 6, "num_operators": 5, "value": -5333.0, "id": "0296"}
+{"infix": "54 + 13 + 61 - 71 - (44 - 81 - 25 - 10)", "rpn": "54 13 + 61 71 - + 44 81 - 25 - 10 - -", "depth": 5, "num_operands": 8, "num_operators": 7, "value": 129.0, "id": "0297"}
+{"infix": "1 * 92 - 50 * 84 - 43 - 94 - 76", "rpn": "1 92 * 50 84 43 - 94 76 - - * -", "depth": 5, "num_operands": 7, "num_operators": 6, "value": -1058.0, "id": "0298"}
+{"infix": "97 + 15 / 49", "rpn": "97 15 + 49 /", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 2.2857142857142856, "id": "0299"}
+{"infix": "26 + 99 + (63 + 52 + 24 + 36) * 98", "rpn": "26 99 63 52 + 24 + 36 + 98 * + +", "depth": 7, "num_operands": 7, "num_operators": 6, "value": 17275.0, "id": "0300"}
+{"infix": "(67 + 50 - 69) * 41 + 69 + 19 + (47 - 3) * 43 * 83", "rpn": "67 50 + 69 - 41 69 19 + 47 3 - 43 * + + * 83 *", "depth": 7, "num_operands": 10, "num_operators": 9, "value": 8051664.0, "id": "0301"}
+{"infix": "88 - 83", "rpn": "88 83 -", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 5.0, "id": "0302"}
+{"infix": "50 - (40 - 3 + 33 + 76)", "rpn": "50 40 3 - 33 76 + + -", "depth": 4, "num_operands": 5, "num_operators": 4, "value": -96.0, "id": "0303"}
+{"infix": "(12 - (66 + 70) * 23) * 7 * 56 / 80", "rpn": "12 66 70 + 23 * - 7 * 56 * 80 /", "depth": 7, "num_operands": 7, "num_operators": 6, "value": -15268.4, "id": "0304"}
+{"infix": "46 - 36", "rpn": "46 36 -", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 10.0, "id": "0305"}
+{"infix": "6 - (4 + 79 - 23 * 32 + 46 - 93) + 9 - 32 + 86", "rpn": "6 4 79 23 32 * - + 46 93 - + - 9 32 - + 86 +", "depth": 8, "num_operands": 10, "num_operators": 9, "value": 769.0, "id": "0306"}
+{"infix": "14 * (89 + 72 - 38) * (61 - 43)", "rpn": "14 89 72 38 - + * 61 43 - *", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 30996.0, "id": "0307"}
+{"infix": "89 + 22", "rpn": "89 22 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 111.0, "id": "0308"}
+{"infix": "(26 - 82 * (83 + 60)) / (66 / 34 + 70) + 31 + 97 + 62", "rpn": "26 82 83 60 + * - 66 34 / 70 + / 31 97 62 + + +", "depth": 6, "num_operands": 10, "num_operators": 9, "value": 27.367130008176616, "id": "0309"}
+{"infix": "66 + 3 - 44 * 26", "rpn": "66 3 + 44 26 * -", "depth": 3, "num_operands": 4, "num_operators": 3, "value": -1075.0, "id": "0310"}
+{"infix": "81 + 82 - 98", "rpn": "81 82 + 98 -", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 65.0, "id": "0311"}
+{"infix": "(56 - 21) / 70 - (65 - 90) * 65", "rpn": "56 21 - 70 / 65 90 - - 65 *", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 1657.5, "id": "0312"}
+{"infix": "(3 - 26) * 82 + 42 + 26 + 75 + 33 - 81 * 90", "rpn": "3 26 - 82 42 26 75 + + + 33 81 - 90 * + *", "depth": 6, "num_operands": 9, "num_operators": 8, "value": 94185.0, "id": "0313"}
+{"infix": "30 + 73 / 31 + 27 + 21", "rpn": "30 73 31 / + 27 + 21 +", "depth": 5, "num_operands": 5, "num_operators": 4, "value": 80.35483870967741, "id": "0314"}
+{"infix": "(75 + 59 + (92 + 72) / 56) * (36 - 98 * 48)", "rpn": "75 59 + 92 72 + 56 / + 36 98 48 * - *", "depth": 5, "num_operands": 8, "num_operators": 7, "value": -639182.5714285714, "id": "0315"}
+{"infix": "85 - 99 + 16 - 77 - 79 + 92 - 1", "rpn": "85 99 - 16 77 - 79 - 92 + + 1 -", "depth": 6, "num_operands": 7, "num_operators": 6, "value": -63.0, "id": "0316"}
+{"infix": "66 + 16 - (57 + 93)", "rpn": "66 16 + 57 93 + -", "depth": 3, "num_operands": 4, "num_operators": 3, "value": -68.0, "id": "0317"}
+{"infix": "38 + 23", "rpn": "38 23 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 61.0, "id": "0318"}
+{"infix": "57 - 84 + 27 + 44 * 8 + 13", "rpn": "57 84 - 27 + 44 8 13 + * +", "depth": 4, "num_operands": 6, "num_operators": 5, "value": 924.0, "id": "0319"}
+{"infix": "47 * 26 / ((41 - (88 + 11)) * (66 - (36 + 21 - 57 - 84)))", "rpn": "47 26 * 41 88 11 + - 66 36 21 + 57 - 84 - - * /", "depth": 7, "num_operands": 10, "num_operators": 9, "value": -0.14045977011494254, "id": "0320"}
+{"infix": "38 / 11 - 62", "rpn": "38 11 / 62 -", "depth": 3, "num_operands": 3, "num_operators": 2, "value": -58.54545454545455, "id": "0321"}
+{"infix": "44 + 66 - (96 + 48)", "rpn": "44 66 96 48 + - +", "depth": 4, "num_operands": 4, "num_operators": 3, "value": -34.0, "id": "0322"}
+{"infix": "63 - 19 - (41 - (46 - 56))", "rpn": "63 19 - 41 46 56 - - -", "depth": 4, "num_operands": 5, "num_operators": 4, "value": -7.0, "id": "0323"}
+{"infix": "93 + 56 - 46 - 20 + 21", "rpn": "93 56 + 46 20 - - 21 +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 144.0, "id": "0324"}
+{"infix": "3 * 94", "rpn": "3 94 *", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 282.0, "id": "0325"}
+{"infix": "48 + 2 + 70 + 42 + (55 * (1 + 36) + 23) * (81 - 68)", "rpn": "48 2 + 70 42 55 1 36 + * 23 + 81 68 - * + + +", "depth": 8, "num_operands": 10, "num_operators": 9, "value": 26916.0, "id": "0326"}
+{"infix": "36 + 91 + 93 - 15 - (14 + 72)", "rpn": "36 91 93 + 15 - 14 72 + - +", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 119.0, "id": "0327"}
+{"infix": "81 - 18 + 44 + 77 * 73", "rpn": "81 18 - 44 77 73 * + +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 5728.0, "id": "0328"}
+{"infix": "2 - 59 - 11 - (43 + 19)", "rpn": "2 59 - 11 - 43 19 + -", "depth": 4, "num_operands": 5, "num_operators": 4, "value": -130.0, "id": "0329"}
+{"infix": "70 - 57 + 53 - (57 + 28) - 56", "rpn": "70 57 - 53 + 57 28 + - 56 -", "depth": 5, "num_operands": 6, "num_operators": 5, "value": -75.0, "id": "0330"}
+{"infix": "9 * 85 - (72 - 82) - (96 + 69 - 49)", "rpn": "9 85 * 72 82 - - 96 69 + 49 - -", "depth": 4, "num_operands": 7, "num_operators": 6, "value": 659.0, "id": "0331"}
+{"infix": "77 + 18 + 9 + 40 + 79", "rpn": "77 18 + 9 40 79 + + +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 223.0, "id": "0332"}
+{"infix": "81 / ((40 - 58 * (42 - 74) + 17 + 22) * 29) + 48 + 75", "rpn": "81 40 58 - 42 74 - * 17 22 + + 29 * / 48 75 + +", "depth": 7, "num_operands": 10, "num_operators": 9, "value": 123.00454163162321, "id": "0333"}
+{"infix": "4 - 58 + 37 * 41 + 39 - 90 + 51", "rpn": "4 58 - 37 41 * + 39 90 - 51 + +", "depth": 4, "num_operands": 7, "num_operators": 6, "value": 1463.0, "id": "0334"}
+{"infix": "(71 / 1 - 60 - 37 + 63) * 6", "rpn": "71 1 / 60 - 37 - 63 + 6 *", "depth": 6, "num_operands": 6, "num_operators": 5, "value": 222.0, "id": "0335"}
+{"infix": "27 - 13 - (36 + 4) + 85 + 15 + 37 + 56 + 79", "rpn": "27 13 - 36 4 + - 85 + 15 37 56 + + 79 + +", "depth": 5, "num_operands": 9, "num_operators": 8, "value": 246.0, "id": "0336"}
+{"infix": "93 + 34 + 96 * (93 - 39) - (58 + 31 - 46) - 38", "rpn": "93 34 + 96 93 39 - * 58 31 + 46 - - 38 - +", "depth": 6, "num_operands": 9, "num_operators": 8, "value": 5230.0, "id": "0337"}
+{"infix": "54 * (23 + (18 + 40) * 3 * 66)", "rpn": "54 23 18 40 + 3 66 * * + *", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 621378.0, "id": "0338"}
+{"infix": "25 - 84 - (58 + 9) - 71", "rpn": "25 84 - 58 9 + - 71 -", "depth": 4, "num_operands": 5, "num_operators": 4, "value": -197.0, "id": "0339"}
+{"infix": "46 + 92 + 100 + 72", "rpn": "46 92 100 + + 72 +", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 310.0, "id": "0340"}
+{"infix": "80 * 51 * 100 + 75 + 78", "rpn": "80 51 100 * * 75 78 + +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 408153.0, "id": "0341"}
+{"infix": "81 + 54 * 97 * 74", "rpn": "81 54 + 97 74 * *", "depth": 3, "num_operands": 4, "num_operators": 3, "value": 969030.0, "id": "0342"}
+{"infix": "68 / 74 + 46 + 50 - (60 * 25 + 96 + 81)", "rpn": "68 74 / 46 50 + + 60 25 * 96 + 81 + -", "depth": 5, "num_operands": 8, "num_operators": 7, "value": -1580.081081081081, "id": "0343"}
+{"infix": "14 - 9 * (67 * (17 + 84) + 97 + 17 + 76 + 35 + 38)", "rpn": "14 9 67 17 84 + * 97 17 + + 76 + 35 38 + + * -", "depth": 8, "num_operands": 10, "num_operators": 9, "value": -63256.0, "id": "0344"}
+{"infix": "1 + 54 + 42 + 43 * 43 - (98 + 91 + 44) + 9 + 72", "rpn": "1 54 42 + 43 43 * 98 91 44 + + - + + 9 + 72 +", "depth": 8, "num_operands": 10, "num_operators": 9, "value": 1794.0, "id": "0345"}
+{"infix": "3 / 39 / 26 / 45 + 61 * 86 + 24", "rpn": "3 39 / 26 / 45 / 61 86 * 24 + +", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 5270.00006574622, "id": "0346"}
+{"infix": "44 - (15 * 55 + 65 * (44 + 29) * 49)", "rpn": "44 15 55 * 65 44 29 + 49 * * + -", "depth": 6, "num_operands": 7, "num_operators": 6, "value": -233286.0, "id": "0347"}
+{"infix": "69 / (18 * 14 * 31) + 83 * (28 + 5 + 87 + 66) - 4", "rpn": "69 18 14 * 31 * / 83 28 5 + 87 66 + + * + 4 -", "depth": 6, "num_operands": 10, "num_operators": 9, "value": 15434.008832565285, "id": "0348"}
+{"infix": "(58 + 62) * (56 - 59)", "rpn": "58 62 + 56 59 - *", "depth": 3, "num_operands": 4, "num_operators": 3, "value": -360.0, "id": "0349"}
+{"infix": "(60 + 24) * 13 - (62 + 69) / 51 / (4 + 43 - 9)", "rpn": "60 24 + 13 62 69 + - * 51 4 43 + 9 - / /", "depth": 5, "num_operands": 9, "num_operators": 8, "value": -7385.411764705883, "id": "0350"}
+{"infix": "(14 + 48 - 17) / (33 * 14)", "rpn": "14 48 + 17 - 33 14 * /", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 0.09740259740259741, "id": "0351"}
+{"infix": "68 - (87 + 99 + 26)", "rpn": "68 87 99 26 + + -", "depth": 4, "num_operands": 4, "num_operators": 3, "value": -144.0, "id": "0352"}
+{"infix": "(47 + 84 * 79 * 38) * 71 - (94 + 24) + 9 + 28 + 92", "rpn": "47 84 79 38 * * + 71 94 24 + - * 9 28 + 92 + +", "depth": 6, "num_operands": 10, "num_operators": 9, "value": -11853976.0, "id": "0353"}
+{"infix": "7 - (24 + 25)", "rpn": "7 24 25 + -", "depth": 3, "num_operands": 3, "num_operators": 2, "value": -42.0, "id": "0354"}
+{"infix": "69 + 62 - 32 + 12", "rpn": "69 62 32 - + 12 +", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 111.0, "id": "0355"}
+{"infix": "(80 - 75 + 52 + 86) * 35 + 77 - (17 - 6)", "rpn": "80 75 - 52 86 + + 35 * 77 17 6 - - +", "depth": 5, "num_operands": 8, "num_operators": 7, "value": 5071.0, "id": "0356"}
+{"infix": "16 + 94 + 26 * (48 + 61)", "rpn": "16 94 + 26 48 61 + * +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 2944.0, "id": "0357"}
+{"infix": "(30 - 21) * 84 - 95", "rpn": "30 21 - 84 95 - *", "depth": 3, "num_operands": 4, "num_operators": 3, "value": -99.0, "id": "0358"}
+{"infix": "100 * (71 - 15 + 77 + 39) + 24 + (54 + 88) * 12", "rpn": "100 71 15 - 77 39 + + * 24 54 88 + 12 * + +", "depth": 5, "num_operands": 9, "num_operators": 8, "value": 18928.0, "id": "0359"}
+{"infix": "(39 + 19) * (74 - (80 + 67 - (84 - 76)))", "rpn": "39 19 + 74 80 67 84 76 - - + - *", "depth": 6, "num_operands": 7, "num_operators": 6, "value": -3770.0, "id": "0360"}
+{"infix": "11 / 100 - 99", "rpn": "11 100 / 99 -", "depth": 3, "num_operands": 3, "num_operators": 2, "value": -98.89, "id": "0361"}
+{"infix": "55 + 5 / 21", "rpn": "55 5 + 21 /", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 2.857142857142857, "id": "0362"}
+{"infix": "67 - (2 + 51 + 53 + 83 * 72)", "rpn": "67 2 51 53 + 83 72 * + + -", "depth": 5, "num_operands": 6, "num_operators": 5, "value": -6015.0, "id": "0363"}
+{"infix": "74 + 81 + (59 * 35 - 97) * 35 + 38 + 77 + 15 - 58", "rpn": "74 81 + 59 35 * 97 - 35 38 77 + + * 15 + + 58 -", "depth": 7, "num_operands": 10, "num_operators": 9, "value": 295312.0, "id": "0364"}
+{"infix": "81 - (98 * 24 * 94 + 67)", "rpn": "81 98 24 94 * * 67 + -", "depth": 5, "num_operands": 5, "num_operators": 4, "value": -221074.0, "id": "0365"}
+{"infix": "((16 + 4) * 17 - 66) / 32", "rpn": "16 4 + 17 * 66 - 32 /", "depth": 5, "num_operands": 5, "num_operators": 4, "value": 8.5625, "id": "0366"}
+{"infix": "99 - (87 + 15)", "rpn": "99 87 15 + -", "depth": 3, "num_operands": 3, "num_operators": 2, "value": -3.0, "id": "0367"}
+{"infix": "17 * 18", "rpn": "17 18 *", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 306.0, "id": "0368"}
+{"infix": "19 - 19 + 94 / 95", "rpn": "19 19 - 94 95 / +", "depth": 3, "num_operands": 4, "num_operators": 3, "value": 0.9894736842105263, "id": "0369"}
+{"infix": "57 - (8 - (38 + 40 + 67 + 45 - (97 + 27) - 49 * 52))", "rpn": "57 8 38 40 + 67 45 97 27 + - + + 49 52 * - - -", "depth": 8, "num_operands": 10, "num_operators": 9, "value": -2433.0, "id": "0370"}
+{"infix": "1 + 42 - 30 * 46", "rpn": "1 42 + 30 46 * -", "depth": 3, "num_operands": 4, "num_operators": 3, "value": -1337.0, "id": "0371"}
+{"infix": "15 - 95 + 53 + (21 + 22) * 67 + 17 + 3", "rpn": "15 95 - 53 21 22 + 67 * + 17 + 3 + +", "depth": 7, "num_operands": 8, "num_operators": 7, "value": 2874.0, "id": "0372"}
+{"infix": "(91 + 53 - (90 - (90 + 74))) * 8 + 11", "rpn": "91 53 + 90 90 74 + - - 8 * 11 +", "depth": 6, "num_operands": 7, "num_operators": 6, "value": 1755.0, "id": "0373"}
+{"infix": "83 / (69 / (61 + 11 + 77 - (61 + 10) * 63))", "rpn": "83 69 61 11 77 + 61 10 + 63 * - + / /", "depth": 7, "num_operands": 8, "num_operators": 7, "value": -5201.333333333334, "id": "0374"}
+{"infix": "21 + 67 + 31 - 36 + (92 + 38 + 73) * 59 - 92", "rpn": "21 67 + 31 36 - + 92 38 + 73 + 59 92 - * +", "depth": 5, "num_operands": 9, "num_operators": 8, "value": -6616.0, "id": "0375"}
+{"infix": "10 + 74 - 20 * (53 - 87) + 40 + 56", "rpn": "10 74 + 20 53 87 - * - 40 + 56 +", "depth": 6, "num_operands": 7, "num_operators": 6, "value": 860.0, "id": "0376"}
+{"infix": "86 - (27 + 30 + 92 - 75 + 99)", "rpn": "86 27 30 92 75 - 99 + + + -", "depth": 6, "num_operands": 6, "num_operators": 5, "value": -87.0, "id": "0377"}
+{"infix": "46 * 72 * 33 * (40 - 20)", "rpn": "46 72 * 33 * 40 20 - *", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 2185920.0, "id": "0378"}
+{"infix": "(77 + 41 - 54) * 77", "rpn": "77 41 54 - + 77 *", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 4928.0, "id": "0379"}
+{"infix": "66 * (50 + 20 * 43) + 65 + 57 + 90 - (73 + 8)", "rpn": "66 50 20 43 * + * 65 + 57 90 + 73 8 + - +", "depth": 6, "num_operands": 9, "num_operators": 8, "value": 60191.0, "id": "0380"}
+{"infix": "95 - 67 * 77 / 20 - 89", "rpn": "95 67 77 20 / * 89 - -", "depth": 5, "num_operands": 5, "num_operators": 4, "value": -73.94999999999999, "id": "0381"}
+{"infix": "70 + 16 - 4", "rpn": "70 16 4 - +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 82.0, "id": "0382"}
+{"infix": "56 + 91 - 45 - 25 - (37 - 78 - 86 + 23)", "rpn": "56 91 45 - 25 - 37 78 86 - 23 + - - +", "depth": 6, "num_operands": 8, "num_operators": 7, "value": 55.0, "id": "0383"}
+{"infix": "44 + 51 / 74 + 27 / 5 / 23", "rpn": "44 51 74 / 27 5 / 23 / + +", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 44.92397179788484, "id": "0384"}
+{"infix": "95 + 10 - (12 - 63 - 78)", "rpn": "95 10 + 12 63 - 78 - -", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 234.0, "id": "0385"}
+{"infix": "70 + 6 + 42 + 27 + 58 * (68 - 97) * 52", "rpn": "70 6 42 27 + 58 + + 68 97 - * 52 * +", "depth": 7, "num_operands": 8, "num_operators": 7, "value": -200494.0, "id": "0386"}
+{"infix": "49 + 21 - (92 - 38) - (54 * 87 - 61 * 79 + 97)", "rpn": "49 21 + 92 38 - - 54 87 * 61 79 * - 97 + -", "depth": 5, "num_operands": 9, "num_operators": 8, "value": 40.0, "id": "0387"}
+{"infix": "53 * 50 + 75 + 22", "rpn": "53 50 * 75 22 + +", "depth": 3, "num_operands": 4, "num_operators": 3, "value": 2747.0, "id": "0388"}
+{"infix": "59 * (52 + 95)", "rpn": "59 52 95 + *", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 8673.0, "id": "0389"}
+{"infix": "99 + 54 + 37 + 32 - (15 + 92)", "rpn": "99 54 + 37 32 + 15 92 + - +", "depth": 4, "num_operands": 6, "num_operators": 5, "value": 115.0, "id": "0390"}
+{"infix": "(50 - 88 + 99) * 51 + 68 * 84", "rpn": "50 88 - 99 + 51 * 68 84 * +", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 8823.0, "id": "0391"}
+{"infix": "15 - 38 - (4 + 89) + 74 + 55 + 24 + 38", "rpn": "15 38 - 4 89 + - 74 55 24 + 38 + + +", "depth": 5, "num_operands": 8, "num_operators": 7, "value": 75.0, "id": "0392"}
+{"infix": "48 - 47 - 16 / 19 + 66 * 45 + 57 + 61", "rpn": "48 47 - 16 19 / 66 45 * + 57 61 + + -", "depth": 5, "num_operands": 8, "num_operators": 7, "value": -3087.842105263158, "id": "0393"}
+{"infix": "74 + 74 + 87 + 38 + 42 + 80 - 37 + 70", "rpn": "74 74 87 + 38 42 + + + 80 37 - + 70 +", "depth": 6, "num_operands": 8, "num_operators": 7, "value": 428.0, "id": "0394"}
+{"infix": "89 - 15", "rpn": "89 15 -", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 74.0, "id": "0395"}
+{"infix": "63 + 89 + 24 - 60 + 23 - 64 - (91 - 83 - 42)", "rpn": "63 89 24 + 60 - + 23 + 64 91 83 - 42 - - -", "depth": 6, "num_operands": 9, "num_operators": 8, "value": 41.0, "id": "0396"}
+{"infix": "36 + 57 + 21", "rpn": "36 57 21 + +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 114.0, "id": "0397"}
+{"infix": "12 - (48 + 51 + 12 + 73) - (7 - 72 / 6 + 84) * 54", "rpn": "12 48 51 + 12 73 + + - 7 72 6 / 84 + - - 54 *", "depth": 6, "num_operands": 10, "num_operators": 9, "value": -4482.0, "id": "0398"}
+{"infix": "63 + 98 + 93 + 76 + 7", "rpn": "63 98 + 93 76 + + 7 +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 337.0, "id": "0399"}
+{"infix": "(31 / 83 * (1 + 33) + 48 + 39) / ((27 + 97) / 65)", "rpn": "31 83 / 1 33 + * 48 + 39 + 27 97 + 65 / /", "depth": 6, "num_operands": 9, "num_operators": 8, "value": 52.26146521570151, "id": "0400"}
+{"infix": "53 + 69 + 44 + 67", "rpn": "53 69 + 44 + 67 +", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 233.0, "id": "0401"}
+{"infix": "56 + 33 - 24 - (50 / 1 + 67)", "rpn": "56 33 + 24 - 50 1 / 67 + -", "depth": 4, "num_operands": 6, "num_operators": 5, "value": -52.0, "id": "0402"}
+{"infix": "58 * 36 * 51 + 80 + 31 - (32 + 73)", "rpn": "58 36 51 * * 80 31 + + 32 73 + -", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 106494.0, "id": "0403"}
+{"infix": "33 + 66", "rpn": "33 66 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 99.0, "id": "0404"}
+{"infix": "62 + 67 - 55 + 41 * 48 + 28 + 82", "rpn": "62 67 55 - + 41 48 * 28 + 82 + +", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 2152.0, "id": "0405"}
+{"infix": "21 * 57", "rpn": "21 57 *", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 1197.0, "id": "0406"}
+{"infix": "76 + 87 + 24 * 58", "rpn": "76 87 24 + + 58 *", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 10846.0, "id": "0407"}
+{"infix": "93 - 25 + 46 - 91 * 29 - 21 - 34 + 10 - 27", "rpn": "93 25 - 46 + 91 29 * - 21 34 - 10 + 27 - -", "depth": 5, "num_operands": 9, "num_operators": 8, "value": -2495.0, "id": "0408"}
+{"infix": "74 + 14 + 100 - (22 * 13 - (16 - 18) * (43 - 42)) + 79", "rpn": "74 14 100 + + 22 13 * 16 18 - 43 42 - * - - 79 +", "depth": 6, "num_operands": 10, "num_operators": 9, "value": -21.0, "id": "0409"}
+{"infix": "91 - 69", "rpn": "91 69 -", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 22.0, "id": "0410"}
+{"infix": "5 + 73 + (33 - (59 + 87)) * 50", "rpn": "5 73 + 33 59 87 + - 50 * +", "depth": 5, "num_operands": 6, "num_operators": 5, "value": -5572.0, "id": "0411"}
+{"infix": "98 - (74 + 75)", "rpn": "98 74 75 + -", "depth": 3, "num_operands": 3, "num_operators": 2, "value": -51.0, "id": "0412"}
+{"infix": "28 * 54 * 98 - 35 + 77 + 49 + 50 - 1", "rpn": "28 54 98 * * 35 - 77 49 50 + + 1 - +", "depth": 5, "num_operands": 8, "num_operators": 7, "value": 148316.0, "id": "0413"}
+{"infix": "81 + 16 + (100 - 78) * 95 - 35", "rpn": "81 16 + 100 78 - 95 * + 35 -", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 2152.0, "id": "0414"}
+{"infix": "38 / 21 / (91 - (13 + 93) + 98 + 64) - 55 + 2", "rpn": "38 21 / 91 13 93 + - 98 64 + + / 55 2 + -", "depth": 6, "num_operands": 9, "num_operators": 8, "value": -56.98769031422093, "id": "0415"}
+{"infix": "46 + 99 - 98 * 98 - 25 + 36 * 15 * 85 + 8 * 48", "rpn": "46 99 + 98 98 * - 25 - 36 15 * 85 8 48 * + * +", "depth": 5, "num_operands": 10, "num_operators": 9, "value": 243776.0, "id": "0416"}
+{"infix": "(20 + 83) * 56 - (54 + 13)", "rpn": "20 83 + 56 54 13 + - *", "depth": 4, "num_operands": 5, "num_operators": 4, "value": -1133.0, "id": "0417"}
+{"infix": "10 * 80 * (76 - 55 + 10 + 68)", "rpn": "10 80 * 76 55 - 10 68 + + *", "depth": 4, "num_operands": 6, "num_operators": 5, "value": 79200.0, "id": "0418"}
+{"infix": "18 * 18 + 87", "rpn": "18 18 * 87 +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 411.0, "id": "0419"}
+{"infix": "56 - 8 * 60", "rpn": "56 8 60 * -", "depth": 3, "num_operands": 3, "num_operators": 2, "value": -424.0, "id": "0420"}
+{"infix": "8 - 71 + 55 + 25", "rpn": "8 71 - 55 + 25 +", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 17.0, "id": "0421"}
+{"infix": "96 - 44 + 11 - 91", "rpn": "96 44 - 11 + 91 -", "depth": 4, "num_operands": 4, "num_operators": 3, "value": -28.0, "id": "0422"}
+{"infix": "94 * 77 + 3 + 5 + 22 + 28", "rpn": "94 77 * 3 5 + 22 + 28 + +", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 7296.0, "id": "0423"}
+{"infix": "52 + 63 + 98 - 92 + 18 + 39 * 52", "rpn": "52 63 98 92 - + 18 + + 39 52 * +", "depth": 6, "num_operands": 7, "num_operators": 6, "value": 2167.0, "id": "0424"}
+{"infix": "44 * 28 - 3 + 8 * (20 - (80 + 27))", "rpn": "44 28 * 3 - 8 20 80 27 + - * +", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 533.0, "id": "0425"}
+{"infix": "(31 + 6 - 58 - (56 - 5) - 31 - 92 - 71) * 54 * 61", "rpn": "31 6 58 - 56 5 - - 31 92 - 71 - - + 54 * 61 *", "depth": 7, "num_operands": 10, "num_operators": 9, "value": 197640.0, "id": "0426"}
+{"infix": "51 * (35 - 88 * 93) * 21 + 24 + 69", "rpn": "51 35 88 93 * - 21 * * 24 69 + +", "depth": 6, "num_operands": 7, "num_operators": 6, "value": -8727486.0, "id": "0427"}
+{"infix": "50 + 36 - 86 + 79 + 42 + 61 + 93 + 18 + 77 + 21", "rpn": "50 36 86 - 79 + 42 61 93 18 + + 77 + + 21 + + +", "depth": 8, "num_operands": 10, "num_operators": 9, "value": 391.0, "id": "0428"}
+{"infix": "14 + 81 + 77 + 95 - (5 + 72)", "rpn": "14 81 77 + + 95 5 72 + - +", "depth": 4, "num_operands": 6, "num_operators": 5, "value": 190.0, "id": "0429"}
+{"infix": "39 + 79 + 39 - 97 + 43 + 97 * 96 + 96 + 74", "rpn": "39 79 + 39 97 - + 43 97 96 * + 96 + 74 + +", "depth": 6, "num_operands": 9, "num_operators": 8, "value": 9585.0, "id": "0430"}
+{"infix": "13 + 67 + 66 + 27 + 44", "rpn": "13 67 + 66 27 + + 44 +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 217.0, "id": "0431"}
+{"infix": "30 + 42 - 36", "rpn": "30 42 36 - +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 36.0, "id": "0432"}
+{"infix": "53 + 4 + 67 / 70 + 7 - 88 - 11 + 45 - 9", "rpn": "53 4 + 67 70 / + 7 88 - 11 - 45 9 - + +", "depth": 5, "num_operands": 9, "num_operators": 8, "value": 1.9571428571428555, "id": "0433"}
+{"infix": "76 + 48 + 85 + 17", "rpn": "76 48 + 85 17 + +", "depth": 3, "num_operands": 4, "num_operators": 3, "value": 226.0, "id": "0434"}
+{"infix": "84 - 90 + 56 - (52 - 71) / 14 + 94 - 70", "rpn": "84 90 - 56 52 71 - 14 94 + / - + 70 -", "depth": 6, "num_operands": 8, "num_operators": 7, "value": -19.824074074074076, "id": "0435"}
+{"infix": "(58 + 51 + 51) * 18 / (93 + 6) + 21 / (95 + 63)", "rpn": "58 51 + 51 + 18 93 6 + / * 21 95 63 + / +", "depth": 5, "num_operands": 9, "num_operators": 8, "value": 29.223820483314157, "id": "0436"}
+{"infix": "63 * (44 + 80) * (57 + 6) - 43", "rpn": "63 44 80 + * 57 6 + * 43 -", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 492113.0, "id": "0437"}
+{"infix": "7 + 14", "rpn": "7 14 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 21.0, "id": "0438"}
+{"infix": "33 - 44 / 66 + 46 + 32 + 63", "rpn": "33 44 66 / - 46 + 32 63 + +", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 173.33333333333334, "id": "0439"}
+{"infix": "33 * (43 - (16 - 44))", "rpn": "33 43 16 44 - - *", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 2343.0, "id": "0440"}
+{"infix": "32 * 72 / 17 + 21 - 39 + 35 * 40 * 64", "rpn": "32 72 17 / 21 39 - 35 + + 40 * * 64 *", "depth": 7, "num_operands": 8, "num_operators": 7, "value": 1739595.294117647, "id": "0441"}
+{"infix": "(50 + 12) * 66 - (38 - (79 + 22 + 30) + 70 - 3)", "rpn": "50 12 + 66 * 38 79 22 30 + + - 70 3 - + -", "depth": 6, "num_operands": 9, "num_operators": 8, "value": 4118.0, "id": "0442"}
+{"infix": "56 / 92", "rpn": "56 92 /", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 0.6086956521739131, "id": "0443"}
+{"infix": "100 + 59 - 53 + 78 + 4 + 70 - 26 + 69", "rpn": "100 59 53 - + 78 4 + + 70 26 - 69 + +", "depth": 5, "num_operands": 8, "num_operators": 7, "value": 301.0, "id": "0444"}
+{"infix": "44 - 26 - (54 - 75 + 51 + 92)", "rpn": "44 26 - 54 75 51 92 + + - -", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 182.0, "id": "0445"}
+{"infix": "25 + 61 - 11 + 72", "rpn": "25 61 + 11 72 + -", "depth": 3, "num_operands": 4, "num_operators": 3, "value": 3.0, "id": "0446"}
+{"infix": "99 - 93 + 76", "rpn": "99 93 76 + -", "depth": 3, "num_operands": 3, "num_operators": 2, "value": -70.0, "id": "0447"}
+{"infix": "(69 + 57) * 54 + 15 + 76 - 22", "rpn": "69 57 + 54 * 15 76 + + 22 -", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 6873.0, "id": "0448"}
+{"infix": "(67 + 67) * (40 - ((24 + 26 + 20) * 77 + 53) + 64 * 11)", "rpn": "67 67 + 40 24 26 20 + + 77 * 53 + - 64 11 * + *", "depth": 8, "num_operands": 10, "num_operators": 9, "value": -629666.0, "id": "0449"}
+{"infix": "77 + 49 + 2 + 65 + 83", "rpn": "77 49 + 2 + 65 83 + +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 276.0, "id": "0450"}
+{"infix": "(39 + 7) * 32", "rpn": "39 7 + 32 *", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 1472.0, "id": "0451"}
+{"infix": "4 + (39 + 41) * 43 + 69 * (7 + 26) * (2 + 60 + 72)", "rpn": "4 39 41 + 43 * 69 7 26 + * 2 60 + 72 + * + +", "depth": 6, "num_operands": 10, "num_operators": 9, "value": 308562.0, "id": "0452"}
+{"infix": "82 - (57 - 79) - (26 + 67 + 75 + 97 + 33 + 95)", "rpn": "82 57 79 - - 26 67 + 75 97 + 33 + 95 + + -", "depth": 6, "num_operands": 9, "num_operators": 8, "value": -289.0, "id": "0453"}
+{"infix": "55 * (32 + 98) * 56 + 38", "rpn": "55 32 98 + 56 * 38 + *", "depth": 5, "num_operands": 5, "num_operators": 4, "value": 402490.0, "id": "0454"}
+{"infix": "27 * 83 - 96 + 24", "rpn": "27 83 * 96 - 24 +", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 2169.0, "id": "0455"}
+{"infix": "(27 + 88) * 37 + 22 + 4", "rpn": "27 88 + 37 22 + 4 + *", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 7245.0, "id": "0456"}
+{"infix": "43 - 59 - (89 * 95 + 21 + 77)", "rpn": "43 59 - 89 95 * 21 77 + + -", "depth": 4, "num_operands": 6, "num_operators": 5, "value": -8569.0, "id": "0457"}
+{"infix": "79 + 3 - 50 - (42 + 100)", "rpn": "79 3 50 - + 42 100 + -", "depth": 4, "num_operands": 5, "num_operators": 4, "value": -110.0, "id": "0458"}
+{"infix": "90 - (9 - 59 * 65 * 57 + 21 + 1)", "rpn": "90 9 59 65 * 57 * - 21 1 + + -", "depth": 6, "num_operands": 7, "num_operators": 6, "value": 218654.0, "id": "0459"}
+{"infix": "100 * 9 + 100", "rpn": "100 9 * 100 +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 1000.0, "id": "0460"}
+{"infix": "73 + 34 * 44 + 73 + 23", "rpn": "73 34 44 * 73 23 + + +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 1665.0, "id": "0461"}
+{"infix": "87 + 45 - 100", "rpn": "87 45 100 - +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 32.0, "id": "0462"}
+{"infix": "36 + (94 + 9) * (94 - 83) * (57 - 3) + 97 + 39", "rpn": "36 94 9 + 94 83 - 57 3 - * * 97 39 + + +", "depth": 6, "num_operands": 9, "num_operators": 8, "value": 61354.0, "id": "0463"}
+{"infix": "27 + 28 + 3 * 6 + 85 - 82 - 32", "rpn": "27 28 + 3 6 * 85 + 82 - + 32 -", "depth": 6, "num_operands": 7, "num_operators": 6, "value": 44.0, "id": "0464"}
+{"infix": "(78 - 20) / 97 - 29 * 47 / 84 + 5 + 87 + 81 + 2", "rpn": "78 20 - 97 29 - / 47 * 84 5 + 87 81 + + 2 + /", "depth": 5, "num_operands": 10, "num_operators": 9, "value": 0.15478083125141948, "id": "0465"}
+{"infix": "8 - (35 - 13 - 36) + 38 + 67 - 50", "rpn": "8 35 13 - 36 - - 38 67 + 50 - +", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 77.0, "id": "0466"}
+{"infix": "11 + 4 + 78 - 35 + 35", "rpn": "11 4 78 35 - + + 35 +", "depth": 5, "num_operands": 5, "num_operators": 4, "value": 93.0, "id": "0467"}
+{"infix": "9 * 96 - 81 - (17 + 46) * ((97 + 48) * 94 - 18 + 24)", "rpn": "9 96 81 - * 17 46 + - 97 48 + 94 * 18 - 24 + *", "depth": 6, "num_operands": 10, "num_operators": 9, "value": 981792.0, "id": "0468"}
+{"infix": "(45 + 17 * 31) / 3 + 58 + 55 + (89 - 71) * (39 + 7)", "rpn": "45 17 31 * + 3 / 58 55 + 89 71 - 39 7 + * + +", "depth": 5, "num_operands": 10, "num_operators": 9, "value": 1131.6666666666667, "id": "0469"}
+{"infix": "5 - (55 + 67) * 87 + 40 * 95 * (75 + 19 + 88)", "rpn": "5 55 67 + 87 * - 40 95 * 75 19 88 + + * +", "depth": 5, "num_operands": 9, "num_operators": 8, "value": 680991.0, "id": "0470"}
+{"infix": "53 + 90 - 44 / 59 - (2 - 89) + 58 * 23 + 30 - 84", "rpn": "53 90 44 59 / - + 2 89 - - 58 23 30 + * 84 - +", "depth": 6, "num_operands": 10, "num_operators": 9, "value": 3219.2542372881358, "id": "0471"}
+{"infix": "64 + 9", "rpn": "64 9 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 73.0, "id": "0472"}
+{"infix": "12 + 79 + 91 * 29 - 49 - (83 + 72)", "rpn": "12 79 + 91 29 * 49 - 83 72 + - +", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 2526.0, "id": "0473"}
+{"infix": "(55 - 43 + 93 * 2) * (92 * 87 + 48 * 96)", "rpn": "55 43 - 93 2 * + 92 87 * 48 96 * + *", "depth": 4, "num_operands": 8, "num_operators": 7, "value": 2497176.0, "id": "0474"}
+{"infix": "10 - (2 - 94)", "rpn": "10 2 94 - -", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 102.0, "id": "0475"}
+{"infix": "54 + 36 - (41 + 9 * 98 - (76 + 58 - 24))", "rpn": "54 36 + 41 9 98 * + 76 58 + 24 - - -", "depth": 5, "num_operands": 8, "num_operators": 7, "value": -723.0, "id": "0476"}
+{"infix": "25 + 48 + 73 - (99 + 57) * 88", "rpn": "25 48 73 + + 99 57 + 88 * -", "depth": 4, "num_operands": 6, "num_operators": 5, "value": -13582.0, "id": "0477"}
+{"infix": "75 - 97 + 14", "rpn": "75 97 - 14 +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": -8.0, "id": "0478"}
+{"infix": "33 + 43", "rpn": "33 43 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 76.0, "id": "0479"}
+{"infix": "5 * 72 / 75 + 68 / 30 - (90 - 57 - 83) + 74 + 88", "rpn": "5 72 * 75 / 68 30 / + 90 57 - 83 - - 74 88 + +", "depth": 6, "num_operands": 10, "num_operators": 9, "value": 219.06666666666666, "id": "0480"}
+{"infix": "41 - 20 + 93 + 41 / 36", "rpn": "41 20 - 93 41 36 / + +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 115.13888888888889, "id": "0481"}
+{"infix": "78 / 99", "rpn": "78 99 /", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 0.7878787878787878, "id": "0482"}
+{"infix": "26 + 64 + (36 - 78) * (96 - 32)", "rpn": "26 64 + 36 78 - 96 32 - * +", "depth": 4, "num_operands": 6, "num_operators": 5, "value": -2598.0, "id": "0483"}
+{"infix": "15 - 40 * 17 - 28 - (18 + 66 + 5) * 18 * 96", "rpn": "15 40 - 17 28 - 18 66 + 5 + - * 18 96 * *", "depth": 6, "num_operands": 9, "num_operators": 8, "value": 4320000.0, "id": "0484"}
+{"infix": "25 - (58 - (20 + (92 + 9 - 40 + 8) * 83))", "rpn": "25 58 20 92 9 + 40 - 8 + 83 * + - -", "depth": 8, "num_operands": 8, "num_operators": 7, "value": 5714.0, "id": "0485"}
+{"infix": "27 + 68 + (68 + 33) * (6 - 93) + 15 - (92 + 47)", "rpn": "27 68 + 68 33 + 6 93 - * 15 92 47 + - + +", "depth": 5, "num_operands": 9, "num_operators": 8, "value": -8816.0, "id": "0486"}
+{"infix": "17 + 96 - (69 + 82) + 23 + 14 * 26 / 27", "rpn": "17 96 69 82 + - + 23 + 14 26 * 27 / +", "depth": 6, "num_operands": 8, "num_operators": 7, "value": -1.518518518518519, "id": "0487"}
+{"infix": "59 * (60 + 48)", "rpn": "59 60 48 + *", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 6372.0, "id": "0488"}
+{"infix": "67 + 49 + 35", "rpn": "67 49 + 35 +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 151.0, "id": "0489"}
+{"infix": "67 + 19 - 66 + 4 * (91 + 92) + 51", "rpn": "67 19 66 - + 4 91 92 + * + 51 +", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 803.0, "id": "0490"}
+{"infix": "33 * 74 + 19 - 68 + 94", "rpn": "33 74 * 19 68 - 94 + +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 2487.0, "id": "0491"}
+{"infix": "55 * 24 + 15 * 20 + 55", "rpn": "55 24 * 15 20 * + 55 +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 1675.0, "id": "0492"}
+{"infix": "(92 + 51) * (41 - 37 + 21 + 9) - (21 - 27)", "rpn": "92 51 + 41 37 - 21 9 + + * 21 27 - -", "depth": 5, "num_operands": 8, "num_operators": 7, "value": 4868.0, "id": "0493"}
+{"infix": "78 / (31 - 19)", "rpn": "78 31 19 - /", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 6.5, "id": "0494"}
+{"infix": "(87 + 94 - 43) * 14 - (39 - 70)", "rpn": "87 94 43 - + 14 * 39 70 - -", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 1963.0, "id": "0495"}
+{"infix": "10 + 71 * ((71 - 6) * 79 - 98 + 17 - (22 + 86) + 29)", "rpn": "10 71 + 71 6 - 79 98 - * 17 22 86 + - 29 + + *", "depth": 6, "num_operands": 10, "num_operators": 9, "value": -105057.0, "id": "0496"}
+{"infix": "65 / (25 - 56) * (71 - (49 + 96) + (96 - 35) * (40 + 44))", "rpn": "65 25 56 - / 71 49 96 + - 96 35 - 40 44 + * + *", "depth": 5, "num_operands": 10, "num_operators": 9, "value": -10588.709677419354, "id": "0497"}
+{"infix": "9 - 35 + 83 + 30 + 62 + 92", "rpn": "9 35 - 83 30 + + 62 92 + +", "depth": 4, "num_operands": 6, "num_operators": 5, "value": 241.0, "id": "0498"}
+{"infix": "34 - (75 + 46) + 37 + 40 + 85 + 26", "rpn": "34 75 46 + - 37 40 + 85 26 + + +", "depth": 4, "num_operands": 7, "num_operators": 6, "value": 101.0, "id": "0499"}
+{"infix": "57 + 87", "rpn": "57 87 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 144.0, "id": "0500"}
+{"infix": "98 + 67 + 46 + 86 + 98 - 29", "rpn": "98 67 + 46 + 86 98 + 29 - +", "depth": 4, "num_operands": 6, "num_operators": 5, "value": 366.0, "id": "0501"}
+{"infix": "2 - 20 - 54 * 85 / 4 + 74 * 14 + 23 - (76 + 59)", "rpn": "2 20 - 54 85 4 / * 74 14 * 23 76 59 + - + + -", "depth": 6, "num_operands": 10, "num_operators": 9, "value": -2089.5, "id": "0502"}
+{"infix": "69 + 18 - 32 - 32 - 5 + 36 - 85", "rpn": "69 18 32 - + 32 5 - - 36 + 85 -", "depth": 6, "num_operands": 7, "num_operators": 6, "value": -21.0, "id": "0503"}
+{"infix": "66 - 41 + 59", "rpn": "66 41 - 59 +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 84.0, "id": "0504"}
+{"infix": "46 + 68 + 90 + 16 + 13", "rpn": "46 68 90 + + 16 + 13 +", "depth": 5, "num_operands": 5, "num_operators": 4, "value": 233.0, "id": "0505"}
+{"infix": "100 - 90 + 51 + 83 + 3 * 94", "rpn": "100 90 - 51 83 + + 3 94 * +", "depth": 4, "num_operands": 6, "num_operators": 5, "value": 426.0, "id": "0506"}
+{"infix": "(80 + 19) * 89 * 92 * 76 * 23 / 47", "rpn": "80 19 + 89 92 * * 76 23 * * 47 /", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 30147867.574468084, "id": "0507"}
+{"infix": "41 / (29 + 55)", "rpn": "41 29 55 + /", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 0.4880952380952381, "id": "0508"}
+{"infix": "(55 + 71) * 48 - 6 * 96 - 56 + 86 - 66 + 37 * 44", "rpn": "55 71 + 48 * 6 96 * 56 - 86 66 - 37 44 * + + -", "depth": 5, "num_operands": 10, "num_operators": 9, "value": 3880.0, "id": "0509"}
+{"infix": "25 - (76 / 84 + 82 - 47 + 15)", "rpn": "25 76 84 / 82 47 - 15 + + -", "depth": 5, "num_operands": 6, "num_operators": 5, "value": -25.904761904761905, "id": "0510"}
+{"infix": "10 + 48 + 78", "rpn": "10 48 78 + +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 136.0, "id": "0511"}
+{"infix": "(74 + 90) * (70 + 66 - 87 / 74 + 47)", "rpn": "74 90 + 70 66 87 74 / - 47 + + *", "depth": 6, "num_operands": 7, "num_operators": 6, "value": 29819.18918918919, "id": "0512"}
+{"infix": "(5 + 26 + 29 - 98) / 19", "rpn": "5 26 + 29 98 - + 19 /", "depth": 4, "num_operands": 5, "num_operators": 4, "value": -2.0, "id": "0513"}
+{"infix": "43 + 70 + 11 + 24 + 57 - (45 - 98) + 80", "rpn": "43 70 + 11 24 57 + 45 98 - - + + 80 +", "depth": 6, "num_operands": 8, "num_operators": 7, "value": 338.0, "id": "0514"}
+{"infix": "32 * (69 - 55) * 71 / 64 + 16", "rpn": "32 69 55 - * 71 64 / * 16 +", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 513.0, "id": "0515"}
+{"infix": "75 + 30 * (20 + 97 * 60 - (36 - (15 - 63)))", "rpn": "75 30 20 97 60 * + 36 15 63 - - - * +", "depth": 6, "num_operands": 8, "num_operators": 7, "value": 172755.0, "id": "0516"}
+{"infix": "44 + 9 + 35 - 19", "rpn": "44 9 35 + + 19 -", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 69.0, "id": "0517"}
+{"infix": "91 - 76 - (70 - (24 + 38))", "rpn": "91 76 - 70 24 38 + - -", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 7.0, "id": "0518"}
+{"infix": "(85 - (19 + 33 - 79 * 85)) * (38 + 98)", "rpn": "85 19 33 79 85 * - + - 38 98 + *", "depth": 6, "num_operands": 7, "num_operators": 6, "value": 917728.0, "id": "0519"}
+{"infix": "25 * 76 - 90 + 23", "rpn": "25 76 90 - * 23 +", "depth": 4, "num_operands": 4, "num_operators": 3, "value": -327.0, "id": "0520"}
+{"infix": "(23 + 45) * (94 + 60) + 48 - 82 + 22 + 58 - 73", "rpn": "23 45 + 94 60 + * 48 82 - + 22 58 + 73 - +", "depth": 5, "num_operands": 9, "num_operators": 8, "value": 10445.0, "id": "0521"}
+{"infix": "(32 * 78 + 96 + 50) / 34 * 68 / 25 + 27 + 36", "rpn": "32 78 * 96 50 + + 34 68 * 25 / / 27 36 + +", "depth": 5, "num_operands": 9, "num_operators": 8, "value": 91.56833910034602, "id": "0522"}
+{"infix": "73 * (53 + 92) / 100 + 83 * 62 + 72 - 97", "rpn": "73 53 92 + * 100 83 62 * + 72 97 - + /", "depth": 5, "num_operands": 8, "num_operators": 7, "value": 2.0273893890059376, "id": "0523"}
+{"infix": "40 - 39 - 2", "rpn": "40 39 2 - -", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 3.0, "id": "0524"}
+{"infix": "94 / 73 * 10", "rpn": "94 73 10 * /", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 0.12876712328767123, "id": "0525"}
+{"infix": "43 + 97 + 15 + 7 + 4 + 71 + 72 + 87", "rpn": "43 97 + 15 7 4 + + + 71 72 87 + + +", "depth": 5, "num_operands": 8, "num_operators": 7, "value": 396.0, "id": "0526"}
+{"infix": "82 + 68 / (59 * 68)", "rpn": "82 68 59 68 * / +", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 82.01694915254237, "id": "0527"}
+{"infix": "25 + 74 - 40", "rpn": "25 74 + 40 -", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 59.0, "id": "0528"}
+{"infix": "53 + 39 + 78 + 51 + 63 - 28 / 3 - (82 + 31)", "rpn": "53 39 78 + 51 + 63 28 3 / - 82 31 + - + +", "depth": 6, "num_operands": 9, "num_operators": 8, "value": 161.66666666666666, "id": "0529"}
+{"infix": "77 - 1", "rpn": "77 1 -", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 76.0, "id": "0530"}
+{"infix": "23 * 60 + 94 + 95", "rpn": "23 60 * 94 + 95 +", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 1569.0, "id": "0531"}
+{"infix": "6 / 35 + 60 + 46 * 70 * (65 * 42 + 89 - 77)", "rpn": "6 35 60 + / 46 70 * 65 42 * 89 77 - + * +", "depth": 5, "num_operands": 9, "num_operators": 8, "value": 8829240.063157896, "id": "0532"}
+{"infix": "85 + 60 - 92 * 73 - 82 + 33 * 80 + 13", "rpn": "85 60 + 92 73 * - 82 33 + 80 13 + * -", "depth": 4, "num_operands": 8, "num_operators": 7, "value": -17266.0, "id": "0533"}
+{"infix": "90 - 74 + 81 * 25 + 54 - 18 - 25", "rpn": "90 74 - 81 25 * 54 + 18 - + 25 -", "depth": 6, "num_operands": 7, "num_operators": 6, "value": 2052.0, "id": "0534"}
+{"infix": "43 * 68 * 15 + 100 * 57 + (52 - 98) * 54 * 65", "rpn": "43 68 15 * * 100 57 * + 52 98 - 54 * 65 * +", "depth": 5, "num_operands": 9, "num_operators": 8, "value": -111900.0, "id": "0535"}
+{"infix": "86 + 51 + 26 - 39", "rpn": "86 51 26 + + 39 -", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 124.0, "id": "0536"}
+{"infix": "19 * (42 + 59 * 89 + 79) * 16 - (52 + 97 + 92) * 35", "rpn": "19 42 59 89 * 79 + + 16 52 97 92 + + - * 35 * *", "depth": 7, "num_operands": 10, "num_operators": 9, "value": -803785500.0, "id": "0537"}
+{"infix": "72 - 96 + 10 - (69 + 68) - 96", "rpn": "72 96 - 10 69 68 + - + 96 -", "depth": 5, "num_operands": 6, "num_operators": 5, "value": -247.0, "id": "0538"}
+{"infix": "40 + 15 * 86 / 63", "rpn": "40 15 86 * 63 / +", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 60.476190476190474, "id": "0539"}
+{"infix": "(79 + 42) * 5 + 14", "rpn": "79 42 + 5 * 14 +", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 619.0, "id": "0540"}
+{"infix": "(23 - 54) * (54 + 90) + 64 - 16", "rpn": "23 54 - 54 90 + * 64 + 16 -", "depth": 5, "num_operands": 6, "num_operators": 5, "value": -4416.0, "id": "0541"}
+{"infix": "84 * 25 + 16 - 98 - (55 - 71) + 24 * 3 / 74", "rpn": "84 25 16 98 - + 55 71 - - * 24 3 74 / * +", "depth": 6, "num_operands": 9, "num_operators": 8, "value": -3443.027027027027, "id": "0542"}
+{"infix": "49 - 25", "rpn": "49 25 -", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 24.0, "id": "0543"}
+{"infix": "(90 + 63 + 14) * (48 - 49) * 49", "rpn": "90 63 + 14 + 48 49 - 49 * *", "depth": 4, "num_operands": 6, "num_operators": 5, "value": -8183.0, "id": "0544"}
+{"infix": "84 / 88", "rpn": "84 88 /", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 0.9545454545454546, "id": "0545"}
+{"infix": "41 + 81", "rpn": "41 81 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 122.0, "id": "0546"}
+{"infix": "10 - 13 - (52 + 3 + 14) + 28", "rpn": "10 13 52 3 14 + + - 28 + -", "depth": 6, "num_operands": 6, "num_operators": 5, "value": 38.0, "id": "0547"}
+{"infix": "24 * (53 - 2) - 34 + 48 + 82 + 30 + 41 - (12 + 77)", "rpn": "24 53 2 - * 34 - 48 + 82 30 41 12 77 + - + + +", "depth": 6, "num_operands": 10, "num_operators": 9, "value": 1302.0, "id": "0548"}
+{"infix": "39 - 89", "rpn": "39 89 -", "depth": 2, "num_operands": 2, "num_operators": 1, "value": -50.0, "id": "0549"}
+{"infix": "(25 - 24) * (68 + 85 + 83)", "rpn": "25 24 - 68 85 83 + + *", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 236.0, "id": "0550"}
+{"infix": "31 * 1", "rpn": "31 1 *", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 31.0, "id": "0551"}
+{"infix": "34 + 27 + 22 + 90 + 7 - (96 - (97 + 90 + 44 + 55))", "rpn": "34 27 + 22 90 + + 7 96 97 90 44 + 55 + + - - +", "depth": 7, "num_operands": 10, "num_operators": 9, "value": 370.0, "id": "0552"}
+{"infix": "30 * 22", "rpn": "30 22 *", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 660.0, "id": "0553"}
+{"infix": "71 * 11 * (28 + 47 + 84 / 12 + 61 * 77)", "rpn": "71 11 * 28 47 + 84 12 / 61 77 * + + *", "depth": 5, "num_operands": 8, "num_operators": 7, "value": 3732399.0, "id": "0554"}
+{"infix": "45 * 1 - 84 * 69", "rpn": "45 1 * 84 - 69 *", "depth": 4, "num_operands": 4, "num_operators": 3, "value": -2691.0, "id": "0555"}
+{"infix": "74 + 44 - 48 / 10 + 56 + 1 + 24 + 59 - 29 + 6", "rpn": "74 44 + 48 10 / 56 1 24 + 59 + 29 - + 6 + + -", "depth": 8, "num_operands": 10, "num_operators": 9, "value": -3.799999999999997, "id": "0556"}
+{"infix": "69 * 3 - (76 + 92)", "rpn": "69 3 * 76 92 + -", "depth": 3, "num_operands": 4, "num_operators": 3, "value": 39.0, "id": "0557"}
+{"infix": "50 * (50 + 10)", "rpn": "50 50 10 + *", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 3000.0, "id": "0558"}
+{"infix": "(89 + 77 + 68 * 12) / 30 - (91 + 22 + 73)", "rpn": "89 77 + 68 12 * + 30 / 91 22 73 + + -", "depth": 5, "num_operands": 8, "num_operators": 7, "value": -153.26666666666665, "id": "0559"}
+{"infix": "65 - 17 + 40 + 65 - 80 + 95", "rpn": "65 17 - 40 65 80 - + + 95 +", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 168.0, "id": "0560"}
+{"infix": "54 - 87 - (33 - (11 - 84)) + 86 + 47 + 8 * 89 / 18", "rpn": "54 87 - 33 11 84 - - - 86 + 47 8 89 18 / * + +", "depth": 6, "num_operands": 10, "num_operators": 9, "value": 33.55555555555556, "id": "0561"}
+{"infix": "62 + 19 - 21 + 100 - (48 - 30)", "rpn": "62 19 21 - 100 + + 48 30 - -", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 142.0, "id": "0562"}
+{"infix": "16 * 26 + 34", "rpn": "16 26 * 34 +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 450.0, "id": "0563"}
+{"infix": "82 + 4", "rpn": "82 4 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 86.0, "id": "0564"}
+{"infix": "8 + 37", "rpn": "8 37 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 45.0, "id": "0565"}
+{"infix": "84 - (96 + 92) + 52 * 88 + 75 + 62 + 87 + 45", "rpn": "84 96 92 + - 52 88 * + 75 + 62 + 87 45 + +", "depth": 7, "num_operands": 9, "num_operators": 8, "value": 4741.0, "id": "0566"}
+{"infix": "66 * 31 / 25 * 62", "rpn": "66 31 * 25 / 62 *", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 5074.08, "id": "0567"}
+{"infix": "81 / 10", "rpn": "81 10 /", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 8.1, "id": "0568"}
+{"infix": "47 * (73 - 52 - 73 + 62) + 13 + 17 + 90", "rpn": "47 73 52 - 73 - 62 + * 13 17 + 90 + +", "depth": 6, "num_operands": 8, "num_operators": 7, "value": 590.0, "id": "0569"}
+{"infix": "58 + 90", "rpn": "58 90 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 148.0, "id": "0570"}
+{"infix": "58 - 51 + 50 * 34", "rpn": "58 51 50 + 34 * -", "depth": 4, "num_operands": 4, "num_operators": 3, "value": -3376.0, "id": "0571"}
+{"infix": "(36 - 82) * 30 + 88 - 78 + 80 + 35", "rpn": "36 82 - 30 * 88 78 - 80 35 + + +", "depth": 4, "num_operands": 7, "num_operators": 6, "value": -1255.0, "id": "0572"}
+{"infix": "23 - (90 + 30 + 12) * (64 + 3)", "rpn": "23 90 30 + 12 + 64 3 + * -", "depth": 5, "num_operands": 6, "num_operators": 5, "value": -8821.0, "id": "0573"}
+{"infix": "59 + 41 + 24 * 11", "rpn": "59 41 24 + 11 * +", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 774.0, "id": "0574"}
+{"infix": "33 + 75 * 12 + 65 + 21 + 69 - 16 + 3 + 95", "rpn": "33 75 + 12 65 + 21 + 69 16 - + 3 + 95 + *", "depth": 7, "num_operands": 9, "num_operators": 8, "value": 26892.0, "id": "0575"}
+{"infix": "91 - 75 + 68 + 87", "rpn": "91 75 - 68 + 87 +", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 171.0, "id": "0576"}
+{"infix": "2 / 60 + 63 * 30 - 43 * 17 - 13 + 16 * 35 + 96", "rpn": "2 60 / 63 30 43 - * + 17 13 - 16 35 * 96 + + *", "depth": 5, "num_operands": 10, "num_operators": 9, "value": -540518.0, "id": "0577"}
+{"infix": "99 - (19 - 84 * 89) * 31 - 14 + 32 + 78 - 34", "rpn": "99 19 84 89 * - 31 * 14 32 78 + + - 34 - -", "depth": 7, "num_operands": 9, "num_operators": 8, "value": 231424.0, "id": "0578"}
+{"infix": "47 * (7 + 7 + 27) * 82 + 17", "rpn": "47 7 7 + 27 + * 82 17 + *", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 190773.0, "id": "0579"}
+{"infix": "95 - 21 * 20", "rpn": "95 21 20 * -", "depth": 3, "num_operands": 3, "num_operators": 2, "value": -325.0, "id": "0580"}
+{"infix": "68 + 52", "rpn": "68 52 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 120.0, "id": "0581"}
+{"infix": "9 * (17 * 96 - 89 + 60)", "rpn": "9 17 96 * 89 - 60 + *", "depth": 5, "num_operands": 5, "num_operators": 4, "value": 14427.0, "id": "0582"}
+{"infix": "67 * 87 + 81", "rpn": "67 87 81 + *", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 11256.0, "id": "0583"}
+{"infix": "17 - (62 - (17 + 77)) + 82 / 3", "rpn": "17 62 17 77 + - - 82 3 / +", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 76.33333333333333, "id": "0584"}
+{"infix": "100 * 93 + 68 - 28 - 86 + 56 - 51 / 80", "rpn": "100 93 * 68 28 - + 86 - 56 51 80 / - +", "depth": 5, "num_operands": 8, "num_operators": 7, "value": 9309.3625, "id": "0585"}
+{"infix": "4 + 100 + 37 * 65 + 78 + 82 - 9 + 20", "rpn": "4 100 37 65 * 78 + + + 82 9 - 20 + +", "depth": 6, "num_operands": 8, "num_operators": 7, "value": 2680.0, "id": "0586"}
+{"infix": "62 * 61 * (53 + 47)", "rpn": "62 61 53 47 + * *", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 378200.0, "id": "0587"}
+{"infix": "15 - 37 * (26 * 90 - 55 + 11 - 67) / (6 / 45 - 12)", "rpn": "15 37 - 26 90 * 55 - 11 67 - + 6 45 / 12 - / *", "depth": 6, "num_operands": 10, "num_operators": 9, "value": 4132.4157303370785, "id": "0588"}
+{"infix": "100 - (24 + 9 - (9 + 55 - 41 - 77 / 95))", "rpn": "100 24 9 + 9 55 + 41 - 77 95 / - - -", "depth": 6, "num_operands": 8, "num_operators": 7, "value": 89.18947368421053, "id": "0589"}
+{"infix": "12 - 87 + 42 - 39 + (67 + 62 + 89) * (22 - 31)", "rpn": "12 87 - 42 39 - + 67 62 89 + + 22 31 - * +", "depth": 5, "num_operands": 9, "num_operators": 8, "value": -2034.0, "id": "0590"}
+{"infix": "(77 - 22 + 50 - 80) / (56 + 49 - (89 + 36))", "rpn": "77 22 - 50 80 - + 56 49 + 89 36 + - /", "depth": 4, "num_operands": 8, "num_operators": 7, "value": -1.25, "id": "0591"}
+{"infix": "(70 + 38) * 89 / 89 - 61 + 16 * 89 - 64", "rpn": "70 38 + 89 * 89 61 - 16 89 * + / 64 -", "depth": 5, "num_operands": 8, "num_operators": 7, "value": -57.3801652892562, "id": "0592"}
+{"infix": "90 + 67 + 21 + 27 - 4", "rpn": "90 67 + 21 + 27 4 - +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 201.0, "id": "0593"}
+{"infix": "26 + 30 + 40 + 57 - (81 + 6 - 80)", "rpn": "26 30 + 40 57 + + 81 6 + 80 - -", "depth": 4, "num_operands": 7, "num_operators": 6, "value": 146.0, "id": "0594"}
+{"infix": "97 + 35 + 67 / 69", "rpn": "97 35 67 69 / + +", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 132.97101449275362, "id": "0595"}
+{"infix": "86 + 71 + 11 + 4 / 48 + 84 + 96", "rpn": "86 71 + 11 + 4 48 / + 84 96 + +", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 348.08333333333337, "id": "0596"}
+{"infix": "23 - 57 + 91 - (88 + 87 / 31 * 16 * 20 - 43 - 67)", "rpn": "23 57 91 + - 88 87 31 / 16 * + 20 * 43 - 67 - -", "depth": 8, "num_operands": 10, "num_operators": 9, "value": -2673.064516129032, "id": "0597"}
+{"infix": "43 - 51", "rpn": "43 51 -", "depth": 2, "num_operands": 2, "num_operators": 1, "value": -8.0, "id": "0598"}
+{"infix": "5 + 32 + 57 + 22 * 59 * 27 * 93 + 5 - 25 * 30", "rpn": "5 32 + 57 22 + + 59 27 93 * 5 25 30 * - + * *", "depth": 6, "num_operands": 10, "num_operators": 9, "value": 12086504.0, "id": "0599"}
+{"infix": "34 + 38 + 89 + 25 + 22", "rpn": "34 38 89 + + 25 + 22 +", "depth": 5, "num_operands": 5, "num_operators": 4, "value": 208.0, "id": "0600"}
+{"infix": "12 + 44", "rpn": "12 44 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 56.0, "id": "0601"}
+{"infix": "70 / 26 + 67 + 32 - 45 - 23 / 80", "rpn": "70 26 / 67 + 32 45 - 23 80 / - +", "depth": 4, "num_operands": 7, "num_operators": 6, "value": 56.40480769230769, "id": "0602"}
+{"infix": "58 + 14 - 30 - (78 / 11 * (35 - 15) + 29 - 82)", "rpn": "58 14 + 30 - 78 11 / 35 15 - * 29 82 - + -", "depth": 5, "num_operands": 9, "num_operators": 8, "value": -46.81818181818181, "id": "0603"}
+{"infix": "38 * 31", "rpn": "38 31 *", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 1178.0, "id": "0604"}
+{"infix": "(51 + 97 + 64 - 63) / 93", "rpn": "51 97 + 64 63 - + 93 /", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 1.6021505376344085, "id": "0605"}
+{"infix": "12 / 25 + 82 * 87 - 65 - (41 + 8 + 43) + 35", "rpn": "12 25 / 82 87 * + 65 41 8 43 + + - - 35 +", "depth": 6, "num_operands": 9, "num_operators": 8, "value": 7196.48, "id": "0606"}
+{"infix": "66 * 53 + 2 * (80 * 65 + 51) * 91 * 47", "rpn": "66 53 * 2 80 65 * 51 + * 91 47 * * +", "depth": 6, "num_operands": 8, "num_operators": 7, "value": 44920552.0, "id": "0607"}
+{"infix": "(6 + 29 + 80) * 80", "rpn": "6 29 80 + + 80 *", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 9200.0, "id": "0608"}
+{"infix": "(58 + 76) * 92 + 41 - 82", "rpn": "58 76 + 92 * 41 + 82 -", "depth": 5, "num_operands": 5, "num_operators": 4, "value": 12287.0, "id": "0609"}
+{"infix": "14 + 67 + 89 - (62 / 61 + 92 - (22 + 61))", "rpn": "14 67 89 + 62 61 / 92 22 61 + - + - +", "depth": 6, "num_operands": 8, "num_operators": 7, "value": 159.98360655737704, "id": "0610"}
+{"infix": "24 - (40 * 72 + 12) + 78 * 55 - (84 - 93)", "rpn": "24 40 72 * 12 + - 78 55 * 84 93 - - +", "depth": 5, "num_operands": 8, "num_operators": 7, "value": 1431.0, "id": "0611"}
+{"infix": "68 - 79 - 83 * (44 / 20 + 47 * (24 + 16 - 52) + 37)", "rpn": "68 79 83 - 44 20 / 47 24 16 + 52 - * 37 + + * -", "depth": 8, "num_operands": 10, "num_operators": 9, "value": -2031.1999999999998, "id": "0612"}
+{"infix": "67 + 57", "rpn": "67 57 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 124.0, "id": "0613"}
+{"infix": "55 * 73", "rpn": "55 73 *", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 4015.0, "id": "0614"}
+{"infix": "89 - 3 + 83 + 42 + 77", "rpn": "89 3 - 83 + 42 + 77 +", "depth": 5, "num_operands": 5, "num_operators": 4, "value": 288.0, "id": "0615"}
+{"infix": "45 + 3 + 62 - (54 + 64) + 32 / 50 - 61 - (5 - 91)", "rpn": "45 3 62 + 54 64 + - 32 50 / + + 61 5 91 - - -", "depth": 6, "num_operands": 10, "num_operators": 9, "value": -154.36, "id": "0616"}
+{"infix": "87 + 15 + 40 + 74", "rpn": "87 15 + 40 74 + +", "depth": 3, "num_operands": 4, "num_operators": 3, "value": 216.0, "id": "0617"}
+{"infix": "75 + 17 + 67", "rpn": "75 17 67 + +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 159.0, "id": "0618"}
+{"infix": "72 + 95 + 65", "rpn": "72 95 + 65 +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 232.0, "id": "0619"}
+{"infix": "(7 + 1) * 20", "rpn": "7 1 + 20 *", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 160.0, "id": "0620"}
+{"infix": "87 - 46 + 91 + 49 - 53 + 14 * (65 + 93 + 76 - 86)", "rpn": "87 46 - 91 49 + 53 - 14 65 93 76 + 86 - + * + +", "depth": 7, "num_operands": 10, "num_operators": 9, "value": 2200.0, "id": "0621"}
+{"infix": "63 + 17 + 90 - 82 - 57 * (56 + 90)", "rpn": "63 17 90 + + 82 - 57 56 90 + * -", "depth": 5, "num_operands": 7, "num_operators": 6, "value": -8234.0, "id": "0622"}
+{"infix": "77 / (18 / 28 + 83)", "rpn": "77 18 28 / 83 + /", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 0.9205807002561913, "id": "0623"}
+{"infix": "46 + 18 + 60 + 78 * (61 + 35) * 100", "rpn": "46 18 + 60 78 61 35 + * + 100 * +", "depth": 6, "num_operands": 7, "num_operators": 6, "value": 754864.0, "id": "0624"}
+{"infix": "24 / 89 * 87 + 13 + 2 + 51 + 97 - 11 + 2 - 12", "rpn": "24 89 87 * / 13 2 51 + + + 97 11 - + 2 12 - +", "depth": 6, "num_operands": 10, "num_operators": 9, "value": 142.00309957380858, "id": "0625"}
+{"infix": "11 + 91 + 51 - 89 * 56 + 11 + 65", "rpn": "11 91 + 51 89 - 56 11 + * 65 + +", "depth": 5, "num_operands": 7, "num_operators": 6, "value": -2379.0, "id": "0626"}
+{"infix": "78 * 63 + 98 * (73 + 86 + 40) * 5", "rpn": "78 63 * 98 73 86 40 + + * + 5 *", "depth": 6, "num_operands": 7, "num_operators": 6, "value": 122080.0, "id": "0627"}
+{"infix": "17 + 60 * 48 + 44 + 7 / (12 - 49)", "rpn": "17 60 48 * + 44 + 7 12 49 - / +", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 2940.810810810811, "id": "0628"}
+{"infix": "92 - (33 + 15 + 100 * 26 - 2 + 93)", "rpn": "92 33 15 + 100 26 2 - * 93 + + -", "depth": 6, "num_operands": 7, "num_operators": 6, "value": -2449.0, "id": "0629"}
+{"infix": "42 - 40 - 26 - (12 - 12 + 49)", "rpn": "42 40 - 26 - 12 12 - 49 + -", "depth": 4, "num_operands": 6, "num_operators": 5, "value": -73.0, "id": "0630"}
+{"infix": "(81 - 46) * (7 + 65) - (40 + 24) * 76 + 95 + 64 / 9", "rpn": "81 46 - 7 65 + * 40 24 + - 76 95 + 64 9 / + *", "depth": 5, "num_operands": 10, "num_operators": 9, "value": 437440.8888888889, "id": "0631"}
+{"infix": "37 + 53 / 46 + 17 - 69 - 88 * 82", "rpn": "37 53 46 / + 17 69 - 88 82 * - +", "depth": 4, "num_operands": 7, "num_operators": 6, "value": -7229.847826086957, "id": "0632"}
+{"infix": "51 * 92 - 20 + (62 - 47 - 58 + 73) * 9", "rpn": "51 92 20 - * 62 47 - 58 - 73 + 9 * +", "depth": 6, "num_operands": 8, "num_operators": 7, "value": 3942.0, "id": "0633"}
+{"infix": "50 - (45 - 83) + 87 + 66 - 90 - 43", "rpn": "50 45 83 - - 87 66 90 - + 43 - +", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 108.0, "id": "0634"}
+{"infix": "60 + 54 / (73 + 12 * 10)", "rpn": "60 54 + 73 12 + 10 * /", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 0.13411764705882354, "id": "0635"}
+{"infix": "47 + 72 / 82 + 19 + 9 + 60 - 59", "rpn": "47 72 82 / 19 9 60 + + + + 59 -", "depth": 6, "num_operands": 7, "num_operators": 6, "value": 76.8780487804878, "id": "0636"}
+{"infix": "71 + 58 + 35 - 11 + 3 - 71 + 22 + 64 - 32 + 66", "rpn": "71 58 + 35 11 - 3 + 71 - 22 64 + 32 - 66 + + +", "depth": 6, "num_operands": 10, "num_operators": 9, "value": 205.0, "id": "0637"}
+{"infix": "56 + 41 + 95 - 52 + 11 - 28 + 78 - 91", "rpn": "56 41 95 + + 52 - 11 28 - 78 + 91 - +", "depth": 5, "num_operands": 8, "num_operators": 7, "value": 110.0, "id": "0638"}
+{"infix": "25 * (14 + 71) + 9 + 49 - 2 * (86 + 95)", "rpn": "25 14 71 + * 9 49 + + 2 86 95 + * -", "depth": 5, "num_operands": 8, "num_operators": 7, "value": 1821.0, "id": "0639"}
+{"infix": "(15 / 96 * 43 + 20) * (98 - 74 + 23 + 73 + 32)", "rpn": "15 96 / 43 * 20 + 98 74 - 23 + 73 32 + + *", "depth": 5, "num_operands": 9, "num_operators": 8, "value": 4061.25, "id": "0640"}
+{"infix": "6 * 15 + 19 - 54 + 20 - 56", "rpn": "6 15 * 19 54 - 20 + + 56 -", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 19.0, "id": "0641"}
+{"infix": "68 * (31 / 72 + 15) - 75", "rpn": "68 31 72 / 15 + * 75 -", "depth": 5, "num_operands": 5, "num_operators": 4, "value": 974.2777777777778, "id": "0642"}
+{"infix": "15 - 72 + 97 - (31 * 29 + 79 + 35) * (67 - 100)", "rpn": "15 72 - 97 + 31 29 * 79 35 + + 67 100 - * -", "depth": 5, "num_operands": 9, "num_operators": 8, "value": 33469.0, "id": "0643"}
+{"infix": "51 - (28 - 48) + 64 * (97 - (79 + 98 + 31))", "rpn": "51 28 48 - - 64 + 97 79 98 + 31 + - *", "depth": 5, "num_operands": 8, "num_operators": 7, "value": -14985.0, "id": "0644"}
+{"infix": "12 + 28 + (81 + 33 + 8 + 24 + 68 + 87 - 69) * 29", "rpn": "12 28 + 81 33 8 + 24 + 68 + + 87 69 - + 29 * +", "depth": 8, "num_operands": 10, "num_operators": 9, "value": 6768.0, "id": "0645"}
+{"infix": "84 + 46 + 89 * 1 + 6 / 41", "rpn": "84 46 89 + + 1 6 41 / + *", "depth": 4, "num_operands": 6, "num_operators": 5, "value": 251.04878048780486, "id": "0646"}
+{"infix": "89 + 14 + 42 + 2 * 52", "rpn": "89 14 42 2 52 * + + +", "depth": 5, "num_operands": 5, "num_operators": 4, "value": 249.0, "id": "0647"}
+{"infix": "44 + 90 + 7 * 22 / 76", "rpn": "44 90 + 7 22 76 / * +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 136.02631578947367, "id": "0648"}
+{"infix": "95 - 38 + 22 + 81 + 94", "rpn": "95 38 - 22 + 81 94 + +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 254.0, "id": "0649"}
+{"infix": "70 * 26 + 77 - (8 - 45 + 26 + 25 * 73)", "rpn": "70 26 * 77 + 8 45 26 25 73 * + + - -", "depth": 6, "num_operands": 8, "num_operators": 7, "value": 3785.0, "id": "0650"}
+{"infix": "(41 + 29 - (59 + 57) * 77) * 61 + 16 - 67 + 81", "rpn": "41 29 + 59 57 + 77 * - 61 * 16 67 - 81 + +", "depth": 6, "num_operands": 9, "num_operators": 8, "value": -540552.0, "id": "0651"}
+{"infix": "41 * 85", "rpn": "41 85 *", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 3485.0, "id": "0652"}
+{"infix": "81 / ((44 + 40 - 5 - (21 - 87)) * (52 - 31 + 35))", "rpn": "81 44 40 + 5 - 21 87 - - 52 31 - 35 + * /", "depth": 6, "num_operands": 9, "num_operators": 8, "value": 0.009975369458128078, "id": "0653"}
+{"infix": "51 + 8 + 57 + 90", "rpn": "51 8 57 + + 90 +", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 206.0, "id": "0654"}
+{"infix": "20 - 43 + 63 + 15 + 34 + 78 + 51 + 29 + 66", "rpn": "20 43 - 63 15 + 34 78 + + + 51 29 + 66 + +", "depth": 5, "num_operands": 9, "num_operators": 8, "value": 313.0, "id": "0655"}
+{"infix": "(41 + 8) * (22 + 15) + 11", "rpn": "41 8 + 22 15 + * 11 +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 1824.0, "id": "0656"}
+{"infix": "(30 * 36 - 31) * 71 - (32 * (2 + 98) + 41 / 33 * 100)", "rpn": "30 36 * 31 - 71 * 32 2 98 + * 41 33 / 100 * + -", "depth": 5, "num_operands": 10, "num_operators": 9, "value": 71154.75757575757, "id": "0657"}
+{"infix": "1 * 28 / 19", "rpn": "1 28 * 19 /", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 1.4736842105263157, "id": "0658"}
+{"infix": "48 - 35 + 14", "rpn": "48 35 - 14 +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 27.0, "id": "0659"}
+{"infix": "8 * 87 - 29 + 98 * 5 - (99 - 56) * 27", "rpn": "8 87 29 - 98 5 * + * 99 56 - 27 * -", "depth": 5, "num_operands": 8, "num_operators": 7, "value": 3223.0, "id": "0660"}
+{"infix": "29 * 92 + 62 + 31 - (37 + 7) - 16", "rpn": "29 92 * 62 + 31 37 7 + - + 16 -", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 2701.0, "id": "0661"}
+{"infix": "18 * 22 * 97 + 63 - (97 + 2)", "rpn": "18 22 * 97 63 97 2 + - + *", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 24156.0, "id": "0662"}
+{"infix": "81 + 10", "rpn": "81 10 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 91.0, "id": "0663"}
+{"infix": "55 * 3 - (52 + 14 + 77) + 31 * 2 - 46", "rpn": "55 3 * 52 14 77 + + - 31 2 * 46 - +", "depth": 5, "num_operands": 8, "num_operators": 7, "value": 38.0, "id": "0664"}
+{"infix": "99 * 84 - (68 + 71)", "rpn": "99 84 * 68 71 + -", "depth": 3, "num_operands": 4, "num_operators": 3, "value": 8177.0, "id": "0665"}
+{"infix": "21 - 72 - 30", "rpn": "21 72 30 - -", "depth": 3, "num_operands": 3, "num_operators": 2, "value": -21.0, "id": "0666"}
+{"infix": "13 - (63 - 22 + 85 + 83 * 2) - (51 + 21)", "rpn": "13 63 22 - 85 83 2 * + + - 51 21 + -", "depth": 6, "num_operands": 8, "num_operators": 7, "value": -351.0, "id": "0667"}
+{"infix": "(89 + 59) / (66 * 12 / (40 - 55 + 78) * 25)", "rpn": "89 59 + 66 12 * 40 55 - 78 + / 25 * /", "depth": 6, "num_operands": 8, "num_operators": 7, "value": 0.47090909090909094, "id": "0668"}
+{"infix": "83 - (89 + 62 * 58)", "rpn": "83 89 62 58 * + -", "depth": 4, "num_operands": 4, "num_operators": 3, "value": -3602.0, "id": "0669"}
+{"infix": "48 - 2 + 80 + 71 + 57 + 23 * (92 + 73) + 27 + 67", "rpn": "48 2 - 80 71 57 + + 23 92 73 + * 27 + + 67 + +", "depth": 7, "num_operands": 10, "num_operators": 9, "value": 4143.0, "id": "0670"}
+{"infix": "59 * 79 - (34 + 46 * 91 - 45 * (24 + 45))", "rpn": "59 79 * 34 46 91 * + 45 24 45 + * - -", "depth": 5, "num_operands": 8, "num_operators": 7, "value": 3546.0, "id": "0671"}
+{"infix": "99 + 55 + 35 - 47 - (59 + 48 + 36 * 80)", "rpn": "99 55 + 35 47 - + 59 48 + 36 80 * + -", "depth": 4, "num_operands": 8, "num_operators": 7, "value": -2845.0, "id": "0672"}
+{"infix": "30 - (36 + 41 + 1 * 15 * 38 + (19 - 51) / (43 + 28))", "rpn": "30 36 41 1 15 * 38 * 19 51 - 43 28 + / + + + -", "depth": 7, "num_operands": 10, "num_operators": 9, "value": -616.5492957746479, "id": "0673"}
+{"infix": "81 - (14 + 25)", "rpn": "81 14 25 + -", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 42.0, "id": "0674"}
+{"infix": "23 + 2 - 76", "rpn": "23 2 + 76 -", "depth": 3, "num_operands": 3, "num_operators": 2, "value": -51.0, "id": "0675"}
+{"infix": "40 - 5 + 31 + 43 + 49 + 37 - 44 + 1 + 72 - 74", "rpn": "40 5 - 31 + 43 49 + 37 + 44 1 72 + 74 - + - +", "depth": 6, "num_operands": 10, "num_operators": 9, "value": 152.0, "id": "0676"}
+{"infix": "62 * 52 * 67 + 63 + 74 - 28 * (95 + 36 + 56)", "rpn": "62 52 * 67 * 63 74 + 28 - + 95 36 + 56 + *", "depth": 5, "num_operands": 9, "num_operators": 8, "value": 40413879.0, "id": "0677"}
+{"infix": "14 + 88 - 4 - 39 + 15 * 73 * 64 + 49 / 4 + 65", "rpn": "14 88 + 4 39 - - 15 73 * 64 * 49 4 / 65 + + +", "depth": 5, "num_operands": 10, "num_operators": 9, "value": 70294.25, "id": "0678"}
+{"infix": "67 + 76 + 20 + 32 + 76", "rpn": "67 76 20 + 32 + + 76 +", "depth": 5, "num_operands": 5, "num_operators": 4, "value": 271.0, "id": "0679"}
+{"infix": "6 * 87 + 67 + 81 * 99 + 28 + 1 - (56 + 33 - 21)", "rpn": "6 87 * 67 81 99 * + + 28 + 1 56 33 + 21 - - +", "depth": 6, "num_operands": 10, "num_operators": 9, "value": 8569.0, "id": "0680"}
+{"infix": "55 - (11 + 19) + 84 + 40 / 65 * 60 - (38 + 46 + 83)", "rpn": "55 11 19 + - 84 40 65 / 60 * + 38 46 + 83 + - +", "depth": 6, "num_operands": 10, "num_operators": 9, "value": -21.076923076923066, "id": "0681"}
+{"infix": "40 - 85 * 26 + 81 / 73 + 29 + 6 + 45", "rpn": "40 85 26 * - 81 73 / + 29 6 45 + + +", "depth": 5, "num_operands": 8, "num_operators": 7, "value": -2088.890410958904, "id": "0682"}
+{"infix": "19 - 47 * 85 + 83 - 37 - 3", "rpn": "19 47 85 * - 83 37 - 3 - +", "depth": 4, "num_operands": 6, "num_operators": 5, "value": -3933.0, "id": "0683"}
+{"infix": "37 + 13 - 96 * 59 + 79 + (98 + 49) * 60 - 6", "rpn": "37 13 + 96 59 * 79 98 49 + 60 * + + 6 - -", "depth": 7, "num_operands": 9, "num_operators": 8, "value": -14507.0, "id": "0684"}
+{"infix": "36 + 12", "rpn": "36 12 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 48.0, "id": "0685"}
+{"infix": "60 - 58 + 42 + 14 + 34", "rpn": "60 58 - 42 14 34 + + +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 92.0, "id": "0686"}
+{"infix": "82 + 86", "rpn": "82 86 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 168.0, "id": "0687"}
+{"infix": "32 + 80 + 25 + 31 + 97 + 64 / 62 - 11 * 22", "rpn": "32 80 25 + + 31 97 + + 64 62 11 - / 22 * +", "depth": 5, "num_operands": 9, "num_operators": 8, "value": 292.6078431372549, "id": "0688"}
+{"infix": "80 * (51 + 26 + 42)", "rpn": "80 51 26 42 + + *", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 9520.0, "id": "0689"}
+{"infix": "58 + 77 + 74 + 26 / (67 + 54 - 78 / 23)", "rpn": "58 77 + 74 + 26 67 54 + 78 23 / - / +", "depth": 5, "num_operands": 8, "num_operators": 7, "value": 209.22107208872458, "id": "0690"}
+{"infix": "5 - 65 - 51 - 77 + 78 + 36", "rpn": "5 65 - 51 - 77 - 78 36 + +", "depth": 5, "num_operands": 6, "num_operators": 5, "value": -74.0, "id": "0691"}
+{"infix": "78 - 87 - 62", "rpn": "78 87 - 62 -", "depth": 3, "num_operands": 3, "num_operators": 2, "value": -71.0, "id": "0692"}
+{"infix": "34 + 94 + 76", "rpn": "34 94 + 76 +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 204.0, "id": "0693"}
+{"infix": "(65 - 46) * (78 - 39 + 33 + 54 - 83 - 34 + 95 + 78)", "rpn": "65 46 - 78 39 - 33 54 + 83 34 - - 95 78 + + + *", "depth": 6, "num_operands": 10, "num_operators": 9, "value": 4750.0, "id": "0694"}
+{"infix": "100 - 7 * 52 - (74 + 16 - 93 - 10) + 75", "rpn": "100 7 52 * 74 16 93 - 10 - + - 75 + -", "depth": 7, "num_operands": 8, "num_operators": 7, "value": -352.0, "id": "0695"}
+{"infix": "31 + 94 - (42 + 86 + 91)", "rpn": "31 94 + 42 86 91 + + -", "depth": 4, "num_operands": 5, "num_operators": 4, "value": -94.0, "id": "0696"}
+{"infix": "45 * 26 + 25", "rpn": "45 26 * 25 +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 1195.0, "id": "0697"}
+{"infix": "39 + 47 - 93 * 26 + 60 + 88", "rpn": "39 47 + 93 26 * 60 + - 88 +", "depth": 5, "num_operands": 6, "num_operators": 5, "value": -2304.0, "id": "0698"}
+{"infix": "35 - 35 + 81 + 48 * 86 + 89 / (96 + 40 + 81 + 90)", "rpn": "35 35 81 + 48 86 * + 89 + 96 40 81 + 90 + + / -", "depth": 6, "num_operands": 10, "num_operators": 9, "value": 20.88599348534202, "id": "0699"}
+{"infix": "6 - 8 + 25 + 59 + 93 - 58 + 90", "rpn": "6 8 - 25 59 93 + + 58 - 90 + +", "depth": 6, "num_operands": 7, "num_operators": 6, "value": 207.0, "id": "0700"}
+{"infix": "29 - 39 / 54 + 89 * 17 + 64 + 82 + 79 + 35 + 86", "rpn": "29 39 54 / - 89 17 * 64 82 + 79 35 + 86 + + + +", "depth": 6, "num_operands": 10, "num_operators": 9, "value": 1887.2777777777778, "id": "0701"}
+{"infix": "37 * 97 - 44 / 95", "rpn": "37 97 44 95 / - *", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 3571.863157894737, "id": "0702"}
+{"infix": "86 + 48 - 97", "rpn": "86 48 97 - +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 37.0, "id": "0703"}
+{"infix": "81 * 3 - 56 + 67 * 8 * 52", "rpn": "81 3 * 56 67 8 52 * * + -", "depth": 5, "num_operands": 6, "num_operators": 5, "value": -27685.0, "id": "0704"}
+{"infix": "(51 - 55) / 14 * 99 + 79 + 41 + 65 * 11", "rpn": "51 55 - 14 99 * 79 41 + + 65 + / 11 *", "depth": 6, "num_operands": 8, "num_operators": 7, "value": -0.02800763844684914, "id": "0705"}
+{"infix": "90 + 56 + 50 + 37 * (40 - 22 + 37 + 37 + 80)", "rpn": "90 56 50 + + 37 40 22 - 37 37 80 + + + * +", "depth": 6, "num_operands": 9, "num_operators": 8, "value": 6560.0, "id": "0706"}
+{"infix": "57 + (12 + 31) * (82 - 10) + 71 - 38 - 77", "rpn": "57 12 31 + 82 10 - * + 71 38 - + 77 -", "depth": 6, "num_operands": 8, "num_operators": 7, "value": 3109.0, "id": "0707"}
+{"infix": "16 * (20 + 16) * 4", "rpn": "16 20 16 + * 4 *", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 2304.0, "id": "0708"}
+{"infix": "47 + 37 * 73 + 35 * (87 + 74 * 90) - 59 + 54", "rpn": "47 37 + 73 35 87 74 90 * + * + 59 54 + - *", "depth": 7, "num_operands": 9, "num_operators": 8, "value": 19832820.0, "id": "0709"}
+{"infix": "44 + 34 + 73 + 78 * 46 - 5", "rpn": "44 34 + 73 78 46 * + 5 - +", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 3734.0, "id": "0710"}
+{"infix": "31 * (57 + (38 - 100 + 90) / (9 + 17 + 44))", "rpn": "31 57 38 100 90 + - 9 17 44 + + / + *", "depth": 6, "num_operands": 8, "num_operators": 7, "value": 1699.6857142857143, "id": "0711"}
+{"infix": "50 - (83 + 100 + 13 + 4 * 51) * (53 - 48 + 33) - 73", "rpn": "50 83 100 + 13 + 4 51 * + - 53 48 - 33 + * 73 -", "depth": 7, "num_operands": 10, "num_operators": 9, "value": -13373.0, "id": "0712"}
+{"infix": "83 + 88 + 10 * 78 - 30", "rpn": "83 88 + 10 78 * 30 - +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 921.0, "id": "0713"}
+{"infix": "(34 + 55 - 5 + 26 + 75) * 32", "rpn": "34 55 + 5 - 26 75 + + 32 *", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 5920.0, "id": "0714"}
+{"infix": "(81 + 80) * 5 * 60 * 44 + 7 * 49 / (33 + 12 + 71)", "rpn": "81 80 + 5 * 60 44 * 7 49 * + 33 12 + 71 + / *", "depth": 5, "num_operands": 10, "num_operators": 9, "value": 20700.991379310344, "id": "0715"}
+{"infix": "75 + 72 * (31 - 45)", "rpn": "75 72 31 45 - * +", "depth": 4, "num_operands": 4, "num_operators": 3, "value": -933.0, "id": "0716"}
+{"infix": "(46 + 6 + 9) * (18 * 29 + 35)", "rpn": "46 6 9 + + 18 29 * 35 + *", "depth": 4, "num_operands": 6, "num_operators": 5, "value": 33977.0, "id": "0717"}
+{"infix": "43 + 77 + 96 + (97 / 77 + 70 + 75) * 28", "rpn": "43 77 96 + + 97 77 / 70 75 + + 28 * +", "depth": 5, "num_operands": 8, "num_operators": 7, "value": 4311.272727272727, "id": "0718"}
+{"infix": "(36 + 100) * 92 / 79 * (91 + 51 - 18)", "rpn": "36 100 + 92 79 / 91 51 + 18 - * *", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 19639.08860759494, "id": "0719"}
+{"infix": "(61 + 95 + 98) * 40 + 31", "rpn": "61 95 + 98 + 40 31 + *", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 18034.0, "id": "0720"}
+{"infix": "54 - 14", "rpn": "54 14 -", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 40.0, "id": "0721"}
+{"infix": "5 + 68 + 71 + 25 + 13 + 66", "rpn": "5 68 71 + + 25 13 66 + + +", "depth": 4, "num_operands": 6, "num_operators": 5, "value": 248.0, "id": "0722"}
+{"infix": "70 - (3 + 19) * 9 - 81", "rpn": "70 3 19 + - 9 81 - *", "depth": 4, "num_operands": 5, "num_operators": 4, "value": -3456.0, "id": "0723"}
+{"infix": "12 / (19 - 33) - 99 + 24", "rpn": "12 19 33 - / 99 24 + -", "depth": 4, "num_operands": 5, "num_operators": 4, "value": -123.85714285714286, "id": "0724"}
+{"infix": "29 + 75 - 17 * 5 * 59 - 66", "rpn": "29 75 + 17 5 59 * * 66 - -", "depth": 5, "num_operands": 6, "num_operators": 5, "value": -4845.0, "id": "0725"}
+{"infix": "(43 - 59) * 9", "rpn": "43 59 - 9 *", "depth": 3, "num_operands": 3, "num_operators": 2, "value": -144.0, "id": "0726"}
+{"infix": "70 + 51", "rpn": "70 51 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 121.0, "id": "0727"}
+{"infix": "55 + 51", "rpn": "55 51 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 106.0, "id": "0728"}
+{"infix": "70 * (14 + 82) * (90 + 76 - (93 + 58))", "rpn": "70 14 82 + 90 76 93 58 + - + * *", "depth": 6, "num_operands": 7, "num_operators": 6, "value": 100800.0, "id": "0729"}
+{"infix": "31 - 82", "rpn": "31 82 -", "depth": 2, "num_operands": 2, "num_operators": 1, "value": -51.0, "id": "0730"}
+{"infix": "85 + 9 + 90 * 78 * 32", "rpn": "85 9 + 90 78 * 32 * +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 224734.0, "id": "0731"}
+{"infix": "(3 - 1 + 12) * 51", "rpn": "3 1 - 12 + 51 *", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 714.0, "id": "0732"}
+{"infix": "(38 * 77 * 87 * 85 - 47 * (88 + 90 - 28)) * 10", "rpn": "38 77 * 87 85 * * 47 88 90 + 28 - * - 10 *", "depth": 6, "num_operands": 9, "num_operators": 8, "value": 216307200.0, "id": "0733"}
+{"infix": "2 - 87 * 9", "rpn": "2 87 9 * -", "depth": 3, "num_operands": 3, "num_operators": 2, "value": -781.0, "id": "0734"}
+{"infix": "32 + 80 + 82 * 4", "rpn": "32 80 + 82 4 * +", "depth": 3, "num_operands": 4, "num_operators": 3, "value": 440.0, "id": "0735"}
+{"infix": "80 + 7 / (50 + 58) + 96", "rpn": "80 7 + 50 58 + / 96 +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 96.80555555555556, "id": "0736"}
+{"infix": "68 + 72 + 50 + 10 - (82 - 79 + 89)", "rpn": "68 72 50 + 10 + + 82 79 - 89 + -", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 108.0, "id": "0737"}
+{"infix": "13 + 89 - (3 + 27) - 43 + 63 * 12 - 43", "rpn": "13 89 + 3 27 + - 43 63 12 43 - * + -", "depth": 5, "num_operands": 8, "num_operators": 7, "value": 1982.0, "id": "0738"}
+{"infix": "59 + 86 + 49 * 22 + 19 + 22 * 8 + 92", "rpn": "59 86 + 49 22 * 19 + 22 8 * 92 + + +", "depth": 5, "num_operands": 8, "num_operators": 7, "value": 1510.0, "id": "0739"}
+{"infix": "(42 / (32 + 21 * 37) + 74 * 16 * 50) * (78 - 31)", "rpn": "42 32 21 37 * + / 74 16 * 50 * + 78 31 - *", "depth": 6, "num_operands": 9, "num_operators": 8, "value": 2782402.4400494434, "id": "0740"}
+{"infix": "47 - 65 - 12 / 35 + (22 / 50 + 68) * 17", "rpn": "47 65 - 12 35 / - 22 50 / 68 + 17 * +", "depth": 5, "num_operands": 8, "num_operators": 7, "value": 1145.1371428571429, "id": "0741"}
+{"infix": "24 - 51", "rpn": "24 51 -", "depth": 2, "num_operands": 2, "num_operators": 1, "value": -27.0, "id": "0742"}
+{"infix": "58 + 13 - 15", "rpn": "58 13 15 - +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 56.0, "id": "0743"}
+{"infix": "43 - 8 - 83", "rpn": "43 8 - 83 -", "depth": 3, "num_operands": 3, "num_operators": 2, "value": -48.0, "id": "0744"}
+{"infix": "10 + 37 + 93 - 99", "rpn": "10 37 + 93 99 - +", "depth": 3, "num_operands": 4, "num_operators": 3, "value": 41.0, "id": "0745"}
+{"infix": "38 + 25 * 67 / 70 + 85 + 77 + 39 - (94 - 89)", "rpn": "38 25 67 * 70 / + 85 77 + 39 + 94 89 - - +", "depth": 5, "num_operands": 9, "num_operators": 8, "value": 257.92857142857144, "id": "0746"}
+{"infix": "39 + 15 + 56 + 78 - (62 + 7 + 26 - 89 + 42 + 21)", "rpn": "39 15 56 78 + + 62 7 + 26 89 - + 42 21 + + - +", "depth": 6, "num_operands": 10, "num_operators": 9, "value": 119.0, "id": "0747"}
+{"infix": "10 - (85 - (61 + 5 + 19)) + 37 + 95 + 12 + 21 + 43", "rpn": "10 85 61 5 + 19 + - - 37 95 12 + 21 + + 43 + +", "depth": 6, "num_operands": 10, "num_operators": 9, "value": 218.0, "id": "0748"}
+{"infix": "38 + 52", "rpn": "38 52 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 90.0, "id": "0749"}
+{"infix": "58 + 72 - 76 - 55", "rpn": "58 72 76 - 55 - +", "depth": 4, "num_operands": 4, "num_operators": 3, "value": -1.0, "id": "0750"}
+{"infix": "69 * 77 - 41", "rpn": "69 77 41 - *", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 2484.0, "id": "0751"}
+{"infix": "74 * 40 + 80 + 99 - 35 * 26 * 41", "rpn": "74 40 80 99 + + 35 26 * - * 41 *", "depth": 6, "num_operands": 7, "num_operators": 6, "value": -2096494.0, "id": "0752"}
+{"infix": "72 + 3 - 40", "rpn": "72 3 + 40 -", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 35.0, "id": "0753"}
+{"infix": "(1 + 24 + 35 + 60) * (19 + 98 - 15) * 8", "rpn": "1 24 35 60 + + + 19 98 15 - + 8 * *", "depth": 5, "num_operands": 8, "num_operators": 7, "value": 97920.0, "id": "0754"}
+{"infix": "76 - 88 * 44 + (75 + 94) * 71 + 62 + 10", "rpn": "76 88 44 * - 75 94 + 71 * + 62 10 + +", "depth": 5, "num_operands": 8, "num_operators": 7, "value": 8275.0, "id": "0755"}
+{"infix": "(77 + 47) * (85 + 85) - (53 + 58)", "rpn": "77 47 + 85 85 + * 53 58 + -", "depth": 4, "num_operands": 6, "num_operators": 5, "value": 20969.0, "id": "0756"}
+{"infix": "34 * 57 + 9 + 93", "rpn": "34 57 9 + * 93 +", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 2337.0, "id": "0757"}
+{"infix": "87 - 21 * 31 + 29 + 61 + 10 * 15", "rpn": "87 21 31 * - 29 61 + + 10 15 * +", "depth": 5, "num_operands": 7, "num_operators": 6, "value": -324.0, "id": "0758"}
+{"infix": "4 + 48 * 8 + 39 + 21 + 52 + 34 + 63 + 98 + 70", "rpn": "4 48 8 * + 39 21 52 + + + 34 63 + 98 + 70 + +", "depth": 5, "num_operands": 10, "num_operators": 9, "value": 765.0, "id": "0759"}
+{"infix": "100 - 94 * 50 - (12 - (43 + 89) - 92 + 91) / 68", "rpn": "100 94 50 * - 12 43 89 + - 92 91 + - 68 / -", "depth": 6, "num_operands": 9, "num_operators": 8, "value": -4595.544117647059, "id": "0760"}
+{"infix": "(25 + (90 + 37 - 25) * 66) * 39", "rpn": "25 90 37 + 25 - 66 * + 39 *", "depth": 6, "num_operands": 6, "num_operators": 5, "value": 263523.0, "id": "0761"}
+{"infix": "52 + 79 - 8 - 57 * (25 + 46 + 42)", "rpn": "52 79 + 8 - 57 25 46 + 42 + * -", "depth": 5, "num_operands": 7, "num_operators": 6, "value": -6318.0, "id": "0762"}
+{"infix": "(12 * 88 + 54) * 80 * (1 - 24)", "rpn": "12 88 * 54 + 80 1 24 - * *", "depth": 4, "num_operands": 6, "num_operators": 5, "value": -2042400.0, "id": "0763"}
+{"infix": "82 + 81 - (16 + 48)", "rpn": "82 81 16 48 + - +", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 99.0, "id": "0764"}
+{"infix": "93 - (95 - 13 - 65 / (39 - (97 * 34 - 68 * 58)))", "rpn": "93 95 13 - 65 39 97 34 * 68 58 * - - / - -", "depth": 7, "num_operands": 9, "num_operators": 8, "value": 11.0948905109489, "id": "0765"}
+{"infix": "89 + 40 + 23 + 98 + 12 - (100 + 35)", "rpn": "89 40 + 23 98 12 + + 100 35 + - +", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 127.0, "id": "0766"}
+{"infix": "95 * 71 * 41", "rpn": "95 71 41 * *", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 276545.0, "id": "0767"}
+{"infix": "49 - (60 + 11 + 98) + 12", "rpn": "49 60 11 98 + + - 12 +", "depth": 5, "num_operands": 5, "num_operators": 4, "value": -108.0, "id": "0768"}
+{"infix": "68 * 19 + 53 * 85", "rpn": "68 19 53 + 85 * *", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 416160.0, "id": "0769"}
+{"infix": "35 - 82", "rpn": "35 82 -", "depth": 2, "num_operands": 2, "num_operators": 1, "value": -47.0, "id": "0770"}
+{"infix": "78 / 62 + 8 * (97 + 23 + 43 - 31 - 20 * (17 - 42))", "rpn": "78 62 / 8 97 23 43 + 31 - + 20 17 42 - * - * +", "depth": 7, "num_operands": 10, "num_operators": 9, "value": 5057.258064516129, "id": "0771"}
+{"infix": "55 + 62 + 48", "rpn": "55 62 + 48 +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 165.0, "id": "0772"}
+{"infix": "6 + 47 - 70 * (74 + 58 + 1 + 65 + 30 - 20 + 73)", "rpn": "6 47 70 - + 74 58 + 1 65 + 30 20 - + + 73 + *", "depth": 6, "num_operands": 10, "num_operators": 9, "value": -4777.0, "id": "0773"}
+{"infix": "43 + 19 + 29", "rpn": "43 19 29 + +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 91.0, "id": "0774"}
+{"infix": "(25 + 39 - 78) * (23 + 86 * 93) * 48 / (21 + 10)", "rpn": "25 39 78 - + 23 86 93 * + 48 21 10 + / * *", "depth": 5, "num_operands": 9, "num_operators": 8, "value": -173874.5806451613, "id": "0775"}
+{"infix": "76 - 71 - 62 - (31 + 78 + 30) - (10 + 84 + 9)", "rpn": "76 71 - 62 - 31 78 + 30 + - 10 84 + 9 + -", "depth": 5, "num_operands": 9, "num_operators": 8, "value": -299.0, "id": "0776"}
+{"infix": "(66 - 67) * 87 * (18 + 1)", "rpn": "66 67 - 87 * 18 1 + *", "depth": 4, "num_operands": 5, "num_operators": 4, "value": -1653.0, "id": "0777"}
+{"infix": "40 + 59 + 21 * (73 + 21) * (79 + 67)", "rpn": "40 59 21 + 73 21 + 79 67 + * * +", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 1097960.0, "id": "0778"}
+{"infix": "91 + 26 + 2 * 81 + 59 + 18 - 99", "rpn": "91 26 2 81 * + + 59 + 18 99 - +", "depth": 6, "num_operands": 7, "num_operators": 6, "value": 257.0, "id": "0779"}
+{"infix": "36 / (40 + 9)", "rpn": "36 40 9 + /", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 0.7346938775510204, "id": "0780"}
+{"infix": "58 - 1 + 84 * (62 - (79 - 59) - 2)", "rpn": "58 1 - 84 62 79 59 - - 2 - * +", "depth": 6, "num_operands": 7, "num_operators": 6, "value": 3417.0, "id": "0781"}
+{"infix": "58 + 86 + 37 + 81 + 80 + 52 * 74", "rpn": "58 86 + 37 81 + + 80 52 74 * + +", "depth": 4, "num_operands": 7, "num_operators": 6, "value": 4190.0, "id": "0782"}
+{"infix": "76 + 77 - 17 - (72 - 37) - (17 + 87 / 7)", "rpn": "76 77 + 17 72 37 - - 17 87 7 / + - -", "depth": 5, "num_operands": 8, "num_operators": 7, "value": 200.42857142857144, "id": "0783"}
+{"infix": "23 + 85 * 19 + 22 * 96 - 27 - 92", "rpn": "23 85 + 19 * 22 96 * + 27 - 92 -", "depth": 6, "num_operands": 7, "num_operators": 6, "value": 4045.0, "id": "0784"}
+{"infix": "18 - 94 - (25 + 79 * 15 + 42)", "rpn": "18 94 - 25 79 15 * 42 + + -", "depth": 5, "num_operands": 6, "num_operators": 5, "value": -1328.0, "id": "0785"}
+{"infix": "7 * 55 + 41 - 72 * (52 + 41) - 44 + 70 - 72 * 79", "rpn": "7 55 41 + 72 - * 52 41 + * 44 70 72 79 * - + -", "depth": 6, "num_operands": 10, "num_operators": 9, "value": 21198.0, "id": "0786"}
+{"infix": "11 - 31 * 90 + 13 + 52 + (63 + 53) / 27", "rpn": "11 31 90 * - 13 52 + + 63 53 + 27 / +", "depth": 5, "num_operands": 8, "num_operators": 7, "value": -2709.703703703704, "id": "0787"}
+{"infix": "49 + 77 + 30 - 70 - 12", "rpn": "49 77 + 30 70 - 12 - +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 74.0, "id": "0788"}
+{"infix": "93 + 61 + (18 + 18 * 94) * 42 * 58", "rpn": "93 61 + 18 18 94 * + 42 * + 58 *", "depth": 6, "num_operands": 7, "num_operators": 6, "value": 4174492.0, "id": "0789"}
+{"infix": "35 * 20", "rpn": "35 20 *", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 700.0, "id": "0790"}
+{"infix": "30 + 8 * (13 * 26 - 27 - 88 * 34)", "rpn": "30 8 + 13 26 27 - * 88 34 * - *", "depth": 5, "num_operands": 7, "num_operators": 6, "value": -114190.0, "id": "0791"}
+{"infix": "(65 - 63) * (12 + 44 - 43) - 55 + 74 + 90 - 39", "rpn": "65 63 - 12 44 + 43 - * 55 - 74 90 + 39 - +", "depth": 6, "num_operands": 9, "num_operators": 8, "value": 96.0, "id": "0792"}
+{"infix": "67 + 45 * (48 + 61 * 98)", "rpn": "67 45 48 61 98 * + * +", "depth": 5, "num_operands": 5, "num_operators": 4, "value": 271237.0, "id": "0793"}
+{"infix": "5 + 78 + 51 - 33", "rpn": "5 78 51 + + 33 -", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 101.0, "id": "0794"}
+{"infix": "(73 - 69) * 70 * 69", "rpn": "73 69 - 70 * 69 *", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 19320.0, "id": "0795"}
+{"infix": "14 + 97 + 3 - 54 + 78 + 4 * (15 - 53 - (19 + 87))", "rpn": "14 97 + 3 + 54 78 + - 4 15 53 - 19 87 + - * +", "depth": 5, "num_operands": 10, "num_operators": 9, "value": -594.0, "id": "0796"}
+{"infix": "25 + 90", "rpn": "25 90 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 115.0, "id": "0797"}
+{"infix": "(55 + 68) * 8 * 67", "rpn": "55 68 + 8 * 67 *", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 65928.0, "id": "0798"}
+{"infix": "72 / 19", "rpn": "72 19 /", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 3.789473684210526, "id": "0799"}
+{"infix": "90 + 60 + 44 + 88 + (52 + 56) / (36 / 54)", "rpn": "90 60 44 88 + + + 52 56 + 36 54 / / +", "depth": 5, "num_operands": 8, "num_operators": 7, "value": 444.0, "id": "0800"}
+{"infix": "(30 - 82) * 83 * 97 - 48 * (6 + 93 + 11) - 37 + 18", "rpn": "30 82 - 83 97 * * 48 - 6 93 11 + + * 37 18 + -", "depth": 6, "num_operands": 10, "num_operators": 9, "value": -46057055.0, "id": "0801"}
+{"infix": "51 - 34", "rpn": "51 34 -", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 17.0, "id": "0802"}
+{"infix": "58 + 49 * 82 + 64 - (77 - (45 + 52)) * 75 + 35 / 46", "rpn": "58 49 82 * 64 + + 77 45 52 + - 75 * - 35 46 / +", "depth": 6, "num_operands": 10, "num_operators": 9, "value": 5640.760869565217, "id": "0803"}
+{"infix": "98 * 33 + 53", "rpn": "98 33 * 53 +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 3287.0, "id": "0804"}
+{"infix": "66 - 88 * 52 - (11 + 36 / (32 * 13) - (73 - 41))", "rpn": "66 88 52 * - 11 36 32 13 * / 73 41 - - + -", "depth": 6, "num_operands": 9, "num_operators": 8, "value": -4489.086538461538, "id": "0805"}
+{"infix": "5 * 35 * 9", "rpn": "5 35 9 * *", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 1575.0, "id": "0806"}
+{"infix": "68 + 16 * 5 - 39 * 50", "rpn": "68 16 5 39 50 * - * +", "depth": 5, "num_operands": 5, "num_operators": 4, "value": -31052.0, "id": "0807"}
+{"infix": "5 * 59 + 60 * 21 * 1 - 55 - 40", "rpn": "5 59 * 60 21 * 1 * 55 40 - - +", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 1540.0, "id": "0808"}
+{"infix": "(32 + 53 + 22) / 32 - (72 + 68 - (31 + 4 + 7))", "rpn": "32 53 22 + + 32 72 68 + 31 4 7 + + - - /", "depth": 6, "num_operands": 9, "num_operators": 8, "value": -1.621212121212121, "id": "0809"}
+{"infix": "4 - 97 + 58 * 66 / (84 * (2 - 29))", "rpn": "4 97 - 58 66 84 2 29 - * / * +", "depth": 6, "num_operands": 7, "num_operators": 6, "value": -94.68783068783068, "id": "0810"}
+{"infix": "82 / (85 * 99 + 71)", "rpn": "82 85 99 * 71 + /", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 0.009662974310629272, "id": "0811"}
+{"infix": "92 - 40", "rpn": "92 40 -", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 52.0, "id": "0812"}
+{"infix": "34 + 56", "rpn": "34 56 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 90.0, "id": "0813"}
+{"infix": "18 - (88 + 91) + 58 - 87 + 11 + 12 - 21 * 86", "rpn": "18 88 91 + - 58 87 - 11 + 12 21 86 * - + +", "depth": 5, "num_operands": 9, "num_operators": 8, "value": -1973.0, "id": "0814"}
+{"infix": "44 + 92 - 52", "rpn": "44 92 + 52 -", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 84.0, "id": "0815"}
+{"infix": "28 + 47 + 31 + 54 + 77", "rpn": "28 47 + 31 54 77 + + +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 237.0, "id": "0816"}
+{"infix": "(14 - 13) * (75 - 3) * 1 + 98 + 23", "rpn": "14 13 - 75 3 - * 1 * 98 23 + +", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 193.0, "id": "0817"}
+{"infix": "29 * (83 - 77) * 88 * 92 - (66 + 33 + 1)", "rpn": "29 83 77 - 88 92 * * * 66 33 + 1 + -", "depth": 5, "num_operands": 8, "num_operators": 7, "value": 1408604.0, "id": "0818"}
+{"infix": "79 + 33 + 63 + 48", "rpn": "79 33 + 63 + 48 +", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 223.0, "id": "0819"}
+{"infix": "100 + 67 - 93", "rpn": "100 67 93 - +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 74.0, "id": "0820"}
+{"infix": "34 + 84 - 60", "rpn": "34 84 60 - +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 58.0, "id": "0821"}
+{"infix": "93 + 81 + 35 + 79 + 47", "rpn": "93 81 35 + + 79 47 + +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 335.0, "id": "0822"}
+{"infix": "26 + 22 * (79 + 70) * (73 + 8 + 20 + 26 + 38)", "rpn": "26 22 + 79 70 + * 73 8 20 26 + + 38 + + *", "depth": 6, "num_operands": 9, "num_operators": 8, "value": 1180080.0, "id": "0823"}
+{"infix": "69 + 69 - 95 - 58", "rpn": "69 69 95 - + 58 -", "depth": 4, "num_operands": 4, "num_operators": 3, "value": -15.0, "id": "0824"}
+{"infix": "100 - (64 + 86)", "rpn": "100 64 86 + -", "depth": 3, "num_operands": 3, "num_operators": 2, "value": -50.0, "id": "0825"}
+{"infix": "4 - (29 - (89 + 31 + 37)) - 20 - 77 * 78 + 90", "rpn": "4 29 89 31 + 37 + - - 20 - 77 78 * 90 + -", "depth": 7, "num_operands": 9, "num_operators": 8, "value": -5984.0, "id": "0826"}
+{"infix": "89 * 7 - 85", "rpn": "89 7 * 85 -", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 538.0, "id": "0827"}
+{"infix": "3 * 67 + 45 - (85 * 27 - 48)", "rpn": "3 67 * 45 + 85 27 * 48 - -", "depth": 4, "num_operands": 6, "num_operators": 5, "value": -2001.0, "id": "0828"}
+{"infix": "93 + (26 + 64) * 54 - 14 + 85 - 22", "rpn": "93 26 64 + 54 * 14 - + 85 22 - +", "depth": 6, "num_operands": 7, "num_operators": 6, "value": 5002.0, "id": "0829"}
+{"infix": "91 + 7 + 100 + 54 * 38 + 95 / 47", "rpn": "91 7 + 100 54 38 95 47 / + * + +", "depth": 6, "num_operands": 7, "num_operators": 6, "value": 2359.148936170213, "id": "0830"}
+{"infix": "(51 + 50) * 59", "rpn": "51 50 + 59 *", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 5959.0, "id": "0831"}
+{"infix": "90 + 90 + 19 - 99 - 48", "rpn": "90 90 19 99 - + 48 - +", "depth": 5, "num_operands": 5, "num_operators": 4, "value": 52.0, "id": "0832"}
+{"infix": "20 + 23 - 13 * (49 - 8 - 24 - 56 + 5)", "rpn": "20 23 + 13 49 8 - 24 - 56 5 + - * -", "depth": 6, "num_operands": 8, "num_operators": 7, "value": 615.0, "id": "0833"}
+{"infix": "95 - (29 + 78) * 10 + 37 + 57 - 25 - (45 - 73 + 4)", "rpn": "95 29 78 + 10 37 + * - 57 25 - + 45 73 - 4 + -", "depth": 6, "num_operands": 10, "num_operators": 9, "value": -4878.0, "id": "0834"}
+{"infix": "16 + 71", "rpn": "16 71 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 87.0, "id": "0835"}
+{"infix": "15 - 36 - 34 - 84 - (35 - 97) * 12", "rpn": "15 36 34 - 84 - 35 97 - 12 * - -", "depth": 5, "num_operands": 7, "num_operators": 6, "value": -647.0, "id": "0836"}
+{"infix": "9 - 69 - 65", "rpn": "9 69 - 65 -", "depth": 3, "num_operands": 3, "num_operators": 2, "value": -125.0, "id": "0837"}
+{"infix": "41 * 92", "rpn": "41 92 *", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 3772.0, "id": "0838"}
+{"infix": "11 + 45", "rpn": "11 45 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 56.0, "id": "0839"}
+{"infix": "68 + (77 - 96) * 82 + 35 + 94 + 95 + 40 + 87", "rpn": "68 77 96 - 82 * + 35 + 94 95 + + 40 87 + +", "depth": 7, "num_operands": 9, "num_operators": 8, "value": -1139.0, "id": "0840"}
+{"infix": "(39 - 75 + 6) * 80 + 81 + 29 + 3 * 21", "rpn": "39 75 - 6 + 80 81 + * 29 + 3 21 * +", "depth": 6, "num_operands": 8, "num_operators": 7, "value": -4738.0, "id": "0841"}
+{"infix": "21 + 96 + 25 - (63 - (81 + 80)) + 44 - 17", "rpn": "21 96 25 + + 63 81 80 + - - 44 17 - +", "depth": 5, "num_operands": 8, "num_operators": 7, "value": 267.0, "id": "0842"}
+{"infix": "92 - (10 + 1) + 65 - 48 - 2", "rpn": "92 10 1 + - 65 48 - + 2 -", "depth": 5, "num_operands": 6, "num_operators": 5, "value": 96.0, "id": "0843"}
+{"infix": "86 + 20 + 54", "rpn": "86 20 + 54 +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 160.0, "id": "0844"}
+{"infix": "(10 + 71) * 60 * 100 * 33", "rpn": "10 71 + 60 100 * 33 * *", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 16038000.0, "id": "0845"}
+{"infix": "13 * 61 + 31 - (77 + 45 + 6 + 74 + 83)", "rpn": "13 61 * 31 + 77 45 6 + + 74 83 + + -", "depth": 5, "num_operands": 8, "num_operators": 7, "value": 539.0, "id": "0846"}
+{"infix": "84 + 41 + 72 + 53 - 45", "rpn": "84 41 + 72 53 45 - + +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 205.0, "id": "0847"}
+{"infix": "46 * 83 * 96 + 61 * 26 + 14 + 50", "rpn": "46 83 * 96 * 61 26 * + 14 50 + +", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 368178.0, "id": "0848"}
+{"infix": "49 + 93 + 56 + 85 + 52", "rpn": "49 93 56 + 85 + + 52 +", "depth": 5, "num_operands": 5, "num_operators": 4, "value": 335.0, "id": "0849"}
+{"infix": "90 + 11", "rpn": "90 11 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 101.0, "id": "0850"}
+{"infix": "27 + 34 * 54 - 24", "rpn": "27 34 54 * 24 - +", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 1839.0, "id": "0851"}
+{"infix": "95 + 44 + 7 + 85", "rpn": "95 44 7 85 + + +", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 231.0, "id": "0852"}
+{"infix": "(65 + 63) * 67", "rpn": "65 63 + 67 *", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 8576.0, "id": "0853"}
+{"infix": "9 + 83 + 29 - 13 - (81 + 18) + 59", "rpn": "9 83 + 29 13 - 81 18 + - 59 + +", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 68.0, "id": "0854"}
+{"infix": "63 + 35 + 17 + 51", "rpn": "63 35 + 17 51 + +", "depth": 3, "num_operands": 4, "num_operators": 3, "value": 166.0, "id": "0855"}
+{"infix": "57 + 18 - 86 * 71 + 10", "rpn": "57 18 + 86 - 71 10 + *", "depth": 4, "num_operands": 5, "num_operators": 4, "value": -891.0, "id": "0856"}
+{"infix": "62 + 45 - 100", "rpn": "62 45 100 - +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 7.0, "id": "0857"}
+{"infix": "11 + 75 - (94 - (88 - 6)) / (22 / 21) + 41", "rpn": "11 75 + 94 88 6 - - 22 21 / / 41 + -", "depth": 6, "num_operands": 8, "num_operators": 7, "value": 33.54545454545455, "id": "0858"}
+{"infix": "64 - (20 * 23 - 52) * (89 + 85)", "rpn": "64 20 23 * 52 - 89 85 + * -", "depth": 5, "num_operands": 6, "num_operators": 5, "value": -70928.0, "id": "0859"}
+{"infix": "(34 + 18) * 97 * (21 + 44) - (24 + 87) + 1 + 21", "rpn": "34 18 + 97 21 44 + * * 24 87 + - 1 21 + +", "depth": 6, "num_operands": 9, "num_operators": 8, "value": 327771.0, "id": "0860"}
+{"infix": "44 * 38 - (18 + 85 * (33 - 41)) * (17 + 77 + 74 + 79)", "rpn": "44 38 * 18 85 33 41 - * + 17 77 + 74 79 + + * -", "depth": 6, "num_operands": 10, "num_operators": 9, "value": 165186.0, "id": "0861"}
+{"infix": "74 + (2 - 57) * 31 + 15", "rpn": "74 2 57 - 31 * 15 + +", "depth": 5, "num_operands": 5, "num_operators": 4, "value": -1616.0, "id": "0862"}
+{"infix": "73 * 54 + 43 + 46 + (25 + 31) * 24 - 28", "rpn": "73 54 * 43 + 46 + 25 31 + 24 * + 28 -", "depth": 6, "num_operands": 8, "num_operators": 7, "value": 5347.0, "id": "0863"}
+{"infix": "15 - 84", "rpn": "15 84 -", "depth": 2, "num_operands": 2, "num_operators": 1, "value": -69.0, "id": "0864"}
+{"infix": "65 + 36 + 58", "rpn": "65 36 + 58 +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 159.0, "id": "0865"}
+{"infix": "13 - 39 + 20", "rpn": "13 39 - 20 +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": -6.0, "id": "0866"}
+{"infix": "62 + 76", "rpn": "62 76 +", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 138.0, "id": "0867"}
+{"infix": "74 - 9 + 56 + 41 + 68 * 64 + 5 + 46 + 74 + 90", "rpn": "74 9 - 56 41 + + 68 64 * + 5 46 + 74 90 + + +", "depth": 5, "num_operands": 10, "num_operators": 9, "value": 4729.0, "id": "0868"}
+{"infix": "81 * 59 * 89", "rpn": "81 59 89 * *", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 425331.0, "id": "0869"}
+{"infix": "(65 - (77 - (16 - (20 + 65))) - (63 + 46)) * 5", "rpn": "65 77 16 20 65 + - - - 63 46 + - 5 *", "depth": 7, "num_operands": 8, "num_operators": 7, "value": -950.0, "id": "0870"}
+{"infix": "82 - (83 - (65 - (6 - 46 * 8) + 26)) + 31 + 84", "rpn": "82 83 65 6 46 8 * - - 26 + - - 31 84 + +", "depth": 8, "num_operands": 9, "num_operators": 8, "value": 567.0, "id": "0871"}
+{"infix": "86 + 28 - 68", "rpn": "86 28 68 - +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 46.0, "id": "0872"}
+{"infix": "(31 / 50 + 66) * (17 / 46 + 22 + 49 - (72 - 15))", "rpn": "31 50 / 66 + 17 46 / 22 49 72 15 - - + + *", "depth": 6, "num_operands": 9, "num_operators": 8, "value": 957.3004347826088, "id": "0873"}
+{"infix": "74 - (20 / 48 + 74) + 56 + 55 + 77", "rpn": "74 20 48 / 74 + - 56 55 + + 77 +", "depth": 6, "num_operands": 7, "num_operators": 6, "value": 187.58333333333331, "id": "0874"}
+{"infix": "66 - 95 + 42 + 80 + 93 - 99 - 4 - 61 * 37", "rpn": "66 95 - 42 80 + 93 99 - + 4 - 61 37 * - +", "depth": 6, "num_operands": 9, "num_operators": 8, "value": -2174.0, "id": "0875"}
+{"infix": "51 + 97 - 5 * 52 + 49 - 96 / 64 - (15 + 71)", "rpn": "51 97 5 52 * - 49 96 64 / - 15 71 + - + +", "depth": 6, "num_operands": 9, "num_operators": 8, "value": -150.5, "id": "0876"}
+{"infix": "41 * 24 * (17 - 99 + 17) * (38 + 59 + 95) * 31", "rpn": "41 24 * 17 99 - 17 + 38 59 + 95 + 31 * * *", "depth": 6, "num_operands": 9, "num_operators": 8, "value": -380689920.0, "id": "0877"}
+{"infix": "64 + 56 + 63", "rpn": "64 56 + 63 +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 183.0, "id": "0878"}
+{"infix": "52 + 66 + 99", "rpn": "52 66 + 99 +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 217.0, "id": "0879"}
+{"infix": "77 + 69 - (83 / 95 + 47)", "rpn": "77 69 + 83 95 / 47 + -", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 98.1263157894737, "id": "0880"}
+{"infix": "42 - 100 + 54 + 90 + 67", "rpn": "42 100 - 54 90 + + 67 +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 153.0, "id": "0881"}
+{"infix": "7 + 87 * 82 * 19", "rpn": "7 87 82 19 * * +", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 135553.0, "id": "0882"}
+{"infix": "97 * (17 - 56) - (46 - 1)", "rpn": "97 17 56 - * 46 1 - -", "depth": 4, "num_operands": 5, "num_operators": 4, "value": -3828.0, "id": "0883"}
+{"infix": "74 + 15 + (54 + 44) * 13 + 99 + 37 - 55 + 26 + 63", "rpn": "74 15 + 54 44 + 13 * + 99 + 37 55 - 26 63 + + +", "depth": 6, "num_operands": 10, "num_operators": 9, "value": 1533.0, "id": "0884"}
+{"infix": "10 - 35 + 56 + 13 - 55", "rpn": "10 35 - 56 + 13 + 55 -", "depth": 5, "num_operands": 5, "num_operators": 4, "value": -11.0, "id": "0885"}
+{"infix": "28 * 29 + 16 + 91 * (53 - 8 * 72 + 82) * 34 - 14", "rpn": "28 29 * 16 + 91 53 8 72 * 82 + - * + 34 * 14 -", "depth": 8, "num_operands": 10, "num_operators": 9, "value": -1843732.0, "id": "0886"}
+{"infix": "17 * 32 * (59 / 63 + 79) + 16 - 80", "rpn": "17 32 * 59 63 / 79 + * 16 80 - +", "depth": 5, "num_operands": 7, "num_operators": 6, "value": 43421.46031746032, "id": "0887"}
+{"infix": "11 + 18 + 82", "rpn": "11 18 + 82 +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 111.0, "id": "0888"}
+{"infix": "73 + 30 - (13 + 87) - 32 * 54", "rpn": "73 30 13 87 + - 32 - + 54 *", "depth": 6, "num_operands": 6, "num_operators": 5, "value": -1566.0, "id": "0889"}
+{"infix": "22 - 26 + 6 + 60 - 69", "rpn": "22 26 - 6 60 + 69 - +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": -7.0, "id": "0890"}
+{"infix": "73 * 45 * 14 - 5 + 50 + 57 + 43 - 38 - 31 / 27", "rpn": "73 45 * 14 * 5 50 57 + 43 + + - 38 - 31 27 / -", "depth": 7, "num_operands": 10, "num_operators": 9, "value": 45795.851851851854, "id": "0891"}
+{"infix": "49 - 97 + 78 - 36", "rpn": "49 97 - 78 36 - +", "depth": 3, "num_operands": 4, "num_operators": 3, "value": -6.0, "id": "0892"}
+{"infix": "45 + 26 * 52 * 28 - (80 + 22 * 94 - 47 + 91 - 22)", "rpn": "45 26 52 * + 28 * 80 22 94 * 47 - + 91 + 22 - -", "depth": 7, "num_operands": 10, "num_operators": 9, "value": 36946.0, "id": "0893"}
+{"infix": "41 / 46", "rpn": "41 46 /", "depth": 2, "num_operands": 2, "num_operators": 1, "value": 0.8913043478260869, "id": "0894"}
+{"infix": "83 + 86 - 86", "rpn": "83 86 86 - +", "depth": 3, "num_operands": 3, "num_operators": 2, "value": 83.0, "id": "0895"}
+{"infix": "87 - 100 * 76 + 15 - 67 + 81 - 42", "rpn": "87 100 76 * - 15 + 67 - 81 42 - +", "depth": 6, "num_operands": 7, "num_operators": 6, "value": -7526.0, "id": "0896"}
+{"infix": "83 / 100 + 88 * 11 / 53", "rpn": "83 100 / 88 11 53 / * +", "depth": 4, "num_operands": 5, "num_operators": 4, "value": 19.094150943396226, "id": "0897"}
+{"infix": "86 + 66 + 7 / 75", "rpn": "86 66 + 7 75 / +", "depth": 3, "num_operands": 4, "num_operators": 3, "value": 152.09333333333333, "id": "0898"}
+{"infix": "15 - 20 + 29 - 79", "rpn": "15 20 29 79 - + -", "depth": 4, "num_operands": 4, "num_operators": 3, "value": 45.0, "id": "0899"}
+{"infix": "11 + 25 * 51 - 58 - (68 + 93 + 76 - 92) + 9", "rpn": "11 25 51 * 58 - + 68 93 + 76 + 92 - - 9 +", "depth": 6, "num_operands": 9, "num_operators": 8, "value": 1092.0, "id": "0900"}
