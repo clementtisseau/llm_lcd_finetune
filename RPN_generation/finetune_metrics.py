@@ -134,7 +134,7 @@ def main():
     import argparse
 
     parser = argparse.ArgumentParser(description="Plot training/eval metrics from JSONL (saves PNGs).")
-    parser.add_argument("--metrics", type=Path, default="/scratch/ctisseau/finetuned-models/Qwen-Qwen2.5-0.5B_classical_sft_c5c0c8e1a308a4b6f52a/metrics.jsonl", help="Path to metrics.jsonl")
+    parser.add_argument("--metrics", type=Path, default="/scratch/ctisseau/finetuned-models/Qwen-Qwen3-0.6B_classical_sft_f81deac2c36c19f08996/metrics.jsonl", help="Path to metrics.jsonl")
     parser.add_argument("--outdir", type=Path, default="/home/ctisseau/llm_lcd_finetune/RPN_generation/metrics", help="Directory to save PNGs")
     parser.add_argument("--smooth", type=int, default=0, help="Rolling window (in steps) for smoothing; 0/1 disables")
     parser.add_argument("--dpi", type=int, default=150, help="PNG DPI (default 150)")

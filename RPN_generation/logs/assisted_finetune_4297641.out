@@ -1,0 +1,14 @@
+==========================================
+SLURM_JOB_ID = 4297641
+SLURM_JOB_NODELIST = gpu014
+==========================================
+Job started on Mon Oct 27 23:55:52 CET 2025
+Loading dataset
+Dataset loaded
+No checkpoint found — starting from base model
+CLM Tokenizer and Model loaded
+Logits Processor created
+OOM when trying bs=32, trying smaller…
+fits on GPU: micro_batch_size = 16
+Epoch 1, loss over the (real) batch 1: 0.7381, ppl: 2.09
+Job finished on Mon Oct 27 23:56:36 CET 2025

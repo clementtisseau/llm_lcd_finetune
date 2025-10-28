@@ -45,9 +45,9 @@ def finetune(
     print("Dataset loaded")
 
     max_memory3 = {
-        0: "40GB",
-        1: "40GB",
-        2: "40GB"
+        0: "7GB",
+        1: "7GB",
+        2: "7GB"
     }
 
     # Load Model and Tokenizer
@@ -60,7 +60,8 @@ def finetune(
     eval_input_ids, eval_attention_mask, eval_labels = prepare_encodings(tokenizer, eval_dataset)
 
     # Find the perfect micro_batch_size
-    micro_batch_size = find_micro_batch_size(model, max_length)
+    # micro_batch_size = find_micro_batch_size(model, max_length)
+    micro_batch_size = 8
     torch.cuda.empty_cache()    # Is this necessary here? 
 
     if batch_size % micro_batch_size != 0:
@@ -221,6 +222,7 @@ def finetune(
                 window_mb = 0
 
                 if eval_every and (global_optimizer_step % eval_every == 0):
+                    # Maybe here we shouldn't use the evaluate function because it computes unbiased logits, but we should create a evaluate_lcd or evaluate_biased
                     eval_loss, eval_ppl, eval_tokens = evaluate(model, eval_dataloader, loss_fct, first_device)
                     log_jsonl(metrics_path,
                             ts=time.time(),
@@ -320,7 +322,7 @@ if __name__ == "__main__":
 
 
     parser = argparse.ArgumentParser(description="Fine-tune a LLM.")
-    parser.add_argument("--model_name", type=str, default="Qwen/Qwen3-1.7B")
+    parser.add_argument("--model_name", type=str, default="Qwen/Qwen3-0.6B")
     parser.add_argument("--train_path", type=Path, default=DATA)
     parser.add_argument("--train_data_size", type=int, default=None,
                         help="Number of samples of the whole dataset to train on.")

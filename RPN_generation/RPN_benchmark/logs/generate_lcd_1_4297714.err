@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "/home/ctisseau/llm_lcd_finetune/RPN_generation/RPN_benchmark/generate_lcd.py", line 98, in <module>
+    import constraintlm as clm
+  File "/home/ctisseau/llm_lcd_finetune/ConstraintLM/constraintlm/__init__.py", line 9, in <module>
+    from .processors.structured import CLMLogitsProcessor
+  File "/home/ctisseau/llm_lcd_finetune/ConstraintLM/constraintlm/processors/structured.py", line 5, in <module>
+    from outlines.processors import OutlinesLogitsProcessor, GuideLogitsProcessor
+  File "/home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages/outlines/__init__.py", line 5, in <module>
+    import outlines.processors
+  File "/home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages/outlines/processors/__init__.py", line 3, in <module>
+    from .structured import (
+  File "/home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages/outlines/processors/structured.py", line 37, in <module>
+    from outlines.processors.guide import (
+  File "/home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages/outlines/processors/guide.py", line 121, in <module>
+    @cache()
+     ^^^^^^^
+  File "/home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages/outlines/caching.py", line 109, in decorator
+    memory = get_cache()
+             ^^^^^^^^^^^
+  File "/home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages/outlines/caching.py", line 79, in get_cache
+    if outlines_version != memory.get("__version__"):
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ctisseau/miniconda3/envs/clm_finetune/lib/python3.11/site-packages/diskcache/core.py", line 1165, in get
+    rows = self._sql(select, (db_key, raw, time.time())).fetchall()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: database disk image is malformed

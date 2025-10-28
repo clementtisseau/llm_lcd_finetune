@@ -1,0 +1,287 @@
+==========================================
+SLURM_JOB_ID = 4297644
+SLURM_JOB_NODELIST = gpu014
+==========================================
+Job started on Tue Oct 28 00:02:22 CET 2025
+Loading dataset
+Dataset loaded
+No checkpoint found — starting from base model
+CLM Tokenizer and Model loaded
+Logits Processor created
+Epoch 1, loss over the (real) batch 1: 0.7381, ppl: 2.09
+Epoch 1, loss over the (real) batch 2: 0.7543, ppl: 2.13
+Epoch 1, loss over the (real) batch 3: 0.5922, ppl: 1.81
+Epoch 1, loss over the (real) batch 4: 0.7213, ppl: 2.06
+Epoch 1, loss over the (real) batch 5: 0.6414, ppl: 1.90
+Epoch 1, loss over the (real) batch 6: 0.6451, ppl: 1.91
+Epoch 1, loss over the (real) batch 7: 0.5082, ppl: 1.66
+Epoch 1, loss over the (real) batch 8: 0.5459, ppl: 1.73
+Epoch 1, loss over the (real) batch 9: 0.4357, ppl: 1.55
+Epoch 1, loss over the (real) batch 10: 0.4624, ppl: 1.59
+Epoch 1, loss over the (real) batch 11: 0.4985, ppl: 1.65
+Epoch 1, loss over the (real) batch 12: 0.4169, ppl: 1.52
+Epoch 1, loss over the (real) batch 13: 0.4283, ppl: 1.53
+Epoch 1, loss over the (real) batch 14: 0.3448, ppl: 1.41
+Epoch 1, loss over the (real) batch 15: 0.3286, ppl: 1.39
+Epoch 1, loss over the (real) batch 16: 0.3325, ppl: 1.39
+[EVAL] step 16: loss/token=0.3298, ppl=1.39
+Epoch 1, loss over the (real) batch 17: 0.3275, ppl: 1.39
+Epoch 1, loss over the (real) batch 18: 0.2968, ppl: 1.35
+Epoch 1, loss over the (real) batch 19: 0.3249, ppl: 1.38
+Epoch 1, loss over the (real) batch 20: 0.2811, ppl: 1.32
+Epoch 1, loss over the (real) batch 21: 0.3141, ppl: 1.37
+Epoch 1, loss over the (real) batch 22: 0.3174, ppl: 1.37
+Epoch 1, loss over the (real) batch 23: 0.2818, ppl: 1.33
+Epoch 1, loss over the (real) batch 24: 0.3055, ppl: 1.36
+Epoch 1, loss over the (real) batch 25: 0.2373, ppl: 1.27
+Epoch 1, loss over the (real) batch 26: 0.3058, ppl: 1.36
+Epoch 1, loss over the (real) batch 27: 0.2242, ppl: 1.25
+Epoch 1, loss over the (real) batch 28: 0.2433, ppl: 1.28
+Epoch 1, loss over the (real) batch 29: 0.2568, ppl: 1.29
+Epoch 1, loss over the (real) batch 30: 0.1570, ppl: 1.17
+Epoch 1, loss over the (real) batch 31: 0.2507, ppl: 1.28
+Epoch 1, loss over the (real) batch 32: 0.2458, ppl: 1.28
+[EVAL] step 32: loss/token=0.1913, ppl=1.21
+Epoch 1, loss over the (real) batch 33: 0.1759, ppl: 1.19
+Epoch 1, loss over the (real) batch 34: 0.2273, ppl: 1.26
+Epoch 1, loss over the (real) batch 35: 0.2162, ppl: 1.24
+Epoch 1, loss over the (real) batch 36: 0.2213, ppl: 1.25
+Epoch 1, loss over the (real) batch 37: 0.1721, ppl: 1.19
+Epoch 1, loss over the (real) batch 38: 0.1894, ppl: 1.21
+Epoch 1, loss over the (real) batch 39: 0.1907, ppl: 1.21
+Epoch 1, loss over the (real) batch 40: 0.2419, ppl: 1.27
+Epoch 1, loss over the (real) batch 41: 0.1828, ppl: 1.20
+Epoch 1, loss over the (real) batch 42: 0.1917, ppl: 1.21
+Epoch 1, loss over the (real) batch 43: 0.1738, ppl: 1.19
+Epoch 1, loss over the (real) batch 44: 0.1824, ppl: 1.20
+Epoch 1, loss over the (real) batch 45: 0.1825, ppl: 1.20
+Epoch 1, loss over the (real) batch 46: 0.1825, ppl: 1.20
+Epoch 1, loss over the (real) batch 47: 0.1804, ppl: 1.20
+Epoch 1, loss over the (real) batch 48: 0.1665, ppl: 1.18
+[EVAL] step 48: loss/token=0.1558, ppl=1.17
+Epoch 1, loss over the (real) batch 49: 0.1932, ppl: 1.21
+Epoch 1, loss over the (real) batch 50: 0.1577, ppl: 1.17
+Epoch 1, loss over the (real) batch 51: 0.1685, ppl: 1.18
+Epoch 1, loss over the (real) batch 52: 0.1824, ppl: 1.20
+Epoch 1, loss over the (real) batch 53: 0.1742, ppl: 1.19
+Epoch 1, loss over the (real) batch 54: 0.1542, ppl: 1.17
+Epoch 1, loss over the (real) batch 55: 0.1594, ppl: 1.17
+Epoch 1, loss over the (real) batch 56: 0.1879, ppl: 1.21
+Epoch 1, loss over the (real) batch 57: 0.1794, ppl: 1.20
+Epoch 1, loss over the (real) batch 58: 0.1487, ppl: 1.16
+Epoch 1, loss over the (real) batch 59: 0.1628, ppl: 1.18
+Epoch 1, loss over the (real) batch 60: 0.1627, ppl: 1.18
+Epoch 1, loss over the (real) batch 61: 0.1435, ppl: 1.15
+Epoch 1, loss over the (real) batch 62: 0.1636, ppl: 1.18
+Epoch 1, loss over the (real) batch 63: 0.1704, ppl: 1.19
+model saved as /scratch/ctisseau/finetuned-models/Qwen-Qwen3-0.6B_lcd_sft_710a1466dd373f65969b/checkpoint-00000064
+Epoch 1, loss over the (real) batch 64: 0.1247, ppl: 1.13
+[EVAL] step 64: loss/token=0.1455, ppl=1.16
+Epoch 1, loss over the (real) batch 65: 0.1642, ppl: 1.18
+Epoch 1, loss over the (real) batch 66: 0.1594, ppl: 1.17
+Epoch 1, loss over the (real) batch 67: 0.1638, ppl: 1.18
+Epoch 1, loss over the (real) batch 68: 0.1664, ppl: 1.18
+Epoch 1, loss over the (real) batch 69: 0.1523, ppl: 1.16
+Epoch 1, loss over the (real) batch 70: 0.1429, ppl: 1.15
+Epoch 1, loss over the (real) batch 71: 0.1306, ppl: 1.14
+Epoch 1, loss over the (real) batch 72: 0.1645, ppl: 1.18
+Epoch 1, loss over the (real) batch 73: 0.1548, ppl: 1.17
+Epoch 1, loss over the (real) batch 74: 0.1628, ppl: 1.18
+Epoch 1, loss over the (real) batch 75: 0.1435, ppl: 1.15
+Epoch 1, loss over the (real) batch 76: 0.1486, ppl: 1.16
+Epoch 1, loss over the (real) batch 77: 0.1479, ppl: 1.16
+Epoch 1, loss over the (real) batch 78: 0.1032, ppl: 1.11
+Epoch 1, loss over the (real) batch 79: 0.1245, ppl: 1.13
+Epoch 1, loss over the (real) batch 80: 0.1244, ppl: 1.13
+[EVAL] step 80: loss/token=0.1341, ppl=1.14
+Epoch 1, loss over the (real) batch 81: 0.1559, ppl: 1.17
+Epoch 1, loss over the (real) batch 82: 0.1228, ppl: 1.13
+Epoch 1, loss over the (real) batch 83: 0.1591, ppl: 1.17
+Epoch 1, loss over the (real) batch 84: 0.1368, ppl: 1.15
+Epoch 1, loss over the (real) batch 85: 0.1526, ppl: 1.16
+Epoch 1, loss over the (real) batch 86: 0.1813, ppl: 1.20
+Epoch 1, loss over the (real) batch 87: 0.1097, ppl: 1.12
+Epoch 1, loss over the (real) batch 88: 0.1154, ppl: 1.12
+Epoch 1, loss over the (real) batch 89: 0.1249, ppl: 1.13
+Epoch 1, loss over the (real) batch 90: 0.1315, ppl: 1.14
+Epoch 1, loss over the (real) batch 91: 0.1019, ppl: 1.11
+Epoch 1, loss over the (real) batch 92: 0.1336, ppl: 1.14
+Epoch 1, loss over the (real) batch 93: 0.1213, ppl: 1.13
+Epoch 1, loss over the (real) batch 94: 0.1343, ppl: 1.14
+Epoch 1, loss over the (real) batch 95: 0.1370, ppl: 1.15
+Epoch 1, loss over the (real) batch 96: 0.1423, ppl: 1.15
+[EVAL] step 96: loss/token=0.1231, ppl=1.13
+Epoch 1, loss over the (real) batch 97: 0.1036, ppl: 1.11
+Epoch 1, loss over the (real) batch 98: 0.1481, ppl: 1.16
+Epoch 1, loss over the (real) batch 99: 0.1247, ppl: 1.13
+Epoch 1, loss over the (real) batch 100: 0.1437, ppl: 1.15
+Epoch 1, loss over the (real) batch 101: 0.1174, ppl: 1.12
+Epoch 1, loss over the (real) batch 102: 0.1436, ppl: 1.15
+Epoch 1, loss over the (real) batch 103: 0.1160, ppl: 1.12
+Epoch 1, loss over the (real) batch 104: 0.1337, ppl: 1.14
+Epoch 1, loss over the (real) batch 105: 0.1427, ppl: 1.15
+Epoch 1, loss over the (real) batch 106: 0.1116, ppl: 1.12
+Epoch 1, loss over the (real) batch 107: 0.1295, ppl: 1.14
+Epoch 1, loss over the (real) batch 108: 0.1184, ppl: 1.13
+Epoch 1, loss over the (real) batch 109: 0.1283, ppl: 1.14
+Epoch 1, loss over the (real) batch 110: 0.0930, ppl: 1.10
+Epoch 1, loss over the (real) batch 111: 0.1407, ppl: 1.15
+Epoch 1, loss over the (real) batch 112: 0.1377, ppl: 1.15
+[EVAL] step 112: loss/token=0.1173, ppl=1.12
+Epoch 1, loss over the (real) batch 113: 0.1300, ppl: 1.14
+Epoch 1, loss over the (real) batch 114: 0.1480, ppl: 1.16
+Epoch 1, loss over the (real) batch 115: 0.1128, ppl: 1.12
+Epoch 1, loss over the (real) batch 116: 0.1191, ppl: 1.13
+Epoch 1, loss over the (real) batch 117: 0.1226, ppl: 1.13
+Epoch 1, loss over the (real) batch 118: 0.1425, ppl: 1.15
+Epoch 1, loss over the (real) batch 119: 0.1058, ppl: 1.11
+Epoch 1, loss over the (real) batch 120: 0.1340, ppl: 1.14
+Epoch 1, loss over the (real) batch 121: 0.1223, ppl: 1.13
+Epoch 1, loss over the (real) batch 122: 0.1392, ppl: 1.15
+Epoch 1, loss over the (real) batch 123: 0.1480, ppl: 1.16
+Epoch 1, loss over the (real) batch 124: 0.1214, ppl: 1.13
+Epoch 1, loss over the (real) batch 125: 0.1162, ppl: 1.12
+Epoch 1, loss over the (real) batch 126: 0.1444, ppl: 1.16
+Epoch 1, loss over the (real) batch 127: 0.1006, ppl: 1.11
+model saved as /scratch/ctisseau/finetuned-models/Qwen-Qwen3-0.6B_lcd_sft_710a1466dd373f65969b/checkpoint-00000128
+Epoch 1, loss over the (real) batch 128: 0.1155, ppl: 1.12
+[EVAL] step 128: loss/token=0.1128, ppl=1.12
+Epoch 2, loss over the (real) batch 1: 0.1239, ppl: 1.13
+Epoch 2, loss over the (real) batch 2: 0.1332, ppl: 1.14
+Epoch 2, loss over the (real) batch 3: 0.1102, ppl: 1.12
+Epoch 2, loss over the (real) batch 4: 0.1258, ppl: 1.13
+Epoch 2, loss over the (real) batch 5: 0.1284, ppl: 1.14
+Epoch 2, loss over the (real) batch 6: 0.1122, ppl: 1.12
+Epoch 2, loss over the (real) batch 7: 0.1285, ppl: 1.14
+Epoch 2, loss over the (real) batch 8: 0.1364, ppl: 1.15
+Epoch 2, loss over the (real) batch 9: 0.1277, ppl: 1.14
+Epoch 2, loss over the (real) batch 10: 0.1128, ppl: 1.12
+Epoch 2, loss over the (real) batch 11: 0.1388, ppl: 1.15
+Epoch 2, loss over the (real) batch 12: 0.1402, ppl: 1.15
+Epoch 2, loss over the (real) batch 13: 0.1446, ppl: 1.16
+Epoch 2, loss over the (real) batch 14: 0.1037, ppl: 1.11
+Epoch 2, loss over the (real) batch 15: 0.1210, ppl: 1.13
+Epoch 2, loss over the (real) batch 16: 0.1006, ppl: 1.11
+[EVAL] step 144: loss/token=0.1086, ppl=1.11
+Epoch 2, loss over the (real) batch 17: 0.1336, ppl: 1.14
+Epoch 2, loss over the (real) batch 18: 0.0960, ppl: 1.10
+Epoch 2, loss over the (real) batch 19: 0.1039, ppl: 1.11
+Epoch 2, loss over the (real) batch 20: 0.0948, ppl: 1.10
+Epoch 2, loss over the (real) batch 21: 0.1193, ppl: 1.13
+Epoch 2, loss over the (real) batch 22: 0.1413, ppl: 1.15
+Epoch 2, loss over the (real) batch 23: 0.1194, ppl: 1.13
+Epoch 2, loss over the (real) batch 24: 0.1512, ppl: 1.16
+Epoch 2, loss over the (real) batch 25: 0.1072, ppl: 1.11
+Epoch 2, loss over the (real) batch 26: 0.1425, ppl: 1.15
+Epoch 2, loss over the (real) batch 27: 0.1186, ppl: 1.13
+Epoch 2, loss over the (real) batch 28: 0.1242, ppl: 1.13
+Epoch 2, loss over the (real) batch 29: 0.1241, ppl: 1.13
+Epoch 2, loss over the (real) batch 30: 0.0800, ppl: 1.08
+Epoch 2, loss over the (real) batch 31: 0.1133, ppl: 1.12
+Epoch 2, loss over the (real) batch 32: 0.1276, ppl: 1.14
+[EVAL] step 160: loss/token=0.1128, ppl=1.12
+Epoch 2, loss over the (real) batch 33: 0.0980, ppl: 1.10
+Epoch 2, loss over the (real) batch 34: 0.1123, ppl: 1.12
+Epoch 2, loss over the (real) batch 35: 0.1187, ppl: 1.13
+Epoch 2, loss over the (real) batch 36: 0.1234, ppl: 1.13
+Epoch 2, loss over the (real) batch 37: 0.0955, ppl: 1.10
+Epoch 2, loss over the (real) batch 38: 0.1068, ppl: 1.11
+Epoch 2, loss over the (real) batch 39: 0.1133, ppl: 1.12
+Epoch 2, loss over the (real) batch 40: 0.1498, ppl: 1.16
+Epoch 2, loss over the (real) batch 41: 0.1166, ppl: 1.12
+Epoch 2, loss over the (real) batch 42: 0.1149, ppl: 1.12
+Epoch 2, loss over the (real) batch 43: 0.1092, ppl: 1.12
+Epoch 2, loss over the (real) batch 44: 0.1057, ppl: 1.11
+Epoch 2, loss over the (real) batch 45: 0.1230, ppl: 1.13
+Epoch 2, loss over the (real) batch 46: 0.1243, ppl: 1.13
+Epoch 2, loss over the (real) batch 47: 0.1291, ppl: 1.14
+Epoch 2, loss over the (real) batch 48: 0.1064, ppl: 1.11
+[EVAL] step 176: loss/token=0.1108, ppl=1.12
+Epoch 2, loss over the (real) batch 49: 0.1396, ppl: 1.15
+Epoch 2, loss over the (real) batch 50: 0.1177, ppl: 1.12
+Epoch 2, loss over the (real) batch 51: 0.1103, ppl: 1.12
+Epoch 2, loss over the (real) batch 52: 0.1258, ppl: 1.13
+Epoch 2, loss over the (real) batch 53: 0.1129, ppl: 1.12
+Epoch 2, loss over the (real) batch 54: 0.1106, ppl: 1.12
+Epoch 2, loss over the (real) batch 55: 0.1005, ppl: 1.11
+Epoch 2, loss over the (real) batch 56: 0.1394, ppl: 1.15
+Epoch 2, loss over the (real) batch 57: 0.1141, ppl: 1.12
+Epoch 2, loss over the (real) batch 58: 0.1027, ppl: 1.11
+Epoch 2, loss over the (real) batch 59: 0.1233, ppl: 1.13
+Epoch 2, loss over the (real) batch 60: 0.1208, ppl: 1.13
+Epoch 2, loss over the (real) batch 61: 0.1085, ppl: 1.11
+Epoch 2, loss over the (real) batch 62: 0.1041, ppl: 1.11
+Epoch 2, loss over the (real) batch 63: 0.1177, ppl: 1.12
+model saved as /scratch/ctisseau/finetuned-models/Qwen-Qwen3-0.6B_lcd_sft_710a1466dd373f65969b/checkpoint-00000192
+Epoch 2, loss over the (real) batch 64: 0.0914, ppl: 1.10
+[EVAL] step 192: loss/token=0.1077, ppl=1.11
+Epoch 2, loss over the (real) batch 65: 0.1230, ppl: 1.13
+Epoch 2, loss over the (real) batch 66: 0.1149, ppl: 1.12
+Epoch 2, loss over the (real) batch 67: 0.1138, ppl: 1.12
+Epoch 2, loss over the (real) batch 68: 0.1228, ppl: 1.13
+Epoch 2, loss over the (real) batch 69: 0.1153, ppl: 1.12
+Epoch 2, loss over the (real) batch 70: 0.1093, ppl: 1.12
+Epoch 2, loss over the (real) batch 71: 0.1079, ppl: 1.11
+Epoch 2, loss over the (real) batch 72: 0.1173, ppl: 1.12
+Epoch 2, loss over the (real) batch 73: 0.1252, ppl: 1.13
+Epoch 2, loss over the (real) batch 74: 0.1242, ppl: 1.13
+Epoch 2, loss over the (real) batch 75: 0.1133, ppl: 1.12
+Epoch 2, loss over the (real) batch 76: 0.1053, ppl: 1.11
+Epoch 2, loss over the (real) batch 77: 0.1077, ppl: 1.11
+Epoch 2, loss over the (real) batch 78: 0.0826, ppl: 1.09
+Epoch 2, loss over the (real) batch 79: 0.0976, ppl: 1.10
+Epoch 2, loss over the (real) batch 80: 0.0911, ppl: 1.10
+[EVAL] step 208: loss/token=0.1079, ppl=1.11
+Epoch 2, loss over the (real) batch 81: 0.1191, ppl: 1.13
+Epoch 2, loss over the (real) batch 82: 0.0964, ppl: 1.10
+Epoch 2, loss over the (real) batch 83: 0.1245, ppl: 1.13
+Epoch 2, loss over the (real) batch 84: 0.1070, ppl: 1.11
+Epoch 2, loss over the (real) batch 85: 0.1241, ppl: 1.13
+Epoch 2, loss over the (real) batch 86: 0.1365, ppl: 1.15
+Epoch 2, loss over the (real) batch 87: 0.0917, ppl: 1.10
+Epoch 2, loss over the (real) batch 88: 0.0993, ppl: 1.10
+Epoch 2, loss over the (real) batch 89: 0.0958, ppl: 1.10
+Epoch 2, loss over the (real) batch 90: 0.1085, ppl: 1.11
+Epoch 2, loss over the (real) batch 91: 0.0768, ppl: 1.08
+Epoch 2, loss over the (real) batch 92: 0.1095, ppl: 1.12
+Epoch 2, loss over the (real) batch 93: 0.1008, ppl: 1.11
+Epoch 2, loss over the (real) batch 94: 0.1122, ppl: 1.12
+Epoch 2, loss over the (real) batch 95: 0.1120, ppl: 1.12
+Epoch 2, loss over the (real) batch 96: 0.1148, ppl: 1.12
+[EVAL] step 224: loss/token=0.1093, ppl=1.12
+Epoch 2, loss over the (real) batch 97: 0.0901, ppl: 1.09
+Epoch 2, loss over the (real) batch 98: 0.1299, ppl: 1.14
+Epoch 2, loss over the (real) batch 99: 0.0995, ppl: 1.10
+Epoch 2, loss over the (real) batch 100: 0.1150, ppl: 1.12
+Epoch 2, loss over the (real) batch 101: 0.0829, ppl: 1.09
+Epoch 2, loss over the (real) batch 102: 0.1254, ppl: 1.13
+Epoch 2, loss over the (real) batch 103: 0.0954, ppl: 1.10
+Epoch 2, loss over the (real) batch 104: 0.1024, ppl: 1.11
+Epoch 2, loss over the (real) batch 105: 0.1135, ppl: 1.12
+Epoch 2, loss over the (real) batch 106: 0.0934, ppl: 1.10
+Epoch 2, loss over the (real) batch 107: 0.1030, ppl: 1.11
+Epoch 2, loss over the (real) batch 108: 0.1021, ppl: 1.11
+Epoch 2, loss over the (real) batch 109: 0.1138, ppl: 1.12
+Epoch 2, loss over the (real) batch 110: 0.0818, ppl: 1.09
+Epoch 2, loss over the (real) batch 111: 0.1134, ppl: 1.12
+Epoch 2, loss over the (real) batch 112: 0.1127, ppl: 1.12
+[EVAL] step 240: loss/token=0.1086, ppl=1.11
+Epoch 2, loss over the (real) batch 113: 0.1134, ppl: 1.12
+Epoch 2, loss over the (real) batch 114: 0.1255, ppl: 1.13
+Epoch 2, loss over the (real) batch 115: 0.0994, ppl: 1.10
+Epoch 2, loss over the (real) batch 116: 0.0953, ppl: 1.10
+Epoch 2, loss over the (real) batch 117: 0.1069, ppl: 1.11
+Epoch 2, loss over the (real) batch 118: 0.1261, ppl: 1.13
+Epoch 2, loss over the (real) batch 119: 0.0885, ppl: 1.09
+Epoch 2, loss over the (real) batch 120: 0.1251, ppl: 1.13
+Epoch 2, loss over the (real) batch 121: 0.1102, ppl: 1.12
+Epoch 2, loss over the (real) batch 122: 0.1218, ppl: 1.13
+Epoch 2, loss over the (real) batch 123: 0.1290, ppl: 1.14
+Epoch 2, loss over the (real) batch 124: 0.1128, ppl: 1.12
+Epoch 2, loss over the (real) batch 125: 0.1052, ppl: 1.11
+Epoch 2, loss over the (real) batch 126: 0.1258, ppl: 1.13
+Epoch 2, loss over the (real) batch 127: 0.0918, ppl: 1.10
+model saved as /scratch/ctisseau/finetuned-models/Qwen-Qwen3-0.6B_lcd_sft_710a1466dd373f65969b/checkpoint-00000256
+Epoch 2, loss over the (real) batch 128: 0.1060, ppl: 1.11
+[EVAL] step 256: loss/token=0.1083, ppl=1.11
+Job finished on Tue Oct 28 00:59:35 CET 2025

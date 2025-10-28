@@ -1,0 +1,9 @@
+==========================================
+SLURM_JOB_ID = 4297643
+SLURM_JOB_NODELIST = gpu014
+==========================================
+Job started on Tue Oct 28 00:00:22 CET 2025
+Loading dataset
+Dataset loaded
+No checkpoint found — starting from base model
+Job finished on Tue Oct 28 00:00:33 CET 2025

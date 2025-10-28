@@ -10,3 +10,6 @@ Logits Processor and Sequence Sampler created.
 Reading problems...
 Found 900 problems.
 Generating 128 samples with constraint for each of the 900 problems...
+Writing 115200 sampled solutions to samples/Qwen3-1.7B_classical_sft_7c8926f8324c983f7990-ckpt256-nofewshot-lcdgen-n128-t1-p1-k20.jsonl
+Done.
+Job finished on Mon Oct 27 20:09:58 CET 2025

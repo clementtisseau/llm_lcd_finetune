@@ -1,0 +1,15 @@
+==========================================
+SLURM_JOB_ID = 4297716
+SLURM_JOB_NODELIST = gpu011
+==========================================
+Job started on Tue Oct 28 09:51:55 CET 2025
+Loading CLM model: Qwen3-0.6B_classical_sft_f81deac2c36c19f08996-ckpt64...
+CLM model loaded.
+Creating Logits Processor and Sequence Sampler...
+Logits Processor and Sequence Sampler created.
+Reading problems...
+Found 900 problems.
+Generating 128 samples with constraint for each of the 900 problems...
+Writing 115200 sampled solutions to samples/Qwen3-0.6B_classical_sft_f81deac2c36c19f08996-ckpt64-nofewshot-lcdgen-n128-t1-p1-k20.jsonl
+Done.
+Job finished on Tue Oct 28 11:26:03 CET 2025

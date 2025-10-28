@@ -182,8 +182,8 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="Fine-tune a LLM.")
 
-    parser.add_argument("--model_name", type=str, default="Qwen/Qwen3-1.7B")
-    parser.add_argument("--readable_model_name", type=str, default="Qwen3-1.7B")
+    parser.add_argument("--model_name", type=str, default="Qwen/Qwen3-0.6B")
+    parser.add_argument("--readable_model_name", type=str, default="Qwen3-0.6B")
     parser.add_argument("--dataset_file", type=str, default=DATA)
     parser.add_argument("--n_samples", type=int, default=128)
     parser.add_argument("--max_new_tokens", type=int, default=64)

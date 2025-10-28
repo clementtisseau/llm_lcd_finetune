@@ -1,0 +1,202 @@
+Qwen3-0.6B-nofewshot-n128-t1-p1-k20
+
+pass@1:   0.1625954861111111
+pass@2:   0.1991218285214348
+pass@4:   0.23249555440986544
+pass@8:   0.2627268597761927
+pass@16:  0.29003291383907726
+pass@32:  0.3150092573750788
+pass@64:  0.3385385807580153
+pass@128: 0.36333333333333334
+
+Accuracy by true_length (% passed):
+  length=3: 69.91% (8948/12800)
+  length=5: 47.49% (6079/12800)
+  length=7: 17.06% (2184/12800)
+  length=9: 9.46% (1211/12800)
+  length=11: 1.67% (214/12800)
+  length=13: 0.55% (71/12800)
+  length=15: 0.02% (2/12800)
+  length=17: 0.02% (3/12800)
+  length=19: 0.15% (19/12800)
+  overall: 16.26% (18731/115200)
+Error rates by true_length (%):
+  length=3: syntax 27.90% (3571/12800) | regex 0.37% (47/12800)
+  length=5: syntax 29.00% (3712/12800) | regex 2.11% (270/12800)
+  length=7: syntax 62.90% (8051/12800) | regex 1.58% (202/12800)
+  length=9: syntax 79.74% (10207/12800) | regex 3.17% (406/12800)
+  length=11: syntax 91.93% (11767/12800) | regex 9.29% (1189/12800)
+  length=13: syntax 94.10% (12045/12800) | regex 10.83% (1386/12800)
+  length=15: syntax 96.67% (12374/12800) | regex 12.73% (1630/12800)
+  length=17: syntax 97.37% (12463/12800) | regex 13.20% (1689/12800)
+  length=19: syntax 97.11% (12430/12800) | regex 15.49% (1983/12800)
+  overall: syntax 75.19% (86620/115200) | regex 7.64% (8802/115200)
+
+
+
+---------------------- (Classical SFT, 2 epochs, LCD gen)
+Qwen3-0.6B_classical_sft_f81deac2c36c19f08996-ckpt256-nofewshot-lcdgen-n128-t1-p1-k20
+
+pass@1:   0.5582638888888889
+pass@2:   0.673473999343832
+pass@4:   0.760903682352206
+pass@8:   0.8215011778243745
+pass@16:  0.8645032201603913
+pass@32:  0.8970474965208455
+pass@64:  0.922200479102513
+pass@128: 0.9422222222222222
+
+Accuracy by true_length (% passed):
+  length=3: 99.96% (12795/12800)
+  length=5: 84.75% (10848/12800)
+  length=7: 68.63% (8785/12800)
+  length=9: 67.17% (8598/12800)
+  length=11: 55.85% (7149/12800)
+  length=13: 48.01% (6145/12800)
+  length=15: 32.33% (4138/12800)
+  length=17: 26.55% (3398/12800)
+  length=19: 19.19% (2456/12800)
+  overall: 55.83% (64312/115200)
+Error rates by true_length (%):
+  length=3: syntax 0.03% (4/12800) | regex 0.00% (0/12800)
+  length=5: syntax 0.45% (58/12800) | regex 0.00% (0/12800)
+  length=7: syntax 1.43% (183/12800) | regex 0.00% (0/12800)
+  length=9: syntax 3.26% (417/12800) | regex 0.00% (0/12800)
+  length=11: syntax 5.87% (751/12800) | regex 0.00% (0/12800)
+  length=13: syntax 9.77% (1250/12800) | regex 0.00% (0/12800)
+  length=15: syntax 19.01% (2433/12800) | regex 0.00% (0/12800)
+  length=17: syntax 26.48% (3390/12800) | regex 0.00% (0/12800)
+  length=19: syntax 34.11% (4366/12800) | regex 0.00% (0/12800)
+  overall: syntax 11.16% (12852/115200) | regex 0.00% (0/115200)
+
+
+---------------------- (LCD-SFT, 2 epochs, LCD gen)
+Qwen3-0.6B_lcd_sft_710a1466dd373f65969b-ckpt256-nofewshot-lcdgen-n128-t1-p1-k20
+
+pass@1:   0.5592274305555555
+pass@2:   0.6748836668853895
+pass@4:   0.7624682309502979
+pass@8:   0.8230353126185269
+pass@16:  0.8661395374296698
+pass@32:  0.8984382961193446
+pass@64:  0.9225994932437402
+pass@128: 0.9411111111111111
+
+Accuracy by true_length (% passed):
+  length=3: 99.88% (12785/12800)    -
+  length=5: 84.90% (10867/12800)    +
+  length=7: 68.55% (8775/12800)     -
+  length=9: 67.74% (8671/12800)     +
+  length=11: 55.93% (7159/12800)    +
+  length=13: 48.08% (6154/12800)    +
+  length=15: 32.46% (4155/12800)    +
+  length=17: 27.16% (3477/12800)    ++
+  length=19: 18.59% (2380/12800)    --
+  overall: 55.92% (64423/115200)    +
+Error rates by true_length (%):
+  length=3: syntax 0.11% (14/12800) | regex 0.00% (0/12800)       +
+  length=5: syntax 0.46% (59/12800) | regex 0.00% (0/12800)       +
+  length=7: syntax 1.86% (238/12800) | regex 0.00% (0/12800)      +
+  length=9: syntax 2.97% (380/12800) | regex 0.00% (0/12800)      --
+  length=11: syntax 5.84% (748/12800) | regex 0.00% (0/12800)     -
+  length=13: syntax 10.65% (1363/12800) | regex 0.00% (0/12800)   ++
+  length=15: syntax 18.95% (2426/12800) | regex 0.00% (0/12800)   -
+  length=17: syntax 26.90% (3443/12800) | regex 0.00% (0/12800)   +
+  length=19: syntax 34.73% (4445/12800) | regex 0.00% (0/12800)   +
+  overall: syntax 11.39% (13116/115200) | regex 0.00% (0/115200)  +
+
+
+
+
+
+Conclusion of those experiments: The base model clearly doesn't master the regex (nor the full syntax). Our hypothesis: LCD-SFT doesn't have to focus on learning the regex, and can learn the full syntax and semantic faster than classical SFT. 
+First, we compare (LCD-SFT, 2 epochs, LCD gen) and (Classical SFT, 2 epochs, LCD gen). 
+However, we don't see a clear difference in the accuracy and error rate between the 2 models. 
+It tells us that those one doesn't clearly learn more than the other, but maybe one learns faster. 
+To verify this we will do the same experiments with ckpt64.
+
+
+
+
+
+
+
+----- Checkpoint 64 --- Checkpoint 64 --- Checkpoint 64 --- Checkpoint 64 -----
+ 
+
+---------------------- (LCD-SFT, half of 1 epoch, LCD gen)
+Qwen3-0.6B_classical_sft_f81deac2c36c19f08996-ckpt64-nofewshot-lcdgen-n128-t1-p1-k20
+
+pass@1:   0.42094618055555544
+pass@2:   0.5229647856517936
+pass@4:   0.6185028086072574
+pass@8:   0.699413813484547
+pass@16:  0.7655354959151832
+pass@32:  0.8192521403524848
+pass@64:  0.8632459513606561
+pass@128: 0.9011111111111111
+
+Accuracy by true_length (% passed):
+  length=3: 99.86% (12782/12800)
+  length=5: 80.84% (10348/12800)
+  length=7: 61.30% (7847/12800)
+  length=9: 53.02% (6787/12800)
+  length=11: 34.66% (4437/12800)
+  length=13: 24.62% (3152/12800)
+  length=15: 12.70% (1626/12800)
+  length=17: 7.64% (978/12800)
+  length=19: 4.19% (536/12800)
+  overall: 42.09% (48493/115200)
+Error rates by true_length (%):
+  length=3: syntax 0.14% (18/12800) | regex 0.00% (0/12800)
+  length=5: syntax 1.20% (154/12800) | regex 0.00% (0/12800)
+  length=7: syntax 3.99% (511/12800) | regex 0.00% (0/12800)
+  length=9: syntax 12.38% (1585/12800) | regex 0.00% (0/12800)
+  length=11: syntax 22.81% (2920/12800) | regex 0.00% (0/12800)
+  length=13: syntax 32.20% (4121/12800) | regex 0.00% (0/12800)
+  length=15: syntax 45.12% (5775/12800) | regex 0.00% (0/12800)
+  length=17: syntax 54.62% (6992/12800) | regex 0.00% (0/12800)
+  length=19: syntax 61.58% (7882/12800) | regex 0.00% (0/12800)
+  overall: syntax 26.01% (29958/115200) | regex 0.00% (0/115200)
+
+
+
+---------------------- (Classical-SFT, half of 1 epoch, LCD gen)
+Qwen3-0.6B_lcd_sft_710a1466dd373f65969b-ckpt64-nofewshot-lcdgen-n128-t1-p1-k20
+
+pass@1:   0.42124999999999985
+pass@2:   0.5247861986001751
+pass@4:   0.6204568395617215
+pass@8:   0.7008567264380771
+pass@16:  0.7663916955628615
+pass@32:  0.8196036952624959
+pass@64:  0.8600744381554251
+pass@128: 0.8888888888888888
+
+Accuracy by true_length (% passed):
+  length=3: 99.48% (12733/12800)    -
+  length=5: 81.00% (10368/12800)    +
+  length=7: 61.31% (7848/12800)     =
+  length=9: 53.02% (6786/12800)     =
+  length=11: 34.12% (4368/12800)    -
+  length=13: 25.45% (3258/12800)    ++
+  length=15: 12.64% (1618/12800)    -
+  length=17: 7.88% (1008/12800)     +
+  length=19: 4.23% (541/12800)      +
+  overall: 42.12% (48528/115200)    +
+Error rates by true_length (%):
+  length=3: syntax 0.50% (64/12800) | regex 0.00% (0/12800)       +
+  length=5: syntax 1.62% (208/12800) | regex 0.00% (0/12800)      ++
+  length=7: syntax 4.64% (594/12800) | regex 0.00% (0/12800)      ++
+  length=9: syntax 13.25% (1696/12800) | regex 0.00% (0/12800)    ++
+  length=11: syntax 24.11% (3086/12800) | regex 0.00% (0/12800)   ++
+  length=13: syntax 32.59% (4171/12800) | regex 0.00% (0/12800)   +
+  length=15: syntax 46.44% (5944/12800) | regex 0.00% (0/12800)   ++
+  length=17: syntax 56.05% (7175/12800) | regex 0.00% (0/12800)   ++  
+  length=19: syntax 62.52% (8003/12800) | regex 0.00% (0/12800)   ++
+  overall: syntax 26.86% (30941/115200) | regex 0.00% (0/115200)  ++
+
+
+Unfortunately, it looks like LCD-SFT isn't learning the full syntax or semantic faster, even if it doesn't have to learn the regex.
+
+Too be 100% sure that our technique doesn't work, we will do exactly the same experiments, with this same model, but this time we will constrain using the full syntax (regex + stack). 

@@ -19,8 +19,8 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 DATA = HERE / "data" / "dataset900.jsonl"
 # SAMPLES = HERE / "samples" / "data1000" / "SFT" / "Qwen3-1.7B-dtrain1024-ckpt32-d1000-n128-t1-p08.jsonl"
-# SAMPLES = HERE / "samples" / "Qwen3-1.7B_lcd_sft_9fdbc593c01affa7ad7a-ckpt256-nofewshot-lcdgen-n128-t1-p1-k20.jsonl"
-SAMPLES = HERE / "samples" / "data900" / "nofewshot" / "Qwen3-1.7B_classical_sft_7c8926f8324c983f7990-ckpt256-nofewshot-n128-t1-p1-k20.jsonl"
+SAMPLES = HERE / "samples" / "Qwen3-0.6B_lcd_sft_710a1466dd373f65969b-ckpt64-nofewshot-lcdgen-n128-t1-p1-k20.jsonl"
+# SAMPLES = HERE / "samples" / "data900" / "SFT" / "Qwen2.5-0.5B_classical_sft_c5c0c8e1a308a4b6f52a-ckpt256-n128-t1-p1-k20.jsonl"
 
 # --- I/O helpers ---
 def stream_jsonl(filename: Path) -> Iterable[Dict]:

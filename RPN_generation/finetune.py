@@ -42,9 +42,9 @@ def finetune(
     print("Dataset loaded")
 
     max_memory3 = {
-        0: "40GB",
-        1: "40GB",
-        2: "40GB"
+        0: "7GB",
+        1: "7GB",
+        2: "7GB"
     }
     
     # Load Model and Tokenizer
@@ -296,7 +296,7 @@ if __name__ == "__main__":
 
 
     parser = argparse.ArgumentParser(description="Fine-tune a LLM.")
-    parser.add_argument("--model_name", type=str, default="Qwen/Qwen2.5-0.5B")
+    parser.add_argument("--model_name", type=str, default="Qwen/Qwen3-0.6B")
     parser.add_argument("--train_path", type=Path, default=DATA)
     parser.add_argument("--train_data_size", type=int, default=None,
                         help="Number of samples of the whole dataset to train on.")
