@@ -3,7 +3,9 @@ import math
 from transformers import AutoTokenizer, AutoModelForCausalLM, get_cosine_schedule_with_warmup
 import constraintlm as clm
 import outlines
+
 from outlines.processors import RegexLogitsProcessor
+from constraintlm import RPNFullSyntaxLogitsProcessor
 
 from pathlib import Path
 
@@ -142,6 +144,41 @@ def load_model_tokenizer_rpnprocessor(output_dir, model_name, max_memory):
     )
     print("Logits Processor created")
     return model, tokenizer, rpn_logits_processor
+
+
+def load_model_tokenizer_rpnprocessorfullsyntax(output_dir, model_name, max_memory):
+    resume_dir = find_last_checkpoint(output_dir)
+    if resume_dir is not None:
+        print(f"Resuming from {resume_dir}")
+        model_to_load = resume_dir
+    else: 
+        print("No checkpoint found — starting from base model")
+        model_to_load = model_name
+    # Load tokenizer and model
+    bf16_ok = torch.cuda.is_available() and torch.cuda.is_bf16_supported()
+    dtype = torch.bfloat16 if bf16_ok else torch.float16
+    clm_model = clm.TransformersLM(
+        model_to_load,
+        torch_dtype=dtype,
+        device_map="balanced",
+        max_memory=max_memory,
+    )
+    tokenizer = clm_model.tokenizer
+    tokenizer.padding_side = "left"  # simpler for generating multiple sequences
+    if tokenizer.pad_token is None:
+        tokenizer.pad_token = tokenizer.eos_token
+    model = clm_model.model
+    model.eval()
+    print("CLM Tokenizer and Model loaded")
+    outlines_model = outlines.from_transformers(clm_model.model, clm_model.tokenizer)
+    rpnfullsyntax_logits_processor = RPNFullSyntaxLogitsProcessor(
+        r"(?:\d+|[+\-*/])(?: (?:\d+|[+\-*/]))*",
+        outlines_model.tokenizer,
+        outlines_model.tensor_library_name,
+        tokenizer_transformer = tokenizer,
+    )
+    print("Logits Processor created")
+    return model, tokenizer, rpnfullsyntax_logits_processor
 
 
 
@@ -329,68 +366,81 @@ def evaluate(model, loader, loss_fct, device):
     return mean_loss, ppl, total_valid_tokens
 
 
-# ---------- Custom Logits Processor ----------
-_number_or_op = re.compile(r"\d+|[+\-*/]")
+# # ---------- Custom Logits Processor ----------
+# _number_or_op = re.compile(r"\d+|[+\-*/]")
 
-def _extract_symbols(text: str):
-    """
-    Parse `text` into a list of RPN tokens (integers and +, -, *, /).
-    Returns None if any invalid characters are present.
-    """
-    matches = list(_number_or_op.finditer(text))    # list of re.Match objects (it contains the substring, the position of the beginning and the end of the substring)
-    symbols = [m.group(0) for m in matches]         # list of substrings that match \d or [+\-*/]
-    cleaned = _number_or_op.sub("", text)           # remove the match from text, we should have "   " only
-    if cleaned and not cleaned.isspace():           # we should obtain only whitespace; otherwise text contained a non-digit-nor-operator char
-        return None
-    return symbols
+# def _extract_symbols(text: str):
+#     """
+#     Parse `text` into a list of RPN tokens (integers and +, -, *, /).
+#     Returns None if any invalid characters are present.
+#     """
+#     matches = list(_number_or_op.finditer(text))    # list of re.Match objects (it contains the substring, the position of the beginning and the end of the substring)
+#     symbols = [m.group(0) for m in matches]         # list of substrings that match \d or [+\-*/]
+#     cleaned = _number_or_op.sub("", text)           # remove the match from text, we should have "   " only
+#     if cleaned and not cleaned.isspace():           # we should obtain only whitespace; otherwise text contained a non-digit-nor-operator char
+#         return None
+#     return symbols
 
-def _score_rpn_prefix(input_ids: torch.LongTensor, tokenizer) -> torch.FloatTensor:
-    """
-    Given the token IDs generated so far and a candidate token (input_ids), 
-    return the score associated by the constraint.
-    """
-    # Decode all sequences at once
+# def _score_rpn_prefix(input_ids: torch.LongTensor, tokenizer) -> torch.FloatTensor:
+#     """
+#     Given the token IDs generated so far and a candidate token (input_ids), 
+#     return the score associated by the constraint.
+#     """
+#     # Decode all sequences at once
 
-    last_id = int(input_ids[-1].item())
-    is_eos = last_id == int(tokenizer.eos_token_id) 
+#     last_id = int(input_ids[-1].item())
+#     is_eos = last_id == int(tokenizer.eos_token_id) 
 
-    text = tokenizer.decode(input_ids.tolist(), skip_special_tokens=True, clean_up_tokenization_spaces=True)
+#     text = tokenizer.decode(input_ids.tolist(), skip_special_tokens=True, clean_up_tokenization_spaces=True)
     
-    if not text.strip():
-        return float("-inf") if is_eos else 0.0      # empty context is valid as a prefix but not a complete sentence
-    symbols = _extract_symbols(text)
-    if symbols is None:             # text contains non-digit-nor-operator char => symbols = None 
-        return float('-inf')
-    depth = 0
-    for sym in symbols:
-        if sym.isdigit():
-            depth += 1
-        else:
-            # operator
-            if depth < 2:
-                return float('-inf')
-            depth -= 1
-    if is_eos:
-        return 0.0 if depth == 1 else float("-inf")
-    return 0.0 if depth >= 1 else float("-inf")
+#     if not text.strip():
+#         return float("-inf") if is_eos else 0.0      # empty context is valid as a prefix but not a complete sentence
+#     symbols = _extract_symbols(text)
+#     if symbols is None:             # text contains non-digit-nor-operator char => symbols = None 
+#         return float('-inf')
+#     depth = 0
+#     for sym in symbols:
+#         if sym.isdigit():
+#             depth += 1
+#         else:
+#             # operator
+#             if depth < 2:
+#                 return float('-inf')
+#             depth -= 1
+#     if is_eos:
+#         return 0.0 if depth == 1 else float("-inf")
+#     return 0.0 if depth >= 1 else float("-inf")
 
-def process_logits_rpn_syntax(rpn_logits_processor, input_ids, logits, tokenizer, start_ans):
-    ans_input_ids = input_ids[start_ans:]
-    # print("Answer so far:", tokenizer.decode(ans_input_ids))
+# def process_logits_rpn_syntax(rpn_logits_processor, input_ids, logits, tokenizer, start_ans):
+#     if input_ids.dim() != 2:
+#         raise ValueError("`input_ids` must be 2-D (batch, seq_len).")
+#     if logits.dim() != 2:
+#         raise ValueError("`logits` must be 2-D (batch, vocab).")
+#     # VERY important: start_ans needs to be the same for all the sentences
+#     # So during training we need to use a left-padding
+#     # And during inference we cannot generate in parallel for different prompts (except if we left-pad) (but we can generate several samples of the same prompt).
+#     ans_input_ids = input_ids[:, start_ans:]
+#     # print("Answer so far:", tokenizer.batch_decode(ans_input_ids))
     
-    biased_logits = rpn_logits_processor.process_logits(input_ids.unsqueeze(0), logits.unsqueeze(0)).squeeze(0)
-    if biased_logits.dim() != 1:
-        raise ValueError("This processor expects 1D logits for a single batch element.")
+#     biased_logits = rpn_logits_processor.process_logits(input_ids, logits)      # (B, V)
+#     if biased_logits.dim() != 2:
+#         raise ValueError("This processor expects 2-D logits (batch, vocab).")
     
-    valid_ids = (biased_logits != float('-inf')).nonzero(as_tuple=True)[0].tolist()
-    # print("First masking:", tokenizer.convert_ids_to_tokens(valid_ids))           # for example ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'Ġ', 'Ġ*', 'Ġ-', 'Ġ+', 'Ġ/', '<|im_end|>'], however the code below will mask all those tokens I don't understand why
+#     # for b in range(biased_logits.size(0)):
+#     #     valid_ids = (biased_logits[b] != float('-inf')).nonzero(as_tuple=True)[0].tolist()
+#     #     print(f"First masking (batch {b}):", tokenizer.convert_ids_to_tokens(valid_ids))           # for example ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'Ġ', 'Ġ*', 'Ġ-', 'Ġ+', 'Ġ/', '<|im_end|>'], however the code below will mask all those tokens I don't understand why
 
-    mask = torch.zeros_like(biased_logits, dtype=biased_logits.dtype)
+#     mask = torch.zeros_like(biased_logits, dtype=biased_logits.dtype)
 
-    allowed = torch.nonzero(biased_logits != float('-inf'), as_tuple=True)[0]
-    for idx in allowed:
-        cand_id = idx.to(device=ans_input_ids.device, dtype=ans_input_ids.dtype).unsqueeze(0)
-        cand_seq = torch.cat([ans_input_ids, cand_id], dim=0)
-        s = _score_rpn_prefix(cand_seq, tokenizer)
-        mask[idx] = torch.tensor(s, device=mask.device, dtype=mask.dtype)
-    return biased_logits + mask
+#     batch_size = input_ids.size(0)
+#     for b in range(batch_size):
+#         seq_prefix = ans_input_ids[b]
+
+#         allowed = torch.nonzero(biased_logits[b] != float('-inf'), as_tuple=True)[0]
+#         for idx in allowed:
+#             cand_id = idx.to(device=seq_prefix.device, dtype=seq_prefix.dtype).unsqueeze(0)
+#             cand_seq = torch.cat([seq_prefix, cand_id], dim=0)
+#             s = _score_rpn_prefix(cand_seq, tokenizer)
+#             mask[b, idx] = torch.tensor(s, device=mask.device, dtype=mask.dtype)
+
+#     return biased_logits + mask

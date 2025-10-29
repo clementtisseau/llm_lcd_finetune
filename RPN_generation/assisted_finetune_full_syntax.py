@@ -15,8 +15,8 @@ from pathlib import Path
 
 from finetune_utils import (
     stream_jsonl, find_last_checkpoint, resume_training, save_checkpoint,
-    load_model_tokenizer_rpnprocessor, prepare_encodings, find_micro_batch_size,
-    build_optimizer_and_scheduler, log_jsonl, reconcile_metrics, evaluate, process_logits_rpn_syntax,
+    load_model_tokenizer_rpnprocessorfullsyntax, prepare_encodings, find_micro_batch_size,
+    build_optimizer_and_scheduler, log_jsonl, reconcile_metrics, evaluate,
 )
 
 
@@ -51,7 +51,7 @@ def finetune(
     }
 
     # Load Model and Tokenizer
-    model, tokenizer, rpn_logits_processor = load_model_tokenizer_rpnprocessor(output_dir, model_name, max_memory3)
+    model, tokenizer, rpnfullsyntax_logits_processor = load_model_tokenizer_rpnprocessorfullsyntax(output_dir, model_name, max_memory3)
     model.config.use_cache = False          # Disable KV-cache, which is useless during training
     first_device = next(model.parameters()).device
 
@@ -133,13 +133,13 @@ def finetune(
                 # print(f"---input---'{tokenizer.decode(batch_input_ids[i, :], skip_special_tokens=False, clean_up_tokenization_spaces=False)}'---end of input---")
                 # print(tokenizer.decode(batch_input_ids[i, start_ans-1], skip_special_tokens=False, clean_up_tokenization_spaces=False), "first token to compute and bias logits from")
                 # print(tokenizer.decode(batch_input_ids[i, end_ans-1], skip_special_tokens=False, clean_up_tokenization_spaces=False), "last token to compute and bias logits from")
-                rpn_logits_processor._seq_start_idx = start_ans                 # Length of the prompt before the generation biased of the answer
-                rpn_logits_processor._guide_states = {hash(tuple()): rpn_logits_processor.guide.initial_state}        # reset the _guide_states dictionary
+                rpnfullsyntax_logits_processor._seq_start_idx = start_ans                 # Length of the prompt before the generation biased of the answer
+                rpnfullsyntax_logits_processor._guide_states = {hash(tuple()): rpnfullsyntax_logits_processor.guide.initial_state}        # reset the _guide_states dictionary
                 for j in range(start_ans-1, end_ans):
                     # print(f"generated so far:'{tokenizer.decode(batch_input_ids[i, start_ans-1:j+1])}'", f"token we are predicting from:'{tokenizer.decode(batch_input_ids[i, j])}'")
-                    biased = process_logits_rpn_syntax(rpn_logits_processor, batch_input_ids[i, :j+1], logits[i, j, :], tokenizer, start_ans)
+                    biased = rpnfullsyntax_logits_processor.process_logits(batch_input_ids[i, :j+1].unsqueeze(0), logits[i, j, :].unsqueeze(0)).squeeze(0)
                     # valid_ids = (biased != float('-inf')).nonzero(as_tuple=True)[0].tolist()
-                    # print(tokenizer.convert_ids_to_tokens(valid_ids))
+                    # print(f"Second masking (batch {i}):", tokenizer.convert_ids_to_tokens(valid_ids))
                     biased_logits[i, j, :] = biased
             # Shift for teacher forcing
             shift_logits = biased_logits[..., :-1, :].contiguous()      # we exclude the last logits vector because we don't know the ground truth next token  

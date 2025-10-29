@@ -33,7 +33,7 @@ def write_jsonl(filename: str, data, append: bool = False):
 
 
 # --- Core Generation Function ---
-def generate_constrained_rpn(model, tokenizer, clm_sampler, infix: str, num_samples: int, max_new_tokens: int, temperature = 1.0, top_k = 20, top_p = 0.95, few_shot=1) -> list[str]:
+def generate_constrained(model, tokenizer, clm_sampler, infix: str, num_samples: int, max_new_tokens: int, temperature = 1.0, top_k = 20, top_p = 0.95, few_shot=1) -> list[str]:
     """
     Generates a batch of rpn expressions for a given infix, using a constraint.
 
@@ -157,7 +157,7 @@ def main(
     print(f"Generating {n_samples} samples with constraint for each of the {len(dataset)} problems...")
     samples = []
     for data in tqdm(dataset, desc="Generating samples"):
-        generated_completions = generate_constrained_rpn(
+        generated_completions = generate_constrained(
             model=model,
             tokenizer=tokenizer,
             clm_sampler=rpn_multinomial_sampler,

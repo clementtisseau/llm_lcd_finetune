@@ -33,7 +33,7 @@ def write_jsonl(filename: str, data, append: bool = False):
 
 
 # --- Core Generation Function ---
-def generate_constrained_rpn(model, tokenizer, clm_sampler, infix: str, num_samples: int, max_new_tokens: int, temperature = 1.0, top_k = 20, top_p = 0.95, few_shot=1) -> list[str]:
+def generate_constrained(model, tokenizer, clm_sampler, infix: str, num_samples: int, max_new_tokens: int, temperature = 1.0, top_k = 20, top_p = 0.95, few_shot=1) -> list[str]:
     """
     Generates a batch of rpn expressions for a given infix, using a constraint.
 
@@ -97,7 +97,8 @@ RPN:"""}
 
 import constraintlm as clm
 import outlines
-from outlines.processors import RegexLogitsProcessor
+from clm import RPNFullSyntaxLogitsProcessor
+
 # We will use this regex to express RPN expressions. It doesn't enforce syntactic validit: "4 3 + -", "+ - * /" respect the regex.
 # (?:\d+|[+\-*/])(?: (?:\d+|[+\-*/]))*    a single space *between* two digits/operators. 
 
@@ -133,12 +134,14 @@ def main(
     print("CLM model loaded.")
     print("Creating Logits Processor and Sequence Sampler...")
     outlines_model = outlines.from_transformers(clm_model.model, clm_model.tokenizer)
-    rpn_logits_processor = RegexLogitsProcessor(
+    rpnfullsyntax_logits_processor = RPNFullSyntaxLogitsProcessor(
         r"(?:\d+|[+\-*/])(?: (?:\d+|[+\-*/]))*",
         outlines_model.tokenizer,
         outlines_model.tensor_library_name,
+        tokenizer_trasnformer = tokenizer,
     )
-    rpn_multinomial_sampler = clm.MultinomialSeqSampler(clm_model, logits_processor=rpn_logits_processor)
+
+    rpnfullsyntax_multinomial_sampler = clm.MultinomialSeqSampler(clm_model, logits_processor=rpnfullsyntax_logits_processor)
     print("Logits Processor and Sequence Sampler created.")
     
     print("Reading problems...")
@@ -157,10 +160,10 @@ def main(
     print(f"Generating {n_samples} samples with constraint for each of the {len(dataset)} problems...")
     samples = []
     for data in tqdm(dataset, desc="Generating samples"):
-        generated_completions = generate_constrained_rpn(
+        generated_completions = generate_constrained(
             model=model,
             tokenizer=tokenizer,
-            clm_sampler=rpn_multinomial_sampler,
+            clm_sampler=rpnfullsyntax_multinomial_sampler,
             infix=data["infix"], 
             num_samples=n_samples,
             max_new_tokens=max_new_tokens, 
